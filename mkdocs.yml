@@ -1,0 +1,38 @@
+site_name: NaBL
+site_url: https://pdmosses.github.io/nabl
+repo_name: pdmosses/nabl
+repo_url: https://github.com/pdmosses/nabl
+
+theme:
+  name: material
+
+  features:
+    - content.code.copy
+    # - navigation.expand
+    - navigation.indexes 
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+plugins:
+  - search
+  - awesome-pages:
+      collapse_single_pages: false
+      strict: false
+      order: asc
+      sort_type: natural
+      order_by: title
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/metaborg.css
+  - stylesheets/sdf3-sorts.css
+  - stylesheets/sdf3.css

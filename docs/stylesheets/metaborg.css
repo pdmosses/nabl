@@ -1,0 +1,12 @@
+.highlighttable .linenos, .highlighttable code  {
+  background-color: hsla(0, 0%, 100%, 1);
+}
+
+.highlighttable code a {
+  color: black;
+}
+
+.highlighttable code a:hover {
+  color: default;
+  text-decoration: underline;
+}
