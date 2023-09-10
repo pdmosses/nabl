@@ -1,0 +1,63 @@
+---
+title: Constructors.sdf3
+---
+
+# `Constructors.sdf3`
+
+:simple-github: [pdmosses/nabl/org.metaborg.meta.nabl2.lang/syntax/nabl2/lang/signatures/Constructors.sdf3]
+
+[pdmosses/nabl/org.metaborg.meta.nabl2.lang/syntax/nabl2/lang/signatures/Constructors.sdf3]: https://github.com/pdmosses/nabl/blob/master/org.metaborg.meta.nabl2.lang/syntax/nabl2/lang/signatures/Constructors.sdf3 "The source file on GitHub"
+
+<div class="sdf3"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></div></td>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../Signature.sdf3#nabl2/lang/signatures/Constructors_80_114" id="nabl2/lang/signatures/Constructors_7_41" title="Referenced at ../Signature.sdf3 line 6">nabl2/lang/signatures/Constructors</a>
+
+<span class="keyword">imports</span>
+
+  <a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3#nabl2/shared/common/Identifiers_7_38" id="nabl2/shared/common/Identifiers_54_85" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3 line 1">nabl2/shared/common/Identifiers</a>
+  <a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3#nabl2/shared/common/Sorts_7_32" id="nabl2/shared/common/Sorts_88_113" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3 line 1">nabl2/shared/common/Sorts</a>
+
+<span class="keyword">template options</span>
+
+  <span class="keyword">keyword</span> -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\']
+
+<span class="keyword">context-free syntax</span>
+
+  <span id="NaBL2-Signature_187_202" title="Not referenced locally, nor via imports">NaBL2-Signature</span>.<span class="cons_Constructor"><span id="Sorts_203_208" title="Not referenced locally, nor via imports">Sorts</span></span> = &lt;
+    <span class="cons_String">sorts</span>
+      &lt;{<a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3#NaBL2-Sort_150_160" id="NaBL2-Sort_231_241" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3 line 13">NaBL2-Sort</a> <span class="cons_Lit">"\n"</span>}*&gt;
+  &gt; {<span class="keyword">longest-match</span>}
+
+  <span id="NaBL2-Signature_273_288" title="Not referenced locally, nor via imports">NaBL2-Signature</span>.<span class="cons_Constructor"><span id="Constructors_289_301" title="Not referenced locally, nor via imports">Constructors</span></span> = &lt;
+    <span class="cons_String">constructors</span>
+      &lt;{<a href="#NaBL2-OpDecl_375_387" id="NaBL2-OpDecl_331_343" title="Defined at line 24, 25">NaBL2-OpDecl</a> <span class="cons_Lit">"\n"</span>}*&gt;
+  &gt; {<span class="keyword">longest-match</span>}
+
+  <a href="#NaBL2-OpDecl_331_343" id="NaBL2-OpDecl_375_387" title="Referenced at line 21">NaBL2-OpDecl</a>.<span class="cons_Constructor"><span id="OpDecl_388_394" title="Not referenced locally, nor via imports">OpDecl</span></span>        = [[<a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3#NaBL2-OpId_534_544" id="NaBL2-OpId_406_416" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3 line 22, 23">NaBL2-OpId</a>] <span class="cons_String">:</span> [{<a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3#NaBL2-SortRef_194_207" id="NaBL2-SortRef_422_435" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3 line 15, 16, 17, 18, 19, 20, 21, 22, 23">NaBL2-SortRef</a> <span class="cons_Lit">" * "</span>}*] <span class="cons_String">-&gt;</span> [<a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3#NaBL2-Sort_150_160" id="NaBL2-Sort_449_459" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3 line 13">NaBL2-Sort</a>]]
+  <a href="#NaBL2-OpDecl_331_343" id="NaBL2-OpDecl_464_476" title="Referenced at line 21">NaBL2-OpDecl</a>.<span class="cons_Constructor"><span id="NullaryOpDecl_477_490" title="Not referenced locally, nor via imports">NullaryOpDecl</span></span> = [[<a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3#NaBL2-OpId_534_544" id="NaBL2-OpId_495_505" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3 line 22, 23">NaBL2-OpId</a>] <span class="cons_String">:</span> [<a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3#NaBL2-Sort_150_160" id="NaBL2-Sort_510_520" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3 line 13">NaBL2-Sort</a>]]
+
+</code></pre></td></tr></tbody></table></div>
