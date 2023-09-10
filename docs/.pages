@@ -1,0 +1,5 @@
+arrange:
+    - index.md
+    - statix.lang
+    - org.metaborg.nabl2.lang
+    - org.metaborg.lang.nabl
