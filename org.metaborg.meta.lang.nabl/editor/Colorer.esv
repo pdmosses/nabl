@@ -3,6 +3,26 @@ module Colorer
 imports 
 
   libspoofax/color/default
+  
+//module libspoofax/color/default
+//
+imports
+
+  libspoofax/color/colors
+
+colorer // Default, token-based highlighting
+
+  keyword    : 127 0 85 bold
+// Disable color references for ESV baseline support, re-enable after bootstrapping.
+//  identifier : default
+//  string     : blue
+//  number     : darkgreen
+  identifier : _
+  string     : 0 0 255
+  number     : 0 128 0
+  var        : 139 69 19 italic
+  operator   : 0 0 128
+  layout     : 63 127 95 italic
 
 colorer
   
@@ -10,3 +30,12 @@ colorer
   
   PropertyID._        : 0 64 128 italic //bold
   PropertyRef.TypeProp: 0 64 128 italic bold
+
+// Added for CSS generation:
+
+    _.NamespaceDef    : 0 64 128 italic //bold
+    _.NamespaceRef    : 0 64 128 italic //bold
+    _.PropertyRef     : 0 64 128 italic //bold
+    _.QualityRef      : 0 64 128 italic //bold
+    _.TypeProp        : 0 64 128 italic bold
+  
