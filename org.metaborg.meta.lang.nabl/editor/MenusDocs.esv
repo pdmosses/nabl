@@ -1,0 +1,14 @@
+module MenusDocs
+
+menus
+
+  menu: "Docs"
+    
+    action: "Generate website" = generate-docs-website
+    action: "Generate pages"   = generate-docs-pages
+    action: "Generate CSS"     = generate-docs-css
+   
+    submenu: "Debug"
+      action: "Test generate page" = test-generate-docs-page
+    end
+    
