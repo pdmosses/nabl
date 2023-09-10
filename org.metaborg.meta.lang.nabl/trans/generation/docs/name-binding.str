@@ -1,0 +1,119 @@
+module generation/docs/name-binding
+
+imports
+
+  libstratego-lib
+  
+  libspoofax/analysis/-
+  libspoofax/core/-
+  libspoofax/resource/-
+  libspoofax/term/origin
+    
+  runtime/analysis/-
+  runtime/nabl/-
+  runtime/task/-
+  runtime/index/-
+  runtime/properties/-
+  runtime/types/-
+  analysis/-
+  
+  generation/signatures/-
+
+rules // Name binding
+
+  // analyzed-ast: file:File -> ast':AST
+  // - for use with languages where name binding is specified in NaBL
+  
+  // TODO: simplify the definition
+  
+  analyzed-ast: file -> ast'
+    with
+      ast := <parse-file-with-current-lang> file
+    ; Result([FileResult(_, _, ast', _, _, _)], _, _, _, _) := <editor-analyze> [File(file, ast, 0)]
+
+  use-to-defs:
+    node -> defs
+    where
+      result := <has-annos; get-annos; fetch-elem(?Use(<id>))> node
+    with
+      defs := <task-get-results> result
+
+  get-use:
+    node -> reference
+    where
+      reference := <has-annos; get-annos; fetch-elem(?Use(_))> node
+
+  get-def:
+    node -> definition
+    where
+      definition := <has-annos; get-annos; fetch-elem(?Def(_))> node
+
+  def-to-uses(|ast-list):
+    node -> <filter(where(is-ref-to(|d)))> ref-list
+    where
+      d := <is-string; get-def> node
+    ; s := <strip-annos> node
+    ; ref-list := <collect(where(is-string; where(get-use); strip-annos; equal(|s)))> ast-list
+
+  is-ref-to(|d): ref -> ref
+    where
+      <elem> (d, <use-to-defs> ref)
+ 
+//  is-ref-to(|d): ref -> ref
+//    where
+//      defs := <use-to-defs> ref
+//    ; strings := <map(write-to-string)> defs
+//    ; <elem> (<write-to-string> d, strings)
+  
+rules // Multi-file order of definitions of the same name
+
+  sort-by-origin = qsort(origin-lt)
+  
+  origin-lt: (s1, s2) -> ()
+    where
+      (f1, f2) := (<origin-file> s1, <origin-file> s2)
+    ; if <eq> (f1, f2)
+      then 
+        if <eq> (<origin-line> s1, <origin-line> s2)
+        then <lt> (<origin-column> s1, <origin-column> s2)
+        else <lt> (<origin-line> s1, <origin-line> s2)
+        end
+      else <string-lt> (f1, f2)
+      end
+    ; !()
+
+rules // A line for each origin file of the nodes, listing the line numbers of the origins
+
+  gen-origin-info: (path, nodes) -> <string-replace(|"  ", " ")> string
+    where 
+      files := <map(origin-file); make-set> nodes
+    ; string := <map(gen-file-info(|path, nodes)); separate-by(|"; "); concat-strings> files
+  
+  gen-file-info(|path, nodes): file -> 
+    <concat-strings>
+      [ <direct-path> (path, file)
+      , " line "
+      | < filter(where(origin-file; equal(|file)))
+        ; map(origin-line; inc; int-to-string)
+        ; separate-by(|", ")
+        > nodes
+      ]
+  
+rules // Direct path
+
+  // direct-path: (s:string, t:string) -> s:string
+  // - eliminates any common prefix of s and t
+  // - for each dir in the rest of s, prefixes "../" to the rest of t
+  
+  direct-path: (source-path, target-path) -> string
+    where
+      string := 
+        <direct-path> (<string-tokenize(|['/'])> source-path, <string-tokenize(|['/'])> target-path)
+  
+  direct-path: ([], []) -> ""
+  
+  direct-path: ([x|s*], [x|t*]) -> <direct-path> (s*, t*)
+  
+  direct-path: ([_|s*], t*) -> <direct-path> (s*, [".."|t*])
+  
+  direct-path: ([], t*) -> <separate-by(|"/"); concat-strings> t*

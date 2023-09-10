@@ -1,0 +1,118 @@
+module generation/docs/gen-docs-pages
+
+imports
+
+  generation/docs/gen-node-markup
+  generation/docs/gen-tokens-markup
+  generation/docs/name-binding
+  
+  libstratego-lib
+  
+  libspoofax/analysis/-
+  libspoofax/core/-
+  libspoofax/resource/-
+  libspoofax/term/origin
+    
+  generation/signatures/-
+  EditorService
+
+rules // Actions
+
+  // generate-docs-pages: (_, _, _, _, project-path) -> None()
+  // - for use as an action in the Spoofax menu
+  // - the extension of the selected file determines the source language
+  // - generates a docs page from each source file in the enclosing project
+  
+  generate-docs-pages: (_, _, _, path, project-path) -> None()
+    with
+      meta-language := <get-extension> path
+    ; file-list := <current-language-source-files; filter(where(has-extension(|meta-language)))>
+    ; ast-list := <map(analyzed-ast)> file-list
+    ; repo-path := <local-path; dirname; dirname> project-path
+    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
+    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
+    ; <zip; map(generate-markup(|project-path, ast-list, cons))> (file-list, ast-list)
+
+  // test-generate-docs-pages: (_, _, _, path, project-path) -> None()
+  // - for use as an action in the Spoofax menu
+  // - the extension of the selected file determines the source language
+  // - generates an incomplete docs page from the selected source file
+
+  test-generate-docs-page: (_, _, _, path, project-path) -> None()
+    with
+      meta-language := <get-extension> path
+    ; file-list := [$[[project-path]/[path]]]
+    ; ast-list := <map(analyzed-ast)> file-list
+    ; repo-path := <local-path; dirname; dirname> project-path
+    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
+    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
+    ; <zip; map(generate-markup(|project-path, ast-list, cons))> (file-list, ast-list)
+
+  // meta-project-path: ext:String -> path:String
+  // - path is REPO/META-LANGUAGE for META-LANGUAGE used in files with extension ext
+
+  meta-project-path: "sdf3" -> "sdf/org.metaborg.meta.lang.template"
+  meta-project-path: "nab" -> "nabl/org.metaborg.meta.lang.nabl"
+
+  // generate-markup(|project-path, ast-list, cons): (file, ast) -> ()
+  // - assumes that the project is at the top level of repo-clone
+  // - assumes that the docs directory is a sibling of the project
+  // - reads source text from the file
+  // - generates an HTML div element with markup for the ast and any surrounding tokens
+  // - embeds the HTML in the source text for a web page
+  // - writes the web page source to the docs directory
+    
+  generate-markup(|project-path, ast-list, cons): (file, ast) -> ()
+    with
+      path := <string-replace(|$[[project-path]/], "")> file
+    ; meta-language := <get-extension> path
+    ; filename := <base-filename> path
+    ; project-name := <base-filename> project-path
+    ; project-clone := <local-path> project-path
+    ; repo-name := <dirname; base-filename> project-clone
+    ; repo-clone := <dirname> project-clone
+    ; github-repo := $[pdmosses/[repo-name]]
+    ; target := $[[repo-clone]/docs/[project-name]/[path].md]
+    ; say(!target)
+    ; ins := <fopen> (path, "r")
+    ; outs := <fopen> (target, "w")
+    ; <fputs> (
+        ${---
+          title: {filename}
+          ---
+          
+          # `{filename}`
+          
+          :simple-github: [{github-repo}/{project-name}/{path}]
+          
+          [{github-repo}/{project-name}/{path}]: https://github.com/{github-repo}/blob/master/{project-name}/{path} "The source file on GitHub"
+          
+          }, outs)
+    ; div-start := ${<div class="{meta-language}"><table class="highlighttable"><tbody><tr>}
+    ; div-end :=   ${</tr></tbody></table></div>}
+    ; td-start :=  ${<td class="linenos"><div class="linenodiv"><pre><span></span>}
+    ; td-end :=    ${</pre></div></td>}
+    ; <fputs> (<concat-strings> [div-start, td-start, <gen-linenos> path, td-end], outs)
+    ; <fputs> (
+        ${
+          <td class="code"><pre><code>}, outs)
+    ; <gen-node-markup(|ins, outs, repo-name, cons, ast-list)> (0, ast)
+    ; gen-tokens-markup(|ins, outs)
+    ; <fputs> (
+        ${
+          </code></pre></td>{div-end}}, outs)
+    ; <fclose> ins
+    ; <fclose> outs
+    ; !()
+
+rules // Line numbers
+
+  // gen-linenos: path:string -> linenos:string
+  // - linenos consists of the line numbers of all the lines in the file at path
+  // - each line number is on a separate line, with no spaces
+
+  gen-linenos: path -> <for(prefix-lineno | 1, <count-lines> path) ; reverse; lines> []
+   
+  prefix-lineno(|n): l -> [<int-to-string> n | l]
+  
+  count-lines = read-text-file ; get-lines; rtrim(?""); length

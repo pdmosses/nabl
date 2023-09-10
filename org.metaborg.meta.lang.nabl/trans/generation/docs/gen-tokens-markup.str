@@ -1,0 +1,182 @@
+module generation/docs/gen-tokens-markup
+
+imports
+
+  libstratego-lib
+  
+rules // Tokens
+
+  // gen-tokens-markup(|ins:stream, outs:stream):
+  // - reads all remaining chars from ins
+  // - forms the corresponding string for displaying those chars in HTML
+  // - inserts markup for highllghting all tokens in the string
+  // - writes the marked-up string to outs
+  
+  gen-tokens-markup(|ins, outs) = 
+    <fputs> (<gen-fgetcs; map(char-to-html-string); concat-strings; markup-tokens> ins, outs)
+
+  // gen-tokens-markup(|ins:stream, outs:stream, n:int):
+  // - reads exactly n chars from ins
+  // - otherwise as gen-tokens-markup(|ins, outs)
+
+  gen-tokens-markup(|ins, outs, n) =
+    <fputs> (<gen-fgetcs(|n); map(char-to-html-string); concat-strings; markup-tokens> ins, outs)
+  
+  gen-copy(|ins, outs, n) =
+    repeat(<fputs> (<fgetc; char-to-html-string> ins, outs) | n)
+  
+  gen-fgetcs:
+    ins -> [c | cs]
+    where
+      c := <fgetc> ins
+    ; cs :=  <gen-fgetcs> ins
+  
+  gen-fgetcs:
+    ins -> []
+  
+  gen-fgetcs(|n):
+    ins -> [c | cs]
+    where
+      <gti> (n, 0)
+    ; c := <fgetc> ins
+    ; cs :=  <gen-fgetcs(| <int-dec> n)> ins
+  
+  gen-fgetcs(|0):
+    ins -> []
+
+  char-to-html-string: '&' -> "&amp;"
+  char-to-html-string: '<' -> "&lt;"
+  char-to-html-string: '>' -> "&gt;"
+  char-to-html-string: '\t' -> "        " // 8 spaces (Python-Markdown maps tabs in HTML to 4 spaces)
+  char-to-html-string: c -> <implode-string> [c]
+
+  // markup-tokens: html:string -> html':string
+  // - adds markup for highlighting all tokens in the html string
+  
+  markup-tokens: "" -> ""
+  
+  markup-tokens:
+    html -> <conc-strings> (token, tokens)
+    where
+      (token, html') := <markup-token> html
+    ; tokens := <markup-tokens> html'
+
+  // markup-token: html:string -> (token:string, html':string)
+  // - assumes html is non-empty
+  // - token is the html markup of the first token in html
+  // - html' is the un-markedup rest of html
+  // - the order of scanning for specific kinds of token follows JSGLR:
+  //   https://github.com/metaborg/jsglr/blob/master/org.spoofax.jsglr/src/org/spoofax/jsglr/client/imploder/TokenKindManager.java
+  
+  markup-token =
+    scan-token(scan-whitespace, id) 
+    <+
+    scan-token(scan-comment,    markup-token-kind(|"layout"))
+    <+
+    scan-token(scan-keywords,   markup-token-kind(|"keyword"))
+    <+
+    scan-token(scan-string-1,   id)
+    <+
+    scan-token(scan-string-2,   id)
+//    <+
+//    scan-token(scan-number,     markup-token-kind(|"number"))
+    <+
+    scan-token(scan-escape,     markup-token-kind(|"string"))
+    <+
+    scan-token(scan-unknown,    id)
+//    <+
+//    scan-token(scan-identifier, markup-token-kind(|"identifier"))
+//    <+
+//    scan-token(scan-operator,   markup-token-kind(|"operator"))
+//    <+
+//    scan-token(scan-var,        markup-token-kind(|"var"))
+
+  // scan-token(scanner, kinder): html:string -> (token:string, html':string)
+  // - assumes scanner: (char*, char*) -> (char*, char*)
+  // - assumes kinder: html:string -> token:string
+  // - when scanner matches a prefix of html (leaving html'), kinder returns token
+  
+  scan-token(scanner, kinder):
+    html -> (token, html')
+    where (scanned-chars, unscanned-chars) := <scanner> ([], <explode-string> html)
+    ; token := <reverse; implode-string; kinder> scanned-chars
+    ; html' := <implode-string> unscanned-chars
+  
+  scan-char(p):
+    (scanned-chars, [char|unscanned-chars]) -> ([char|scanned-chars], unscanned-chars)
+    where <p> char
+  
+  markup-token-kind(|kind): token -> $[<span class="[kind]">[token]</span>]
+  
+  scan-whitespace = 
+    repeat1( scan-char(?' ' + ?'\n' + ?'\r') ) // '\t' already mapped to spaces
+
+  scan-comment =
+    ( scan-char(?'%') ; scan-char(?'%') ; repeat( scan-char(not(?'\n' + ?'\r')) ) )
+    +
+    ( scan-char(?'%') ; repeat1( scan-char(not(?'%' + ?'\n' + ?'\r'))) ; scan-char(?'%') )
+    +
+    ( scan-char(?'/') ; scan-char(?'*') ; repeat( scan-comment-char ) ; scan-char(?'*') ; scan-char(?'/') )
+    +
+    ( scan-char(?'/') ; scan-char(?'/') ; repeat( scan-char(not(?'\n' + ?'\r')) ) )
+    
+  scan-comment-char =
+    scan-char(not(?'*'))
+    +
+    ( scan-char(?'*') ; try( scan-char( not(?'/') ) ) )
+  
+  scan-keywords =
+    scan-keyword ; repeat( repeat1( scan-char(?' ') ) ; scan-keyword )
+  
+  scan-keyword =
+    scan-char(is-alpha) ; repeat( scan-char(is-alpha + ?'-') )
+    +
+    scan-char(?'-') ; scan-char(?'C') ; scan-char(?'F')
+    +
+    scan-char(?'-') ; scan-char(?'L') ; scan-char(?'E') ; scan-char(?'X')
+    +
+    scan-char(?'-') ; scan-char(?'V') ; scan-char(?'A') ; scan-char(?'R')
+
+  scan-unknown =
+    scan-char(?'&') ; repeat1( scan-char(is-lower) ) ; scan-char(?';')
+    <+
+    scan-char(id)
+
+  scan-escape =
+    scan-char(?'\') ; scan-char( not(?'&') )
+    <+
+    scan-char(?'\') ; scan-char(?'&') ; scan-char(?'a') ; scan-char(?'m') ; scan-char(?'p') ; scan-char(?';')
+    <+
+    scan-char(?'\') ; scan-char(?'&') ; scan-char(?'g') ; scan-char(?'t') ; scan-char(?';')
+    <+
+    scan-char(?'\') ; scan-char(?'&') ; scan-char(?'l') ; scan-char(?'t') ; scan-char(?';')
+
+  scan-string-1 =
+    scan-char(?'\'') ;
+    repeat( scan-string-char-1 ) ;
+    scan-char(?'\'')
+  
+  scan-string-char-1 =
+    scan-char(not(?'\'' + ?'\'))
+    +
+    ( scan-char(?'\') ; scan-char(?'\' + ?'\'' + ?'n' + ?'t') )
+    +
+    ( scan-char(?'\') ; repeat( scan-char(is-num) | 3 ) )
+  
+  scan-string-2 =
+    scan-char(?'"') ;
+    repeat( scan-string-char-2 ) ;
+    scan-char(?'"')
+  
+  scan-string-char-2 =
+    scan-char(not(?'"' + ?'\'))
+    +
+    ( scan-char(?'\') ; scan-char(?'\' + ?'"' + ?'n' + ?'t') )
+    +
+    ( scan-char(?'\') ; repeat( scan-char(is-num) | 3 ) )
+
+  scan-integer =
+    try( scan-char(?'+' + ?'-') ) ; repeat1( scan-char(?is-num) )
+   
+  scan-number =
+    scan-integer ; try( scan-char(?'.') ; repeat1( scan-char(?is-num) ) ; scan-char(?'e') ; scan-integer )

@@ -1,0 +1,123 @@
+module generation/docs/gen-node-markup
+
+imports
+
+  generation/docs/gen-tokens-markup
+  generation/docs/name-binding
+  
+  libstratego-lib
+  
+  libspoofax/analysis/-
+  libspoofax/core/-
+  libspoofax/resource/-
+  libspoofax/term/origin
+        
+  generation/signatures/-
+  EditorService
+
+rules // Nodes
+
+  // gen-node-markup(|ins:Stream, outs:Stream, repo-name:String, cons:List(Constructor(String)), ast-list:List(AST)):
+  //   (p:Int, node:AST) -> r:Int
+  // - assumes that the text before position p (>= 0) in ins has already been marked up
+  // - assumes that the source text of node starts at position q >= p
+  // - matches and marks up all tokens between p and q, writing them to outs
+  // - marks up ast, writing it to outs
+  // - inserts HTML tags for definitions, references, and highlighting nodes in ast
+  // - assumes that cons is a list of the constructors for highlighting 
+  // - the result r is the position of the end of the ast text
+
+  // gen-node-markup embeds a reference node in an <a> element with a link to the corresponding definition
+  // - assumes that the name of a reference is a string
+  // - links to the first definition of the reference
+   
+  gen-node-markup(|ins, outs, repo-name, cons, ast-list):
+    (p, node) -> r
+    where
+      defs@[def1|_] := <is-string; use-to-defs; sort-by-origin> node
+    ; (q, r) := <origin-offset> node
+    ; id-attr := $[[node]_[q]_[r]]
+    ; gen-tokens-markup(| ins, outs, <subti> (q, p))
+    ; direct-path := <direct-path> (<origin-file> node, <origin-file> def1)
+    ; (s, t) := <origin-offset> def1
+    ; href := $[[direct-path]#[node]_[s]_[t]]
+    ; origin-info := <gen-origin-info> (<origin-file> node, defs)
+    ; title := <string-replace(|"  ", " ")> $[Defined at [origin-info]]
+    ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
+    ; gen-copy(| ins, outs, <subti> (r, q))
+    ; <fputs> ($[</a>], outs)
+  
+  // gen-node-markup embeds a definition node in an <a> element with a link to the corresponding reference
+  // - links to the first reference to the definition
+  // - when there are no references, embeds it in a <span> element
+  // - assumes that the name of a definition is a string
+  // - always includes an id attribute
+  // - guarantees that the id is unique on each web page by adding the origin-offset to the name
+
+  gen-node-markup(|ins, outs, repo-name, cons, ast-list):
+    (p, node) -> r
+    where 
+      refs := <is-string; def-to-uses(|ast-list); sort-by-origin> node
+    ; (q, r) := <origin-offset> node
+    ; id-attr := $[[node]_[q]_[r]]
+    ; gen-tokens-markup(| ins, outs, <subti> (q, p))
+    ; if <eq> (refs, []) 
+      then 
+        title := "Not referenced locally, nor via imports"
+      ; <fputs> ($[<span id="[id-attr]" title="[title]">], outs)
+      ; gen-copy(| ins, outs, <subti> (r, q))
+      ; <fputs> ($[</span>], outs)
+      else
+        [ref1 | _] := refs
+      ; direct-path := <direct-path> (<origin-file> node, <origin-file> ref1)
+      ; (s, t) := <origin-offset> ref1
+      ; href := $[[direct-path]#[node]_[s]_[t]]
+      ; origin-info := <gen-origin-info> (<origin-file> node, refs)
+      ; title := <string-replace(|"  ", " ")> $[Referenced at [origin-info]]
+      ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
+      ; gen-copy(| ins, outs, <subti> (r, q))
+      ; <fputs> ($[</a>], outs)
+      end
+  
+  // gen-node-markup copies other strings without markup
+
+  gen-node-markup(|ins, outs, repo-name, cons, ast-list):
+    (p, node) -> r
+    where
+      <is-string> node
+    ; (q, r) := <origin-offset> node
+    ; gen-tokens-markup(| ins, outs, <subti> (q, p))
+    ; gen-copy(| ins, outs, <subti> (r, q))
+  
+  // gen-node-markup embeds a node to be highlighted in a <span> element with a class attribute
+  // - takes the set of constructors for highlighted nodes from editor/Colorer.esv
+  // - guarantees to mark up all branches of the node
+
+  gen-node-markup(|ins, outs, repo-name, cons, ast-list):
+    (p, node@f#(nodes)) -> r
+    where 
+      <elem> (Constructor(f), cons)
+    ; (q, r) := <origin-offset> node
+    ; gen-tokens-markup(| ins, outs, <subti> (q, p))
+    ; <fputs> ($[<span class="cons_[f]">], outs)
+    ; r' := <gen-node-markup-map(|ins, outs, repo-name, cons, ast-list)> (q, nodes)
+    ; gen-copy(| ins, outs, <subti> (r, r'))
+    ; <fputs> ($[</span>], outs)
+
+  // gen-node-markup otherwise generates markup only for the branches of the node
+  // - guarantees to mark up all branches of the node
+  
+  gen-node-markup(|ins, outs, repo-name, cons, ast-list):
+    (p, f#(nodes)) -> <gen-node-markup-map(|ins, outs, repo-name, cons, ast-list)> (p, nodes)
+  
+  // gen-node-markup-map generates markup for each node in a list of nodes
+
+  gen-node-markup-map(|ins, outs, repo-name, cons, ast-list):
+    (p, [node | nodes]) -> r
+    where 
+      q := <gen-node-markup(|ins, outs, repo-name, cons, ast-list)> (p, node)
+    ; r := <gen-node-markup-map(|ins, outs, repo-name, cons, ast-list)> (q, nodes)
+
+  gen-node-markup-map(|ins, outs, repo-name, cons, ast-list):
+    (p, []) -> p
+

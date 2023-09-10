@@ -13,7 +13,8 @@ imports
   outline
   names/analysis/names
   analysis/-
-	generation/-
+  generation/-
+  generation/docs/-
   coq-semantics/-
 
 rules // Analysis
