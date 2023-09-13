@@ -61,7 +61,7 @@ title: Properties.sdf3
   
   <a href="#SectionKeyword_222_236" id="SectionKeyword_251_265" title="Referenced at line 16">SectionKeyword</a> = <span class="cons_Lit">"properties"</span> 
   
-  <a href="../../formulas/Propositions.sdf3#Relation_641_649" id="Relation_287_295" title="Referenced at ../../formulas/Propositions.sdf3 line 24; ../../NameBindingLanguage.sdf3 line 112">Relation</a> = <span class="cons_Lit">"&lt;"</span> [<span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">a</span>-<span class="cons_Regular">z</span>\-]* <span class="cons_Lit">":"</span> 
+  <a href="../../NameBindingLanguage.sdf3#Relation_2656_2664" id="Relation_287_295" title="Referenced at ../../NameBindingLanguage.sdf3 line 112; ../../formulas/Propositions.sdf3 line 24">Relation</a> = <span class="cons_Lit">"&lt;"</span> [<span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">a</span>-<span class="cons_Regular">z</span>\-]* <span class="cons_Lit">":"</span> 
 
 <span class="keyword">context-free syntax</span>
 
@@ -73,7 +73,7 @@ title: Properties.sdf3
   <a href="#PropertyDef_393_404" id="PropertyDef_415_426" title="Referenced at line 26">PropertyDef</a>.<span class="cons_Constructor"><span id="PropertyDef_427_438" title="Not referenced locally, nor via imports">PropertyDef</span></span> = &lt;
     &lt;<a href="#PropertyID_159_169" id="PropertyID_448_458" title="Defined at line 14, 15, 16">PropertyID</a>&gt; <span class="cons_String">of</span> &lt;{<a href="../Namespaces.sdf3#NamespaceRef_340_352" id="NamespaceRef_465_477" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a> <span class="cons_Lit">", "</span>}+&gt; <span class="cons_String">:</span> &lt;<a href="../../terms/Signatures.sdf3#Sort_83_87" id="Sort_489_493" title="Defined at ../../terms/Signatures.sdf3 line 10, 14, 15, 16">Sort</a>&gt;&gt; 
 
-  <a href="../../formulas/Propositions.sdf3#PropertyRef_584_595" id="PropertyRef_500_511" title="Referenced at ../../formulas/Propositions.sdf3 line 23; ../../NameBindingLanguage.sdf3 line 153">PropertyRef</a>.<span class="cons_Constructor"><span id="TypeProp_512_520" title="Not referenced locally, nor via imports">TypeProp</span></span> = &lt;<span class="cons_String">type</span>&gt; 
-  <a href="../../formulas/Propositions.sdf3#PropertyRef_584_595" id="PropertyRef_533_544" title="Referenced at ../../formulas/Propositions.sdf3 line 23; ../../NameBindingLanguage.sdf3 line 153">PropertyRef</a>.<span class="cons_Constructor"><span id="PropertyRef_545_556" title="Not referenced locally, nor via imports">PropertyRef</span></span> = &lt;&lt;<a href="#PropertyID_159_169" id="PropertyID_561_571" title="Defined at line 14, 15, 16">PropertyID</a>&gt;&gt; 
+  <a href="../../NameBindingLanguage.sdf3#PropertyRef_3672_3683" id="PropertyRef_500_511" title="Referenced at ../../NameBindingLanguage.sdf3 line 153; ../../formulas/Propositions.sdf3 line 23">PropertyRef</a>.<span class="cons_Constructor"><span id="TypeProp_512_520" title="Not referenced locally, nor via imports">TypeProp</span></span> = &lt;<span class="cons_String">type</span>&gt; 
+  <a href="../../NameBindingLanguage.sdf3#PropertyRef_3672_3683" id="PropertyRef_533_544" title="Referenced at ../../NameBindingLanguage.sdf3 line 153; ../../formulas/Propositions.sdf3 line 23">PropertyRef</a>.<span class="cons_Constructor"><span id="PropertyRef_545_556" title="Not referenced locally, nor via imports">PropertyRef</span></span> = &lt;&lt;<a href="#PropertyID_159_169" id="PropertyID_561_571" title="Defined at line 14, 15, 16">PropertyID</a>&gt;&gt; 
 
 </code></pre></td></tr></tbody></table></div>

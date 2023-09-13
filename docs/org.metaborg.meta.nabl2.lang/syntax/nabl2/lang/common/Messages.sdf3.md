@@ -61,17 +61,17 @@ title: Messages.sdf3
   <span id="NaBL2-MessageContent_257_277" title="Not referenced locally, nor via imports">NaBL2-MessageContent</span>.<span class="cons_Constructor"><span id="Default_278_285" title="Not referenced locally, nor via imports">Default</span></span>  =
   <span id="NaBL2-MessageContent_291_311" title="Not referenced locally, nor via imports">NaBL2-MessageContent</span>          = <a href="../Terms.sdf3#NaBL2-StringTerm_880_896" id="NaBL2-StringTerm_323_339" title="Defined at ../Terms.sdf3 line 38">NaBL2-StringTerm</a>
 
-  <a href="#NaBL2-MessageContentPart_200_224" id="NaBL2-MessageContentPart_343_367" title="Referenced at line 14">NaBL2-MessageContentPart</a>.<span class="cons_Constructor"><span id="Term_368_372" title="Not referenced locally, nor via imports">Term</span></span> = &lt;<span class="cons_String">[</span>&lt;<a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/CTerms.sdf3#NaBL2-CTerm_128_139" id="NaBL2-CTerm_378_389" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/CTerms.sdf3 line 13, 14">NaBL2-CTerm</a>&gt;<span class="cons_String">]</span>&gt;
-  <a href="#NaBL2-MessageContentPart_200_224" id="NaBL2-MessageContentPart_395_419" title="Referenced at line 14">NaBL2-MessageContentPart</a>.<span class="cons_Constructor"><span id="Text_420_424" title="Not referenced locally, nor via imports">Text</span></span> = <a href="#NaBL2-MessageChars_465_483" id="NaBL2-MessageChars_427_445" title="Defined at line 26">NaBL2-MessageChars</a>
-
+  <a href="#NaBL2-MessageContentPart_200_224" id="NaBL2-MessageContentPart_343_367" title="Referenced at line 14">NaBL2-MessageContentPart</a>.<span class="cons_Constructor"><span id="Term_368_372" title="Not referenced locally, nor via imports">Term</span></span> = &lt;<span class="cons_String">[</span>&lt;<span class="keyword">N</span>aBL2-CTerm&gt;]<span class="cons_String">&gt;</span>
+  <span class="keyword">N</span><a href="#NaBL2-MessageContentPart_200_224" id="NaBL2-MessageContentPart_395_419" title="Referenced at line 14">aBL2-MessageContentPart.</a><span class="keyword">T</span><span class="cons_Constructor"><span id="Text_420_424" title="Not referenced locally, nor via imports">ext </span></span>= <span class="keyword">N</span><a href="#NaBL2-MessageChars_465_483" id="NaBL2-MessageChars_427_445" title="Defined at line 26">aBL2-MessageChars
+</a>
 <span class="keyword">lexical syntax</span>
 
-  <a href="#NaBL2-MessageChars_615_633" id="NaBL2-MessageChars_465_483" title="Referenced at line 32">NaBL2-MessageChars</a> = <a href="#NaBL2-MessageChar_507_524" id="NaBL2-MessageChar_486_503" title="Defined at line 27, 28">NaBL2-MessageChar</a>+
-  <a href="#NaBL2-MessageChar_486_503" id="NaBL2-MessageChar_507_524" title="Referenced at line 26">NaBL2-MessageChar</a>  = ~[\[\]\\\t\r\n]
-  <a href="#NaBL2-MessageChar_486_503" id="NaBL2-MessageChar_546_563" title="Referenced at line 26">NaBL2-MessageChar</a>  = <span class="cons_Lit">"\\["</span> | <span class="cons_Lit">"\\]"</span> | <span class="cons_Lit">"\\\\"</span>
-
+  <span class="keyword">N</span><a href="#NaBL2-MessageChars_615_633" id="NaBL2-MessageChars_465_483" title="Referenced at line 32">aBL2-MessageChars </a>= <span class="keyword">N</span><a href="#NaBL2-MessageChar_507_524" id="NaBL2-MessageChar_486_503" title="Defined at line 27, 28">aBL2-MessageChar+</a>
+  <span class="keyword">N</span><a href="#NaBL2-MessageChar_486_503" id="NaBL2-MessageChar_507_524" title="Referenced at line 26">aBL2-MessageChar </a> = ~[<span class="string">\[</span>\]\\\<span class="keyword">t</span>\<span class="keyword">r</span>\<span class="keyword">n</span>]
+  <span class="keyword">N</span><a href="#NaBL2-MessageChar_486_503" id="NaBL2-MessageChar_546_563" title="Referenced at line 26">aBL2-MessageChar </a> = "<span class="cons_Lit">\\[" </span>| "<span class="cons_Lit">\\]" </span>| "<span class="cons_Lit">\\\\"
+</span>
 <span class="keyword">lexical restrictions</span>
 
-  <a href="#NaBL2-MessageChars_465_483" id="NaBL2-MessageChars_615_633" title="Defined at line 26">NaBL2-MessageChars</a> -/- ~[\[\]]
+  <span class="keyword">N</span><a href="#NaBL2-MessageChars_465_483" id="NaBL2-MessageChars_615_633" title="Defined at line 26">aBL2-MessageChars </a>-/- ~[<span class="string">\[</span>\]]
 
 </code></pre></td></tr></tbody></table></div>
