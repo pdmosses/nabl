@@ -66,9 +66,9 @@ title: CGen.sdf3
 
 <span class="keyword">imports</span>
  
-  <a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/CTerms.sdf3#nabl2/shared/common/CTerms_7_33" id="nabl2/shared/common/CTerms_42_68" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/CTerms.sdf3 line 1">nabl2/shared/common/CTerms</a>
-  <a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3#nabl2/shared/common/Identifiers_7_38" id="nabl2/shared/common/Identifiers_71_102" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3 line 1">nabl2/shared/common/Identifiers</a>
-  <a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/constraints/Base.sdf3#nabl2/shared/constraints/Base_7_36" id="nabl2/shared/constraints/Base_105_134" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/constraints/Base.sdf3 line 1">nabl2/shared/constraints/Base</a>
+  <span title="External reference">nabl2/shared/common/CTerms</span>
+  <span title="External reference">nabl2/shared/common/Identifiers</span>
+  <span title="External reference">nabl2/shared/constraints/Base</span>
 
   <a href="../../common/Identifiers.sdf3#nabl2/lang/common/Identifiers_7_36" id="nabl2/lang/common/Identifiers_138_167" title="Defined at ../../common/Identifiers.sdf3 line 1">nabl2/lang/common/Identifiers</a>
   <a href="../../common/Injections.sdf3#nabl2/lang/common/Injections_7_35" id="nabl2/lang/common/Injections_170_198" title="Defined at ../../common/Injections.sdf3 line 1">nabl2/lang/common/Injections</a>
@@ -104,10 +104,10 @@ title: CGen.sdf3
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#NaBL2-CGenParamsTerm_928_948" id="NaBL2-CGenParamsTerm_1000_1020" title="Referenced at line 38">NaBL2-CGenParamsTerm</a>          =                             {ast("Tuple([])")}
+  <a href="#NaBL2-CGenParamsTerm_928_948" id="NaBL2-CGenParamsTerm_1000_1020" title="Referenced at line 38">NaBL2-CGenParamsTerm</a>          =                             {<span class="cons_Unquoted">ast</span>(<span class="cons_Quoted">"Tuple([])"</span>)}
   <a href="#NaBL2-CGenParamsTerm_928_948" id="NaBL2-CGenParamsTerm_1081_1101" title="Referenced at line 38">NaBL2-CGenParamsTerm</a>.<span class="cons_Constructor"><span id="Tuple_1102_1107" title="Not referenced locally, nor via imports">Tuple</span></span>    = &lt;<span class="cons_String">^</span> <span class="cons_String">(</span>&lt;{<span class="keyword">Na</span>BL2-CTerm ",<span class="cons_Lit"> "}*</span>&gt;)&gt;<span class="cons_String">
 </span>
-  <span class="keyword">Na</span><a href="#NaBL2-CGenParamsPattern_727_750" id="NaBL2-CGenParamsPattern_1144_1167" title="Referenced at line 32">BL2-CGenParamsPattern  </a>     =                                {<span class="keyword">as</span>t("<span class="keyword">T</span>uple([])")}
+  <span class="keyword">Na</span><a href="#NaBL2-CGenParamsPattern_727_750" id="NaBL2-CGenParamsPattern_1144_1167" title="Referenced at line 32">BL2-CGenParamsPattern  </a>     =                                {<span class="keyword">as</span><span class="cons_Unquoted">t("</span><span class="keyword">T</span><span class="cons_Quoted">uple([])")}</span>
   <span class="keyword">Na</span><a href="#NaBL2-CGenParamsPattern_727_750" id="NaBL2-CGenParamsPattern_1228_1251" title="Referenced at line 32">BL2-CGenParamsPattern.T</a><span class="keyword">u</span><span class="cons_Constructor"><span id="Tuple_1252_1257" title="Not referenced locally, nor via imports">ple =</span></span> &lt;^ <span class="cons_String">(</span>&lt;<span class="cons_String">{</span><span class="keyword">Na</span><a href="../../common/Terms.sdf3#NaBL2-VarOrWld_203_217" id="NaBL2-VarOrWld_1266_1280" title="Defined at ../../common/Terms.sdf3 line 16, 17">BL2-VarOrWld "</a>,<span class="cons_Lit"> "}*</span>&gt;)&gt;<span class="cons_String">
 </span>
   <span class="keyword">Na</span><a href="#NaBL2-CGenTypeTerm_951_969" id="NaBL2-CGenTypeTerm_1294_1312" title="Referenced at line 38">BL2-CGenTypeTerm.N</a><span class="keyword">o</span><span class="cons_Constructor"><span id="NoType_1313_1319" title="Not referenced locally, nor via imports">Type  </span></span>   =

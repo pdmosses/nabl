@@ -45,7 +45,7 @@ title: Messages.sdf3
 
 <span class="keyword">imports</span>
 
-  <a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/CTerms.sdf3#nabl2/shared/common/CTerms_7_33" id="nabl2/shared/common/CTerms_46_72" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/CTerms.sdf3 line 1">nabl2/shared/common/CTerms</a>
+  <span title="External reference">nabl2/shared/common/CTerms</span>
   <a href="../Terms.sdf3#nabl2/lang/common/Terms_7_30" id="nabl2/lang/common/Terms_75_98" title="Defined at ../Terms.sdf3 line 1">nabl2/lang/common/Terms</a>
 
 <span class="keyword">template options</span>

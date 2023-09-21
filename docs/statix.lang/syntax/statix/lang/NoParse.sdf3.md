@@ -46,7 +46,7 @@ title: NoParse.sdf3
   <a href="../Core.sdf3#statix/lang/Core_7_23" id="statix/lang/Core_100_116" title="Defined at ../Core.sdf3 line 1">statix/lang/Core</a>
   <a href="../Sugar.sdf3#statix/lang/Sugar_7_24" id="statix/lang/Sugar_119_136" title="Defined at ../Sugar.sdf3 line 1">statix/lang/Sugar</a>
 
-  <a href="../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/API.sdf3#statix/API_7_17" id="statix/API_140_150" title="Defined at ../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/API.sdf3 line 1">statix/API</a>
+  <span title="External reference">statix/API</span>
 
 <span class="keyword">template options</span>
 
@@ -63,9 +63,9 @@ title: NoParse.sdf3
 <span class="keyword">context-free syntax</span> <span class="layout">// runtime terms</span>
 
   <a href="#Term_262_266" id="Term_403_407" title="Referenced at line 17">Term</a> = <a href="../Core.sdf3#Label_4187_4192" id="Label_410_415" title="Defined at ../Core.sdf3 line 196">Label</a>
-  <a href="#Term_262_266" id="Term_418_422" title="Referenced at line 17">Term</a> = <a href="../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/API.sdf3#Stx-Scope_109_118" id="Stx-Scope_425_434" title="Defined at ../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/API.sdf3 line 11">Stx-Scope</a>
-  <a href="#Term_262_266" id="Term_437_441" title="Referenced at line 17">Term</a> = <a href="../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/API.sdf3#Stx-TermIndex_121_134" id="Stx-TermIndex_444_457" title="Defined at ../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/API.sdf3 line 12">Stx-TermIndex</a>
+  <a href="#Term_262_266" id="Term_418_422" title="Referenced at line 17">Term</a> = <span title="External reference">Stx-Scope</span>
+  <a href="#Term_262_266" id="Term_437_441" title="Referenced at line 17">Term</a> = <span title="External reference">Stx-TermIndex</span>
 
-  <span id="TermOrTermIndex_461_476" title="Not referenced locally, nor via imports">TermOrTermIndex</span> = <a href="../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/API.sdf3#Stx-TermIndex_121_134" id="Stx-TermIndex_479_492" title="Defined at ../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/API.sdf3 line 12">Stx-TermIndex</a>
+  <span id="TermOrTermIndex_461_476" title="Not referenced locally, nor via imports">TermOrTermIndex</span> = <span title="External reference">Stx-TermIndex</span>
 
 </code></pre></td></tr></tbody></table></div>

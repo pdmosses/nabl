@@ -48,9 +48,9 @@ title: Relations.sdf3
 
 <span class="keyword">imports</span>
 
-  <a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3#nabl2/shared/common/Identifiers_7_38" id="nabl2/shared/common/Identifiers_51_82" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3 line 1">nabl2/shared/common/Identifiers</a>
-  <a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Relations.sdf3#nabl2/shared/common/Relations_7_36" id="nabl2/shared/common/Relations_85_114" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Relations.sdf3 line 1">nabl2/shared/common/Relations</a>
-  <a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3#nabl2/shared/common/Sorts_7_32" id="nabl2/shared/common/Sorts_117_142" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3 line 1">nabl2/shared/common/Sorts</a>
+  <span title="External reference">nabl2/shared/common/Identifiers</span>
+  <span title="External reference">nabl2/shared/common/Relations</span>
+  <span title="External reference">nabl2/shared/common/Sorts</span>
 
 <span class="keyword">template options</span>
 
@@ -76,7 +76,7 @@ title: Relations.sdf3
   NaBL2-<span class="keyword">Varian</span><a href="#NaBL2-VariancePatterns_443_465" id="NaBL2-VariancePatterns_661_683" title="Referenced at line 22">cePatterns      = &lt;{ &lt;</a>{<span class="keyword">NaBL</span>2-<span class="keyword">Va</span><span class="cons_String">r</span>i<span class="keyword">an</span><span class="keyword">ce</span>Pattern ",\n"}*&gt; }&gt;
   <span class="cons_Lit">NaBL2</span>-<span class="keyword">Va</span>r<span class="cons_String">i</span><span class="keyword">ance</span><a href="#NaBL2-VariancePatterns_443_465" id="NaBL2-VariancePatterns_732_754" title="Referenced at line 22">Patterns      = {ast("</a>[]")}
  
- lex<span class="keyword">i</span>cal <span class="keyword">syntax</span>
+ <span class="cons_Unquoted">lex</span><span class="keyword">i</span><span class="cons_Quoted">cal </span><span class="keyword">syntax</span>
  
   <span class="keyword">NaBL</span>2-<span class="keyword">Keyword</span> <span id="NaBL2-Keyword_796_809" title="Not referenced locally, nor via imports">= "relations"</span>
 </code></pre></td></tr></tbody></table></div>

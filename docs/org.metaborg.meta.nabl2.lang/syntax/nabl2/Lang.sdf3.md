@@ -19,7 +19,7 @@ title: Lang.sdf3
 
 <span class="keyword">imports</span>
 
-  <a href="../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/Shared.sdf3#nabl2/Shared_7_19" id="nabl2/Shared_30_42" title="Defined at ../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/Shared.sdf3 line 1">nabl2/Shared</a>
+  <span title="External reference">nabl2/Shared</span>
   <a href="../lang/Main.sdf3#nabl2/lang/Main_7_22" id="nabl2/lang/Main_45_60" title="Defined at ../lang/Main.sdf3 line 1">nabl2/lang/Main</a>
 
 </code></pre></td></tr></tbody></table></div>

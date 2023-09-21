@@ -50,9 +50,9 @@ title: Functions.sdf3
 
 <span class="keyword">imports</span>
 
-  <a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3#nabl2/shared/common/Identifiers_7_38" id="nabl2/shared/common/Identifiers_51_82" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3 line 1">nabl2/shared/common/Identifiers</a>
-  <a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Functions.sdf3#nabl2/shared/common/Functions_7_36" id="nabl2/shared/common/Functions_85_114" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Functions.sdf3 line 1">nabl2/shared/common/Functions</a>
-  <a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3#nabl2/shared/common/Sorts_7_32" id="nabl2/shared/common/Sorts_117_142" title="Defined at ../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3 line 1">nabl2/shared/common/Sorts</a>
+  <span title="External reference">nabl2/shared/common/Identifiers</span>
+  <span title="External reference">nabl2/shared/common/Functions</span>
+  <span title="External reference">nabl2/shared/common/Sorts</span>
   <a href="../../common/CTerms.sdf3#nabl2/lang/common/CTerms_7_31" id="nabl2/lang/common/CTerms_145_169" title="Defined at ../../common/CTerms.sdf3 line 1">nabl2/lang/common/CTerms</a>
 
 <span class="keyword">template options</span>
@@ -76,9 +76,9 @@ title: Functions.sdf3
   </a>  { &lt;{NaB<span class="cons_String">L</span>2-<span class="keyword">F</span><a href="#NaBL2-FunctionCase_638_656" id="NaBL2-FunctionCase_560_578" title="Defined at line 33">unctionCase ",\n"}</a>*<span class="cons_Lit">&gt;
    </span> }
   &gt;
- <span class="cons_String"> </span><span class="keyword">N</span>aB<span class="keyword">L</span>2-<span class="keyword">F</span><a href="#NaBL2-FunctionCases_439_458" id="NaBL2-FunctionCases_600_619" title="Referenced at line 23">unctionCases = {ast</a>("[]")}
- 
-  <span class="keyword">NaBL</span>2-<span class="keyword">F</span><a href="#NaBL2-FunctionCase_560_578" id="NaBL2-FunctionCase_638_656" title="Referenced at line 28">unctionCase  = [[N</a><span class="keyword">aBL</span>2-<span class="keyword">C</span><a href="../../common/CTerms.sdf3#NaBL2-CTerm_359_370" id="NaBL2-CTerm_662_673" title="Defined at ../../common/CTerms.sdf3 line 23, 27, 29, 30">Term] -&gt; [N</a><span class="keyword">a</span>B<span class="cons_String">L2</span>-<span class="keyword">C</span><a href="../../common/CTerms.sdf3#NaBL2-CTerm_359_370" id="NaBL2-CTerm_679_690" title="Defined at ../../common/CTerms.sdf3 line 23, 27, 29, 30">Term]]
+ <span class="cons_String"> </span><span class="keyword">N</span>aB<span class="keyword">L</span>2-<span class="keyword">F</span><a href="#NaBL2-FunctionCases_439_458" id="NaBL2-FunctionCases_600_619" title="Referenced at line 23">unctionCases = {ast</a>("[]<span class="cons_Unquoted">")}</span>
+<span class="cons_Quoted"> 
+  </span><span class="keyword">NaBL</span>2-<span class="keyword">F</span><a href="#NaBL2-FunctionCase_560_578" id="NaBL2-FunctionCase_638_656" title="Referenced at line 28">unctionCase  = [[N</a><span class="keyword">aBL</span>2-<span class="keyword">C</span><a href="../../common/CTerms.sdf3#NaBL2-CTerm_359_370" id="NaBL2-CTerm_662_673" title="Defined at ../../common/CTerms.sdf3 line 23, 27, 29, 30">Term] -&gt; [N</a><span class="keyword">a</span>B<span class="cons_String">L2</span>-<span class="keyword">C</span><a href="../../common/CTerms.sdf3#NaBL2-CTerm_359_370" id="NaBL2-CTerm_679_690" title="Defined at ../../common/CTerms.sdf3 line 23, 27, 29, 30">Term]]
 
 lex</a><span class="keyword">ical syntax</span>
 

@@ -58,6 +58,6 @@ title: Constants.sdf3
   
 <span class="keyword">lexical syntax</span>
 
-  <a href="../Signatures.sdf3#Id_535_537" id="Id_353_355" title="Referenced at ../Signatures.sdf3 line 32; ../Terms.sdf3 line 37">Id</a> = <a href="#Char_222_226" id="Char_358_362" title="Defined at line 15, 19">Char</a> {<span class="keyword">reject</span>}
+  <span id="Id_353_355" title="Not referenced locally, nor via imports">Id</span> = <a href="#Char_222_226" id="Char_358_362" title="Defined at line 15, 19">Char</a> {<span class="keyword">reject</span>}
 
 </code></pre></td></tr></tbody></table></div>

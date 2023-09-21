@@ -137,7 +137,7 @@ title: StringQuotations.sdf3
       
   <span class="layout">// Padding is a dummy lexical that will contain the indentation prefix of every quotation</span>
   <a href="#Padding_2370_2377" id="Padding_2360_2367" title="Referenced at line 58">Padding</a> = <a href="#Padding_340_347" id="Padding_2370_2377" title="Defined at line 15, 58, 59">Padding</a><span class="keyword">-LEX</span> 
-  <a href="#Padding_2370_2377" id="Padding_2385_2392" title="Referenced at line 58">Padding</a><span class="keyword">-LEX</span> = {indentpadding}
+  <a href="#Padding_2370_2377" id="Padding_2385_2392" title="Referenced at line 58">Padding</a><span class="keyword">-LEX</span> = {<span class="cons_Unquoted">indentpadding</span>}
   
 <span class="keyword">lexical restrictions</span>
 

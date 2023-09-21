@@ -69,7 +69,7 @@ title: Result.sdf3
 
 <span class="keyword">imports</span>
 
-  <a href="../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/API.sdf3#statix/API_7_17" id="statix/API_38_48" title="Defined at ../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/API.sdf3 line 1">statix/API</a>
+  <span title="External reference">statix/API</span>
 
   <a href="../../lang/Layout.sdf3#statix/lang/Layout_7_25" id="statix/lang/Layout_52_70" title="Defined at ../../lang/Layout.sdf3 line 1">statix/lang/Layout</a>
   <a href="../../lang/Common.sdf3#statix/lang/Common_7_25" id="statix/lang/Common_73_91" title="Defined at ../../lang/Common.sdf3 line 1">statix/lang/Common</a>
@@ -77,8 +77,8 @@ title: Result.sdf3
   <a href="../../lang/Sugar.sdf3#statix/lang/Sugar_7_24" id="statix/lang/Sugar_113_130" title="Defined at ../../lang/Sugar.sdf3 line 1">statix/lang/Sugar</a>
   <a href="../../lang/Deprecated.sdf3#statix/lang/Deprecated_7_29" id="statix/lang/Deprecated_133_155" title="Defined at ../../lang/Deprecated.sdf3 line 1">statix/lang/Deprecated</a>
 
-  <a href="../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/runtime/ATerm.sdf3#statix/runtime/ATerm_7_27" id="statix/runtime/ATerm_159_179" title="Defined at ../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/runtime/ATerm.sdf3 line 1">statix/runtime/ATerm</a>
-  <a href="../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/runtime/ScopeGraph.sdf3#statix/runtime/ScopeGraph_7_32" id="statix/runtime/ScopeGraph_182_207" title="Defined at ../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/runtime/ScopeGraph.sdf3 line 1">statix/runtime/ScopeGraph</a>
+  <span title="External reference">statix/runtime/ATerm</span>
+  <span title="External reference">statix/runtime/ScopeGraph</span>
 
 
 <span class="keyword">context-free syntax</span>
@@ -109,16 +109,16 @@ title: Result.sdf3
 
   <a href="#Analysis_480_488" id="Analysis_609_617" title="Referenced at line 36">Analysis</a>.<span class="cons_Constructor"><span id="Analysis_618_626" title="Not referenced locally, nor via imports">Analysis</span></span> = &lt;
     <span class="cons_String">analysis</span>
-      &lt;<a href="../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/runtime/ScopeGraph.sdf3#Stx-ScopeGraph_105_119" id="Stx-ScopeGraph_651_665" title="Defined at ../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/runtime/ScopeGraph.sdf3 line 12">Stx-ScopeGraph</a>&gt;
+      &lt;<span title="External reference">Stx-ScopeGraph</span>&gt;
   &gt;
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#SubstEntry_455_465" id="SubstEntry_695_705" title="Referenced at line 34">SubstEntry</a> = [[<a href="../../lang/Core.sdf3#Var_7912_7915" id="Var_710_713" title="Defined at ../../lang/Core.sdf3 line 337, 338">Var</a>] <span class="cons_String">|-&gt;</span> [<a href="../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/runtime/ATerm.sdf3#Stx-ATerm_438_447" id="Stx-ATerm_720_729" title="Defined at ../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/runtime/ATerm.sdf3 line 18, 39, 40, 41, 42">Stx-ATerm</a>]]
+  <a href="#SubstEntry_455_465" id="SubstEntry_695_705" title="Referenced at line 34">SubstEntry</a> = [[<a href="../../lang/Core.sdf3#Var_7912_7915" id="Var_710_713" title="Defined at ../../lang/Core.sdf3 line 337, 338">Var</a>] <span class="cons_String">|-&gt;</span> [<span title="External reference">Stx-ATerm</span>]]
   
 <span class="keyword">context-free syntax</span>
 
-  <a href="#EditorMessage_379_392" id="EditorMessage_758_771" title="Referenced at line 29">EditorMessage</a> = [[<a href="#MessagePos_807_817" id="MessagePos_776_786" title="Defined at line 56">MessagePos</a>] <span class="cons_String">:</span> [<a href="../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/API.sdf3#Stx-STRING_52_62" id="Stx-STRING_791_801" title="Defined at ../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20230609-133100-master/target/unpacked/latest/syntax/statix/API.sdf3 line 6">Stx-STRING</a>]]
+  <a href="#EditorMessage_379_392" id="EditorMessage_758_771" title="Referenced at line 29">EditorMessage</a> = [[<a href="#MessagePos_807_817" id="MessagePos_776_786" title="Defined at line 56">MessagePos</a>] <span class="cons_String">:</span> [<span title="External reference">Stx-STRING</span>]]
 
   <a href="#MessagePos_776_786" id="MessagePos_807_817" title="Referenced at line 54">MessagePos</a> = <span class="cons_Lit">"*"</span>
 
