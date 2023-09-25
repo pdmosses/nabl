@@ -1,0 +1,38 @@
+module generation/docs/gen-docs-website
+
+imports
+    libspoofax/core/-
+    libspoofax/resource/-
+
+rules // initialise the repo docs directory for the current project
+
+//  For each directory DIR in PROJECT, generate the configuration file 
+//  REPO/docs/PROJECT/DIR/.pages for use by mkdocs-awesome-pages-plugin.
+//  This stops MkDocs transforming DIR names such as `aliases` to `Aliases`.
+//  (If the plugin had an option to suppress the MkDocs transformation,
+//  these files would not be needed.)
+
+//  generate-docs-website: (_, _, _, path, project-path) -> None()
+
+  generate-docs-website: (_, _, _, path, project-path) -> None()
+    with
+      meta-language := <get-extension> path
+    ; repo-clone := <project-path; local-path; dirname>
+    ; project-name := <project-path; base-filename>
+    ; file-list := <current-language-source-files; filter(where(has-extension(|meta-language)))>
+    ; dir-list := <map(dirname; string-replace(|<project-path>, $[[<project-path; base-filename>]]))> file-list
+    ; say(!$[[repo-clone]/docs/[project-name]/**])
+    ; <map(gen-docs-dir)> dir-list
+
+  gen-docs-dir: dir -> ()
+    with
+      repo-clone := <project-path; local-path; dirname>
+    ; project-name := <project-path; base-filename>
+    ; pages-file := $[[repo-clone]/docs/[dir]/.pages]
+    ; pages-contents := $[title: [<base-filename> dir]]
+    ; outs := <fopen> (pages-file, "w")
+    ; <fputs> (pages-contents, outs)
+    ; <fclose> outs
+    ; if <is-substring(!"/")> dir
+      then <dirname; gen-docs-dir> dir
+      end

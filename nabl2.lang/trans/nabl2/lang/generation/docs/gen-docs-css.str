@@ -1,0 +1,69 @@
+module generation/docs/gen-docs-css
+
+imports
+  
+  libstratego-lib
+  
+  libspoofax/core/-
+  libspoofax/resource/-
+  EditorService
+
+rules // generate docs highlighting CSS for meta-language from its editor/Colorer.esv file
+
+  generate-docs-css: (_, _, ast, path, project-path) -> ()
+    with
+      meta-language := <get-extension> path
+    ; repo-clone := <local-path; dirname> project-path
+    ; repo-path := <local-path; dirname; dirname> project-path
+    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
+    ; css-file := $[[repo-clone]/docs/stylesheets/[meta-language].css]
+    ; say(!css-file)
+    ; css := <parse-file; colorer-to-css(|meta-language)> colorer-file
+    ; outs := <fopen> (css-file, "w")
+    ; <fputs> (css, outs)
+    ; <fclose> outs
+    ; metaborg-css-dir := $[[repo-clone]/docs/stylesheets]
+    ; metaborg-css-file :=  "eclipse:///org.metaborg.meta.lang.template/trans/generation/docs/metaborg.css"
+    ; say(!$[[metaborg-css-dir]/metaborg.css])
+    ; <copy-file> (metaborg-css-file, metaborg-css-dir)
+
+  meta-project-path: "sdf3" -> "sdf/org.metaborg.meta.lang.template"
+  
+  colorer-to-css(|meta-language) =
+      collect-om(?ColorRule(_, _))
+    ; map(color-rule-to-css-rule(|meta-language))
+    ; concat-strings
+    ; repeat(string-replace(|"\n  \n", "\n") | 3)
+  
+  color-rule-to-css-rule(|meta-language):
+    ColorRule(kind, Attribute(color, bg-color, font)) ->
+    $[.[meta-language] code [<gen-class> kind] {
+        [<gen-color> color]
+        [<gen-bg-color> bg-color]
+        [<gen-font> font]
+      }
+      ]
+
+  gen-class: Token(TK_KEYWORD())    -> ".keyword"
+  gen-class: Token(TK_IDENTIFIER()) -> ".identifier"
+  gen-class: Token(TK_STRING())     -> ".string"
+  gen-class: Token(TK_NUMBER())     -> ".number"
+  gen-class: Token(TK_VAR())        -> ".var"
+  gen-class: Token(TK_OPERATOR())   -> ".operator"
+  gen-class: Token(TK_LAYOUT())     -> ".layout"
+  
+  gen-class: ConstructorOnly(Constructor(c))             -> $[.cons_[c]]
+  gen-class: Sort(s)                                     -> $[.sort_[s]]
+  gen-class: SortAndConstructor(Sort(s), Constructor(c)) -> $[.sort_[s].cons_[c]]
+  
+  gen-color: ColorRGB(r, g, b) -> $[color: rgb([r] [g] [b]);]
+  gen-color: ColorDefault()    -> ""
+  gen-color: NoColor()         -> ""
+
+  gen-bg-color: ColorRGB(r, g, b) -> $[background-color: rgb([r] [g] [b]);]
+  gen-bg-color: ColorDefault()    -> ""
+  gen-bg-color: NoColor()         -> ""
+
+  gen-font: BOLD()   -> "font-weight: bold;"
+  gen-font: ITALIC() -> "font-style: italic;"
+  gen-font: NORMAL() -> ""
