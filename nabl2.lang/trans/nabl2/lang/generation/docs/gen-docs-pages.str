@@ -1,10 +1,10 @@
-module generation/docs/gen-docs-pages
+module nabl2/lang/generation/docs/gen-docs-pages
 
 imports
 
-  generation/docs/gen-node-markup
-  generation/docs/gen-tokens-markup
-  generation/docs/name-binding
+  nabl2/lang/generation/docs/gen-node-markup
+  nabl2/lang/generation/docs/gen-tokens-markup
+  nabl2/lang/generation/docs/name-binding
   
   libstratego-lib
   
@@ -13,10 +13,6 @@ imports
   libspoofax/resource/-
   libspoofax/term/origin
     
-  
-  signatures/TemplateLang-sig
-  generation/signatures/-
-
 rules // Actions
 
   // generate-docs-pages: (_, _, _, _, project-path) -> None()
@@ -30,9 +26,9 @@ rules // Actions
     ; file-list := <current-language-source-files; filter(where(has-extension(|meta-language)))>
     ; ast-list := <map(analyzed-ast)> file-list
     ; repo-path := <local-path; dirname; dirname> project-path
-    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
-    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
-    ; <zip; map(generate-markup(|project-path, ast-list, cons))> (file-list, ast-list)
+//    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
+//    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
+    ; <zip; map(generate-markup(|project-path, ast-list, []))> (file-list, ast-list)
 
   // test-generate-docs-pages: (_, _, _, path, project-path) -> None()
   // - for use as an action in the Spoofax menu
@@ -45,14 +41,15 @@ rules // Actions
     ; file-list := [$[[project-path]/[path]]]
     ; ast-list := <map(analyzed-ast)> file-list
     ; repo-path := <local-path; dirname; dirname> project-path
-    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
-    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
-    ; <zip; map(generate-markup(|project-path, ast-list, cons))> (file-list, ast-list)
+//    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
+//    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
+    ; <zip; map(generate-markup(|project-path, ast-list, []))> (file-list, ast-list)
 
   // meta-project-path: ext:String -> path:String
   // - path is REPO/META-LANGUAGE for META-LANGUAGE used in files with extension ext
 
   meta-project-path: "sdf3" -> "sdf/org.metaborg.meta.lang.template"
+  meta-project-path: "nabl2" -> "nabl/org.metaborg.meta.nabl2.lang"
 
   // generate-markup(|project-path, ast-list, cons): (file, ast) -> ()
   // - assumes that the project is at the top level of repo-clone

@@ -1,4 +1,4 @@
-module generation/docs/name-binding
+module nabl2/lang/generation/docs/name-binding
 
 imports
 
@@ -9,16 +9,8 @@ imports
   libspoofax/resource/-
   libspoofax/term/origin
     
-  runtime/analysis/-
-  runtime/nabl/-
-  runtime/task/-
-  runtime/index/-
-  runtime/properties/-
-  runtime/types/-
-  analysis/-
-  
-  signatures/TemplateLang-sig
-  generation/signatures/-
+  nabl2/lang/analysis/-
+  nabl2/api
 
 rules // Name binding
 
@@ -30,31 +22,47 @@ rules // Name binding
   analyzed-ast: file -> ast'
     with
       ast := <parse-file-with-current-lang> file
-    ; Result([FileResult(_, _, ast', _, _, _)], _, _, _, _) := <editor-analyze> [File(file, ast, 0)]
+    ; (ast', _, _, _) := <editor-analyze> (ast, file, <project-path>)
 
+  // Occurrence: Name * Namespace * Index -> Occurrence
+  
+  // use-to-defs: ref:Occurrence -> List(decl:Occurrence)
+  
   use-to-defs:
     node -> <sort-by-origin(|node)> defs
     where
-      result := <has-annos; get-annos; fetch-elem(?Use(<id>))> node
-    with
-      defs := <task-get-results> result
+      a := <nabl2-get-ast-analysis> node
+    ; defs := <nabl2-get-resolved-names(|a); map(Fst)> node
 
   get-use:
-    node -> reference
+    node -> node
     where
-      reference := <has-annos; get-annos; fetch-elem(?Use(_))> node
+      a := <nabl2-get-ast-analysis> node
+    ; refs := <nabl2-get-all-refs(|a)>
+    ; <elem> (node, refs)
 
   get-def:
-    node -> definition
+    node -> node
     where
-      definition := <has-annos; get-annos; fetch-elem(?Def(_))> node
-
-  def-to-uses(|ast-list):
-    node -> <filter(where(is-ref-to(|d))); sort-by-origin(|node)> ref-list
+      a := <nabl2-get-ast-analysis> node
+    ; defs := <nabl2-get-all-decls(|a)>
+    ; <elem> (node, defs)
+  
+  // def-to-uses: decl:Occurrence -> List(ref:Occurrence)
+  
+  def-to-uses(|_):
+    node -> <sort-by-origin(|node)> refs
     where
-      d := <is-string; get-def> node
-    ; s := <strip-annos> node
-    ; ref-list := <collect(where(is-string; where(get-use); strip-annos; equal(|s)))> ast-list
+      a := <nabl2-get-ast-analysis> node
+    ; <elem> (node, <nabl2-get-all-decls(|a)>)
+    ; refs := <nabl2-get-all-refs(|a); filter(where(is-ref-to(|node)))>
+  
+//  def-to-uses(|ast-list):
+//    node -> <filter(where(is-ref-to(|d))); sort-by-origin(|node)> ref-list
+//    where
+//      d := <is-string; get-def> node
+//    ; s := <strip-annos> node
+//    ; ref-list := <collect(where(is-string; where(get-use); strip-annos; equal(|s)))> ast-list
 
   is-ref-to(|d): ref -> ref
     where

@@ -1,4 +1,4 @@
-module generation/docs/gen-tokens-markup
+module nabl2/lang/generation/docs/gen-tokens-markup
 
 imports
 

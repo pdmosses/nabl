@@ -1,4 +1,4 @@
-module generation/docs/gen-docs-website
+module nabl2/lang/generation/docs/gen-docs-website
 
 imports
     libspoofax/core/-
