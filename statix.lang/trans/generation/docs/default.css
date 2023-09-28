@@ -1,0 +1,23 @@
+.METALANG code .keyword {
+  color: rgb(127 0 85);
+  font-weight: bold;
+}
+.METALANG code .identifier {
+}
+.METALANG code .string {
+  color: rgb(0 0 255);
+}
+.METALANG code .number {
+  color: rgb(0 128 0);
+}
+.METALANG code .var {
+  color: rgb(139 69 19);
+  font-style: italic;
+}
+.METALANG code .operator {
+  color: rgb(0 0 128);
+}
+.METALANG code .layout {
+  color: rgb(63 127 95);
+  font-style: italic;
+}

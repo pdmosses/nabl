@@ -1,0 +1,64 @@
+module generation/docs/name-binding
+
+imports
+
+  libstratego-lib
+  
+  libspoofax/analysis/-
+  libspoofax/core/-
+  libspoofax/resource/-
+  libspoofax/term/origin
+    
+  statix/lang/analysis
+  nabl2/api
+
+rules // Name binding specified in NaBL2
+
+  // analyzed-ast: file:File -> ast':AST
+    
+  analyzed-ast: file -> ast'
+    with
+      ast := <parse-file-with-current-lang> file
+    ; (ast', _, _, _) := <editor-analyze> (ast, file, <project-path>)
+  
+  // get-use: node:Term ->? node
+  // - checks that node occurs as a reference in the scope graph
+  
+  get-use:
+    node -> ref
+    where
+      index := <nabl2-get-ast-index> node
+    ; refs := <nabl2-get-ast-refs> node
+    ; ref := <fetch-elem(?Occurrence(_,_,index))> refs
+  
+  // use-to-defs: node:Term -> defs:List(Term)
+  // - the list of all the defs to which a name use resolves
+  
+  use-to-defs:
+    node -> defs
+    where
+      ref := <get-use> node
+    ; a := <nabl2-get-ast-analysis> node
+    ; decls := <nabl2-get-resolved-names(|a); map(Fst)> ref
+    ; defs := <map(nabl2-get-occurrence-name)> decls
+
+  // get-def: node:Term ->? node
+  // - checks that node occurs as a declaration in the scope graph
+  
+  get-def:
+    node -> decl
+    where
+      index := <nabl2-get-ast-index> node
+    ; decls := <nabl2-get-ast-decls> node
+    ; decl := <fetch-elem(?Occurrence(_,_,index))> decls
+  
+  // def-to-uses: node:Term -> uses:List(Term)
+  // - the list of all the uses which resolve to a definition
+  
+  def-to-uses:
+    node -> uses
+    where
+      decl := <get-def> node
+    ; a := <nabl2-get-ast-analysis> node
+    ; refs := <nabl2-get-refs-to-decl(|a); map(Fst)> decl
+    ; uses := <map(nabl2-get-occurrence-name)> refs

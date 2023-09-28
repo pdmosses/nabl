@@ -3,6 +3,8 @@ module statixlang
 imports
   
   completion/completion
+  
+  generation/docs/-
 
   statix/cli/-
   statix/lang/-
