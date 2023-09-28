@@ -23,7 +23,6 @@ rules // Actions
   generate-docs-pages: (_, _, _, path, project-path) -> None()
     with
       meta-language := <get-extension> path
-    ; file-list := <current-language-source-files; filter(where(has-extension(|meta-language)))>
     ; file-ast-list := <get-project-analyzed-asts>
     ; repo-path := <local-path; dirname; dirname> project-path
 //    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
@@ -38,12 +37,11 @@ rules // Actions
   test-generate-docs-page: (_, _, _, path, project-path) -> None()
     with
       meta-language := <get-extension> path
-    ; file-list := [$[[project-path]/[path]]]
     ; file-ast-list := <get-project-analyzed-asts> // List(Path * AST)
     ; repo-path := <local-path; dirname; dirname> project-path
 //    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
 //    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
-    ; <map(generate-markup(|project-path, [], []))> file-ast-list
+    ; <generate-markup(|project-path, [], [])> (path, <lookup> (path, file-ast-list))
 
   // meta-project-path: ext:String -> path:String
   // - path is REPO/META-LANGUAGE for META-LANGUAGE used in files with extension ext
