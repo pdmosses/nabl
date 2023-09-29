@@ -11,6 +11,7 @@ imports
     
   statix/lang/analysis
   nabl2/api
+    
 
 rules // Name binding specified in NaBL2
 
@@ -21,10 +22,10 @@ rules // Name binding specified in NaBL2
       ast := <parse-file-with-current-lang> file
     ; (ast', _, _, _) := <editor-analyze> (ast, file, <project-path>)
   
-  // get-use: node:Term ->? node
+  // get-ref: node:Term ->? ref:Occurrence
   // - checks that node occurs as a reference in the scope graph
   
-  get-use:
+  get-ref:
     node -> ref
     where
       index := <nabl2-get-ast-index> node
@@ -37,20 +38,21 @@ rules // Name binding specified in NaBL2
   use-to-defs:
     node -> defs
     where
-      ref := <get-use> node
+      ref := <get-ref> node
     ; a := <nabl2-get-ast-analysis> node
     ; decls := <nabl2-get-resolved-names(|a); map(Fst)> ref
     ; defs := <map(nabl2-get-occurrence-name)> decls
 
-  // get-def: node:Term ->? node
+  // get-def: node:Term -> decl:Occurrence
   // - checks that node occurs as a declaration in the scope graph
   
-  get-def:
+  get-decl:
     node -> decl
     where
       index := <nabl2-get-ast-index> node
-    ; decls := <nabl2-get-ast-decls> node
-    ; decl := <fetch-elem(?Occurrence(_,_,index))> decls
+    ; a := <nabl2-get-ast-analysis> node
+    ; decls := <nabl2-get-all-decls(|a)>
+    ; decl := <fetch-elem(?Occurrence(_,node,_) <+ ?Occurrence(_,_,index))> decls
   
   // def-to-uses: node:Term -> uses:List(Term)
   // - the list of all the uses which resolve to a definition
@@ -58,7 +60,7 @@ rules // Name binding specified in NaBL2
   def-to-uses:
     node -> uses
     where
-      decl := <get-def> node
+      decl := <get-decl> node
     ; a := <nabl2-get-ast-analysis> node
     ; refs := <nabl2-get-refs-to-decl(|a); map(Fst)> decl
     ; uses := <map(nabl2-get-occurrence-name)> refs

@@ -12,7 +12,9 @@ imports
   libspoofax/core/-
   libspoofax/resource/-
   libspoofax/term/origin
-    
+  
+  nabl2/api
+
 rules // Actions
 
   // generate-docs-pages: (_, _, _, _, project-path) -> None()
@@ -27,7 +29,7 @@ rules // Actions
     ; repo-path := <local-path; dirname; dirname> project-path
 //    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
 //    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
-    ; <map(generate-markup(|project-path, [], []))> file-ast-list
+    ; <map(generate-markup(|project-path, file-ast-list, []))> file-ast-list
 
   // test-generate-docs-pages: (_, _, _, path, project-path) -> None()
   // - for use as an action in the Spoofax menu
@@ -41,7 +43,9 @@ rules // Actions
     ; repo-path := <local-path; dirname; dirname> project-path
 //    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
 //    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
-    ; <generate-markup(|project-path, [], [])> (path, <lookup> (path, file-ast-list))
+    ; <generate-markup(|project-path, file-ast-list, [])> (path, <lookup> (path, file-ast-list))
+    ; a := <lookup; nabl2-get-ast-analysis> (path, file-ast-list)
+    ; <nabl2-get-all-decls(|a); debug> ()
 
   // meta-project-path: ext:String -> path:String
   // - path is REPO/META-LANGUAGE for META-LANGUAGE used in files with extension ext
