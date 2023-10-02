@@ -1,5 +1,7 @@
 ---
 title: StringQuotations.sdf3
+hide:
+  - toc
 ---
 
 # `StringQuotations.sdf3`

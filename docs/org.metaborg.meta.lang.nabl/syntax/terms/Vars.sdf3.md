@@ -1,5 +1,7 @@
 ---
 title: Vars.sdf3
+hide:
+  - toc
 ---
 
 # `Vars.sdf3`

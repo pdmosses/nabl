@@ -1,5 +1,7 @@
 ---
 title: NoParse.sdf3
+hide:
+  - toc
 ---
 
 # `NoParse.sdf3`

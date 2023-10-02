@@ -1,5 +1,7 @@
 ---
 title: CGen.sdf3
+hide:
+  - toc
 ---
 
 # `CGen.sdf3`
@@ -105,16 +107,16 @@ title: CGen.sdf3
 <span class="keyword">context-free syntax</span>
 
   <a href="#NaBL2-CGenParamsTerm_928_948" id="NaBL2-CGenParamsTerm_1000_1020" title="Referenced at line 38">NaBL2-CGenParamsTerm</a>          =                             {<span class="cons_Unquoted">ast</span>(<span class="cons_Quoted">"Tuple([])"</span>)}
-  <a href="#NaBL2-CGenParamsTerm_928_948" id="NaBL2-CGenParamsTerm_1081_1101" title="Referenced at line 38">NaBL2-CGenParamsTerm</a>.<span class="cons_Constructor"><span id="Tuple_1102_1107" title="Not referenced locally, nor via imports">Tuple</span></span>    = &lt;<span class="cons_String">^</span> <span class="cons_String">(</span>&lt;{<span class="keyword">Na</span>BL2-CTerm ",<span class="cons_Lit"> "}*</span>&gt;)&gt;<span class="cons_String">
-</span>
-  <span class="keyword">Na</span><a href="#NaBL2-CGenParamsPattern_727_750" id="NaBL2-CGenParamsPattern_1144_1167" title="Referenced at line 32">BL2-CGenParamsPattern  </a>     =                                {<span class="keyword">as</span><span class="cons_Unquoted">t("</span><span class="keyword">T</span><span class="cons_Quoted">uple([])")}</span>
-  <span class="keyword">Na</span><a href="#NaBL2-CGenParamsPattern_727_750" id="NaBL2-CGenParamsPattern_1228_1251" title="Referenced at line 32">BL2-CGenParamsPattern.T</a><span class="keyword">u</span><span class="cons_Constructor"><span id="Tuple_1252_1257" title="Not referenced locally, nor via imports">ple =</span></span> &lt;^ <span class="cons_String">(</span>&lt;<span class="cons_String">{</span><span class="keyword">Na</span><a href="../../common/Terms.sdf3#NaBL2-VarOrWld_203_217" id="NaBL2-VarOrWld_1266_1280" title="Defined at ../../common/Terms.sdf3 line 16, 17">BL2-VarOrWld "</a>,<span class="cons_Lit"> "}*</span>&gt;)&gt;<span class="cons_String">
-</span>
-  <span class="keyword">Na</span><a href="#NaBL2-CGenTypeTerm_951_969" id="NaBL2-CGenTypeTerm_1294_1312" title="Referenced at line 38">BL2-CGenTypeTerm.N</a><span class="keyword">o</span><span class="cons_Constructor"><span id="NoType_1313_1319" title="Not referenced locally, nor via imports">Type  </span></span>   =
-  <span class="keyword">Na</span><a href="#NaBL2-CGenTypeTerm_951_969" id="NaBL2-CGenTypeTerm_1328_1346" title="Referenced at line 38">BL2-CGenTypeTerm.T</a><span class="keyword">y</span><span class="cons_Constructor"><span id="Type_1347_1351" title="Not referenced locally, nor via imports">pe  </span></span>     = &lt;: <span class="cons_String">&lt;</span>N<span class="keyword">a</span><span class="keyword">B</span>L2-CTerm&gt;&gt;
+  <a href="#NaBL2-CGenParamsTerm_928_948" id="NaBL2-CGenParamsTerm_1081_1101" title="Referenced at line 38">NaBL2-CGenParamsTerm</a>.<span class="cons_Constructor"><span id="Tuple_1102_1107" title="Not referenced locally, nor via imports">Tuple</span></span>    = &lt;<span class="cons_String">^</span> <span class="cons_String">(</span>&lt;{<span title="External reference">NaBL2-CTerm</span> <span class="cons_Lit">", "</span>}*&gt;<span class="cons_String">)</span>&gt;
 
-  <span class="keyword">NaB</span><a href="#NaBL2-CGenTypePattern_753_774" id="NaBL2-CGenTypePattern_1381_1402" title="Referenced at line 32">L2-CGenTypePattern.No</a><span class="keyword">T</span><span class="cons_Constructor"><span id="NoType_1403_1409" title="Not referenced locally, nor via imports">ype  =</span></span>
-  <span class="keyword">NaB</span><a href="#NaBL2-CGenTypePattern_753_774" id="NaBL2-CGenTypePattern_1415_1436" title="Referenced at line 32">L2-CGenTypePattern.Ty</a><span class="keyword">p</span><span class="cons_Constructor"><span id="Type_1437_1441" title="Not referenced locally, nor via imports">e   </span></span> = &lt;: &lt;<span class="cons_String">N</span>a<span class="keyword">B</span><span class="keyword">L</span>2-CTerm&gt;&gt;
+  <a href="#NaBL2-CGenParamsPattern_727_750" id="NaBL2-CGenParamsPattern_1144_1167" title="Referenced at line 32">NaBL2-CGenParamsPattern</a>       =                                {<span class="cons_Unquoted">ast</span>(<span class="cons_Quoted">"Tuple([])"</span>)}
+  <a href="#NaBL2-CGenParamsPattern_727_750" id="NaBL2-CGenParamsPattern_1228_1251" title="Referenced at line 32">NaBL2-CGenParamsPattern</a>.<span class="cons_Constructor"><span id="Tuple_1252_1257" title="Not referenced locally, nor via imports">Tuple</span></span> = &lt;<span class="cons_String">^</span> <span class="cons_String">(</span>&lt;{<a href="../../common/Terms.sdf3#NaBL2-VarOrWld_203_217" id="NaBL2-VarOrWld_1266_1280" title="Defined at ../../common/Terms.sdf3 line 16, 17">NaBL2-VarOrWld</a> <span class="cons_Lit">", "</span>}*&gt;<span class="cons_String">)</span>&gt;
+
+  <a href="#NaBL2-CGenTypeTerm_951_969" id="NaBL2-CGenTypeTerm_1294_1312" title="Referenced at line 38">NaBL2-CGenTypeTerm</a>.<span class="cons_Constructor"><span id="NoType_1313_1319" title="Not referenced locally, nor via imports">NoType</span></span>     =
+  <a href="#NaBL2-CGenTypeTerm_951_969" id="NaBL2-CGenTypeTerm_1328_1346" title="Referenced at line 38">NaBL2-CGenTypeTerm</a>.<span class="cons_Constructor"><span id="Type_1347_1351" title="Not referenced locally, nor via imports">Type</span></span>       = &lt;<span class="cons_String">:</span> &lt;<span title="External reference">NaBL2-CTerm</span>&gt;&gt;
+
+  <a href="#NaBL2-CGenTypePattern_753_774" id="NaBL2-CGenTypePattern_1381_1402" title="Referenced at line 32">NaBL2-CGenTypePattern</a>.<span class="cons_Constructor"><span id="NoType_1403_1409" title="Not referenced locally, nor via imports">NoType</span></span>  =
+  <a href="#NaBL2-CGenTypePattern_753_774" id="NaBL2-CGenTypePattern_1415_1436" title="Referenced at line 32">NaBL2-CGenTypePattern</a>.<span class="cons_Constructor"><span id="Type_1437_1441" title="Not referenced locally, nor via imports">Type</span></span>    = &lt;<span class="cons_String">:</span> &lt;<span title="External reference">NaBL2-CTerm</span>&gt;&gt;
 
 
 </code></pre></td></tr></tbody></table></div>

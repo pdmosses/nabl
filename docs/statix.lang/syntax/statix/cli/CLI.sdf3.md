@@ -1,5 +1,7 @@
 ---
 title: CLI.sdf3
+hide:
+  - toc
 ---
 
 # `CLI.sdf3`

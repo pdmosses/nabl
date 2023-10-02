@@ -1,5 +1,7 @@
 ---
 title: Properties.sdf3
+hide:
+  - toc
 ---
 
 # `Properties.sdf3`

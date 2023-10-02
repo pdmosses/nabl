@@ -1,5 +1,7 @@
 ---
 title: Common.sdf3
+hide:
+  - toc
 ---
 
 # `Common.sdf3`

@@ -1,5 +1,7 @@
 ---
 title: NameBindingLanguage.sdf3
+hide:
+  - toc
 ---
 
 # `NameBindingLanguage.sdf3`

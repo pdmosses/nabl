@@ -1,5 +1,7 @@
 ---
 title: StatixLang.sdf3
+hide:
+  - toc
 ---
 
 # `StatixLang.sdf3`
@@ -61,7 +63,7 @@ title: StatixLang.sdf3
 
   <a href="#Start_336_341" id="Start_280_285" title="Defined at line 28, 29">Start</a>
 
-  <a href="../statix/lang/Deprecated.sdf3#LabelRE_3620_3627" id="LabelRE_289_296" title="Defined at ../statix/lang/Deprecated.sdf3 line 87">LabelRE</a> <span class="layout">// for testing</span>
+  <a href="../statix/lang/Core.sdf3#LabelRE_4388_4395" id="LabelRE_289_296" title="Defined at ../statix/lang/Core.sdf3 line 205, 206, 208, 209, 210, 211, 212, 213, 214">LabelRE</a> <span class="layout">// for testing</span>
 
 <span class="keyword">context-free syntax</span>
 

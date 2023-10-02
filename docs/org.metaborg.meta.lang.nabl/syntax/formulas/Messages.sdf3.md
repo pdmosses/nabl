@@ -1,5 +1,7 @@
 ---
 title: Messages.sdf3
+hide:
+  - toc
 ---
 
 # `Messages.sdf3`

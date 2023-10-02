@@ -1,5 +1,7 @@
 ---
 title: Functions.sdf3
+hide:
+  - toc
 ---
 
 # `Functions.sdf3`
@@ -68,20 +70,20 @@ title: Functions.sdf3
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#NaBL2-FunctionDef_295_312" id="NaBL2-FunctionDef_367_384" title="Referenced at line 18">NaBL2-FunctionDef</a>.<span class="cons_Constructor"><span id="FunctionDef_385_396" title="Not referenced locally, nor via imports">FunctionDef</span></span> = &lt;&lt;<span class="keyword">NaBL</span>2-Function&gt; &lt;Na<span class="keyword">B</span>L2<a href="#NaBL2-FunctionType_464_482" id="NaBL2-FunctionType_418_436" title="Defined at line 25">-FunctionType&gt; &lt;Na</a><span class="keyword">B</span>L2<a href="#NaBL2-FunctionCases_528_547" id="NaBL2-FunctionCases_439_458" title="Defined at line 27, 31">-FunctionCases&gt;&gt;
+  <a href="#NaBL2-FunctionDef_295_312" id="NaBL2-FunctionDef_367_384" title="Referenced at line 18">NaBL2-FunctionDef</a>.<span class="cons_Constructor"><span id="FunctionDef_385_396" title="Not referenced locally, nor via imports">FunctionDef</span></span> = &lt;&lt;<span title="External reference">NaBL2-Function</span>&gt; &lt;<a href="#NaBL2-FunctionType_464_482" id="NaBL2-FunctionType_418_436" title="Defined at line 25">NaBL2-FunctionType</a>&gt; &lt;<a href="#NaBL2-FunctionCases_528_547" id="NaBL2-FunctionCases_439_458" title="Defined at line 27, 31">NaBL2-FunctionCases</a>&gt;&gt;
 
- </a> <span class="keyword">NaBL</span>2<a href="#NaBL2-FunctionType_418_436" id="NaBL2-FunctionType_464_482" title="Referenced at line 23">-FunctionType  = [</a>: [<span class="keyword">Na</span><span class="cons_String">B</span>L2-SortRef] -&gt; [<span class="keyword">N</span>a<span class="cons_String">BL</span>2-<span class="keyword">S</span>ortRef]]
+  <a href="#NaBL2-FunctionType_418_436" id="NaBL2-FunctionType_464_482" title="Referenced at line 23">NaBL2-FunctionType</a>  = [<span class="cons_String">:</span> [<span title="External reference">NaBL2-SortRef</span>] <span class="cons_String">-&gt;</span> [<span title="External reference">NaBL2-SortRef</span>]]
 
-  N<span class="keyword">aBL</span>2-<span class="keyword">F</span><a href="#NaBL2-FunctionCases_439_458" id="NaBL2-FunctionCases_528_547" title="Referenced at line 23">unctionCases = &lt;
-  </a>  { &lt;{NaB<span class="cons_String">L</span>2-<span class="keyword">F</span><a href="#NaBL2-FunctionCase_638_656" id="NaBL2-FunctionCase_560_578" title="Defined at line 33">unctionCase ",\n"}</a>*<span class="cons_Lit">&gt;
-   </span> }
+  <a href="#NaBL2-FunctionCases_439_458" id="NaBL2-FunctionCases_528_547" title="Referenced at line 23">NaBL2-FunctionCases</a> = &lt;
+    <span class="cons_String">{</span> &lt;{<a href="#NaBL2-FunctionCase_638_656" id="NaBL2-FunctionCase_560_578" title="Defined at line 33">NaBL2-FunctionCase</a> <span class="cons_Lit">",\n"</span>}*&gt;
+    <span class="cons_String">}</span>
   &gt;
- <span class="cons_String"> </span><span class="keyword">N</span>aB<span class="keyword">L</span>2-<span class="keyword">F</span><a href="#NaBL2-FunctionCases_439_458" id="NaBL2-FunctionCases_600_619" title="Referenced at line 23">unctionCases = {ast</a>("[]<span class="cons_Unquoted">")}</span>
-<span class="cons_Quoted"> 
-  </span><span class="keyword">NaBL</span>2-<span class="keyword">F</span><a href="#NaBL2-FunctionCase_560_578" id="NaBL2-FunctionCase_638_656" title="Referenced at line 28">unctionCase  = [[N</a><span class="keyword">aBL</span>2-<span class="keyword">C</span><a href="../../common/CTerms.sdf3#NaBL2-CTerm_359_370" id="NaBL2-CTerm_662_673" title="Defined at ../../common/CTerms.sdf3 line 23, 27, 29, 30">Term] -&gt; [N</a><span class="keyword">a</span>B<span class="cons_String">L2</span>-<span class="keyword">C</span><a href="../../common/CTerms.sdf3#NaBL2-CTerm_359_370" id="NaBL2-CTerm_679_690" title="Defined at ../../common/CTerms.sdf3 line 23, 27, 29, 30">Term]]
+  <a href="#NaBL2-FunctionCases_439_458" id="NaBL2-FunctionCases_600_619" title="Referenced at line 23">NaBL2-FunctionCases</a> = {<span class="cons_Unquoted">ast</span>(<span class="cons_Quoted">"[]"</span>)}
+ 
+  <a href="#NaBL2-FunctionCase_560_578" id="NaBL2-FunctionCase_638_656" title="Referenced at line 28">NaBL2-FunctionCase</a>  = [[<a href="../../common/CTerms.sdf3#NaBL2-CTerm_359_370" id="NaBL2-CTerm_662_673" title="Defined at ../../common/CTerms.sdf3 line 23, 27, 29, 30">NaBL2-CTerm</a>] <span class="cons_String">-&gt;</span> [<a href="../../common/CTerms.sdf3#NaBL2-CTerm_359_370" id="NaBL2-CTerm_679_690" title="Defined at ../../common/CTerms.sdf3 line 23, 27, 29, 30">NaBL2-CTerm</a>]]
 
-lex</a><span class="keyword">ical syntax</span>
+<span class="keyword">lexical syntax</span>
 
-  <span class="keyword">NaBL</span>2-<span class="keyword">S</span><span id="NaBL2-SectionKeyword_712_732" title="Not referenced locally, nor via imports">ectionKeyword = "fun</span><span class="keyword">cti</span><span class="cons_Lit">ons"
+  <span id="NaBL2-SectionKeyword_712_732" title="Not referenced locally, nor via imports">NaBL2-SectionKeyword</span> = <span class="cons_Lit">"functions"</span>
 
 </code></pre></td></tr></tbody></table></div>

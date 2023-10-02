@@ -1,5 +1,7 @@
 ---
 title: Propositions.sdf3
+hide:
+  - toc
 ---
 
 # `Propositions.sdf3`

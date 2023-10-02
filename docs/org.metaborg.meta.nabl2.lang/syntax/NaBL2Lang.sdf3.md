@@ -1,5 +1,7 @@
 ---
 title: NaBL2Lang.sdf3
+hide:
+  - toc
 ---
 
 # `NaBL2Lang.sdf3`

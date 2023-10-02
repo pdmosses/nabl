@@ -1,5 +1,7 @@
 ---
 title: Sugar.sdf3
+hide:
+  - toc
 ---
 
 # `Sugar.sdf3`

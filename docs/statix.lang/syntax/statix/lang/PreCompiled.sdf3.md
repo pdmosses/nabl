@@ -1,5 +1,7 @@
 ---
 title: PreCompiled.sdf3
+hide:
+  - toc
 ---
 
 # `PreCompiled.sdf3`

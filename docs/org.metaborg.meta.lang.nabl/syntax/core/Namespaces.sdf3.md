@@ -1,5 +1,7 @@
 ---
 title: Namespaces.sdf3
+hide:
+  - toc
 ---
 
 # `Namespaces.sdf3`

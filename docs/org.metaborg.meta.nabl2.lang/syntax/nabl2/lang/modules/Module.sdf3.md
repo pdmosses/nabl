@@ -1,5 +1,7 @@
 ---
 title: Module.sdf3
+hide:
+  - toc
 ---
 
 # `Module.sdf3`

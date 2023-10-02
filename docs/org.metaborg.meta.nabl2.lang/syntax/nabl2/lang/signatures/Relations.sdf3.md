@@ -1,5 +1,7 @@
 ---
 title: Relations.sdf3
+hide:
+  - toc
 ---
 
 # `Relations.sdf3`
@@ -65,18 +67,19 @@ title: Relations.sdf3
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#NaBL2-RelationDef_268_285" id="NaBL2-RelationDef_340_357" title="Referenced at line 17">NaBL2-RelationDef</a>.<span class="cons_Constructor"><span id="RelationDef_358_369" title="Not referenced locally, nor via imports">RelationDef</span></span> = &lt;&lt;{<a href="#NaBL2-RelationOption_471_491" id="NaBL2-RelationOption_375_395" title="Defined at line 24, 25, 26">NaBL2-RelationOption</a> <span class="cons_Lit">", "</span>}*&gt; &lt;<span class="keyword">N</span>aBL2-Relation&gt; &lt;<span class="keyword">N</span><a href="#NaBL2-RelationType_599_617" id="NaBL2-RelationType_422_440" title="Defined at line 28">aBL2-RelationType&gt;</a> &lt;<span class="keyword">N</span><a href="#NaBL2-VariancePatterns_661_683" id="NaBL2-VariancePatterns_443_465" title="Defined at line 30, 31">aBL2-VariancePatterns&gt;</a>&gt;
+  <a href="#NaBL2-RelationDef_268_285" id="NaBL2-RelationDef_340_357" title="Referenced at line 17">NaBL2-RelationDef</a>.<span class="cons_Constructor"><span id="RelationDef_358_369" title="Not referenced locally, nor via imports">RelationDef</span></span> = &lt;&lt;{<a href="#NaBL2-RelationOption_471_491" id="NaBL2-RelationOption_375_395" title="Defined at line 24, 25, 26">NaBL2-RelationOption</a> <span class="cons_Lit">", "</span>}*&gt; &lt;<span title="External reference">NaBL2-Relation</span>&gt; &lt;<a href="#NaBL2-RelationType_599_617" id="NaBL2-RelationType_422_440" title="Defined at line 28">NaBL2-RelationType</a>&gt; &lt;<a href="#NaBL2-VariancePatterns_661_683" id="NaBL2-VariancePatterns_443_465" title="Defined at line 30, 31">NaBL2-VariancePatterns</a>&gt;&gt;
 
-  <span class="keyword">N</span><a href="#NaBL2-RelationOption_375_395" id="NaBL2-RelationOption_471_491" title="Referenced at line 22">aBL2-RelationOption </a>= <span class="keyword">N</span><span class="keyword">aBL</span>2-Reflexivity
-  N<span class="keyword">aBL</span><a href="#NaBL2-RelationOption_375_395" id="NaBL2-RelationOption_514_534" title="Referenced at line 22">2-RelationOption = N</a><span class="keyword">aBL</span>2-<span class="keyword">S</span>ymmetry
-  NaBL2-<span class="keyword">R</span><a href="#NaBL2-RelationOption_375_395" id="NaBL2-RelationOption_554_574" title="Referenced at line 22">elationOption = NaBL</a>2-<span class="keyword">T</span><span class="keyword">ran</span>sitivity
+  <a href="#NaBL2-RelationOption_375_395" id="NaBL2-RelationOption_471_491" title="Referenced at line 22">NaBL2-RelationOption</a> = <span title="External reference">NaBL2-Reflexivity</span>
+  <a href="#NaBL2-RelationOption_375_395" id="NaBL2-RelationOption_514_534" title="Referenced at line 22">NaBL2-RelationOption</a> = <span title="External reference">NaBL2-Symmetry</span>
+  <a href="#NaBL2-RelationOption_375_395" id="NaBL2-RelationOption_554_574" title="Referenced at line 22">NaBL2-RelationOption</a> = <span title="External reference">NaBL2-Transitivity</span>
 
-  NaBL2-<span class="keyword">Rela</span><a href="#NaBL2-RelationType_422_440" id="NaBL2-RelationType_599_617" title="Referenced at line 22">tionType = &lt;: &lt;NaB</a><span class="keyword">L</span>2-<span class="keyword">S</span><span class="cons_String">o</span>r<span class="keyword">t</span><span class="keyword">R</span>ef&gt; * &lt;NaBL2-<span class="keyword">S</span>o<span class="cons_String">r</span>t<span class="keyword">R</span><span class="keyword">e</span>f&gt;&gt;
+  <a href="#NaBL2-RelationType_422_440" id="NaBL2-RelationType_599_617" title="Referenced at line 22">NaBL2-RelationType</a> = &lt;<span class="cons_String">:</span> &lt;<span title="External reference">NaBL2-SortRef</span>&gt; <span class="cons_String">*</span> &lt;<span title="External reference">NaBL2-SortRef</span>&gt;&gt;
 
-  NaBL2-<span class="keyword">Varian</span><a href="#NaBL2-VariancePatterns_443_465" id="NaBL2-VariancePatterns_661_683" title="Referenced at line 22">cePatterns      = &lt;{ &lt;</a>{<span class="keyword">NaBL</span>2-<span class="keyword">Va</span><span class="cons_String">r</span>i<span class="keyword">an</span><span class="keyword">ce</span>Pattern ",\n"}*&gt; }&gt;
-  <span class="cons_Lit">NaBL2</span>-<span class="keyword">Va</span>r<span class="cons_String">i</span><span class="keyword">ance</span><a href="#NaBL2-VariancePatterns_443_465" id="NaBL2-VariancePatterns_732_754" title="Referenced at line 22">Patterns      = {ast("</a>[]")}
+  <a href="#NaBL2-VariancePatterns_443_465" id="NaBL2-VariancePatterns_661_683" title="Referenced at line 22">NaBL2-VariancePatterns</a>      = &lt;<span class="cons_String">{</span> &lt;{<span title="External reference">NaBL2-VariancePattern</span> <span class="cons_Lit">",\n"</span>}*&gt; <span class="cons_String">}</span>&gt;
+  <a href="#NaBL2-VariancePatterns_443_465" id="NaBL2-VariancePatterns_732_754" title="Referenced at line 22">NaBL2-VariancePatterns</a>      = {<span class="cons_Unquoted">ast</span>(<span class="cons_Quoted">"[]"</span>)}
  
- <span class="cons_Unquoted">lex</span><span class="keyword">i</span><span class="cons_Quoted">cal </span><span class="keyword">syntax</span>
+ <span class="keyword">lexical syntax</span>
  
-  <span class="keyword">NaBL</span>2-<span class="keyword">Keyword</span> <span id="NaBL2-Keyword_796_809" title="Not referenced locally, nor via imports">= "relations"</span>
+  <span id="NaBL2-Keyword_796_809" title="Not referenced locally, nor via imports">NaBL2-Keyword</span> = <span class="cons_Lit">"relations"</span>
+
 </code></pre></td></tr></tbody></table></div>

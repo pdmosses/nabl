@@ -1,5 +1,7 @@
 ---
 title: Type.sdf3
+hide:
+  - toc
 ---
 
 # `Type.sdf3`

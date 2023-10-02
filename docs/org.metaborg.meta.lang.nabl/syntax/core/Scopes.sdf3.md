@@ -1,5 +1,7 @@
 ---
 title: Scopes.sdf3
+hide:
+  - toc
 ---
 
 # `Scopes.sdf3`
