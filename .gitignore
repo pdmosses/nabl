@@ -39,7 +39,7 @@ modules.xml
 
 
 ## Java
-src-gen/
+/*/src-gen/
 *.class
 *.jar
 *.war
