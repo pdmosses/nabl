@@ -1,5 +1,7 @@
 ---
 title: names.nab
+hide:
+  - toc
 ---
 
 # `names.nab`
