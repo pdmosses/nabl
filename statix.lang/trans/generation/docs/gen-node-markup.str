@@ -2,7 +2,7 @@ module generation/docs/gen-node-markup
 
 imports
 
-  generation/docs/gen-tokens-markup
+  generation/docs/statix-tokens-markup
   generation/docs/gen-origin-info
   generation/docs/name-binding
   
@@ -38,7 +38,7 @@ rules // Nodes
       then
         title := "External reference"
       ; <fputs> ($[<span title="[title]">], outs)
-      ; gen-copy(| ins, outs, <subti> (r, q))
+      ; gen-tokens-markup(| ins, outs, <subti> (r, q))
       ; <fputs> ($[</span>], outs)
       else
         (s, t) := <origin-offset> def1
@@ -46,7 +46,7 @@ rules // Nodes
       ; origin-info := <gen-origin-info> (node, defs)
       ; title := <string-replace(|"  ", " ")> $[Defined at [origin-info]]
       ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
-      ; gen-copy(| ins, outs, <subti> (r, q))
+      ; gen-tokens-markup(| ins, outs, <subti> (r, q))
       ; <fputs> ($[</a>], outs)
       end
 
@@ -68,7 +68,7 @@ rules // Nodes
       then 
         title := "Not referenced locally, nor via imports"
       ; <fputs> ($[<span id="[id-attr]" title="[title]">], outs)
-      ; gen-copy(| ins, outs, <subti> (r, q))
+      ; gen-tokens-markup(| ins, outs, <subti> (r, q))
       ; <fputs> ($[</span>], outs)
       else
         [ref1 | _] := refs
@@ -78,7 +78,7 @@ rules // Nodes
       ; origin-info := <gen-origin-info> (node, refs)
       ; title := <string-replace(|"  ", " ")> $[Referenced at [origin-info]]
       ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
-      ; gen-copy(| ins, outs, <subti> (r, q))
+      ; gen-tokens-markup(| ins, outs, <subti> (r, q))
       ; <fputs> ($[</a>], outs)
       end
   

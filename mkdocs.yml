@@ -48,3 +48,4 @@ extra_css:
   - stylesheets/metaborg.css
   - stylesheets/sdf3.css
   - stylesheets/nab.css
+  - stylesheets/stx.css

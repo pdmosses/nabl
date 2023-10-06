@@ -3,7 +3,7 @@ module generation/docs/gen-docs-pages
 imports
 
   generation/docs/gen-node-markup
-  generation/docs/gen-tokens-markup
+  generation/docs/statix-tokens-markup
   generation/docs/name-binding
   
   libstratego-lib
@@ -44,8 +44,8 @@ rules // Actions
 //    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
 //    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
     ; <generate-markup(|project-path, file-ast-list, [])> (path, <lookup> (path, file-ast-list))
-    ; a := <lookup; nabl2-get-ast-analysis> (path, file-ast-list)
-    ; <nabl2-get-all-decls(|a); debug> ()
+//    ; a := <lookup; nabl2-get-ast-analysis> (path, file-ast-list)
+//    ; <nabl2-get-all-decls(|a); debug> ()
 
   // meta-project-path: ext:String -> path:String
   // - path is REPO/META-LANGUAGE for META-LANGUAGE used in files with extension ext

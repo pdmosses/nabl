@@ -50,6 +50,8 @@ rules // Tokens
   char-to-html-string: '\t' -> "        " // 8 spaces (Python-Markdown maps tabs in HTML to 4 spaces)
   char-to-html-string: c -> <implode-string> [c]
 
+rules // Markup tokens
+
   // markup-tokens: html:string -> html':string
   // - adds markup for highlighting all tokens in the html string
   
@@ -61,12 +63,62 @@ rules // Tokens
       (token, html') := <markup-token> html
     ; tokens := <markup-tokens> html'
 
+rules // Scan and markup a token
+
+  // scan-token(scanner, kinder): html:string -> (token:string, html':string)
+  // - assumes scanner: (char*, char*) -> (char*, char*)
+  // - assumes kinder: html:string -> token:string
+  // - when scanner matches a prefix of html (leaving html'), kinder returns token
+  
+  scan-token(scanner, kinder):
+    html -> (token, html')
+    where (scanned-chars, unscanned-chars) := <scanner> ([], <explode-string> html)
+    ; token := <reverse; implode-string; kinder> scanned-chars
+    ; html' := <implode-string> unscanned-chars
+  
+  // scan(p): cs1:List(Char) * cs2:List(Char) -> List(Char) * List(Char)
+  // - assumes p: c:Char ->? c:Char
+  // - when p holds for the head of cs2, moves that char to cs1
+  
+  scan(p):
+    (scanned-chars, [char|unscanned-chars]) -> ([char|scanned-chars], unscanned-chars)
+    where <p> char
+
+  // scan(|s): List(Char) * List(Char) -> List(Char) * List(Char)
+  // - assumes s:List(Char) or s:String
+  // - scans all the chars of s
+  
+  scan(|[]) = id
+  
+  scan(|[char|chars]) = scan(equal(|char)) ; scan(|chars)
+  
+  scan(|s) = scan(|<explode-string> s)
+
+rules // Kinder strategies:
+
+  markup-token-kind(|kind): token -> $[<span class="[kind]">[token]</span>]
+
+  markup-token-sort(|sort): token -> $[<span class="sort_[sort]">[token]</span>]
+
+rules // Token markup
+
   // markup-token: html:string -> (token:string, html':string)
   // - assumes html is non-empty
   // - token is the html markup of the first token in html
   // - html' is the un-markedup rest of html
   // - the order of scanning for specific kinds of token follows JSGLR:
   //   https://github.com/metaborg/jsglr/blob/master/org.spoofax.jsglr/src/org/spoofax/jsglr/client/imploder/TokenKindManager.java
+  
+  markup-token = scan-token(scan-whitespace, id) 
+  markup-token = scan-token(scan-comment,    markup-token-kind(|"layout"))
+  markup-token = scan-token(scan-keyword,    markup-token-kind(|"keyword"))
+  markup-token = scan-token(scan-string-1,   id)
+  markup-token = scan-token(scan-string-2,   id)
+//markup-token = scan-token(scan-number,     markup-token-kind(|"number"))
+  markup-token = scan-token(scan-escape,     markup-token-kind(|"string"))
+//markup-token = scan-token(scan-identifier, markup-token-kind(|"identifier"))
+//markup-token = scan-token(scan-operator,   markup-token-kind(|"operator"))
+//markup-token = scan-token(scan-var,        markup-token-kind(|"var"))
 
 /*
   statix.lang/editor/Colorer.esv:
@@ -98,6 +150,67 @@ rules // Tokens
   
   MessageChars : 181 137   0 // yellow
 */
+
+  markup-token = scan-token(scan-rule-label,    markup-token-sort(|"rule-label"))
+  markup-token = scan-token(scan-constraint-id, markup-token-sort(|"constraint-id"))
+  markup-token = scan-token(scan-namespace-id,  markup-token-sort(|"namespace-id"))
+  markup-token = scan-token(scan-var-id,        markup-token-sort(|"var-id"))
+  markup-token = scan-token(scan-uc-id,         markup-token-sort(|"uc-id"))
+  markup-token = scan-token(scan-lc-id,         markup-token-sort(|"lc-id"))
+  markup-token = scan-token(scan-id,            markup-token-sort(|"id"))
+  markup-token = scan-token(scan-str,           markup-token-sort(|"str"))
+  markup-token = scan-token(scan-file-id,       markup-token-sort(|"file-id"))
+  markup-token = scan-token(scan-module-id,     markup-token-sort(|"module-id"))
+  markup-token = scan-token(scan-str-id,        markup-token-sort(|"str-id"))
+  markup-token = scan-token(scan-op-id,         markup-token-sort(|"op-id"))
+  markup-token = scan-token(scan-message-chars, markup-token-sort(|"message-chars"))
+
+  markup-token = scan-token(scan-unknown,    id)
+
+rules // Scanners:
+  
+  // Fixed token types:
+
+  scan-whitespace = repeat1( scan(?' ' + ?'\n' + ?'\r') ) // '\t' already mapped to spaces
+
+  scan-comment = ( scan(?'%') ; scan(?'%') ; repeat( scan(not(?'\n' + ?'\r')) ) )
+  scan-comment = ( scan(?'%') ; repeat1( scan(not(?'%' + ?'\n' + ?'\r'))) ; scan(?'%') )
+  scan-comment = ( scan(?'/') ; scan(?'*') ; repeat( scan-comment-char ) ; scan(?'*') ; scan(?'/') )
+  scan-comment = ( scan(?'/') ; scan(?'/') ; repeat( scan(not(?'\n' + ?'\r')) ) )
+    
+  scan-comment-char = scan(not(?'*'))
+  scan-comment-char = ( scan(?'*') ; try( scan( not(?'/') ) ) )
+  
+//  scan-keywords = scan-keyword ; repeat( repeat1( scan(?' ') ) ; scan-keyword )
+  
+//  scan-keyword = scan(is-alpha) ; repeat( scan(is-alpha + ?'-') )
+//  scan-keyword = scan(?'-') ; scan(?'C') ; scan(?'F')
+//  scan-keyword = scan(?'-') ; scan(?'L') ; scan(?'E') ; scan(?'X')
+//  scan-keyword = scan(?'-') ; scan(?'V') ; scan(?'A') ; scan(?'R')
+
+  scan-unknown = scan(?'&') ; repeat1( scan(is-lower) ) ; scan(?';')
+  scan-unknown = scan(id)
+
+  scan-escape = scan(?'\') ; scan( not(?'&') )
+  scan-escape = scan(?'\') ; scan(?'&') ; scan(?'a') ; scan(?'m') ; scan(?'p') ; scan(?';')
+  scan-escape = scan(?'\') ; scan(?'&') ; scan(?'g') ; scan(?'t') ; scan(?';')
+  scan-escape = scan(?'\') ; scan(?'&') ; scan(?'l') ; scan(?'t') ; scan(?';')
+
+  scan-string-1 = scan(?'\'') ; repeat( scan-string-char-1 ) ; scan(?'\'')
+ 
+  scan-string-char-1 = scan(not(?'\'' + ?'\'))
+  scan-string-char-1 = scan(?'\') ; scan(?'\' + ?'\'' + ?'n' + ?'t')
+  scan-string-char-1 = scan(?'\') ; repeat( scan(is-num) | 3 )
+  
+  scan-string-2 = scan(?'"') ; repeat( scan-string-char-2 ) ; scan(?'"')
+  
+  scan-string-char-2 = scan(not(?'"' + ?'\'))
+  scan-string-char-2 = scan(?'\') ; scan(?'\' + ?'"' + ?'n' + ?'t')
+  scan-string-char-2 = scan(?'\') ; repeat( scan(is-num) | 3 )
+
+  scan-integer = try( scan(?'+' + ?'-') ) ; repeat1( scan(?is-num) )
+   
+  scan-number = scan-integer ; try( scan(?'.') ; repeat1( scan(?is-num) ) ; scan(?'e') ; scan-integer )
 
 /*
   statix.lang/syntax/-
@@ -159,130 +272,79 @@ rules // Tokens
   Keyword = "filter" | "min" | "in" | "of" | "resolveMatch" | "resolveLt" | "occurrenceMatch"
 */
 
+  // scan-keyword is tried before other tokens, so reject-rules are implicit
+  // - for longest-match, plurals need to be tried before singular forms
   
+  scan-keyword = scan(|"and")
+  scan-keyword = scan(|"astId")
+  scan-keyword = scan(|"coinductive")
+  scan-keyword = scan(|"constraints")
+  scan-keyword = scan(|"constraint")
+  scan-keyword = scan(|"false")
+  scan-keyword = scan(|"filter")
+  scan-keyword = scan(|"imports")
+  scan-keyword = scan(|"in")
+  scan-keyword = scan(|"labels")
+  scan-keyword = scan(|"maps")
+  scan-keyword = scan(|"min")
+  scan-keyword = scan(|"module")
+  scan-keyword = scan(|"name-resolution")
+  scan-keyword = scan(|"namespaces")
+  scan-keyword = scan(|"namespace")
+  scan-keyword = scan(|"new")
+  scan-keyword = scan(|"occurrenceMatch")
+  scan-keyword = scan(|"of")
+  scan-keyword = scan(|"project")
+  scan-keyword = scan(|"query")
+  scan-keyword = scan(|"relations")
+  scan-keyword = scan(|"relation")
+  scan-keyword = scan(|"resolveLt")
+  scan-keyword = scan(|"resolveMatch")
+  scan-keyword = scan(|"resolve")
+  scan-keyword = scan(|"rules")
+  scan-keyword = scan(|"signature")
+  scan-keyword = scan(|"true")
+  scan-keyword = scan(|"try")
+  scan-keyword = scan(|"with")
   
-  markup-token =
-    
-    scan-token(scan-whitespace, id) 
-    <+
-    scan-token(scan-comment,    markup-token-kind(|"layout"))
-    <+
-    scan-token(scan-keywords,   markup-token-kind(|"keyword"))
-    <+
-    scan-token(scan-string-1,   id)
-    <+
-    scan-token(scan-string-2,   id)
-//    <+
-//    scan-token(scan-number,     markup-token-kind(|"number"))
-    <+
-    scan-token(scan-escape,     markup-token-kind(|"string"))
-    <+
-    scan-token(scan-unknown,    id)
-//    <+
-//    scan-token(scan-identifier, markup-token-kind(|"identifier"))
-//    <+
-//    scan-token(scan-operator,   markup-token-kind(|"operator"))
-//    <+
-//    scan-token(scan-var,        markup-token-kind(|"var"))
+  scan-rule-label = fail // no syntax found
+  
+  scan-constraint-id = scan-lc-id 
+  
+  scan-namespace-id = scan-lc-id
+  
+  scan-var-id    = scan(is-alpha) ; repeat(scan(is-alphanum + ?'_')) ; repeat(scan(?'\'')) ; not(scan(is-alphanum + ?'_'))
+  
+  scan-uc-id     = scan(is-upper) ; repeat(scan(is-alphanum + ?'_')) ; not(scan(?'\''))
 
+  scan-lc-id     = scan(is-lower) ; repeat(scan(is-alphanum + ?'_')) ; not(scan(?'\''))
 
-  // scan-token(scanner, kinder): html:string -> (token:string, html':string)
-  // - assumes scanner: (char*, char*) -> (char*, char*)
-  // - assumes kinder: html:string -> token:string
-  // - when scanner matches a prefix of html (leaving html'), kinder returns token
-  
-  scan-token(scanner, kinder):
-    html -> (token, html')
-    where (scanned-chars, unscanned-chars) := <scanner> ([], <explode-string> html)
-    ; token := <reverse; implode-string; kinder> scanned-chars
-    ; html' := <implode-string> unscanned-chars
-  
-  // scan(p): cs1:List(Char) * cs2:List(Char) -> List(Char) * List(Char)
-  // - assumes p: c:Char ->? c:Char
-  // - when p holds for the head of cs2, moves that char to cs1
-  
-  scan(p):
-    (scanned-chars, [char|unscanned-chars]) -> ([char|scanned-chars], unscanned-chars)
-    where <p> char
+  scan-id        = scan(is-alpha) ; repeat(scan(is-alphanum + ?'_')) ; not(scan(?'\''))
 
-  // scan(|s): List(Char) * List(Char) -> List(Char) * List(Char)
-  // - assumes s:String
-  // - scans all the chars of s
+  scan-str       = scan(?'"') ; repeat( scan-str-char ) ; scan(?'"')
   
-  scan(|s) =
-      <explode-string> s
-
-  markup-token-kind(|kind): token -> $[<span class="[kind]">[token]</span>]
+  scan-str-char  = scan(not(?'"' + ?'\' + ?'\t' + ?'\r' + ?'\n'))
+  scan-str-char  = scan(|"\\\"")
+  scan-str-char  = scan(|"\\\\")
+  scan-str-char  = scan(|"\\t")
+  scan-str-char  = scan(|"\\r")
+  scan-str-char  = scan(|"\\n")
   
-  scan-whitespace = 
-    repeat1( scan(?' ' + ?'\n' + ?'\r') ) // '\t' already mapped to spaces
-
-  scan-comment =
-    ( scan(?'%') ; scan(?'%') ; repeat( scan(not(?'\n' + ?'\r')) ) )
-    +
-    ( scan(?'%') ; repeat1( scan(not(?'%' + ?'\n' + ?'\r'))) ; scan(?'%') )
-    +
-    ( scan(?'/') ; scan(?'*') ; repeat( scan-comment-char ) ; scan(?'*') ; scan(?'/') )
-    +
-    ( scan(?'/') ; scan(?'/') ; repeat( scan(not(?'\n' + ?'\r')) ) )
-    
-  scan-comment-char =
-    scan(not(?'*'))
-    +
-    ( scan(?'*') ; try( scan( not(?'/') ) ) )
+  scan-file-id   = repeat1(scan(is-alphanum + ?'_' + ?'-' + ?'.' + ?'~' + ?'\''))
   
-  scan-keywords =
-    scan-keyword ; repeat( repeat1( scan(?' ') ) ; scan-keyword )
+  scan-module-id = scan-file-id ; repeat( scan(?'/') ; scan-file-id )
   
-  scan-keyword =
-    scan(is-alpha) ; repeat( scan(is-alpha + ?'-') )
-    +
-    scan(?'-') ; scan(?'C') ; scan(?'F')
-    +
-    scan(?'-') ; scan(?'L') ; scan(?'E') ; scan(?'X')
-    +
-    scan(?'-') ; scan(?'V') ; scan(?'A') ; scan(?'R')
-
-  scan-unknown =
-    scan(?'&') ; repeat1( scan(is-lower) ) ; scan(?';')
-    <+
-    scan(id)
-
-  scan-escape =
-    scan(?'\') ; scan( not(?'&') )
-    <+
-    scan(?'\') ; scan(?'&') ; scan(?'a') ; scan(?'m') ; scan(?'p') ; scan(?';')
-    <+
-    scan(?'\') ; scan(?'&') ; scan(?'g') ; scan(?'t') ; scan(?';')
-    <+
-    scan(?'\') ; scan(?'&') ; scan(?'l') ; scan(?'t') ; scan(?';')
-
-  scan-string-1 =
-    scan(?'\'') ;
-    repeat( scan-string-char-1 ) ;
-    scan(?'\'')
+  scan-str-id    = scan(is-upper) ; repeat(scan(is-alphanum + ?'_' + ?'-'))
   
-  scan-string-char-1 =
-    scan(not(?'\'' + ?'\'))
-    +
-    ( scan(?'\') ; scan(?'\' + ?'\'' + ?'n' + ?'t') )
-    +
-    ( scan(?'\') ; repeat( scan(is-num) | 3 ) )
+  scan-op-id     = scan-str-id
   
-  scan-string-2 =
-    scan(?'"') ;
-    repeat( scan-string-char-2 ) ;
-    scan(?'"')
+  scan-message-chars = repeat1( scan-message-char ) ; where(scan(?'[' + ?']'))
   
-  scan-string-char-2 =
-    scan(not(?'"' + ?'\'))
-    +
-    ( scan(?'\') ; scan(?'\' + ?'"' + ?'n' + ?'t') )
-    +
-    ( scan(?'\') ; repeat( scan(is-num) | 3 ) )
-
-  scan-integer =
-    try( scan(?'+' + ?'-') ) ; repeat1( scan(?is-num) )
-   
-  scan-number =
-    scan-integer ; try( scan(?'.') ; repeat1( scan(?is-num) ) ; scan(?'e') ; scan-integer )
+  scan-message-char  = scan(not(?'[' + ?']' + ?'\' + ?'\t' + ?'\r' + ?'\n'))
+  scan-message-char  = scan(|"\\[")
+  scan-message-char  = scan(|"\\]")
+  scan-message-char  = scan(|"\\\\")
+  scan-message-char  = scan(|"\\t")
+  scan-message-char  = scan(|"\\r")
+  scan-message-char  = scan(|"\\n")
+ 
