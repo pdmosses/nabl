@@ -120,7 +120,7 @@ rules // Token markup
   
   markup-token = scan-token(scan-whitespace, id) 
   markup-token = scan-token(scan-comment,    markup-token-kind(|"layout"))
-  markup-token = scan-token(scan-keyword,    markup-token-kind(|"keyword"))
+  markup-token = scan-token(scan-keyword; not(scan(is-alpha)), markup-token-kind(|"keyword"))
 //  markup-token = scan-token(scan-string-1,   id)
 //  markup-token = scan-token(scan-string-2,   id)
 //markup-token = scan-token(scan-number,     markup-token-kind(|"number"))
@@ -160,6 +160,7 @@ markup-token = scan-token(scan-operator,   markup-token-kind(|"operator"))
   MessageChars : 181 137   0 // yellow
 */
 
+  markup-token = scan-token(scan-module-id,     markup-token-sort(|"ModuleID"))
 //  markup-token = scan-token(scan-rule-label,    markup-token-sort(|"RuleLabel"))
   markup-token = scan-token(scan-constraint-id, markup-token-sort(|"ConstraintId"))
 //  markup-token = scan-token(scan-namespace-id,  markup-token-sort(|"NamespaceId"))
@@ -168,7 +169,6 @@ markup-token = scan-token(scan-operator,   markup-token-kind(|"operator"))
 //  markup-token = scan-token(scan-lc-id,         markup-token-sort(|"LCID"))
 //  markup-token = scan-token(scan-str,           markup-token-sort(|"Str"))
 //  markup-token = scan-token(scan-file-id,       markup-token-sort(|"FileID"))
-//  markup-token = scan-token(scan-module-id,     markup-token-sort(|"ModuleID"))
 //  markup-token = scan-token(scan-str-id,        markup-token-sort(|"STRID"))
   markup-token = scan-token(scan-op-id,         markup-token-sort(|"OpId"))
 //  markup-token = scan-token(scan-message-chars, markup-token-sort(|"MessageChars"))
@@ -295,11 +295,15 @@ rules // Scanners:
   scan-keyword = scan(|"constraints")
   scan-keyword = scan(|"constraint")
   scan-keyword = scan(|"constructors")
+  scan-keyword = scan(|"error")
   scan-keyword = scan(|"false")
   scan-keyword = scan(|"filter")
   scan-keyword = scan(|"imports")
   scan-keyword = scan(|"in")
+  scan-keyword = scan(|"int")
   scan-keyword = scan(|"labels")
+  scan-keyword = scan(|"label")
+  scan-keyword = scan(|"list")
   scan-keyword = scan(|"maps")
   scan-keyword = scan(|"min")
   scan-keyword = scan(|"module")
@@ -308,21 +312,27 @@ rules // Scanners:
   scan-keyword = scan(|"namespace")
   scan-keyword = scan(|"new")
   scan-keyword = scan(|"occurrenceMatch")
+  scan-keyword = scan(|"occurrence")
   scan-keyword = scan(|"of")
+  scan-keyword = scan(|"path")
   scan-keyword = scan(|"project")
   scan-keyword = scan(|"query")
+  scan-keyword = scan(|"ref")
   scan-keyword = scan(|"relations")
   scan-keyword = scan(|"relation")
   scan-keyword = scan(|"resolveLt")
   scan-keyword = scan(|"resolveMatch")
   scan-keyword = scan(|"resolve")
+  scan-keyword = scan(|"ref")
   scan-keyword = scan(|"rules")
+  scan-keyword = scan(|"scope")
   scan-keyword = scan(|"signature")
   scan-keyword = scan(|"sorts")
+  scan-keyword = scan(|"string")
   scan-keyword = scan(|"true")
   scan-keyword = scan(|"try")
   scan-keyword = scan(|"with")
-  
+    
   scan-rule-label = fail // no syntax found
   
   scan-constraint-id = scan-lc-id 
@@ -348,7 +358,7 @@ rules // Scanners:
   
   scan-file-id   = repeat1(scan(is-alphanum + ?'_' + ?'-' + ?'.' + ?'~' + ?'\''))
   
-  scan-module-id = scan-file-id ; repeat( scan(?'/') ; scan-file-id )
+  scan-module-id = scan-file-id ; repeat1( scan(?'/') ; scan-file-id )
   
   scan-str-id    = scan(is-upper) ; repeat(scan(is-alphanum + ?'_' + ?'-'))
   

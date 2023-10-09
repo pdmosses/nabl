@@ -128,7 +128,7 @@ hide:
 116
 117
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <span id="overlapping-rules/linear-patterns_7_40" title="Not referenced locally, nor via imports"><span class="token sort_ConstraintId">overlapping</span><span class="operator">-</span><span class="keyword">rules</span><span class="operator">/</span><span class="token sort_ConstraintId">linear</span><span class="operator">-</span><span class="token sort_ConstraintId">patterns</span></span>
+<td class="code"><pre><code><span class="keyword">module</span> <span id="overlapping-rules/linear-patterns_7_40" title="Not referenced locally, nor via imports"><span class="token sort_ModuleID">overlapping-rules/linear-patterns</span></span>
 
 <span class="keyword">signature</span>
   <span class="keyword">sorts</span> <span class="cons_SortDecl"><a href="#S_90_91" id="S_60_61" title="Referenced at line 5, 6, 7, 7, 7, 38, 43, 49, 56, 56, 62, 62, 68, 74, 106, 106, 114, 114"><span class="token sort_OpId">S</span></a></span> <span class="keyword">constructors</span>
@@ -139,26 +139,26 @@ hide:
 <span class="keyword">rules</span>
 
   <span class="layout">// p01 No general case</span>
-  <a href="#p01_174_177" id="p01_156_159" title="Referenced at line 13"><span class="token sort_ConstraintId">p01</span></a> <span class="operator">:</span> <span class="token sort_ConstraintId">list</span><span class="operator">(</span><span class="cons_IntSort">int</span><span class="operator">)</span>
+  <a href="#p01_174_177" id="p01_156_159" title="Referenced at line 13"><span class="token sort_ConstraintId">p01</span></a> <span class="operator">:</span> <span class="keyword">list</span><span class="operator">(</span><span class="cons_IntSort">int</span><span class="operator">)</span>
   <a href="#p01_156_159" id="p01_174_177" title="Defined at line 12"><span class="token sort_ConstraintId">p01</span></a><span class="operator">([_]).</span>
 
 <span class="keyword">rules</span>
 
   <span class="layout">// p02 Top-level general case</span>
-  <a href="#p02_244_247" id="p02_226_229" title="Referenced at line 19, 20"><span class="token sort_ConstraintId">p02</span></a> <span class="operator">:</span> <span class="token sort_ConstraintId">list</span><span class="operator">(</span><span class="cons_IntSort">int</span><span class="operator">)</span>
+  <a href="#p02_244_247" id="p02_226_229" title="Referenced at line 19, 20"><span class="token sort_ConstraintId">p02</span></a> <span class="operator">:</span> <span class="keyword">list</span><span class="operator">(</span><span class="cons_IntSort">int</span><span class="operator">)</span>
   <a href="#p02_226_229" id="p02_244_247" title="Defined at line 18"><span class="token sort_ConstraintId">p02</span></a><span class="operator">([]).</span>
   <a href="#p02_226_229" id="p02_255_258" title="Defined at line 18"><span class="token sort_ConstraintId">p02</span></a><span class="operator">(</span><span class="cons_Var"><span id="xs_259_261" title="Not referenced locally, nor via imports"><span class="token sort_ConstraintId">xs</span></span></span><span class="operator">).</span> <span class="layout">// p02(xs@[_|_]).</span>
 
 <span class="keyword">rules</span>
 
   <span class="layout">// p03 Nested case</span>
-  <a href="#p03_331_334" id="p03_313_316" title="Referenced at line 26, 27"><span class="token sort_ConstraintId">p03</span></a> <span class="operator">:</span> <span class="token sort_ConstraintId">list</span><span class="operator">(</span><span class="cons_IntSort">int</span><span class="operator">)</span>
+  <a href="#p03_331_334" id="p03_313_316" title="Referenced at line 26, 27"><span class="token sort_ConstraintId">p03</span></a> <span class="operator">:</span> <span class="keyword">list</span><span class="operator">(</span><span class="cons_IntSort">int</span><span class="operator">)</span>
   <a href="#p03_313_316" id="p03_331_334" title="Defined at line 25"><span class="token sort_ConstraintId">p03</span></a><span class="operator">([_]).</span>
   <a href="#p03_313_316" id="p03_343_346" title="Defined at line 25"><span class="token sort_ConstraintId">p03</span></a><span class="operator">([_|</span><span class="cons_Var"><span id="xs_350_352" title="Not referenced locally, nor via imports"><span class="token sort_ConstraintId">xs</span></span></span><span class="operator">]).</span> <span class="layout">// p03([_|xs@[_|_]]).</span>
 
 <span class="keyword">rules</span>
 
-  <a href="#p06_418_421" id="p06_388_391" title="Referenced at line 32, 33, 34"><span class="token sort_ConstraintId">p06</span></a> <span class="operator">:</span> <span class="token sort_ConstraintId">list</span><span class="operator">(</span><span class="cons_IntSort">int</span><span class="operator">)</span> <span class="operator">*</span> <span class="token sort_ConstraintId">list</span><span class="operator">(</span><span class="cons_IntSort">int</span><span class="operator">)</span>
+  <a href="#p06_418_421" id="p06_388_391" title="Referenced at line 32, 33, 34"><span class="token sort_ConstraintId">p06</span></a> <span class="operator">:</span> <span class="keyword">list</span><span class="operator">(</span><span class="cons_IntSort">int</span><span class="operator">)</span> <span class="operator">*</span> <span class="keyword">list</span><span class="operator">(</span><span class="cons_IntSort">int</span><span class="operator">)</span>
   <a href="#p06_388_391" id="p06_418_421" title="Defined at line 31"><span class="token sort_ConstraintId">p06</span></a><span class="operator">([],</span> <span class="cons_Var"><span id="ys_426_428" title="Not referenced locally, nor via imports"><span class="token sort_ConstraintId">ys</span></span></span><span class="operator">).</span>
   <a href="#p06_388_391" id="p06_433_436" title="Defined at line 31"><span class="token sort_ConstraintId">p06</span></a><span class="operator">(</span><span class="cons_Var"><span id="xs_437_439" title="Not referenced locally, nor via imports"><span class="token sort_ConstraintId">xs</span></span></span><span class="operator">,</span> <span class="operator">[]).</span> <span class="layout">// p06(xs@[_|_], []).</span>
   <a href="#p06_388_391" id="p06_470_473" title="Defined at line 31"><span class="token sort_ConstraintId">p06</span></a><span class="operator">(</span><span class="cons_Var"><span id="xs_474_476" title="Not referenced locally, nor via imports"><span class="token sort_ConstraintId">xs</span></span></span><span class="operator">,</span> <span class="cons_Var"><span id="ys_478_480" title="Not referenced locally, nor via imports"><span class="token sort_ConstraintId">ys</span></span></span><span class="operator">).</span> <span class="layout">// p06(xs@[_|_], [_|_]).</span>
@@ -210,7 +210,7 @@ hide:
 
 <span class="keyword">rules</span>
 
-  <a href="#p20_1025_1028" id="p20_1007_1010" title="Referenced at line 84, 85"><span class="token sort_ConstraintId">p20</span></a> <span class="operator">:</span> <span class="token sort_ConstraintId">list</span><span class="operator">(</span><span class="cons_IntSort">int</span><span class="operator">)</span>
+  <a href="#p20_1025_1028" id="p20_1007_1010" title="Referenced at line 84, 85"><span class="token sort_ConstraintId">p20</span></a> <span class="operator">:</span> <span class="keyword">list</span><span class="operator">(</span><span class="cons_IntSort">int</span><span class="operator">)</span>
   <a href="#p20_1007_1010" id="p20_1025_1028" title="Defined at line 83"><span class="token sort_ConstraintId">p20</span></a><span class="operator">([_]).</span>
   <a href="#p20_1007_1010" id="p20_1037_1040" title="Defined at line 83"><span class="token sort_ConstraintId">p20</span></a><span class="operator">(</span><span class="cons_Var"><span id="xs_1041_1043" title="Not referenced locally, nor via imports"><span class="token sort_ConstraintId">xs</span></span></span><span class="operator">).</span> <span class="layout">// p20(xs@[]).</span>
            <span class="layout">// p20(xs@[_,_|_]).</span>

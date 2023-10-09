@@ -31,7 +31,7 @@ hide:
 
 <span class="keyword">imports</span>
 
-  <a href="../bb-sig.stx/#busybeaver/bb-sig_137_154" id="busybeaver/bb-sig_187_204" title="Defined at ../bb-sig.stx line 4"><span class="token sort_ConstraintId">busybeaver</span><span class="operator">/</span><span class="token sort_ConstraintId">bb</span><span class="operator">-</span><span class="token sort_ConstraintId">sig</span></a>
-  <a href="../bb-rules.stx/#busybeaver/bb-rules_137_156" id="busybeaver/bb-rules_207_226" title="Defined at ../bb-rules.stx line 4"><span class="token sort_ConstraintId">busybeaver</span><span class="operator">/</span><span class="token sort_ConstraintId">bb</span><span class="operator">-</span><span class="keyword">rules</span></a>
+  <a href="../bb-sig.stx/#busybeaver/bb-sig_137_154" id="busybeaver/bb-sig_187_204" title="Defined at ../bb-sig.stx line 4"><span class="token sort_ModuleID">busybeaver/bb-sig</span></a>
+  <a href="../bb-rules.stx/#busybeaver/bb-rules_137_156" id="busybeaver/bb-rules_207_226" title="Defined at ../bb-rules.stx line 4"><span class="token sort_ModuleID">busybeaver/bb-rules</span></a>
 
 </code></pre></td></tr></tbody></table></div>
