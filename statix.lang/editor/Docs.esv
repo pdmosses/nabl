@@ -10,4 +10,5 @@ menus
    
     submenu: "Debug"
       action: "Test generate page" = test-generate-docs-page
+      action: "Test tokens markup" = test-tokens-markup
     end

@@ -9,6 +9,7 @@ imports
   libstratego-lib
   
   libspoofax/term/origin
+  EditorService
 
 rules // Nodes
 
@@ -96,17 +97,16 @@ rules // Nodes
   // - takes the set of constructors for highlighted nodes from editor/Colorer.esv
   // - guarantees to mark up all branches of the node
 
-//  // NaBL2 uses the defualt colorer, which does not specify colors for any constructors.
-//  gen-node-markup(|ins, outs, repo-name, cons, ast-list):
-//    (p, node@f#(nodes)) -> r
-//    where 
-//      <elem> (Constructor(f), cons)
-//    ; (q, r) := <origin-offset> node
-//    ; gen-tokens-markup(| ins, outs, <subti> (q, p))
-//    ; <fputs> ($[<span class="cons_[f]">], outs)
-//    ; r' := <gen-node-markup-map(|ins, outs, repo-name, cons, ast-list)> (q, nodes)
-//    ; gen-copy(| ins, outs, <subti> (r, r'))
-//    ; <fputs> ($[</span>], outs)
+  gen-node-markup(|ins, outs, repo-name, cons, ast-list):
+    (p, node@f#(nodes)) -> r
+    where 
+      <elem> (Constructor(f), cons)
+    ; (q, r) := <origin-offset> node
+    ; gen-tokens-markup(| ins, outs, <subti> (q, p))
+    ; <fputs> ($[<span class="cons_[f]">], outs)
+    ; r' := <gen-node-markup-map(|ins, outs, repo-name, cons, ast-list)> (q, nodes)
+    ; gen-copy(| ins, outs, <subti> (r, r'))
+    ; <fputs> ($[</span>], outs)
 
   // gen-node-markup otherwise generates markup only for the branches of the node
   // - guarantees to mark up all branches of the node

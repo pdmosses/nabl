@@ -14,6 +14,7 @@ imports
   libspoofax/term/origin
   
   nabl2/api
+  EditorService
 
 rules // Actions
 
@@ -24,12 +25,15 @@ rules // Actions
   
   generate-docs-pages: (_, _, _, path, project-path) -> None()
     with
-      meta-language := <get-extension> path
-    ; file-ast-list := <get-project-analyzed-asts>
+      file-ast-list := <get-project-analyzed-asts>
+    ; meta-language := <get-extension> path
     ; repo-path := <local-path; dirname; dirname> project-path
-//    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
-//    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
-    ; <map(generate-markup(|project-path, file-ast-list, []))> file-ast-list
+    ; meta-language-project-path := $[[repo-path]/[<meta-project-path> meta-language]]
+    ; colorer-file := 
+        <!$[[meta-language-project-path]/editor/Colorer-CF.esv]; file-exists 
+         <+ !$[[meta-language-project-path]/editor/Colorer.esv]>
+    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
+    ; <map(generate-markup(|project-path, file-ast-list, cons))> file-ast-list
 
   // test-generate-docs-pages: (_, _, _, path, project-path) -> None()
   // - for use as an action in the Spoofax menu
@@ -38,20 +42,25 @@ rules // Actions
 
   test-generate-docs-page: (_, _, _, path, project-path) -> None()
     with
-      meta-language := <get-extension> path
-    ; file-ast-list := <get-project-analyzed-asts> // List(Path * AST)
+      file-ast-list := <get-project-analyzed-asts> // List(Path * AST)
+    ; meta-language := <get-extension> path
     ; repo-path := <local-path; dirname; dirname> project-path
-//    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
-//    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
-    ; <generate-markup(|project-path, file-ast-list, [])> (path, <lookup> (path, file-ast-list))
+    ; meta-language-project-path := $[[repo-path]/[<meta-project-path> meta-language]]
+    ; colorer-file := 
+        <!$[[meta-language-project-path]/editor/Colorer-CF.esv]; file-exists 
+         <+ !$[[meta-language-project-path]/editor/Colorer.esv]>
+    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
+    ; <generate-markup(|project-path, file-ast-list, cons)> (path, <lookup> (path, file-ast-list))
 //    ; a := <lookup; nabl2-get-ast-analysis> (path, file-ast-list)
 //    ; <nabl2-get-all-decls(|a); debug> ()
 
   // meta-project-path: ext:String -> path:String
   // - path is REPO/META-LANGUAGE for META-LANGUAGE used in files with extension ext
 
-  meta-project-path: "sdf3" -> "sdf/org.metaborg.meta.lang.template"
+  meta-project-path: "sdf3"  -> "sdf/org.metaborg.meta.lang.template"
+  meta-project-path: "nab"   -> "nabl/org.metaborg.meta.lang.nabl"
   meta-project-path: "nabl2" -> "nabl/org.metaborg.meta.nabl2.lang"
+  meta-project-path: "stx"   -> "nabl/statix.lang"
 
   // generate-markup(|project-path, ast-list, cons): (file, ast) -> ()
   // - assumes that the project is at the top level of repo-clone

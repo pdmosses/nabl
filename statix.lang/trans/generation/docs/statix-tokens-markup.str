@@ -6,6 +6,15 @@ imports
   
 rules // Tokens
 
+  test-tokens-markup:
+    (_, _, ast, path, project-path) -> ()
+    where
+      target := <guarantee-extension(|"txt")> path
+    ; say(!target)
+    ; ins := <fopen> (path, "r")
+    ; outs := <fopen> (target, "w")
+    ; gen-tokens-markup(|ins, outs)
+
   // gen-tokens-markup(|ins:stream, outs:stream):
   // - reads all remaining chars from ins
   // - forms the corresponding string for displaying those chars in HTML
@@ -96,9 +105,9 @@ rules // Scan and markup a token
 
 rules // Kinder strategies:
 
-  markup-token-kind(|kind): token -> $[<span class="[kind]">[token]</span>]
+  markup-token-kind(|kind): token -> $[<span class="token [kind]">[token]</span>]
 
-  markup-token-sort(|sort): token -> $[<span class="sort_[sort]">[token]</span>]
+  markup-token-sort(|sort): token -> $[<span class="token sort_[sort]">[token]</span>]
 
 rules // Token markup
 
@@ -112,8 +121,8 @@ rules // Token markup
   markup-token = scan-token(scan-whitespace, id) 
   markup-token = scan-token(scan-comment,    markup-token-kind(|"layout"))
   markup-token = scan-token(scan-keyword,    markup-token-kind(|"keyword"))
-  markup-token = scan-token(scan-string-1,   id)
-  markup-token = scan-token(scan-string-2,   id)
+//  markup-token = scan-token(scan-string-1,   id)
+//  markup-token = scan-token(scan-string-2,   id)
 //markup-token = scan-token(scan-number,     markup-token-kind(|"number"))
   markup-token = scan-token(scan-escape,     markup-token-kind(|"string"))
 //markup-token = scan-token(scan-identifier, markup-token-kind(|"identifier"))
@@ -151,19 +160,20 @@ rules // Token markup
   MessageChars : 181 137   0 // yellow
 */
 
-  markup-token = scan-token(scan-rule-label,    markup-token-sort(|"rule-label"))
-  markup-token = scan-token(scan-constraint-id, markup-token-sort(|"constraint-id"))
-  markup-token = scan-token(scan-namespace-id,  markup-token-sort(|"namespace-id"))
-  markup-token = scan-token(scan-var-id,        markup-token-sort(|"var-id"))
-  markup-token = scan-token(scan-uc-id,         markup-token-sort(|"uc-id"))
-  markup-token = scan-token(scan-lc-id,         markup-token-sort(|"lc-id"))
-  markup-token = scan-token(scan-id,            markup-token-sort(|"id"))
-  markup-token = scan-token(scan-str,           markup-token-sort(|"str"))
-  markup-token = scan-token(scan-file-id,       markup-token-sort(|"file-id"))
-  markup-token = scan-token(scan-module-id,     markup-token-sort(|"module-id"))
-  markup-token = scan-token(scan-str-id,        markup-token-sort(|"str-id"))
-  markup-token = scan-token(scan-op-id,         markup-token-sort(|"op-id"))
-  markup-token = scan-token(scan-message-chars, markup-token-sort(|"message-chars"))
+//  markup-token = scan-token(scan-rule-label,    markup-token-sort(|"RuleLabel"))
+  markup-token = scan-token(scan-constraint-id, markup-token-sort(|"ConstraintId"))
+//  markup-token = scan-token(scan-namespace-id,  markup-token-sort(|"NamespaceId"))
+//  markup-token = scan-token(scan-var-id,        markup-token-sort(|"VARID"))
+//  markup-token = scan-token(scan-uc-id,         markup-token-sort(|"UCID"))
+//  markup-token = scan-token(scan-lc-id,         markup-token-sort(|"LCID"))
+//  markup-token = scan-token(scan-str,           markup-token-sort(|"Str"))
+//  markup-token = scan-token(scan-file-id,       markup-token-sort(|"FileID"))
+//  markup-token = scan-token(scan-module-id,     markup-token-sort(|"ModuleID"))
+//  markup-token = scan-token(scan-str-id,        markup-token-sort(|"STRID"))
+  markup-token = scan-token(scan-op-id,         markup-token-sort(|"OpId"))
+//  markup-token = scan-token(scan-message-chars, markup-token-sort(|"MessageChars"))
+
+  markup-token = scan-token(scan-id,            markup-token-sort(|"ID"))
 
   markup-token = scan-token(scan-unknown,    id)
 
