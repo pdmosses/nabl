@@ -76,7 +76,7 @@ rules // Actions
     then !()
     else
       path := <string-replace(|$[[project-path]/], "")> file
-    ; meta-language := <get-extension> path
+    ; meta-language := <get-extension; try(?"stxtest"; !"stx")> path
     ; filename := <base-filename> path
     ; project-name := <base-filename> project-path
     ; project-clone := <local-path> project-path

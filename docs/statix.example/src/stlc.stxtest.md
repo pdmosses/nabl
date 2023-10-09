@@ -10,7 +10,7 @@ hide:
 
 [pdmosses/nabl/statix.example/src/stlc.stxtest]: https://github.com/pdmosses/nabl/blob/master/statix.example/src/stlc.stxtest "The source file on GitHub"
 
-<div class="stxtest"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+<div class="stx"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4

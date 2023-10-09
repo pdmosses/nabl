@@ -10,7 +10,7 @@ hide:
 
 [pdmosses/nabl/statix.example/src/subtype-overloading.stxtest]: https://github.com/pdmosses/nabl/blob/master/statix.example/src/subtype-overloading.stxtest "The source file on GitHub"
 
-<div class="stxtest"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+<div class="stx"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -120,6 +120,6 @@ hide:
 
   <a href="#pots2ots_718_726" id="pots2ots_1036_1044" title="Referenced at line 35"><span class="token sort_ConstraintId">pots2ots</span></a> <span class="keyword">maps</span> <a href="#pot2ot_1078_1084" id="pot2ot_1050_1056" title="Defined at line 54"><span class="token sort_ConstraintId">pot2ot</span></a><span class="operator">(</span><span class="keyword">list</span><span class="operator">(*))</span> <span class="operator">=</span> <span class="keyword">list</span><span class="operator">(*)</span>
   <a href="#pot2ot_1050_1056" id="pot2ot_1078_1084" title="Referenced at line 53, 55"><span class="token sort_ConstraintId">pot2ot</span></a> <span class="operator">:</span> <span class="operator">(</span><span class="cons_PathSort">path</span> <span class="operator">*</span> <span class="operator">(</span><span class="cons_OccurrenceSort">occurrence</span> <span class="operator">*</span> <span class="cons_SimpleSort"><a href="#TYPE_473_477" id="TYPE_1109_1113" title="Defined at line 20"><span class="token sort_OpId">TYPE</span></a></span><span class="operator">))</span> <span class="operator">-&gt;</span> <span class="operator">(</span><span class="cons_OccurrenceSort">occurrence</span> <span class="operator">*</span> <span class="cons_SimpleSort"><a href="#TYPE_473_477" id="TYPE_1133_1137" title="Defined at line 20"><span class="token sort_OpId">TYPE</span></a></span><span class="operator">)</span>
-  <a href="#pot2ot_1078_1084" id="pot2ot_1141_1147" title="Defined at line 54"><span class="token sort_ConstraintId">pot2ot</span></a><span class="operator">((_,</span> <span class="cons_Var">ot</span><span class="operator">))</span> <span class="operator">=</span> <span class="cons_Var"><span id="ot_1159_1161" title="Not referenced locally, nor via imports"><span class="token sort_ConstraintId">ot</span></span></span><span class="operator">.</span>
+  <a href="#pot2ot_1078_1084" id="pot2ot_1141_1147" title="Defined at line 54"><span class="token sort_ConstraintId">pot2ot</span></a><span class="operator">((_,</span> <span class="cons_Var"><span id="ot_1152_1154" title="Not referenced locally, nor via imports"><span class="token sort_ConstraintId">ot</span></span></span><span class="operator">))</span> <span class="operator">=</span> <span class="cons_Var">ot</span><span class="operator">.</span>
 
 </code></pre></td></tr></tbody></table></div>

@@ -10,7 +10,7 @@ hide:
 
 [pdmosses/nabl/statix.example/src/partial-classes.stxtest]: https://github.com/pdmosses/nabl/blob/master/statix.example/src/partial-classes.stxtest "The source file on GitHub"
 
-<div class="stxtest"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+<div class="stx"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -154,7 +154,7 @@ hide:
   <a href="#importPartials_811_825" id="importPartials_874_888" title="Referenced at line 52"><span class="token sort_ConstraintId">importPartials</span></a> <span class="keyword">maps</span> <a href="#importPartial_922_935" id="importPartial_894_907" title="Defined at line 58"><span class="token sort_ConstraintId">importPartial</span></a><span class="operator">(</span><span class="keyword">list</span><span class="operator">(*),</span> <span class="operator">*)</span>
   <a href="#importPartial_894_907" id="importPartial_922_935" title="Referenced at line 57, 60, 62"><span class="token sort_ConstraintId">importPartial</span></a> <span class="operator">:</span> <span class="operator">(</span><span class="cons_PathSort">path</span> <span class="operator">*</span> <span class="operator">(</span><span class="cons_StringSort">string</span> <span class="operator">*</span> <span class="cons_ScopeSort">scope</span><span class="operator">))</span> <span class="operator">*</span> <span class="cons_ScopeSort">scope</span>
 
-  <a href="#importPartial_922_935" id="importPartial_975_988" title="Defined at line 58"><span class="token sort_ConstraintId">importPartial</span></a><span class="operator">((_,</span> <span class="operator">(_,</span> <span class="cons_Var">s</span><span class="operator">)),</span> <span class="cons_Var"><span id="s_1002_1003" title="Not referenced locally, nor via imports"><span class="token sort_ConstraintId">s</span></span></span><span class="operator">).</span>
+  <a href="#importPartial_922_935" id="importPartial_975_988" title="Defined at line 58"><span class="token sort_ConstraintId">importPartial</span></a><span class="operator">((_,</span> <span class="operator">(_,</span> <span class="cons_Var"><span id="s_997_998" title="Not referenced locally, nor via imports"><span class="token sort_ConstraintId">s</span></span></span><span class="operator">)),</span> <span class="cons_Var">s</span><span class="operator">).</span>
 
   <a href="#importPartial_922_935" id="importPartial_1009_1022" title="Defined at line 58"><span class="token sort_ConstraintId">importPartial</span></a><span class="operator">((_,</span> <span class="operator">(_,</span> <span class="cons_Var"><a href="#s'_1054_1056" id="s'_1031_1033" title="Referenced at line 63">s<span class="operator">'</span></a></span><span class="operator">)),</span> <span class="cons_Var"><a href="#s_1047_1048" id="s_1037_1038" title="Referenced at line 63"><span class="token sort_ConstraintId">s</span></a></span><span class="operator">)</span> <span class="operator">:-</span>
     <span class="cons_Var"><a href="#s_1037_1038" id="s_1047_1048" title="Defined at line 62"><span class="token sort_ConstraintId">s</span></a></span> <span class="operator">-</span><a href="#E_449_450" id="E_1050_1051" title="Defined at line 30"><span class="token sort_OpId">E</span></a><span class="operator">-&gt;</span> <span class="cons_Var"><a href="#s'_1031_1033" id="s'_1054_1056" title="Defined at line 62">s<span class="operator">'</span></a></span><span class="operator">.</span>
