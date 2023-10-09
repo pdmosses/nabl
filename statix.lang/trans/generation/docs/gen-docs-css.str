@@ -46,7 +46,8 @@ rules // generate docs highlighting CSS for meta-language from its editor/Colore
     $[[<gen-selector(|meta-language)> kind] {
         [<gen-color> color]
         [<gen-bg-color> bg-color]
-        [<gen-font> font]
+        [<gen-font-weight> font]
+        [<gen-font-style> font]
       }
       ]
 
@@ -66,14 +67,20 @@ rules // generate docs highlighting CSS for meta-language from its editor/Colore
     SortAndConstructor(Sort(s), Constructor(c)) -> $[.[meta-language] .sort_[s].cons_[c]]
   
   gen-color: ColorRGB(r, g, b) -> $[color: rgb([r] [g] [b]);]
-  gen-color: ColorDefault()    -> ""
+  gen-color: ColorDefault()    -> $[color: var(--md-code-fg-color);]
   gen-color: NoColor()         -> ""
 
   gen-bg-color: ColorRGB(r, g, b) -> $[background-color: rgb([r] [g] [b]);]
-  gen-bg-color: ColorDefault()    -> ""
+  gen-bg-color: ColorDefault()    -> $[background-color: var(--md-code-bg-color);]
   gen-bg-color: NoColor()         -> ""
 
-  gen-font: BOLD()        -> "font-weight: bold;"
-  gen-font: BOLD_ITALIC() -> "font-weight: bold; font-style: italic;"
-  gen-font: ITALIC()      -> "font-style: italic;"
-  gen-font: NORMAL()      -> "font-weight: normal; font-style: normal;"
+  gen-font-weight: BOLD()        -> "font-weight: bold;"
+  gen-font-weight: BOLD_ITALIC() -> "font-weight: bold;"
+  gen-font-weight: ITALIC()      -> "font-weight: normal;"
+  gen-font-weight: NORMAL()      -> "font-weight: normal;"
+
+  gen-font-style: BOLD()        -> "font-style: normal;"
+  gen-font-style: BOLD_ITALIC() -> "font-style: italic;"
+  gen-font-style: ITALIC()      -> "font-style: italic;"
+  gen-font-style: NORMAL()      -> "font-style: normal;"
+  

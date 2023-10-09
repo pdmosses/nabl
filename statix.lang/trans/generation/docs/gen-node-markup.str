@@ -43,7 +43,7 @@ rules // Nodes
       ; <fputs> ($[</span>], outs)
       else
         (s, t) := <origin-offset> def1
-      ; href := $[[direct-path]#[node]_[s]_[t]]
+      ; href := $[[<file-url> direct-path]#[node]_[s]_[t]]
       ; origin-info := <gen-origin-info> (node, defs)
       ; title := <string-replace(|"  ", " ")> $[Defined at [origin-info]]
       ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
@@ -75,7 +75,7 @@ rules // Nodes
         [ref1 | _] := refs
       ; direct-path := <direct-path> (<origin-file> node, <origin-file> ref1)
       ; (s, t) := <origin-offset> ref1
-      ; href := $[[direct-path]#[node]_[s]_[t]]
+      ; href := $[[<file-url> direct-path]#[node]_[s]_[t]]
       ; origin-info := <gen-origin-info> (node, refs)
       ; title := <string-replace(|"  ", " ")> $[Referenced at [origin-info]]
       ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)

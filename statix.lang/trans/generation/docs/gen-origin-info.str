@@ -66,7 +66,13 @@ rules // Direct path
   direct-path: ([_|s*], t*) -> <direct-path> (s*, [".."|t*])
   
   direct-path: ([], t*) -> <separate-by(|"/"); concat-strings> t*
-  
+
+  // file-url: string -> string
+  // - avoids status 301 redirects reported by the W3C link checker
+
+  file-url: "" -> ""
+  file-url: s -> $[[s]/]
+
   // is-in-project: s:string -> s:string
   // - checks that s is not a relative path to a plugin file
 

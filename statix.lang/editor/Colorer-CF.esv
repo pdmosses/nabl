@@ -31,6 +31,12 @@ colorer
   ConstraintId : 0 0 109            // dark blue ?  
   
 //  NamespaceId  : 108 113 196        // violet // Deprecated?
+  _.NsDecl          : 108 113 196        // violet
+  _.NamespaceQuery  : 108 113 196        // violet
+  _.NamespaceFilter : _
+  _.NamespaceMin    : _
+  _.StxOccurrence   : _
+  _.Closure         : _
 
 //  VARID        : 101 123 131 italic // base0 // Var.Var = VARID
   _.Var        : 101 123 131 italic // base0
@@ -49,9 +55,18 @@ colorer
 //  ModuleID     : 0 0 255            // blue // ModuleId?
   
 //  STRID        : 0 0 255 bold       // blue // SortId = STRID; OpId = STRID
-  _.SortDecl       : 0 0 255 bold       // blue // SortDecl.SortDecl = SortId
+  _.SortDecl       : 0 0 0 _      // black // SortDecl.SortDecl = SortId
 //  _.SortAlias       : 0 0 255 bold       // blue // SortDecl.SortAlias = <<SortId> = <SortRef>>
-  _.SimpleSort        : 0 0 255 _       // blue // Sort.SimpleSort = SortId
+// SortRef:
+  _.IntSort        : 127 0 85 bold
+  _.StringSort     : 127 0 85 bold
+  _.PathSort       : 127 0 85 bold
+  _.LabelSort      : 127 0 85 bold
+  _.OccurrenceSort : 127 0 85 bold
+  _.ScopeSort      : 127 0 85 bold
+  _.AstIdSort      : 127 0 85 bold
+
+  _.SimpleSort        : 0 0 0 _       // black // Sort.SimpleSort = SortId
   
   OpId         : 7 54 66 bold       // base02
   

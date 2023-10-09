@@ -105,7 +105,7 @@ rules // Scan and markup a token
 
 rules // Kinder strategies:
 
-  markup-token-kind(|kind): token -> $[<span class="token [kind]">[token]</span>]
+  markup-token-kind(|kind): token -> $[<span class="[kind]">[token]</span>]
 
   markup-token-sort(|sort): token -> $[<span class="token sort_[sort]">[token]</span>]
 
@@ -126,7 +126,7 @@ rules // Token markup
 //markup-token = scan-token(scan-number,     markup-token-kind(|"number"))
   markup-token = scan-token(scan-escape,     markup-token-kind(|"string"))
 //markup-token = scan-token(scan-identifier, markup-token-kind(|"identifier"))
-//markup-token = scan-token(scan-operator,   markup-token-kind(|"operator"))
+markup-token = scan-token(scan-operator,   markup-token-kind(|"operator"))
 //markup-token = scan-token(scan-var,        markup-token-kind(|"var"))
 
 /*
@@ -202,9 +202,13 @@ rules // Scanners:
   scan-unknown = scan(id)
 
   scan-escape = scan(?'\') ; scan( not(?'&') )
-  scan-escape = scan(?'\') ; scan(?'&') ; scan(?'a') ; scan(?'m') ; scan(?'p') ; scan(?';')
-  scan-escape = scan(?'\') ; scan(?'&') ; scan(?'g') ; scan(?'t') ; scan(?';')
-  scan-escape = scan(?'\') ; scan(?'&') ; scan(?'l') ; scan(?'t') ; scan(?';')
+  scan-escape = scan(?'\') ; scan-html
+  
+  scan-html = scan(|"&amp;")
+  scan-html = scan(|"&lt;")
+  scan-html = scan(|"&gt;")
+
+  scan-operator = repeat1 ( scan-html <+ scan( not(is-alphanum + ?' ' + ?'\n' + ?'\r') ) )
 
   scan-string-1 = scan(?'\'') ; repeat( scan-string-char-1 ) ; scan(?'\'')
  
@@ -290,6 +294,7 @@ rules // Scanners:
   scan-keyword = scan(|"coinductive")
   scan-keyword = scan(|"constraints")
   scan-keyword = scan(|"constraint")
+  scan-keyword = scan(|"constructors")
   scan-keyword = scan(|"false")
   scan-keyword = scan(|"filter")
   scan-keyword = scan(|"imports")
@@ -313,6 +318,7 @@ rules // Scanners:
   scan-keyword = scan(|"resolve")
   scan-keyword = scan(|"rules")
   scan-keyword = scan(|"signature")
+  scan-keyword = scan(|"sorts")
   scan-keyword = scan(|"true")
   scan-keyword = scan(|"try")
   scan-keyword = scan(|"with")
