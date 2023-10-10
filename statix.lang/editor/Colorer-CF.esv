@@ -55,7 +55,7 @@ colorer
 //  ModuleID     : 0 0 255            // blue // ModuleId?
   
 //  STRID        : 0 0 255 bold       // blue // SortId = STRID; OpId = STRID
-  _.SortDecl       : 0 0 0 _      // black // SortDecl.SortDecl = SortId
+  _.SortDecl       : 0 0 0      // black // SortDecl.SortDecl = SortId
 //  _.SortAlias       : 0 0 255 bold       // blue // SortDecl.SortAlias = <<SortId> = <SortRef>>
 // SortRef:
   _.IntSort        : 127 0 85 bold
@@ -66,7 +66,7 @@ colorer
   _.ScopeSort      : 127 0 85 bold
   _.AstIdSort      : 127 0 85 bold
 
-  _.SimpleSort        : 0 0 0 _       // black // Sort.SimpleSort = SortId
+  _.SimpleSort        : 0 0 0       // black // Sort.SimpleSort = SortId
   
   OpId         : 7 54 66 bold       // base02
   

@@ -85,7 +85,6 @@
 }
 .stx .cons_SortDecl, .stx .cons_SortDecl .token {
   color: rgb(0 0 0);
-  /* background-color: var(--md-code-bg-color); */
   font-weight: normal;
   font-style: normal;
 }
@@ -126,7 +125,6 @@
 }
 .stx .cons_SimpleSort, .stx .cons_SimpleSort .token {
   color: rgb(0 0 0);
-  /* background-color: var(--md-code-bg-color); */
   font-weight: normal;
   font-style: normal;
 }
