@@ -78,6 +78,11 @@
   font-weight: normal;
   font-style: normal;
 }
+.stx .cons_Label, .stx .cons_Label .token {
+  color: rgb(88 110 117);
+  font-weight: normal;
+  font-style: normal;
+}
 .stx .cons_Str, .stx .cons_Str .token {
   color: rgb(0 128 0);
   font-weight: normal;

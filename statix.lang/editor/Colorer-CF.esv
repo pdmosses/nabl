@@ -46,7 +46,8 @@ colorer
 //  LCID         : 0 0 0              // black // ConstraintId = LCID
   
   ID           :  88 110 117        // base02 // AstPropertyId = ID; RelationId = ID
-  
+  _.Label : 88 110 117
+
 //  Str          : 0 128 0            // darkgreen
   _.Str          : 0 128 0            // darkgreen
   
