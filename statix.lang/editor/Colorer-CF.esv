@@ -23,6 +23,8 @@ colorer Default, token-based highlighting
   
 colorer
 
+  Id : _
+
 //  RuleLabel._  : 0 0 139 // Unused?
   
   //RelationId   : 38 139 210 bold     // blue   
@@ -70,7 +72,9 @@ colorer
 
   _.SimpleSort        : 0 0 0       // black // Sort.SimpleSort = SortId
   
-  OpId         : 7 54 66 bold       // base02
+//  OpId         : 7 54 66 bold       // base02
+  _.OpDecl       : 7 54 66 bold       // base02
+  _.Op           : 7 54 66 bold       // base02
   
 //  MessageChars : 181 137 0          // yellow
   _.Text : 181 137 0          // yellow // MessageContentPart.Text = MessageChars

@@ -81,6 +81,7 @@ rules // Actions
     ; project-name := <base-filename> project-path
     ; project-clone := <local-path> project-path
     ; repo-name := <dirname; base-filename> project-clone
+    ; repo-path := <local-path; dirname; dirname> project-path
     ; repo-clone := <dirname> project-clone
     ; github-repo := $[pdmosses/[repo-name]]
     ; github-link := <
@@ -88,7 +89,7 @@ rules // Actions
         !${:simple-github: [{github-repo}/{project-name}/{path}]}
         end > path
     ; target := $[[repo-clone]/docs/[project-name]/[path].md]
-    ; say(!target)
+    ; say(!target; string-replace(|repo-path, "..."))
     ; ins := <fopen> (path, "r")
     ; outs := <fopen> (target, "w")
     ; <fputs> (

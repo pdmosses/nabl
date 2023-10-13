@@ -20,14 +20,14 @@ rules // generate docs highlighting CSS for meta-language from its editor/Colore
         <!$[[meta-language-project-path]/editor/Colorer-CF.esv]; file-exists 
          <+ !$[[meta-language-project-path]/editor/Colorer.esv]>
     ; css-file := $[[repo-clone]/docs/stylesheets/[meta-language].css]
-    ; say(!css-file)
+    ; say(!css-file; string-replace(|repo-path, "..."))
     ; css := <parse-file; colorer-to-css(|meta-language)> colorer-file
     ; outs := <fopen> (css-file, "w")
     ; <fputs> (css, outs)
     ; <fclose> outs
     ; metaborg-css-dir := $[[repo-clone]/docs/stylesheets]
     ; metaborg-css-file :=  $[[meta-language-project-path]/trans/generation/docs/metaborg.css]
-    ; say(!$[[metaborg-css-dir]/metaborg.css])
+    ; say(!$[[metaborg-css-dir]/metaborg.css]; string-replace(|repo-path, "..."))
     ; <copy-file> (metaborg-css-file, metaborg-css-dir)
 
   meta-project-path: "sdf3" -> "sdf/org.metaborg.meta.lang.template"
@@ -60,7 +60,7 @@ rules // generate docs highlighting CSS for meta-language from its editor/Colore
   gen-selector(|meta-language): Token(TK_LAYOUT())     -> $[.[meta-language] .layout]
   
   gen-selector(|meta-language):
-    ConstructorOnly(Constructor(c)) -> $[.[meta-language] .cons_[c], .[meta-language] .cons_[c] .token]
+    ConstructorOnly(Constructor(c)) -> $[.[meta-language] .cons_[c], .[meta-language] .cons_[c] > * > .token]
   gen-selector(|meta-language):
     Sort(s) -> $[.[meta-language] .sort_[s]]
   gen-selector(|meta-language):

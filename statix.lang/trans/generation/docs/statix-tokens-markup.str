@@ -160,9 +160,8 @@ markup-token = scan-token(scan-operator,   markup-token-kind(|"operator"))
   MessageChars : 181 137   0 // yellow
 */
 
-  markup-token = scan-token(scan-module-id,     markup-token-sort(|"ModuleID"))
 //  markup-token = scan-token(scan-rule-label,    markup-token-sort(|"RuleLabel"))
-  markup-token = scan-token(scan-constraint-id, markup-token-sort(|"ConstraintId"))
+//  markup-token = scan-token(scan-constraint-id, markup-token-sort(|"ConstraintId"))
 //  markup-token = scan-token(scan-namespace-id,  markup-token-sort(|"NamespaceId"))
 //  markup-token = scan-token(scan-var-id,        markup-token-sort(|"VARID"))
 //  markup-token = scan-token(scan-uc-id,         markup-token-sort(|"UCID"))
@@ -170,10 +169,11 @@ markup-token = scan-token(scan-operator,   markup-token-kind(|"operator"))
 //  markup-token = scan-token(scan-str,           markup-token-sort(|"Str"))
 //  markup-token = scan-token(scan-file-id,       markup-token-sort(|"FileID"))
 //  markup-token = scan-token(scan-str-id,        markup-token-sort(|"STRID"))
-  markup-token = scan-token(scan-op-id,         markup-token-sort(|"OpId"))
+//  markup-token = scan-token(scan-op-id,         markup-token-sort(|"OpId"))
 //  markup-token = scan-token(scan-message-chars, markup-token-sort(|"MessageChars"))
+  markup-token = scan-token(scan-module-id,     markup-token-sort(|"Id"))
 
-  markup-token = scan-token(scan-id,            markup-token-sort(|"ID"))
+//  markup-token = scan-token(scan-id,            markup-token-sort(|"ID"))
 
   markup-token = scan-token(scan-unknown,    id)
 
@@ -210,21 +210,21 @@ rules // Scanners:
 
   scan-operator = repeat1 ( scan-html <+ scan( not(is-alphanum + ?' ' + ?'\n' + ?'\r') ) )
 
-  scan-string-1 = scan(?'\'') ; repeat( scan-string-char-1 ) ; scan(?'\'')
- 
-  scan-string-char-1 = scan(not(?'\'' + ?'\'))
-  scan-string-char-1 = scan(?'\') ; scan(?'\' + ?'\'' + ?'n' + ?'t')
-  scan-string-char-1 = scan(?'\') ; repeat( scan(is-num) | 3 )
-  
-  scan-string-2 = scan(?'"') ; repeat( scan-string-char-2 ) ; scan(?'"')
-  
-  scan-string-char-2 = scan(not(?'"' + ?'\'))
-  scan-string-char-2 = scan(?'\') ; scan(?'\' + ?'"' + ?'n' + ?'t')
-  scan-string-char-2 = scan(?'\') ; repeat( scan(is-num) | 3 )
-
-  scan-integer = try( scan(?'+' + ?'-') ) ; repeat1( scan(?is-num) )
-   
-  scan-number = scan-integer ; try( scan(?'.') ; repeat1( scan(?is-num) ) ; scan(?'e') ; scan-integer )
+//  scan-string-1 = scan(?'\'') ; repeat( scan-string-char-1 ) ; scan(?'\'')
+// 
+//  scan-string-char-1 = scan(not(?'\'' + ?'\'))
+//  scan-string-char-1 = scan(?'\') ; scan(?'\' + ?'\'' + ?'n' + ?'t')
+//  scan-string-char-1 = scan(?'\') ; repeat( scan(is-num) | 3 )
+//  
+//  scan-string-2 = scan(?'"') ; repeat( scan-string-char-2 ) ; scan(?'"')
+//  
+//  scan-string-char-2 = scan(not(?'"' + ?'\'))
+//  scan-string-char-2 = scan(?'\') ; scan(?'\' + ?'"' + ?'n' + ?'t')
+//  scan-string-char-2 = scan(?'\') ; repeat( scan(is-num) | 3 )
+//
+//  scan-integer = try( scan(?'+' + ?'-') ) ; repeat1( scan(?is-num) )
+//   
+//  scan-number = scan-integer ; try( scan(?'.') ; repeat1( scan(?is-num) ) ; scan(?'e') ; scan-integer )
 
 /*
   statix.lang/syntax/-
@@ -333,19 +333,19 @@ rules // Scanners:
   scan-keyword = scan(|"try")
   scan-keyword = scan(|"with")
     
-  scan-rule-label = fail // no syntax found
-  
-  scan-constraint-id = scan-lc-id 
-  
-  scan-namespace-id = scan-lc-id
-  
-  scan-var-id    = scan(is-alpha) ; repeat(scan(is-alphanum + ?'_')) ; repeat(scan(?'\'')) ; not(scan(is-alphanum + ?'_'))
-  
-  scan-uc-id     = scan(is-upper) ; repeat(scan(is-alphanum + ?'_')) ; not(scan(?'\''))
-
-  scan-lc-id     = scan(is-lower) ; repeat(scan(is-alphanum + ?'_')) ; not(scan(?'\''))
-
-  scan-id        = scan(is-alpha) ; repeat(scan(is-alphanum + ?'_')) ; not(scan(?'\''))
+//  scan-rule-label = fail // no syntax found
+//  
+//  scan-constraint-id = scan-lc-id 
+//  
+//  scan-namespace-id = scan-lc-id
+//  
+//  scan-var-id    = scan(is-alpha) ; repeat(scan(is-alphanum + ?'_')) ; repeat(scan(?'\'')) ; not(scan(is-alphanum + ?'_'))
+//  
+//  scan-uc-id     = scan(is-upper) ; repeat(scan(is-alphanum + ?'_')) ; not(scan(?'\''))
+//
+//  scan-lc-id     = scan(is-lower) ; repeat(scan(is-alphanum + ?'_')) ; not(scan(?'\''))
+//
+//  scan-id        = scan(is-alpha) ; repeat(scan(is-alphanum + ?'_')) ; not(scan(?'\''))
 
   scan-str       = scan(?'"') ; repeat( scan-str-char ) ; scan(?'"')
   
@@ -356,13 +356,13 @@ rules // Scanners:
   scan-str-char  = scan(|"\\r")
   scan-str-char  = scan(|"\\n")
   
-  scan-file-id   = repeat1(scan(is-alphanum + ?'_' + ?'-' + ?'.' + ?'~' + ?'\''))
+  scan-file-id   = scan(is-alpha); repeat(scan(is-alphanum + ?'_' + ?'-' + ?'.' + ?'~' + ?'\''))
   
   scan-module-id = scan-file-id ; repeat( scan(?'/') ; scan-file-id )
   
-  scan-str-id    = scan(is-upper) ; repeat(scan(is-alphanum + ?'_' + ?'-'))
-  
-  scan-op-id     = scan-str-id
+//  scan-str-id    = scan(is-upper) ; repeat(scan(is-alphanum + ?'_' + ?'-'))
+//  
+//  scan-op-id     = scan-str-id
   
   scan-message-chars = repeat1( scan-message-char ) ; where(scan(?'[' + ?']'))
   
