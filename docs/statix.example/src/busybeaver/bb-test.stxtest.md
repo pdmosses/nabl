@@ -27,7 +27,7 @@ hide:
 
 <span class="keyword">resolve</span>
 
-  <a href="../bb-rules.stx/#busybeaver_197_207" id="busybeaver_141_151" title="Defined at ../bb-rules.stx line 12"><span class="token sort_ConstraintId">busybeaver</span></a><span class="operator">(</span><a href="../bb-sig.stx/#A_198_199" id="A_152_153" title="Defined at ../bb-sig.stx line 9"><span class="token sort_OpId">A</span></a><span class="operator">(),</span> <span class="operator">([],</span> <a href="../bb-sig.stx/#Zero_295_299" id="Zero_162_166" title="Defined at ../bb-sig.stx line 15"><span class="token sort_OpId">Zero</span></a><span class="operator">(),</span> <span class="operator">[]))</span>
+  <a href="../bb-rules.stx/#busybeaver_197_207" id="busybeaver_141_151" title="Defined at ../bb-rules.stx line 12"><span class="token sort_ModuleID">busybeaver</span></a><span class="operator">(</span><a href="../bb-sig.stx/#A_198_199" id="A_152_153" title="Defined at ../bb-sig.stx line 9"><span class="token sort_ModuleID">A</span></a><span class="operator">(),</span> <span class="operator">([],</span> <a href="../bb-sig.stx/#Zero_295_299" id="Zero_162_166" title="Defined at ../bb-sig.stx line 15"><span class="token sort_ModuleID">Zero</span></a><span class="operator">(),</span> <span class="operator">[]))</span>
 
 <span class="keyword">imports</span>
 

@@ -57,6 +57,7 @@ colorer
 //  STRID        : 0 0 255 bold       // blue // SortId = STRID; OpId = STRID
   _.SortDecl       : 0 0 0      // black // SortDecl.SortDecl = SortId
 //  _.SortAlias       : 0 0 255 bold       // blue // SortDecl.SortAlias = <<SortId> = <SortRef>>
+  _.SortAlias      : 0 0 0    // SortDecl.SortAlias = <<SortId> = <SortRef>>
 // SortRef:
   _.IntSort        : 127 0 85 bold
   _.StringSort     : 127 0 85 bold

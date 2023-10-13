@@ -189,7 +189,7 @@ rules // Scanners:
   scan-comment = ( scan(?'/') ; scan(?'/') ; repeat( scan(not(?'\n' + ?'\r')) ) )
     
   scan-comment-char = scan(not(?'*'))
-  scan-comment-char = ( scan(?'*') ; try( scan( not(?'/') ) ) )
+  scan-comment-char = ( scan(?'*') ; scan( not(?'/') ) )
   
 //  scan-keywords = scan-keyword ; repeat( repeat1( scan(?' ') ) ; scan-keyword )
   
@@ -358,7 +358,7 @@ rules // Scanners:
   
   scan-file-id   = repeat1(scan(is-alphanum + ?'_' + ?'-' + ?'.' + ?'~' + ?'\''))
   
-  scan-module-id = scan-file-id ; repeat1( scan(?'/') ; scan-file-id )
+  scan-module-id = scan-file-id ; repeat( scan(?'/') ; scan-file-id )
   
   scan-str-id    = scan(is-upper) ; repeat(scan(is-alphanum + ?'_' + ?'-'))
   

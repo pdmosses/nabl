@@ -88,6 +88,11 @@
   font-weight: normal;
   font-style: normal;
 }
+.stx .cons_SortAlias, .stx .cons_SortAlias .token {
+  color: rgb(0 0 0);
+  font-weight: normal;
+  font-style: normal;
+}
 .stx .cons_IntSort, .stx .cons_IntSort .token {
   color: rgb(127 0 85);
   font-weight: bold;
