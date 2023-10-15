@@ -67,11 +67,11 @@ rules // generate docs highlighting CSS for meta-language from its editor/Colore
     SortAndConstructor(Sort(s), Constructor(c)) -> $[.[meta-language] .sort_[s].cons_[c]]
   
   gen-color: ColorRGB(r, g, b) -> $[color: rgb([r] [g] [b]);]
-  gen-color: ColorDefault()    -> $[color: var(--md-code-fg-color);]
+  gen-color: ColorDefault()    -> ""
   gen-color: NoColor()         -> ""
 
   gen-bg-color: ColorRGB(r, g, b) -> $[background-color: rgb([r] [g] [b]);]
-  gen-bg-color: ColorDefault()    -> $[background-color: var(--md-code-bg-color);]
+  gen-bg-color: ColorDefault()    -> ""
   gen-bg-color: NoColor()         -> ""
 
   gen-font-weight: BOLD()        -> "font-weight: bold;"
