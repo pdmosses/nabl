@@ -4,7 +4,6 @@
   font-style: normal;
 }
 .stx .identifier {
-  color: var(--md-code-fg-color);
   font-weight: normal;
   font-style: normal;
 }
@@ -34,7 +33,6 @@
   font-style: italic;
 }
 .stx .sort_Id {
-  color: var(--md-code-fg-color);
   font-weight: normal;
   font-style: normal;
 }
@@ -54,22 +52,18 @@
   font-style: normal;
 }
 .stx .cons_NamespaceFilter, .stx .cons_NamespaceFilter > * > .token {
-  color: var(--md-code-fg-color);
   font-weight: normal;
   font-style: normal;
 }
 .stx .cons_NamespaceMin, .stx .cons_NamespaceMin > * > .token {
-  color: var(--md-code-fg-color);
   font-weight: normal;
   font-style: normal;
 }
 .stx .cons_StxOccurrence, .stx .cons_StxOccurrence > * > .token {
-  color: var(--md-code-fg-color);
   font-weight: normal;
   font-style: normal;
 }
 .stx .cons_Closure, .stx .cons_Closure > * > .token {
-  color: var(--md-code-fg-color);
   font-weight: normal;
   font-style: normal;
 }
