@@ -4,11 +4,9 @@ menus
 
   menu: "Docs"
     
-    action: "Generate website" = generate-docs-website
-    action: "Generate pages"   = generate-docs-pages
-    action: "Generate CSS"     = generate-docs-css
+    action: "Generate website"  = generate-website
    
-    submenu: "Debug"
-      action: "Test generate page" = test-generate-docs-page
-      action: "Test tokens markup" = test-tokens-markup
+    submenu: "Develop"
+      action: "Generate config" = generate-config
+      action: "Generate css"    = generate-css
     end

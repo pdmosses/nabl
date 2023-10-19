@@ -43,7 +43,9 @@ rules // A line for each origin file of the nodes, listing the line numbers of t
       [ <direct-path> (path, file)
       , " line "
       | < filter(where(origin-file; equal(|file)))
-        ; map(origin-line; inc; int-to-string)
+        ; map(origin-line)
+        ; make-set
+        ; map(inc; int-to-string)
         ; separate-by(|", ")
         > nodes
       ]

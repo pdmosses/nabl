@@ -12,11 +12,11 @@ rules // initialise the repo docs directory for the current project
 //  (If the plugin had an option to suppress the MkDocs transformation,
 //  these files would not be needed.)
 
-//  generate-docs-website: (_, _, _, path, project-path) -> None()
+//  generate-config: (_, _, _, path, project-path) -> None()
 
-  generate-docs-website: (_, _, _, path, project-path) -> None()
+  generate-config: (_, _, _, path, project-path) -> None()
     with
-      meta-language := <get-extension> path
+      meta-language := <get-extension; try(?"stxtest"; !"stx")> path
     ; repo-clone := <local-path; dirname> project-path
     ; repo-name := <base-filename> repo-clone
     ; <gen-docs> (meta-language, repo-clone, repo-name, project-path)
@@ -104,4 +104,5 @@ markdown_extensions:
 extra_css:
   - stylesheets/metaborg.css
   - stylesheets/sdf3.css
-  - stylesheets/stx.css}
+  - stylesheets/stx.css
+}
