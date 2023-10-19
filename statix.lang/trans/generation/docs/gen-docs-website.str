@@ -17,11 +17,14 @@ rules // initialise the repo docs directory for the current project
   generate-docs-website: (_, _, _, path, project-path) -> None()
     with
       meta-language := <get-extension> path
-    ; repo-clone := <project-path; local-path; dirname>
-    ; project-name := <project-path; base-filename>
+    ; project-name := <base-filename> project-path
+    ; repo-clone := <local-path; dirname> project-path
+    ; repo-name := <base-filename> repo-clone
+    ; repo-path := <dirname> repo-clone
     ; file-list := <current-language-source-files; filter(where(has-extension(|meta-language)))>
-    ; dir-list := <map(dirname; string-replace(|<project-path>, $[[<project-path; base-filename>]]))> file-list
-    ; say(!$[[repo-clone]/docs/[project-name]/**])
+    ; dir-list := <map(dirname; string-replace(|project-path, project-name))> file-list
+    ; target := $[[repo-clone]/docs/[project-name]/**]
+    ; say(!target; string-replace(|repo-path, "..."))
     ; <map(gen-docs-dir)> dir-list
 
   gen-docs-dir: dir -> ()
@@ -39,4 +42,59 @@ rules // initialise the repo docs directory for the current project
     ; <fclose> outs
     ; if <dirname; is-substring(!"/")> dir
       then <dirname; gen-docs-dir> dir
+      else say(!dir)
       end
+
+  mkdocs: repo-name ->
+${site_name: {repo-name}
+site_url: https://pdmosses.github.io/{repo-name}/
+repo_name: pdmosses/{repo-name}
+repo_url: https://github.com/pdmosses/{repo-name}/
+
+theme:
+  name: material
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/lightbulb 
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+
+  features:
+    - content.code.copy
+    # - navigation.expand
+    - navigation.indexes 
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+plugins:
+  - search
+  - awesome-pages:
+      collapse_single_pages: false
+      strict: false
+      order: asc
+      sort_type: natural
+      order_by: title
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - stylesheets/metaborg.css
+  - stylesheets/sdf3.css
+  - stylesheets/stx.css}
