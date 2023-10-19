@@ -17,21 +17,22 @@ rules // initialise the repo docs directory for the current project
   generate-docs-website: (_, _, _, path, project-path) -> None()
     with
       meta-language := <get-extension> path
-    ; project-name := <base-filename> project-path
     ; repo-clone := <local-path; dirname> project-path
     ; repo-name := <base-filename> repo-clone
-    ; repo-path := <dirname> repo-clone
-    ; file-list := <current-language-source-files; filter(where(has-extension(|meta-language)))>
-    ; dir-list := <map(dirname; string-replace(|project-path, project-name))> file-list
-    ; target := $[[repo-clone]/docs/[project-name]/**]
-    ; say(!target; string-replace(|repo-path, "..."))
-    ; <map(gen-docs-dir)> dir-list
+    ; <gen-docs> (meta-language, repo-clone, repo-name, project-path)
+    ; <gen-mkdocs> (repo-clone, repo-name)
 
-  gen-docs-dir: dir -> ()
+  gen-docs: (meta-language, repo-clone, repo-name, project-path) -> None()
     with
-      repo-clone := <project-path; local-path; dirname>
-    ; project-name := <project-path; base-filename>
-    ; pages-file := $[[repo-clone]/docs/[dir]/.pages]
+      file-list := <current-language-source-files; filter(where(has-extension(|meta-language)))>
+    ; project-name := <base-filename> project-path
+    ; dir-list := <map(dirname; string-replace(|project-path, project-name))> file-list
+    ; say(!$[[repo-name]/docs/[project-name]])
+    ; <map(gen-docs-dir(|repo-clone))> dir-list
+
+  gen-docs-dir(|repo-clone): dir -> ()
+    with
+      pages-file := $[[repo-clone]/docs/[dir]/.pages]
     ; pages-contents := $[title: [<base-filename> dir]]
     ; pages-src-gen := "\nhide: true"
     ; outs := <fopen> (pages-file, "w")
@@ -41,9 +42,15 @@ rules // initialise the repo docs directory for the current project
       end
     ; <fclose> outs
     ; if <dirname; is-substring(!"/")> dir
-      then <dirname; gen-docs-dir> dir
-      else say(!dir)
+      then <dirname; gen-docs-dir(|repo-clone)> dir
       end
+
+  gen-mkdocs: (repo-clone, repo-name) -> ()
+    with
+      mkdocs-file := $[[repo-clone]/mkdocs.yml]
+    ; outs := <fopen> (mkdocs-file, "w")
+    ; <fputs> (<mkdocs> repo-name, outs)
+    ; <fclose> outs
 
   mkdocs: repo-name ->
 ${site_name: {repo-name}
