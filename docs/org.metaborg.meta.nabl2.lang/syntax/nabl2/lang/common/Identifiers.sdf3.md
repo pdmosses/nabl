@@ -25,7 +25,7 @@ hide:
 13
 14
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../../rules/Names.sdf3#nabl2/lang/common/Identifiers_76_105" id="nabl2/lang/common/Identifiers_7_36" title="Referenced at ../../rules/Names.sdf3 line 6">nabl2/lang/common/Identifiers</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../Main.sdf3/#nabl2/lang/common/Identifiers_69_98" id="nabl2/lang/common/Identifiers_7_36" title="Referenced at ../Main.sdf3 line 6; ../../rules/CGen.sdf3 line 9; ../../rules/Names.sdf3 line 6">nabl2/lang/common/Identifiers</a>
 
 <span class="keyword">imports</span>
 
@@ -33,8 +33,8 @@ hide:
 
 <span class="keyword">lexical syntax</span>
 
-  <a href="#NaBL2-RuleId_225_237" id="NaBL2-RuleId_100_112" title="Referenced at line 14; ../../rules/Names.sdf3 line 30">NaBL2-RuleId</a> = [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span>] [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>]*
-  <a href="#NaBL2-RuleId_225_237" id="NaBL2-RuleId_139_151" title="Referenced at line 14; ../../rules/Names.sdf3 line 30">NaBL2-RuleId</a> = <span class="cons_Lit">"init"</span> | <span class="cons_Lit">"default"</span> {<span class="keyword">case-insensitive</span>, <span class="keyword">reject</span>}
+  <a href="#NaBL2-RuleId_225_237" id="NaBL2-RuleId_100_112" title="Referenced at line 14; ../../rules/Names.sdf3 line 16, 17, 21, 22, 25, 26, 30">NaBL2-RuleId</a> = [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span>] [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>]*
+  <a href="#NaBL2-RuleId_225_237" id="NaBL2-RuleId_139_151" title="Referenced at line 14; ../../rules/Names.sdf3 line 16, 17, 21, 22, 25, 26, 30">NaBL2-RuleId</a> = <span class="cons_Lit">"init"</span> | <span class="cons_Lit">"default"</span> {<span class="keyword">case-insensitive</span>, <span class="keyword">reject</span>}
 
 <span class="keyword">lexical restrictions</span>
 

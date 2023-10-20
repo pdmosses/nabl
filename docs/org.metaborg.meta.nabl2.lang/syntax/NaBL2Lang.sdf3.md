@@ -26,12 +26,12 @@ hide:
 
 <span class="keyword">imports</span>
 
-  <a href="../nabl2/Lang.sdf3#nabl2/Lang_7_17" id="nabl2/Lang_29_39" title="Defined at ../nabl2/Lang.sdf3 line 1">nabl2/Lang</a>
-  <a href="../nabl2/lang/modules/Module.sdf3#nabl2/lang/modules/Module_7_32" id="nabl2/lang/modules/Module_42_67" title="Defined at ../nabl2/lang/modules/Module.sdf3 line 1">nabl2/lang/modules/Module</a> <span class="layout">// not transitively visible</span>
-  <a href="../Layout.sdf3#Layout_7_13" id="Layout_98_104" title="Defined at ../Layout.sdf3 line 1">Layout</a>
+  <a href="../nabl2/Lang.sdf3/#nabl2/Lang_7_17" id="nabl2/Lang_29_39" title="Defined at ../nabl2/Lang.sdf3 line 1">nabl2/Lang</a>
+  <a href="../nabl2/lang/modules/Module.sdf3/#nabl2/lang/modules/Module_7_32" id="nabl2/lang/modules/Module_42_67" title="Defined at ../nabl2/lang/modules/Module.sdf3 line 1">nabl2/lang/modules/Module</a> <span class="layout">// not transitively visible</span>
+  <a href="../Layout.sdf3/#Layout_7_13" id="Layout_98_104" title="Defined at ../Layout.sdf3 line 1">Layout</a>
 
 <span class="keyword">context-free start-symbols</span>
 
-  <a href="../nabl2/lang/modules/Module.sdf3#NaBL2-Module_108_120" id="NaBL2-Module_136_148" title="Defined at ../nabl2/lang/modules/Module.sdf3 line 9">NaBL2-Module</a>
+  <a href="../nabl2/lang/modules/Module.sdf3/#NaBL2-Module_108_120" id="NaBL2-Module_136_148" title="Defined at ../nabl2/lang/modules/Module.sdf3 line 9">NaBL2-Module</a>
 
 </code></pre></td></tr></tbody></table></div>

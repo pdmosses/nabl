@@ -34,12 +34,12 @@ hide:
 22
 23
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../CGen.sdf3#nabl2/lang/rules/Rules_227_249" id="nabl2/lang/rules/Rules_7_29" title="Referenced at ../CGen.sdf3 line 12">nabl2/lang/rules/Rules</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../CGen.sdf3/#nabl2/lang/rules/Rules_227_249" id="nabl2/lang/rules/Rules_7_29" title="Referenced at ../CGen.sdf3 line 12; ../../Main.sdf3 line 7">nabl2/lang/rules/Rules</a>
 
 <span class="keyword">imports</span>
 
-  <a href="../CGen.sdf3#nabl2/lang/rules/CGen_7_28" id="nabl2/lang/rules/CGen_42_63" title="Defined at ../CGen.sdf3 line 1">nabl2/lang/rules/CGen</a>
-  <a href="../Names.sdf3#nabl2/lang/rules/Names_7_29" id="nabl2/lang/rules/Names_66_88" title="Defined at ../Names.sdf3 line 1">nabl2/lang/rules/Names</a>
+  <a href="../CGen.sdf3/#nabl2/lang/rules/CGen_7_28" id="nabl2/lang/rules/CGen_42_63" title="Defined at ../CGen.sdf3 line 1">nabl2/lang/rules/CGen</a>
+  <a href="../Names.sdf3/#nabl2/lang/rules/Names_7_29" id="nabl2/lang/rules/Names_66_88" title="Defined at ../Names.sdf3 line 1">nabl2/lang/rules/Names</a>
 
 <span class="keyword">template options</span>
 
@@ -50,7 +50,7 @@ hide:
   <span id="NaBL2-ModuleSection_160_179" title="Not referenced locally, nor via imports">NaBL2-ModuleSection</span>.<span class="cons_Constructor"><span id="Rules_180_185" title="Not referenced locally, nor via imports">Rules</span></span> = &lt;
     <span class="cons_String">rules</span>
  
-      &lt;{<a href="../CGen.sdf3#NaBL2-Rule_300_310" id="NaBL2-Rule_210_220" title="Defined at ../CGen.sdf3 line 18, 22, 27, 31">NaBL2-Rule</a> <span class="cons_Lit">"\n\n"</span>}*&gt;
+      &lt;{<a href="../CGen.sdf3/#NaBL2-Rule_300_310" id="NaBL2-Rule_210_220" title="Defined at ../CGen.sdf3 line 18, 22, 27, 31">NaBL2-Rule</a> <span class="cons_Lit">"\n\n"</span>}*&gt;
 
   &gt; {<span class="keyword">longest-match</span>}
 

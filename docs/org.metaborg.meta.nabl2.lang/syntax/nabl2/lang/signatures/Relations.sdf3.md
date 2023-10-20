@@ -46,7 +46,7 @@ hide:
 34
 35
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../Signature.sdf3#nabl2/lang/signatures/Relations_190_221" id="nabl2/lang/signatures/Relations_7_38" title="Referenced at ../Signature.sdf3 line 9">nabl2/lang/signatures/Relations</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../Signature.sdf3/#nabl2/lang/signatures/Relations_190_221" id="nabl2/lang/signatures/Relations_7_38" title="Referenced at ../Signature.sdf3 line 9">nabl2/lang/signatures/Relations</a>
 
 <span class="keyword">imports</span>
 

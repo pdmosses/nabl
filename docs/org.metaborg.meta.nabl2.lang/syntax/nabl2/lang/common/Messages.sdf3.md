@@ -43,12 +43,12 @@ hide:
 31
 32
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../Main.sdf3#nabl2/lang/common/Messages_132_158" id="nabl2/lang/common/Messages_7_33" title="Referenced at ../Main.sdf3 line 8">nabl2/lang/common/Messages</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../Main.sdf3/#nabl2/lang/common/Messages_132_158" id="nabl2/lang/common/Messages_7_33" title="Referenced at ../Main.sdf3 line 8">nabl2/lang/common/Messages</a>
 
 <span class="keyword">imports</span>
 
   <span title="External reference">nabl2/shared/common/CTerms</span>
-  <a href="../Terms.sdf3#nabl2/lang/common/Terms_7_30" id="nabl2/lang/common/Terms_75_98" title="Defined at ../Terms.sdf3 line 1">nabl2/lang/common/Terms</a>
+  <a href="../Terms.sdf3/#nabl2/lang/common/Terms_7_30" id="nabl2/lang/common/Terms_75_98" title="Defined at ../Terms.sdf3 line 1">nabl2/lang/common/Terms</a>
 
 <span class="keyword">template options</span>
 
@@ -61,14 +61,14 @@ hide:
 <span class="keyword">context-free syntax</span>
 
   <span id="NaBL2-MessageContent_257_277" title="Not referenced locally, nor via imports">NaBL2-MessageContent</span>.<span class="cons_Constructor"><span id="Default_278_285" title="Not referenced locally, nor via imports">Default</span></span>  =
-  <span id="NaBL2-MessageContent_291_311" title="Not referenced locally, nor via imports">NaBL2-MessageContent</span>          = <a href="../Terms.sdf3#NaBL2-StringTerm_880_896" id="NaBL2-StringTerm_323_339" title="Defined at ../Terms.sdf3 line 38">NaBL2-StringTerm</a>
+  <span id="NaBL2-MessageContent_291_311" title="Not referenced locally, nor via imports">NaBL2-MessageContent</span>          = <a href="../Terms.sdf3/#NaBL2-StringTerm_880_896" id="NaBL2-StringTerm_323_339" title="Defined at ../Terms.sdf3 line 38">NaBL2-StringTerm</a>
 
   <a href="#NaBL2-MessageContentPart_200_224" id="NaBL2-MessageContentPart_343_367" title="Referenced at line 14">NaBL2-MessageContentPart</a>.<span class="cons_Constructor"><span id="Term_368_372" title="Not referenced locally, nor via imports">Term</span></span> = &lt;<span class="cons_String">[</span>&lt;<span title="External reference">NaBL2-CTerm</span>&gt;<span class="cons_String">]</span>&gt;
   <a href="#NaBL2-MessageContentPart_200_224" id="NaBL2-MessageContentPart_395_419" title="Referenced at line 14">NaBL2-MessageContentPart</a>.<span class="cons_Constructor"><span id="Text_420_424" title="Not referenced locally, nor via imports">Text</span></span> = <a href="#NaBL2-MessageChars_465_483" id="NaBL2-MessageChars_427_445" title="Defined at line 26">NaBL2-MessageChars</a>
 
 <span class="keyword">lexical syntax</span>
 
-  <a href="#NaBL2-MessageChars_615_633" id="NaBL2-MessageChars_465_483" title="Referenced at line 32">NaBL2-MessageChars</a> = <a href="#NaBL2-MessageChar_507_524" id="NaBL2-MessageChar_486_503" title="Defined at line 27, 28">NaBL2-MessageChar</a>+
+  <a href="#NaBL2-MessageChars_427_445" id="NaBL2-MessageChars_465_483" title="Referenced at line 22, 32">NaBL2-MessageChars</a> = <a href="#NaBL2-MessageChar_507_524" id="NaBL2-MessageChar_486_503" title="Defined at line 27, 28">NaBL2-MessageChar</a>+
   <a href="#NaBL2-MessageChar_486_503" id="NaBL2-MessageChar_507_524" title="Referenced at line 26">NaBL2-MessageChar</a>  = ~[\[\]\\\t\r\n]
   <a href="#NaBL2-MessageChar_486_503" id="NaBL2-MessageChar_546_563" title="Referenced at line 26">NaBL2-MessageChar</a>  = <span class="cons_Lit">"\\["</span> | <span class="cons_Lit">"\\]"</span> | <span class="cons_Lit">"\\\\"</span>
 

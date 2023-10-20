@@ -55,7 +55,7 @@ hide:
 43
 44
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../Signature.sdf3#nabl2/lang/signatures/NameResolution_151_187" id="nabl2/lang/signatures/NameResolution_7_43" title="Referenced at ../Signature.sdf3 line 8">nabl2/lang/signatures/NameResolution</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../Signature.sdf3/#nabl2/lang/signatures/NameResolution_151_187" id="nabl2/lang/signatures/NameResolution_7_43" title="Referenced at ../Signature.sdf3 line 8">nabl2/lang/signatures/NameResolution</a>
 
 <span class="keyword">imports</span>
 

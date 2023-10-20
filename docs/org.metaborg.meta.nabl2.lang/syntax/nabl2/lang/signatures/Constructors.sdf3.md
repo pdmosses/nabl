@@ -36,7 +36,7 @@ hide:
 24
 25
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../Signature.sdf3#nabl2/lang/signatures/Constructors_80_114" id="nabl2/lang/signatures/Constructors_7_41" title="Referenced at ../Signature.sdf3 line 6">nabl2/lang/signatures/Constructors</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../Signature.sdf3/#nabl2/lang/signatures/Constructors_80_114" id="nabl2/lang/signatures/Constructors_7_41" title="Referenced at ../Signature.sdf3 line 6">nabl2/lang/signatures/Constructors</a>
 
 <span class="keyword">imports</span>
 

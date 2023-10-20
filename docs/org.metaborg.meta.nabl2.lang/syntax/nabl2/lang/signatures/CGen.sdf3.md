@@ -39,13 +39,13 @@ hide:
 27
 28
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../Signature.sdf3#nabl2/lang/signatures/CGen_51_77" id="nabl2/lang/signatures/CGen_7_33" title="Referenced at ../Signature.sdf3 line 5">nabl2/lang/signatures/CGen</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../Signature.sdf3/#nabl2/lang/signatures/CGen_51_77" id="nabl2/lang/signatures/CGen_7_33" title="Referenced at ../Signature.sdf3 line 5">nabl2/lang/signatures/CGen</a>
 
 <span class="keyword">imports</span>
 
   <span title="External reference">nabl2/shared/common/Sorts</span>
-  <a href="../../rules/Names.sdf3#nabl2/lang/rules/Names_7_29" id="nabl2/lang/rules/Names_74_96" title="Defined at ../../rules/Names.sdf3 line 1">nabl2/lang/rules/Names</a>
-  <a href="../../rules/CGen.sdf3#nabl2/lang/rules/CGen_7_28" id="nabl2/lang/rules/CGen_99_120" title="Defined at ../../rules/CGen.sdf3 line 1">nabl2/lang/rules/CGen</a>
+  <a href="../../rules/Names.sdf3/#nabl2/lang/rules/Names_7_29" id="nabl2/lang/rules/Names_74_96" title="Defined at ../../rules/Names.sdf3 line 1">nabl2/lang/rules/Names</a>
+  <a href="../../rules/CGen.sdf3/#nabl2/lang/rules/CGen_7_28" id="nabl2/lang/rules/CGen_99_120" title="Defined at ../../rules/CGen.sdf3 line 1">nabl2/lang/rules/CGen</a>
 
 <span class="keyword">template options</span>
 
@@ -60,12 +60,12 @@ hide:
   &gt;
 
   <a href="#NaBL2-CGenSig_250_263" id="NaBL2-CGenSig_280_293" title="Referenced at line 17">NaBL2-CGenSig</a>.<span class="cons_Constructor"><span id="CGenInitSig_294_305" title="Not referenced locally, nor via imports">CGenInitSig</span></span> = &lt;<span class="cons_String">init</span> &lt;<a href="#NaBL2-CGenSigParams_477_496" id="NaBL2-CGenSigParams_315_334" title="Defined at line 24, 25">NaBL2-CGenSigParams</a>&gt; &lt;<a href="#NaBL2-CGenSigType_602_619" id="NaBL2-CGenSigType_337_354" title="Defined at line 27, 28">NaBL2-CGenSigType</a>&gt;&gt;
-  <a href="#NaBL2-CGenSig_250_263" id="NaBL2-CGenSig_359_372" title="Referenced at line 17">NaBL2-CGenSig</a>.<span class="cons_Constructor"><span id="CGenSig_373_380" title="Not referenced locally, nor via imports">CGenSig</span></span>     = &lt;&lt;<a href="../../rules/Names.sdf3#NaBL2-CGenRuleDef_164_181" id="NaBL2-CGenRuleDef_389_406" title="Defined at ../../rules/Names.sdf3 line 14, 15, 16, 17">NaBL2-CGenRuleDef</a>&gt; <span class="cons_String">[[</span> &lt;<span title="External reference">NaBL2-SortRef</span>&gt; &lt;<a href="#NaBL2-CGenSigParams_477_496" id="NaBL2-CGenSigParams_428_447" title="Defined at line 24, 25">NaBL2-CGenSigParams</a>&gt; &lt;<a href="#NaBL2-CGenSigType_602_619" id="NaBL2-CGenSigType_450_467" title="Defined at line 27, 28">NaBL2-CGenSigType</a>&gt; <span class="cons_String">]]</span>&gt;
+  <a href="#NaBL2-CGenSig_250_263" id="NaBL2-CGenSig_359_372" title="Referenced at line 17">NaBL2-CGenSig</a>.<span class="cons_Constructor"><span id="CGenSig_373_380" title="Not referenced locally, nor via imports">CGenSig</span></span>     = &lt;&lt;<a href="../../rules/Names.sdf3/#NaBL2-CGenRuleDef_164_181" id="NaBL2-CGenRuleDef_389_406" title="Defined at ../../rules/Names.sdf3 line 14, 15, 16, 17">NaBL2-CGenRuleDef</a>&gt; <span class="cons_String">[[</span> &lt;<span title="External reference">NaBL2-SortRef</span>&gt; &lt;<a href="#NaBL2-CGenSigParams_477_496" id="NaBL2-CGenSigParams_428_447" title="Defined at line 24, 25">NaBL2-CGenSigParams</a>&gt; &lt;<a href="#NaBL2-CGenSigType_602_619" id="NaBL2-CGenSigType_450_467" title="Defined at line 27, 28">NaBL2-CGenSigType</a>&gt; <span class="cons_String">]]</span>&gt;
  
-  <a href="#NaBL2-CGenSigParams_428_447" id="NaBL2-CGenSigParams_477_496" title="Referenced at line 22">NaBL2-CGenSigParams</a>   =                               {<span class="cons_Unquoted">ast</span>(<span class="cons_Quoted">"[]"</span>)}
-  <a href="#NaBL2-CGenSigParams_428_447" id="NaBL2-CGenSigParams_545_564" title="Referenced at line 22">NaBL2-CGenSigParams</a>   = &lt;<span class="cons_String">^</span> <span class="cons_String">(</span>&lt;{<span title="External reference">NaBL2-SortRef</span> <span class="cons_Lit">", "</span>}*&gt;<span class="cons_String">)</span>&gt;
+  <a href="#NaBL2-CGenSigParams_315_334" id="NaBL2-CGenSigParams_477_496" title="Referenced at line 21, 22">NaBL2-CGenSigParams</a>   =                               {<span class="cons_Unquoted">ast</span>(<span class="cons_Quoted">"[]"</span>)}
+  <a href="#NaBL2-CGenSigParams_315_334" id="NaBL2-CGenSigParams_545_564" title="Referenced at line 21, 22">NaBL2-CGenSigParams</a>   = &lt;<span class="cons_String">^</span> <span class="cons_String">(</span>&lt;{<span title="External reference">NaBL2-SortRef</span> <span class="cons_Lit">", "</span>}*&gt;<span class="cons_String">)</span>&gt;
 
-  <a href="#NaBL2-CGenSigType_450_467" id="NaBL2-CGenSigType_602_619" title="Referenced at line 22">NaBL2-CGenSigType</a>.<span class="cons_Constructor"><span id="NoType_620_626" title="Not referenced locally, nor via imports">NoType</span></span> = &lt;&gt;
-  <a href="#NaBL2-CGenSigType_450_467" id="NaBL2-CGenSigType_634_651" title="Referenced at line 22">NaBL2-CGenSigType</a>.<span class="cons_Constructor"><span id="Type_652_656" title="Not referenced locally, nor via imports">Type</span></span>   = &lt;<span class="cons_String">:</span> &lt;<span title="External reference">NaBL2-SortRef</span>&gt;&gt;
+  <a href="#NaBL2-CGenSigType_337_354" id="NaBL2-CGenSigType_602_619" title="Referenced at line 21, 22">NaBL2-CGenSigType</a>.<span class="cons_Constructor"><span id="NoType_620_626" title="Not referenced locally, nor via imports">NoType</span></span> = &lt;&gt;
+  <a href="#NaBL2-CGenSigType_337_354" id="NaBL2-CGenSigType_634_651" title="Referenced at line 21, 22">NaBL2-CGenSigType</a>.<span class="cons_Constructor"><span id="Type_652_656" title="Not referenced locally, nor via imports">Type</span></span>   = &lt;<span class="cons_String">:</span> &lt;<span title="External reference">NaBL2-SortRef</span>&gt;&gt;
 
 </code></pre></td></tr></tbody></table></div>

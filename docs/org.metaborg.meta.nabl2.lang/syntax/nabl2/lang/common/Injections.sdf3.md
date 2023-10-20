@@ -65,7 +65,7 @@ hide:
 53
 54
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../../rules/CGen.sdf3#nabl2/lang/common/Injections_170_198" id="nabl2/lang/common/Injections_7_35" title="Referenced at ../../rules/CGen.sdf3 line 10">nabl2/lang/common/Injections</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../Main.sdf3/#nabl2/lang/common/Injections_101_129" id="nabl2/lang/common/Injections_7_35" title="Referenced at ../Main.sdf3 line 7; ../../rules/CGen.sdf3 line 10">nabl2/lang/common/Injections</a>
 
 <span class="keyword">imports</span>
 
@@ -75,7 +75,7 @@ hide:
   <span title="External reference">nabl2/shared/common/ScopeGraph</span>
   <span title="External reference">nabl2/shared/common/Sets</span>
   <span title="External reference">nabl2/shared/constraints/Base</span>
-  <a href="../Terms.sdf3#nabl2/lang/common/Terms_7_30" id="nabl2/lang/common/Terms_236_259" title="Defined at ../Terms.sdf3 line 1">nabl2/lang/common/Terms</a>
+  <a href="../Terms.sdf3/#nabl2/lang/common/Terms_7_30" id="nabl2/lang/common/Terms_236_259" title="Defined at ../Terms.sdf3 line 1">nabl2/lang/common/Terms</a>
 
 <span class="keyword">template options</span>
 
@@ -83,17 +83,17 @@ hide:
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#NaBL2-Message_1361_1374" id="NaBL2-Message_333_346" title="Referenced at line 43">NaBL2-Message</a>.<span class="cons_Constructor"><span id="DefaultMessage_347_361" title="Not referenced locally, nor via imports">DefaultMessage</span></span> =
+  <a href="#NaBL2-Message_1004_1017" id="NaBL2-Message_333_346" title="Referenced at line 34, 36, 37, 43">NaBL2-Message</a>.<span class="cons_Constructor"><span id="DefaultMessage_347_361" title="Not referenced locally, nor via imports">DefaultMessage</span></span> =
 
   <span id="NaBL2-MessagePosition_367_388" title="Not referenced locally, nor via imports">NaBL2-MessagePosition</span>.<span class="cons_Constructor"><span id="DefaultMessagePosition_389_411" title="Not referenced locally, nor via imports">DefaultMessagePosition</span></span> =
-  <span id="NaBL2-MessagePosition_416_437" title="Not referenced locally, nor via imports">NaBL2-MessagePosition</span>.<span class="cons_Constructor"><span id="MessagePositionFrom_438_457" title="Not referenced locally, nor via imports">MessagePositionFrom</span></span>    = &lt; <span class="cons_String">@</span> &lt;<a href="../Terms.sdf3#NaBL2-Var_146_155" id="NaBL2-Var_468_477" title="Defined at ../Terms.sdf3 line 13">NaBL2-Var</a>&gt;&gt;
+  <span id="NaBL2-MessagePosition_416_437" title="Not referenced locally, nor via imports">NaBL2-MessagePosition</span>.<span class="cons_Constructor"><span id="MessagePositionFrom_438_457" title="Not referenced locally, nor via imports">MessagePositionFrom</span></span>    = &lt; <span class="cons_String">@</span> &lt;<a href="../Terms.sdf3/#NaBL2-Var_146_155" id="NaBL2-Var_468_477" title="Defined at ../Terms.sdf3 line 13">NaBL2-Var</a>&gt;&gt;
 
   <span id="NaBL2-OccurrenceIndex_483_504" title="Not referenced locally, nor via imports">NaBL2-OccurrenceIndex</span>.<span class="cons_Constructor"><span id="DefaultOccurrenceIndex_505_527" title="Not referenced locally, nor via imports">DefaultOccurrenceIndex</span></span> =
-  <span id="NaBL2-OccurrenceIndex_532_553" title="Not referenced locally, nor via imports">NaBL2-OccurrenceIndex</span>.<span class="cons_Constructor"><span id="OccurrenceIndexFrom_554_573" title="Not referenced locally, nor via imports">OccurrenceIndexFrom</span></span>    = &lt; <span class="cons_String">@</span> &lt;<a href="../Terms.sdf3#NaBL2-Var_146_155" id="NaBL2-Var_584_593" title="Defined at ../Terms.sdf3 line 13">NaBL2-Var</a>&gt;&gt;
+  <span id="NaBL2-OccurrenceIndex_532_553" title="Not referenced locally, nor via imports">NaBL2-OccurrenceIndex</span>.<span class="cons_Constructor"><span id="OccurrenceIndexFrom_554_573" title="Not referenced locally, nor via imports">OccurrenceIndexFrom</span></span>    = &lt; <span class="cons_String">@</span> &lt;<a href="../Terms.sdf3/#NaBL2-Var_146_155" id="NaBL2-Var_584_593" title="Defined at ../Terms.sdf3 line 13">NaBL2-Var</a>&gt;&gt;
 
-  <a href="#NaBL2-LabelRE_1564_1577" id="NaBL2-LabelRE_599_612" title="Referenced at line 50">NaBL2-LabelRE</a>.<span class="cons_Constructor"><a href="#Option_1446_1452" id="Option_613_619" title="Referenced at line 47">Option</a></span>    = &lt;&lt;<a href="#NaBL2-LabelRE_599_612" id="NaBL2-LabelRE_627_640" title="Defined at line 27, 28, 29">NaBL2-LabelRE</a>&gt;<span class="cons_String">?</span>&gt;
-  <a href="#NaBL2-LabelRE_1564_1577" id="NaBL2-LabelRE_646_659" title="Referenced at line 50">NaBL2-LabelRE</a>.<span class="cons_Constructor"><a href="#ConcatDot_1526_1535" id="ConcatDot_660_669" title="Referenced at line 48">ConcatDot</a></span> = &lt;&lt;<a href="#NaBL2-LabelRE_599_612" id="NaBL2-LabelRE_674_687" title="Defined at line 27, 28, 29">NaBL2-LabelRE</a>&gt;<span class="cons_String">.</span>&lt;<a href="#NaBL2-LabelRE_599_612" id="NaBL2-LabelRE_690_703" title="Defined at line 27, 28, 29">NaBL2-LabelRE</a>&gt;&gt;  {<span class="keyword">right</span>,<span class="keyword">deprecated</span>("The dot for concatenation is unnecessary, and can be omitted.")}
-  <a href="#NaBL2-LabelRE_1564_1577" id="NaBL2-LabelRE_793_806" title="Referenced at line 50">NaBL2-LabelRE</a>.<span class="cons_Constructor"><a href="#NonEmpty_1467_1475" id="NonEmpty_807_815" title="Referenced at line 47">NonEmpty</a></span> = &lt;&lt;<a href="#NaBL2-LabelRE_599_612" id="NaBL2-LabelRE_820_833" title="Defined at line 27, 28, 29">NaBL2-LabelRE</a>&gt;<span class="cons_String">+</span>&gt;
+  <a href="#NaBL2-LabelRE_627_640" id="NaBL2-LabelRE_599_612" title="Referenced at line 27, 28, 29, 47, 48, 49, 50">NaBL2-LabelRE</a>.<span class="cons_Constructor"><a href="#Option_1446_1452" id="Option_613_619" title="Referenced at line 47">Option</a></span>    = &lt;&lt;<a href="#NaBL2-LabelRE_599_612" id="NaBL2-LabelRE_627_640" title="Defined at line 27, 28, 29">NaBL2-LabelRE</a>&gt;<span class="cons_String">?</span>&gt;
+  <a href="#NaBL2-LabelRE_627_640" id="NaBL2-LabelRE_646_659" title="Referenced at line 27, 28, 29, 47, 48, 49, 50">NaBL2-LabelRE</a>.<span class="cons_Constructor"><a href="#ConcatDot_1526_1535" id="ConcatDot_660_669" title="Referenced at line 48">ConcatDot</a></span> = &lt;&lt;<a href="#NaBL2-LabelRE_599_612" id="NaBL2-LabelRE_674_687" title="Defined at line 27, 28, 29">NaBL2-LabelRE</a>&gt;<span class="cons_String">.</span>&lt;<a href="#NaBL2-LabelRE_599_612" id="NaBL2-LabelRE_690_703" title="Defined at line 27, 28, 29">NaBL2-LabelRE</a>&gt;&gt;  {<span class="keyword">right</span>,<span class="keyword">deprecated</span>("The dot for concatenation is unnecessary, and can be omitted.")}
+  <a href="#NaBL2-LabelRE_627_640" id="NaBL2-LabelRE_793_806" title="Referenced at line 27, 28, 29, 47, 48, 49, 50">NaBL2-LabelRE</a>.<span class="cons_Constructor"><a href="#NonEmpty_1467_1475" id="NonEmpty_807_815" title="Referenced at line 47">NonEmpty</a></span> = &lt;&lt;<a href="#NaBL2-LabelRE_599_612" id="NaBL2-LabelRE_820_833" title="Defined at line 27, 28, 29">NaBL2-LabelRE</a>&gt;<span class="cons_String">+</span>&gt;
 
   <span id="NaBL2-ELabel_840_852" title="Not referenced locally, nor via imports">NaBL2-ELabel</span>.<span class="cons_Constructor"><span id="DefaultELabel_853_866" title="Not referenced locally, nor via imports">DefaultELabel</span></span> = <span class="cons_Lit">"-"</span>
   <span id="NaBL2-NLabel_875_887" title="Not referenced locally, nor via imports">NaBL2-NLabel</span>.<span class="cons_Constructor"><span id="DefaultNLabel_888_901" title="Not referenced locally, nor via imports">DefaultNLabel</span></span> = <span class="cons_Lit">"="</span>
@@ -105,7 +105,7 @@ hide:
 
 <span class="keyword">syntax</span>
 
-  <span id="NaBL2-TermIndex_1191_1206" title="Not referenced locally, nor via imports">NaBL2-TermIndex</span><span class="keyword">-CF</span>.<span class="cons_Constructor"><span id="TermIndexFrom_1210_1223" title="Not referenced locally, nor via imports">TermIndexFrom</span></span> = <span class="cons_Lit">"@"</span> <a href="../Terms.sdf3#NaBL2-Var_146_155" id="NaBL2-Var_1230_1239" title="Defined at ../Terms.sdf3 line 13">NaBL2-Var</a><span class="keyword">-CF</span>
+  <span id="NaBL2-TermIndex_1191_1206" title="Not referenced locally, nor via imports">NaBL2-TermIndex</span><span class="keyword">-CF</span>.<span class="cons_Constructor"><span id="TermIndexFrom_1210_1223" title="Not referenced locally, nor via imports">TermIndexFrom</span></span> = <span class="cons_Lit">"@"</span> <a href="../Terms.sdf3/#NaBL2-Var_146_155" id="NaBL2-Var_1230_1239" title="Defined at ../Terms.sdf3 line 13">NaBL2-Var</a><span class="keyword">-CF</span>
 
   <span id="NaBL2-Constraint_1246_1262" title="Not referenced locally, nor via imports">NaBL2-Constraint</span><span class="keyword">-CF</span>.<span class="cons_Constructor"><span id="CSetEq_1266_1272" title="Not referenced locally, nor via imports">CSetEq</span></span> = <span title="External reference">NaBL2-CSet</span><span class="keyword">-CF LAYOUT</span>?<span class="keyword">-CF</span> <span class="cons_Lit">"seteq"</span> <span title="External reference">NaBL2-SetProj</span><span class="keyword">-CF LAYOUT</span>?<span class="keyword">-CF</span> <span title="External reference">NaBL2-CSet</span><span class="keyword">-CF LAYOUT</span>?<span class="keyword">-CF</span> <a href="#NaBL2-Message_333_346" id="NaBL2-Message_1361_1374" title="Defined at line 19">NaBL2-Message</a><span class="keyword">-CF</span>
 
