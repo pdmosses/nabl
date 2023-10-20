@@ -25,19 +25,25 @@ rules // generate highlighting CSS for meta-language from its editor/Colorer.esv
 
   gen-metaborg-css: (meta-language, meta-language-project-path, repo-clone, repo-name) -> ()
     with
-      metaborg-css-dir := $[[repo-clone]/docs/stylesheets]
-    ; metaborg-css-file :=  $[[meta-language-project-path]/trans/generation/docs/metaborg.css]
-    ; say(!$[[repo-name]/docs/stylesheets/metaborg.css])
-    ; <copy-file> (metaborg-css-file, metaborg-css-dir)
+      target-file := $[[repo-clone]/docs/stylesheets/metaborg.css]
+    ; if <not(file-exists)> target-file
+      then
+        metaborg-css-file := $[[meta-language-project-path]/trans/generation/docs/metaborg.css]
+      ; <copy-file> (metaborg-css-file, target-file)
+      ; say(!$[> [repo-name]/docs/stylesheets/metaborg.css])
+      end
 
   gen-metalanguage-css: (meta-language, colorer-file, repo-clone, repo-name) -> ()
     with
-      css-file := $[[repo-clone]/docs/stylesheets/[meta-language].css]
-    ; say(!$[[repo-name]/docs/stylesheets/[meta-language].css])
-    ; css := <parse-file; colorer-to-css(|meta-language)> colorer-file
-    ; outs := <fopen> (css-file, "w")
-    ; <fputs> (css, outs)
-    ; <fclose> outs
+      target-file := $[[repo-clone]/docs/stylesheets/[meta-language].css]
+    ; if <not(file-exists)> target-file
+      then
+        css := <parse-file; colorer-to-css(|meta-language)> colorer-file
+      ; outs := <fopen> (target-file, "w")
+      ; <fputs> (css, outs)
+      ; <fclose> outs
+      ; say(!$[> [repo-name]/docs/stylesheets/[meta-language].css])
+      end
 
   meta-project-path: "sdf3" -> "sdf/org.metaborg.meta.lang.template"
   meta-project-path: "nab"  -> "nabl/org.metaborg.meta.lang.nabl"

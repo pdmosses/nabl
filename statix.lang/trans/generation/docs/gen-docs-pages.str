@@ -35,11 +35,15 @@ rules // Actions
     ; colorer-file :=
         <!$[[meta-language-project-path]/editor/Colorer-CF.esv]; file-exists 
          <+ !$[[meta-language-project-path]/editor/Colorer.esv]>
-    ; say(!$[Generate website [repo-name]/[<base-filename> project-path] (*.[meta-language]) ...])
+    ; say(!$[Generate website [repo-name]/[<base-filename> project-path]: *.[meta-language] ...])
+    ; say(!"Configuration ...")
     ; <gen-docs> (meta-language, repo-clone, repo-name, project-path)
     ; <gen-mkdocs> (repo-clone, repo-name)
+    ; <gen-ci> (meta-language-project-path, repo-clone, repo-name)
+    ; say(!"CSS ...")
     ; <gen-metaborg-css> (meta-language, meta-language-project-path, repo-clone, repo-name)
     ; <gen-metalanguage-css> (meta-language, colorer-file, repo-clone, repo-name)
+    ; say(!"Web pages ...")
     ; <gen-docs-pages> (meta-language, colorer-file, meta-language-project-path, repo-clone, repo-name, project-path)
     ; say(!"... done")
 
@@ -82,7 +86,7 @@ rules // Actions
         !${:simple-github: [{github-repo}/{project-name}/{path}]}
         end > path
     ; target := $[[repo-clone]/docs/[project-name]/[path].md]
-    ; say(!$[[repo-name]/docs/[project-name]/[path].md])
+    ; say(!$[> [repo-name]/docs/[project-name]/[path].md])
     ; ins := <fopen> (path, "r")
     ; outs := <fopen> (target, "w")
     ; <fputs> (

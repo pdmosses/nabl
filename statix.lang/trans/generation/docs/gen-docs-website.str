@@ -27,30 +27,47 @@ rules // initialise the repo docs directory for the current project
       file-list := <current-language-source-files; filter(where(has-extension(|meta-language)))>
     ; project-name := <base-filename> project-path
     ; dir-list := <map(dirname; string-replace(|project-path, project-name))> file-list
-    ; say(!$[[repo-name]/docs/[project-name]])
     ; <map(gen-docs-dir(|repo-clone))> dir-list
 
   gen-docs-dir(|repo-clone): dir -> ()
     with
-      pages-file := $[[repo-clone]/docs/[dir]/.pages]
-    ; pages-contents := $[title: [<base-filename> dir]]
-    ; pages-src-gen := "\nhide: true"
-    ; outs := <fopen> (pages-file, "w")
-    ; <fputs> (pages-contents, outs)
-    ; if <eq> (<base-filename> dir, "src-gen")
-      then <fputs> (pages-src-gen, outs)
+      target-file := $[[repo-clone]/docs/[dir]/.pages]
+    ; if <not(file-exists)> target-file
+      then
+        pages-contents := $[title: [<base-filename> dir]]
+      ; pages-src-gen := "\nhide: true"
+      ; outs := <fopen> (target-file, "w")
+      ; <fputs> (pages-contents, outs)
+      ; if <eq> (<base-filename> dir, "src-gen")
+        then <fputs> (pages-src-gen, outs)
+        end
+      ; <fclose> outs
       end
-    ; <fclose> outs
-    ; if <dirname; is-substring(!"/")> dir
+    ; if <is-substring(!"/")> dir
       then <dirname; gen-docs-dir(|repo-clone)> dir
       end
 
   gen-mkdocs: (repo-clone, repo-name) -> ()
     with
-      mkdocs-file := $[[repo-clone]/mkdocs.yml]
-    ; outs := <fopen> (mkdocs-file, "w")
-    ; <fputs> (<mkdocs> repo-name, outs)
-    ; <fclose> outs
+      target-file := $[[repo-clone]/mkdocs.yml]
+    ; if <not(file-exists)> target-file
+      then
+        outs := <fopen> (target-file, "w")
+      ; <fputs> (<mkdocs> repo-name, outs)
+      ; <fclose> outs
+      ; say(!$[> [repo-name]/mkdocs.yml])
+      end
+
+  gen-ci: (meta-language-project-path, repo-clone, repo-name) -> ()
+    with
+      ci-path := ".github/workflows/ci.yml"
+    ; target-file := $[[repo-clone]/[ci-path]]
+    ; if <not(file-exists)> target-file
+      then
+        meta-language-ci-file := $[[<dirname> meta-language-project-path]/[ci-path]]
+      ; <copy-file> (meta-language-ci-file, target-file)
+      ; say(!$[> [repo-name]/[ci-path]])
+      end
 
   mkdocs: repo-name ->
 ${site_name: {repo-name}
