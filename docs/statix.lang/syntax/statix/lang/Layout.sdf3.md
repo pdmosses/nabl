@@ -41,7 +41,7 @@ hide:
 29
 30
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../../test/Test.sdf3#statix/lang/Layout_36_54" id="statix/lang/Layout_7_25" title="Referenced at ../../test/Test.sdf3 line 5">statix/lang/Layout</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../../../StatixLang.sdf3/#statix/lang/Layout_30_48" id="statix/lang/Layout_7_25" title="Referenced at ../../../StatixLang.sdf3 line 5; ../../cli/CLI.sdf3 line 5; ../../test/Result.sdf3 line 7; ../../test/Test.sdf3 line 5">statix/lang/Layout</a>
 
 <span class="keyword">lexical syntax</span>
 
@@ -49,15 +49,15 @@ hide:
   <span class="keyword">LAYOUT</span> = <a href="#LineComment_126_137" id="LineComment_76_87" title="Defined at line 11">LineComment</a>
   <span class="keyword">LAYOUT</span> = <a href="#BlockComment_176_188" id="BlockComment_99_111" title="Defined at line 13">BlockComment</a>
 
-  <a href="#EOF_419_422" id="EOF_115_118" title="Referenced at line 21">EOF</a> =  
+  <a href="#EOF_168_171" id="EOF_115_118" title="Referenced at line 11, 13, 21">EOF</a> =  
 
   <a href="#LineComment_76_87" id="LineComment_126_137" title="Referenced at line 6">LineComment</a>     = <span class="cons_Lit">"//"</span> ~[\r\n]* ([\r\n] | <a href="#EOF_115_118" id="EOF_168_171" title="Defined at line 9">EOF</a>)
 
-  <a href="#BlockComment_212_224" id="BlockComment_176_188" title="Referenced at line 13">BlockComment</a>    = <span class="cons_Lit">"/*"</span> <a href="#CommentText_254_265" id="CommentText_199_210" title="Defined at line 14">CommentText</a> (<a href="#BlockComment_176_188" id="BlockComment_212_224" title="Defined at line 13">BlockComment</a> <a href="#CommentText_254_265" id="CommentText_225_236" title="Defined at line 14">CommentText</a>)* (<span class="cons_Lit">"*/"</span> | <a href="#EOF_115_118" id="EOF_247_250" title="Defined at line 9">EOF</a>)
-  <a href="#CommentText_445_456" id="CommentText_254_265" title="Referenced at line 22">CommentText</a>     = <a href="#CommentChar_287_298" id="CommentChar_272_283" title="Defined at line 15">CommentChar</a>*
+  <a href="#BlockComment_99_111" id="BlockComment_176_188" title="Referenced at line 7, 13">BlockComment</a>    = <span class="cons_Lit">"/*"</span> <a href="#CommentText_254_265" id="CommentText_199_210" title="Defined at line 14">CommentText</a> (<a href="#BlockComment_176_188" id="BlockComment_212_224" title="Defined at line 13">BlockComment</a> <a href="#CommentText_254_265" id="CommentText_225_236" title="Defined at line 14">CommentText</a>)* (<span class="cons_Lit">"*/"</span> | <a href="#EOF_115_118" id="EOF_247_250" title="Defined at line 9">EOF</a>)
+  <a href="#CommentText_199_210" id="CommentText_254_265" title="Referenced at line 13, 22">CommentText</a>     = <a href="#CommentChar_287_298" id="CommentChar_272_283" title="Defined at line 15">CommentChar</a>*
   <a href="#CommentChar_272_283" id="CommentChar_287_298" title="Referenced at line 14">CommentChar</a>     = ~[\*\/] | <a href="#CommentAsterisk_372_387" id="CommentAsterisk_315_330" title="Defined at line 17">CommentAsterisk</a> | <a href="#CommentSlash_348_360" id="CommentSlash_333_345" title="Defined at line 16">CommentSlash</a>
-  <a href="#CommentSlash_502_514" id="CommentSlash_348_360" title="Referenced at line 24">CommentSlash</a>    = <span class="cons_Lit">"/"</span>
-  <a href="#CommentAsterisk_475_490" id="CommentAsterisk_372_387" title="Referenced at line 23">CommentAsterisk</a> = <span class="cons_Lit">"*"</span>
+  <a href="#CommentSlash_333_345" id="CommentSlash_348_360" title="Referenced at line 15, 24">CommentSlash</a>    = <span class="cons_Lit">"/"</span>
+  <a href="#CommentAsterisk_315_330" id="CommentAsterisk_372_387" title="Referenced at line 15, 23">CommentAsterisk</a> = <span class="cons_Lit">"*"</span>
 
 <span class="keyword">lexical restrictions</span>
 

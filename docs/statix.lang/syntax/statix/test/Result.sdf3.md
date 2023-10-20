@@ -73,11 +73,11 @@ hide:
 
   <span title="External reference">statix/API</span>
 
-  <a href="../../lang/Layout.sdf3#statix/lang/Layout_7_25" id="statix/lang/Layout_52_70" title="Defined at ../../lang/Layout.sdf3 line 1">statix/lang/Layout</a>
-  <a href="../../lang/Common.sdf3#statix/lang/Common_7_25" id="statix/lang/Common_73_91" title="Defined at ../../lang/Common.sdf3 line 1">statix/lang/Common</a>
-  <a href="../../lang/Core.sdf3#statix/lang/Core_7_23" id="statix/lang/Core_94_110" title="Defined at ../../lang/Core.sdf3 line 1">statix/lang/Core</a>
-  <a href="../../lang/Sugar.sdf3#statix/lang/Sugar_7_24" id="statix/lang/Sugar_113_130" title="Defined at ../../lang/Sugar.sdf3 line 1">statix/lang/Sugar</a>
-  <a href="../../lang/Deprecated.sdf3#statix/lang/Deprecated_7_29" id="statix/lang/Deprecated_133_155" title="Defined at ../../lang/Deprecated.sdf3 line 1">statix/lang/Deprecated</a>
+  <a href="../../lang/Layout.sdf3/#statix/lang/Layout_7_25" id="statix/lang/Layout_52_70" title="Defined at ../../lang/Layout.sdf3 line 1">statix/lang/Layout</a>
+  <a href="../../lang/Common.sdf3/#statix/lang/Common_7_25" id="statix/lang/Common_73_91" title="Defined at ../../lang/Common.sdf3 line 1">statix/lang/Common</a>
+  <a href="../../lang/Core.sdf3/#statix/lang/Core_7_23" id="statix/lang/Core_94_110" title="Defined at ../../lang/Core.sdf3 line 1">statix/lang/Core</a>
+  <a href="../../lang/Sugar.sdf3/#statix/lang/Sugar_7_24" id="statix/lang/Sugar_113_130" title="Defined at ../../lang/Sugar.sdf3 line 1">statix/lang/Sugar</a>
+  <a href="../../lang/Deprecated.sdf3/#statix/lang/Deprecated_7_29" id="statix/lang/Deprecated_133_155" title="Defined at ../../lang/Deprecated.sdf3 line 1">statix/lang/Deprecated</a>
 
   <span title="External reference">statix/runtime/ATerm</span>
   <span title="External reference">statix/runtime/ScopeGraph</span>
@@ -116,11 +116,11 @@ hide:
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#SubstEntry_455_465" id="SubstEntry_695_705" title="Referenced at line 34">SubstEntry</a> = [[<a href="../../lang/Core.sdf3#Var_7912_7915" id="Var_710_713" title="Defined at ../../lang/Core.sdf3 line 337, 338">Var</a>] <span class="cons_String">|-&gt;</span> [<span title="External reference">Stx-ATerm</span>]]
+  <a href="#SubstEntry_455_465" id="SubstEntry_695_705" title="Referenced at line 34">SubstEntry</a> = [[<a href="../../lang/Core.sdf3/#Var_7912_7915" id="Var_710_713" title="Defined at ../../lang/Core.sdf3 line 337, 338">Var</a>] <span class="cons_String">|-&gt;</span> [<span title="External reference">Stx-ATerm</span>]]
   
 <span class="keyword">context-free syntax</span>
 
-  <a href="#EditorMessage_379_392" id="EditorMessage_758_771" title="Referenced at line 29">EditorMessage</a> = [[<a href="#MessagePos_807_817" id="MessagePos_776_786" title="Defined at line 56">MessagePos</a>] <span class="cons_String">:</span> [<span title="External reference">Stx-STRING</span>]]
+  <a href="#EditorMessage_294_307" id="EditorMessage_758_771" title="Referenced at line 23, 26, 29">EditorMessage</a> = [[<a href="#MessagePos_807_817" id="MessagePos_776_786" title="Defined at line 56">MessagePos</a>] <span class="cons_String">:</span> [<span title="External reference">Stx-STRING</span>]]
 
   <a href="#MessagePos_776_786" id="MessagePos_807_817" title="Referenced at line 54">MessagePos</a> = <span class="cons_Lit">"*"</span>
 

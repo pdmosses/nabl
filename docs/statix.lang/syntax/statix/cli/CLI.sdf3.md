@@ -31,14 +31,14 @@ hide:
 19
 20
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../../../StatixLang.sdf3#statix/cli/CLI_183_197" id="statix/cli/CLI_7_21" title="Referenced at ../../../StatixLang.sdf3 line 14">statix/cli/CLI</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../../../StatixLang.sdf3/#statix/cli/CLI_183_197" id="statix/cli/CLI_7_21" title="Referenced at ../../../StatixLang.sdf3 line 14">statix/cli/CLI</a>
 
 <span class="keyword">imports</span>
 
-  <a href="../../lang/Layout.sdf3#statix/lang/Layout_7_25" id="statix/lang/Layout_34_52" title="Defined at ../../lang/Layout.sdf3 line 1">statix/lang/Layout</a>
-  <a href="../../lang/Common.sdf3#statix/lang/Common_7_25" id="statix/lang/Common_55_73" title="Defined at ../../lang/Common.sdf3 line 1">statix/lang/Common</a>
-  <a href="../../lang/Core.sdf3#statix/lang/Core_7_23" id="statix/lang/Core_76_92" title="Defined at ../../lang/Core.sdf3 line 1">statix/lang/Core</a>
-  <a href="../../lang/Sugar.sdf3#statix/lang/Sugar_7_24" id="statix/lang/Sugar_95_112" title="Defined at ../../lang/Sugar.sdf3 line 1">statix/lang/Sugar</a>
+  <a href="../../lang/Layout.sdf3/#statix/lang/Layout_7_25" id="statix/lang/Layout_34_52" title="Defined at ../../lang/Layout.sdf3 line 1">statix/lang/Layout</a>
+  <a href="../../lang/Common.sdf3/#statix/lang/Common_7_25" id="statix/lang/Common_55_73" title="Defined at ../../lang/Common.sdf3 line 1">statix/lang/Common</a>
+  <a href="../../lang/Core.sdf3/#statix/lang/Core_7_23" id="statix/lang/Core_76_92" title="Defined at ../../lang/Core.sdf3 line 1">statix/lang/Core</a>
+  <a href="../../lang/Sugar.sdf3/#statix/lang/Sugar_7_24" id="statix/lang/Sugar_95_112" title="Defined at ../../lang/Sugar.sdf3 line 1">statix/lang/Sugar</a>
 
 <span class="keyword">template options</span>
 
@@ -50,6 +50,6 @@ hide:
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#CommandLine_195_206" id="CommandLine_231_242" title="Referenced at line 16">CommandLine</a>.<span class="cons_Constructor"><span id="Eval_243_247" title="Not referenced locally, nor via imports">Eval</span></span> = &lt;&lt;<a href="../../lang/Sugar.sdf3#Constraint_2068_2078" id="Constraint_252_262" title="Defined at ../../lang/Sugar.sdf3 line 94">Constraint</a>&gt;&gt;
+  <a href="#CommandLine_195_206" id="CommandLine_231_242" title="Referenced at line 16">CommandLine</a>.<span class="cons_Constructor"><span id="Eval_243_247" title="Not referenced locally, nor via imports">Eval</span></span> = &lt;&lt;<a href="../../lang/Sugar.sdf3/#Constraint_2068_2078" id="Constraint_252_262" title="Defined at ../../lang/Sugar.sdf3 line 94">Constraint</a>&gt;&gt;
 
 </code></pre></td></tr></tbody></table></div>

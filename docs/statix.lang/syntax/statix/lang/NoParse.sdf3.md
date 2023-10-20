@@ -44,9 +44,9 @@ hide:
 
 <span class="keyword">imports</span>
 
-  <a href="../Common.sdf3#statix/lang/Common_7_25" id="statix/lang/Common_79_97" title="Defined at ../Common.sdf3 line 1">statix/lang/Common</a>
-  <a href="../Core.sdf3#statix/lang/Core_7_23" id="statix/lang/Core_100_116" title="Defined at ../Core.sdf3 line 1">statix/lang/Core</a>
-  <a href="../Sugar.sdf3#statix/lang/Sugar_7_24" id="statix/lang/Sugar_119_136" title="Defined at ../Sugar.sdf3 line 1">statix/lang/Sugar</a>
+  <a href="../Common.sdf3/#statix/lang/Common_7_25" id="statix/lang/Common_79_97" title="Defined at ../Common.sdf3 line 1">statix/lang/Common</a>
+  <a href="../Core.sdf3/#statix/lang/Core_7_23" id="statix/lang/Core_100_116" title="Defined at ../Core.sdf3 line 1">statix/lang/Core</a>
+  <a href="../Sugar.sdf3/#statix/lang/Sugar_7_24" id="statix/lang/Sugar_119_136" title="Defined at ../Sugar.sdf3 line 1">statix/lang/Sugar</a>
 
   <span title="External reference">statix/API</span>
 
@@ -64,7 +64,7 @@ hide:
 
 <span class="keyword">context-free syntax</span> <span class="layout">// runtime terms</span>
 
-  <a href="#Term_262_266" id="Term_403_407" title="Referenced at line 17">Term</a> = <a href="../Core.sdf3#Label_4187_4192" id="Label_410_415" title="Defined at ../Core.sdf3 line 196">Label</a>
+  <a href="#Term_262_266" id="Term_403_407" title="Referenced at line 17">Term</a> = <a href="../Core.sdf3/#Label_4187_4192" id="Label_410_415" title="Defined at ../Core.sdf3 line 196">Label</a>
   <a href="#Term_262_266" id="Term_418_422" title="Referenced at line 17">Term</a> = <span title="External reference">Stx-Scope</span>
   <a href="#Term_262_266" id="Term_437_441" title="Referenced at line 17">Term</a> = <span title="External reference">Stx-TermIndex</span>
 
