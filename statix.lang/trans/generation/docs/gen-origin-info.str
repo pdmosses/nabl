@@ -49,7 +49,20 @@ rules // A line for each origin file of the nodes, listing the line numbers of t
         ; separate-by(|", ")
         > nodes
       ]
+
+rules // The direct url of the first node in each file, separated by spaces
+
+  gen-urls: (node, nodes) -> <string-replace(|"  ", " ")> string
+    where 
+      files := <map(origin-file); make-set> nodes
+    ; string := <map(gen-url(|<origin-file> node, nodes)); separate-by(|" "); concat-strings> files
   
+  gen-url(|path, nodes): file -> $[[file-url]#[node]_[line]_[column]]
+    where
+      node := <getfirst(where(origin-file; equal(|file)))> nodes
+    ; file-url := <direct-path; file-url> (path, file)
+    ; (line, column) := (<origin-line> node, <origin-column> node)
+ 
 rules // Direct path
 
   // direct-path: (s:string, t:string) -> s:string

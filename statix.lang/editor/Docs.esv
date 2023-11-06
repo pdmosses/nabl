@@ -9,4 +9,5 @@ menus
     submenu: "Develop"
       action: "Generate config" = generate-config
       action: "Generate css"    = generate-css
+      action: "Generate page"   = test-gen-docs-page
     end

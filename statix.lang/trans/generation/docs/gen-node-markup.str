@@ -32,7 +32,8 @@ rules // Nodes
     where
       defs@[def1|_] := <is-string; use-to-defs; sort-by-origin(|node)> node
     ; (q, r) := <origin-offset> node
-    ; id-attr := $[[node]_[q]_[r]]
+    ; (line, column) := (<origin-line> node, <origin-column> node)
+    ; id-attr := $[[node]_[line]_[column]]
     ; gen-tokens-markup(| ins, outs, <subti> (q, p))
     ; direct-path := <direct-path> (<origin-file> node, <origin-file> def1)
     ; if <is-external-path> direct-path
@@ -42,13 +43,21 @@ rules // Nodes
       ; gen-tokens-markup(| ins, outs, <subti> (r, q))
       ; <fputs> ($[</span>], outs)
       else
-        (s, t) := <origin-offset> def1
-      ; href := $[[<file-url> direct-path]#[node]_[s]_[t]]
-      ; origin-info := <gen-origin-info> (node, defs)
-      ; title := <string-replace(|"  ", " ")> $[Defined at [origin-info]]
-      ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
-      ; gen-tokens-markup(| ins, outs, <subti> (r, q))
-      ; <fputs> ($[</a>], outs)
+        urls := <gen-urls> (node, defs)
+      ; if <elem> (' ', <explode-string> urls)
+        then
+          <fputs> ($[<button class="modal-open" id="[id-attr]" title="Multi-file links" data-urls="[urls]">], outs)
+        ; gen-tokens-markup(| ins, outs, <subti> (r, q))
+        ; <fputs> ($[</button>], outs)
+        else
+          (line1, column1) := (<origin-line> def1, <origin-column> def1)
+        ; href := $[[<file-url> direct-path]#[node]_[line1]_[column1]]
+        ; origin-info := <gen-origin-info> (node, defs)
+        ; title := <string-replace(|"  ", " ")> $[Defined at [origin-info]]
+        ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
+        ; gen-tokens-markup(| ins, outs, <subti> (r, q))
+        ; <fputs> ($[</a>], outs)
+        end
       end
 
   // gen-node-markup embeds a definition node in an <a> element with a link to the corresponding reference
@@ -63,7 +72,8 @@ rules // Nodes
     where 
       refs := <is-string; def-to-uses; sort-by-origin(|node)> node
     ; (q, r) := <origin-offset> node
-    ; id-attr := $[[node]_[q]_[r]]
+    ; (line, column) := (<origin-line> node, <origin-column> node)
+    ; id-attr := $[[node]_[line]_[column]]
     ; gen-tokens-markup(| ins, outs, <subti> (q, p))
     ; if <eq> (refs, []) 
       then 
@@ -72,15 +82,23 @@ rules // Nodes
       ; gen-tokens-markup(| ins, outs, <subti> (r, q))
       ; <fputs> ($[</span>], outs)
       else
-        [ref1 | _] := refs
-      ; direct-path := <direct-path> (<origin-file> node, <origin-file> ref1)
-      ; (s, t) := <origin-offset> ref1
-      ; href := $[[<file-url> direct-path]#[node]_[s]_[t]]
-      ; origin-info := <gen-origin-info> (node, refs)
-      ; title := <string-replace(|"  ", " ")> $[Referenced at [origin-info]]
-      ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
-      ; gen-tokens-markup(| ins, outs, <subti> (r, q))
-      ; <fputs> ($[</a>], outs)
+        urls := <gen-urls> (node, refs)
+      ; if <elem> (' ', <explode-string> urls)
+        then
+          <fputs> ($[<button class="modal-open" id="[id-attr]" title="Multi-file links" data-urls="[urls]">], outs)
+        ; gen-tokens-markup(| ins, outs, <subti> (r, q))
+        ; <fputs> ($[</button>], outs)
+        else
+          [ref1 | _] := refs
+        ; direct-path := <direct-path> (<origin-file> node, <origin-file> ref1)
+        ; (line1, column1) := (<origin-line> ref1, <origin-column> ref1)
+        ; href := $[[<file-url> direct-path]#[node]_[line1]_[column1]]
+        ; origin-info := <gen-origin-info> (node, refs)
+        ; title := <string-replace(|"  ", " ")> $[Referenced at [origin-info]]
+        ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
+        ; gen-tokens-markup(| ins, outs, <subti> (r, q))
+        ; <fputs> ($[</a>], outs)
+        end
       end
   
   // gen-node-markup copies other strings without markup

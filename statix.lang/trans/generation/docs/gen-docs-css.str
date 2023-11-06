@@ -21,6 +21,8 @@ rules // generate highlighting CSS for meta-language from its editor/Colorer.esv
         <!$[[meta-language-project-path]/editor/Colorer-CF.esv]; file-exists 
          <+ !$[[meta-language-project-path]/editor/Colorer.esv]>
     ; <gen-metaborg-css> (meta-language, meta-language-project-path, repo-clone, repo-name)
+    ; <gen-modal-css> (meta-language, meta-language-project-path, repo-clone, repo-name)
+    ; <gen-modal-js> (meta-language, meta-language-project-path, repo-clone, repo-name)
     ; <gen-metalanguage-css> (meta-language, colorer-file, repo-clone, repo-name)
 
   gen-metaborg-css: (meta-language, meta-language-project-path, repo-clone, repo-name) -> ()
@@ -31,6 +33,26 @@ rules // generate highlighting CSS for meta-language from its editor/Colorer.esv
         metaborg-css-file := $[[meta-language-project-path]/trans/generation/docs/metaborg.css]
       ; <copy-file> (metaborg-css-file, target-file)
       ; say(!$[> [repo-name]/docs/stylesheets/metaborg.css])
+      end
+
+  gen-modal-css: (meta-language, meta-language-project-path, repo-clone, repo-name) -> ()
+    with
+      target-file := $[[repo-clone]/docs/stylesheets/modal.css]
+    ; if <not(file-exists)> target-file
+      then
+        modal-css-file := $[[meta-language-project-path]/trans/generation/docs/modal.css]
+      ; <copy-file> (modal-css-file, target-file)
+      ; say(!$[> [repo-name]/docs/stylesheets/modal.css])
+      end
+
+  gen-modal-js: (meta-language, meta-language-project-path, repo-clone, repo-name) -> ()
+    with
+      target-file := $[[repo-clone]/docs/javascripts/modal.js]
+    ; if <not(file-exists)> target-file
+      then
+        modal-css-file := $[[meta-language-project-path]/trans/generation/docs/modal.js]
+      ; <copy-file> (modal-css-file, target-file)
+      ; say(!$[> [repo-name]/docs/javascripts/modal.js])
       end
 
   gen-metalanguage-css: (meta-language, colorer-file, repo-clone, repo-name) -> ()

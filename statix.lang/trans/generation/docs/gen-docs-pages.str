@@ -54,6 +54,23 @@ rules // Actions
     ; cons := <parse-file; collect(?Constructor(_))> colorer-file
     ; <map(gen-docs-page(|meta-language, repo-clone, repo-name, project-path, file-ast-list, cons))> file-ast-list
 
+  test-gen-docs-page: (_, _, _, path, project-path) -> None()
+    with
+      meta-language := <get-extension; try(?"stxtest"; !"stx")> path
+    ; repo-clone := <local-path; dirname> project-path
+    ; repo-name := <base-filename> repo-clone
+    ; repo-path := <dirname> repo-clone
+    ; meta-language-project-path := $[[repo-path]/[<meta-project-path> meta-language]]
+    ; colorer-file :=
+        <!$[[meta-language-project-path]/editor/Colorer-CF.esv]; file-exists 
+         <+ !$[[meta-language-project-path]/editor/Colorer.esv]>
+    ; say(!"Web page ...")
+    ; file-ast-list := <get-project-analyzed-asts>
+    ; cons := <parse-file; collect(?Constructor(_))> colorer-file
+    ; <gen-docs-page(|meta-language, repo-clone, repo-name, project-path, file-ast-list, cons)>
+        (path, <lookup> (path, file-ast-list))
+    ; say(!"... done")
+
   // meta-project-path: ext:String -> path:String
   // - path is REPO/META-LANGUAGE for META-LANGUAGE used in files with extension ext
 
@@ -115,7 +132,16 @@ rules // Actions
     ; gen-tokens-markup(|ins, outs)
     ; <fputs> (
         ${
-          </code></pre></td>{div-end}}, outs)
+          </code></pre></td>{div-end}
+          
+          <div id="modal">
+            <div id="modal-content">
+              <span id="modal-close">&times;</span>
+              <h2 id="modal-h2"></h2>
+              <ul id="modal-ul"></ul>
+            </div>
+          </div>
+          }, outs)
     ; <fclose> ins
     ; <fclose> outs
     ; !()
