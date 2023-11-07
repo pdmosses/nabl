@@ -55,13 +55,13 @@ rules // The direct url of the first node in each file, separated by spaces
   gen-urls: (node, nodes) -> <string-replace(|"  ", " ")> string
     where 
       files := <map(origin-file); make-set> nodes
-    ; string := <map(gen-url(|<origin-file> node, nodes)); separate-by(|" "); concat-strings> files
+    ; string := <map(gen-url(|node, nodes)); separate-by(|" "); concat-strings> files
   
-  gen-url(|path, nodes): file -> $[[file-url]#[node]_[line]_[column]]
+  gen-url(|node, nodes): file -> $[[file-url]#[node]_[line]_[column]]
     where
-      node := <getfirst(where(origin-file; equal(|file)))> nodes
-    ; file-url := <direct-path; file-url> (path, file)
-    ; (line, column) := (<origin-line> node, <origin-column> node)
+      node1 := <getfirst(where(origin-file; equal(|file)))> nodes
+    ; file-url := <direct-path; file-url> (<origin-file> node, file)
+    ; (line, column) := (<origin-line; inc> node1, <origin-column; inc> node1)
  
 rules // Direct path
 
