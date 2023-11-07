@@ -44,15 +44,10 @@ rules // Actions
     ; <gen-metaborg-css> (meta-language, meta-language-project-path, repo-clone, repo-name)
     ; <gen-metalanguage-css> (meta-language, colorer-file, repo-clone, repo-name)
     ; say(!"Web pages ...")
-    ; <gen-docs-pages> (meta-language, colorer-file, meta-language-project-path, repo-clone, repo-name, project-path)
-    ; say(!"... done")
-
-  gen-docs-pages:
-    (meta-language, colorer-file, meta-language-project-path, repo-clone, repo-name, project-path) -> ()
-    with
-      file-ast-list := <get-project-analyzed-asts>
+    ; file-ast-list := <get-project-analyzed-asts>
     ; cons := <parse-file; collect(?Constructor(_))> colorer-file
     ; <map(gen-docs-page(|meta-language, repo-clone, repo-name, project-path, file-ast-list, cons))> file-ast-list
+    ; say(!"... done")
 
   test-gen-docs-page: (_, _, _, path, project-path) -> None()
     with
