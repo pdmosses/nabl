@@ -46,7 +46,7 @@ rules // Nodes
         urls := <gen-urls> (node, defs)
       ; if <elem> (' ', <explode-string> urls)
         then
-          <fputs> ($[<button class="modal-open" id="[id-attr]" title="Multi-file links" data-urls="[urls]">], outs)
+          <fputs> ($[<button class="modal-open" id="[id-attr]" title="Multi-file definition" data-urls="[urls]">], outs)
         ; gen-tokens-markup(| ins, outs, <subti> (r, q))
         ; <fputs> ($[</button>], outs)
         else
@@ -85,7 +85,7 @@ rules // Nodes
         urls := <gen-urls> (node, refs)
       ; if <elem> (' ', <explode-string> urls)
         then
-          <fputs> ($[<button class="modal-open" id="[id-attr]" title="Multi-file links" data-urls="[urls]">], outs)
+          <fputs> ($[<button class="modal-open" id="[id-attr]" title="Multi-file references" data-urls="[urls]">], outs)
         ; gen-tokens-markup(| ins, outs, <subti> (r, q))
         ; <fputs> ($[</button>], outs)
         else
