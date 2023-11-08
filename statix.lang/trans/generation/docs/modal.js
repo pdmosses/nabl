@@ -6,7 +6,7 @@
 // TODO: Replace by a CSS-only modal (or add a no-js fallback)
 
 // Get the modal elements
-const modal = document.getElementById("modal");
+const modal = document.getElementById("modal-content");
 const h2    = document.getElementById("modal-h2");
 const p     = document.getElementById("modal-p");
 const ul    = document.getElementById("modal-ul");
@@ -46,10 +46,8 @@ function urlItem(url) {
 
 // When the user clicks in any button, open the modal 
 function btnClick(event) {
-  let node = event.target;
-  while (node && node.tagName != "BUTTON") {
-    node = node.parentNode;
-  }
+  const node = event.target.closest("button.modal-open");
+
   // Copy the button contents to a code element in the modal heading
   h2.replaceChildren();
   if (node.hasChildNodes()) {
@@ -76,6 +74,11 @@ function btnClick(event) {
   for (const anchor of anchors) {
     anchor.addEventListener("click", closeModal);
   }
+  // Move the modal below the button
+  const nodeRect = node.getBoundingClientRect();
+  const marginLeft = nodeRect.left + window.scrollX;
+  const marginTop = nodeRect.bottom + window.scrollY;
+  modal.style.margin = `${marginTop + "px"} 0 0 ${marginLeft + "px"}`;
   // Make the modal contents visible
   modal.style.display = "block";
 }
@@ -102,7 +105,13 @@ if (close) {
 // When the user clicks anywhere outside the modal, close it
 
 function windowClick(event) {
-  if (event.target == modal) {
+  // Only close the modal when:
+  // - it is currently open and
+  // - the click is not aimed at a button that opens the modal and
+  // - the click is outside the modal
+  if (modal.style.display != "none"
+      && event.target.parentNode.tagName != "BUTTON"
+      && event.target.closest('#modal-content') == null) {
     closeModal(event);
   }
 }
