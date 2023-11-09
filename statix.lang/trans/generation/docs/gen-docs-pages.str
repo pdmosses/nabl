@@ -41,10 +41,10 @@ rules // Actions
     ; <gen-mkdocs> (repo-clone, repo-name)
     ; <gen-ci> (meta-language-project-path, repo-clone, repo-name)
     ; say(!"CSS ...")
-    ; <gen-metaborg-css> (meta-language, meta-language-project-path, repo-clone, repo-name)
-    ; <gen-modal-css> (meta-language, meta-language-project-path, repo-clone, repo-name)
-    ; <gen-modal-js> (meta-language, meta-language-project-path, repo-clone, repo-name)
-    ; <gen-metalanguage-css> (meta-language, colorer-file, repo-clone, repo-name)
+    ; <gen-metaborg-css(not(file-exists))> (meta-language, meta-language-project-path, repo-clone, repo-name)
+    ; <gen-modal-css(not(file-exists))> (meta-language, meta-language-project-path, repo-clone, repo-name)
+    ; <gen-modal-js(not(file-exists))> (meta-language, meta-language-project-path, repo-clone, repo-name)
+    ; <gen-metalanguage-css(not(file-exists))> (meta-language, colorer-file, repo-clone, repo-name)
     ; say(!"Web pages ...")
     ; file-ast-list := <get-project-analyzed-asts>
     ; cons := <parse-file; collect(?Constructor(_))> colorer-file

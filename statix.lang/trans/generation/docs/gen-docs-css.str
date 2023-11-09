@@ -20,45 +20,45 @@ rules // generate highlighting CSS for meta-language from its editor/Colorer.esv
     ; colorer-file := 
         <!$[[meta-language-project-path]/editor/Colorer-CF.esv]; file-exists 
          <+ !$[[meta-language-project-path]/editor/Colorer.esv]>
-    ; <gen-metaborg-css> (meta-language, meta-language-project-path, repo-clone, repo-name)
-    ; <gen-modal-css> (meta-language, meta-language-project-path, repo-clone, repo-name)
-    ; <gen-modal-js> (meta-language, meta-language-project-path, repo-clone, repo-name)
-    ; <gen-metalanguage-css> (meta-language, colorer-file, repo-clone, repo-name)
+    ; <gen-metaborg-css(true)> (meta-language, meta-language-project-path, repo-clone, repo-name)
+    ; <gen-modal-css(true)> (meta-language, meta-language-project-path, repo-clone, repo-name)
+    ; <gen-modal-js(true)> (meta-language, meta-language-project-path, repo-clone, repo-name)
+    ; <gen-metalanguage-css(true)> (meta-language, colorer-file, repo-clone, repo-name)
 
-  gen-metaborg-css: (meta-language, meta-language-project-path, repo-clone, repo-name) -> ()
+  gen-metaborg-css(s): (meta-language, meta-language-project-path, repo-clone, repo-name) -> ()
     with
       target-file := $[[repo-clone]/docs/stylesheets/metaborg.css]
-    ; if <not(file-exists)> target-file
+    ; if <s> target-file
       then
         metaborg-css-file := $[[meta-language-project-path]/trans/generation/docs/metaborg.css]
       ; <copy-file> (metaborg-css-file, target-file)
       ; say(!$[> [repo-name]/docs/stylesheets/metaborg.css])
       end
 
-  gen-modal-css: (meta-language, meta-language-project-path, repo-clone, repo-name) -> ()
+  gen-modal-css(s): (meta-language, meta-language-project-path, repo-clone, repo-name) -> ()
     with
       target-file := $[[repo-clone]/docs/stylesheets/modal.css]
-    ; if <not(file-exists)> target-file
+    ; if <s> target-file
       then
         modal-css-file := $[[meta-language-project-path]/trans/generation/docs/modal.css]
       ; <copy-file> (modal-css-file, target-file)
       ; say(!$[> [repo-name]/docs/stylesheets/modal.css])
       end
 
-  gen-modal-js: (meta-language, meta-language-project-path, repo-clone, repo-name) -> ()
+  gen-modal-js(s): (meta-language, meta-language-project-path, repo-clone, repo-name) -> ()
     with
       target-file := $[[repo-clone]/docs/javascripts/modal.js]
-    ; if <not(file-exists)> target-file
+    ; if <s> target-file
       then
         modal-css-file := $[[meta-language-project-path]/trans/generation/docs/modal.js]
       ; <copy-file> (modal-css-file, target-file)
       ; say(!$[> [repo-name]/docs/javascripts/modal.js])
       end
 
-  gen-metalanguage-css: (meta-language, colorer-file, repo-clone, repo-name) -> ()
+  gen-metalanguage-css(s): (meta-language, colorer-file, repo-clone, repo-name) -> ()
     with
       target-file := $[[repo-clone]/docs/stylesheets/[meta-language].css]
-    ; if <not(file-exists)> target-file
+    ; if <s> target-file
       then
         css := <parse-file; colorer-to-css(|meta-language)> colorer-file
       ; outs := <fopen> (target-file, "w")
