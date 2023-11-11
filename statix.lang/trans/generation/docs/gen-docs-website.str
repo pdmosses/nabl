@@ -1,8 +1,10 @@
 module generation/docs/gen-docs-website
 
 imports
-    libspoofax/core/-
-    libspoofax/resource/-
+  libspoofax/core/-
+  libspoofax/resource/-
+
+  generation/docs/gen-docs-meta
 
 rules // initialise the repo docs directory for the current project
 
@@ -19,20 +21,25 @@ rules // initialise the repo docs directory for the current project
       meta-language := <get-extension; try(?"stxtest"; !"stx")> path
     ; repo-clone := <local-path; dirname> project-path
     ; repo-name := <base-filename> repo-clone
-    ; <gen-docs> (meta-language, repo-clone, repo-name, project-path)
-    ; <gen-mkdocs> (repo-clone, repo-name)
+    ; repo-path := <dirname> repo-clone
+    ; meta-language-project-path := $[[repo-path]/[<meta-project-path> meta-language]]
+    ; say(!"\nConfig  ...")
+    ; <gen-docs(true)> (meta-language, repo-clone, repo-name, project-path)
+    ; <gen-mkdocs(true)> (repo-clone, repo-name)
+    ; <gen-ci(true)> (meta-language-project-path, repo-clone, repo-name)
+    ; say(!"... done")
 
-  gen-docs: (meta-language, repo-clone, repo-name, project-path) -> None()
+  gen-docs(s): (meta-language, repo-clone, repo-name, project-path) -> None()
     with
       file-list := <current-language-source-files; filter(where(has-extension(|meta-language)))>
     ; project-name := <base-filename> project-path
     ; dir-list := <map(dirname; string-replace(|project-path, project-name))> file-list
-    ; <map(gen-docs-dir(|repo-clone))> dir-list
+    ; <map(gen-docs-dir(s|repo-clone))> dir-list
 
-  gen-docs-dir(|repo-clone): dir -> ()
+  gen-docs-dir(s|repo-clone): dir -> ()
     with
       target-file := $[[repo-clone]/docs/[dir]/.pages]
-    ; if <not(file-exists)> target-file
+    ; if <s> target-file
       then
         pages-contents := $[title: [<base-filename> dir]]
       ; pages-src-gen := "\nhide: true"
@@ -44,13 +51,13 @@ rules // initialise the repo docs directory for the current project
       ; <fclose> outs
       end
     ; if <is-substring(!"/")> dir
-      then <dirname; gen-docs-dir(|repo-clone)> dir
+      then <dirname; gen-docs-dir(s|repo-clone)> dir
       end
 
-  gen-mkdocs: (repo-clone, repo-name) -> ()
+  gen-mkdocs(s): (repo-clone, repo-name) -> ()
     with
       target-file := $[[repo-clone]/mkdocs.yml]
-    ; if <not(file-exists)> target-file
+    ; if <s> target-file
       then
         outs := <fopen> (target-file, "w")
       ; <fputs> (<mkdocs> repo-name, outs)
@@ -58,11 +65,11 @@ rules // initialise the repo docs directory for the current project
       ; say(!$[> [repo-name]/mkdocs.yml])
       end
 
-  gen-ci: (meta-language-project-path, repo-clone, repo-name) -> ()
+  gen-ci(s): (meta-language-project-path, repo-clone, repo-name) -> ()
     with
       ci-path := ".github/workflows/ci.yml"
     ; target-file := $[[repo-clone]/[ci-path]]
-    ; if <not(file-exists)> target-file
+    ; if <s> target-file
       then
         meta-language-ci-file := $[[<dirname> meta-language-project-path]/[ci-path]]
       ; <copy-file> (meta-language-ci-file, target-file)

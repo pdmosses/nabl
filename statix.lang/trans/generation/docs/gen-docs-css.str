@@ -8,6 +8,8 @@ imports
   libspoofax/resource/-
   EditorService
 
+  generation/docs/gen-docs-meta
+
 rules // generate highlighting CSS for meta-language from its editor/Colorer.esv file
 
   generate-css: (_, _, ast, path, project-path) -> ()
@@ -20,10 +22,12 @@ rules // generate highlighting CSS for meta-language from its editor/Colorer.esv
     ; colorer-file := 
         <!$[[meta-language-project-path]/editor/Colorer-CF.esv]; file-exists 
          <+ !$[[meta-language-project-path]/editor/Colorer.esv]>
+    ; say(!"\nCSS  ...")
     ; <gen-metaborg-css(true)> (meta-language, meta-language-project-path, repo-clone, repo-name)
     ; <gen-modal-css(true)> (meta-language, meta-language-project-path, repo-clone, repo-name)
     ; <gen-modal-js(true)> (meta-language, meta-language-project-path, repo-clone, repo-name)
     ; <gen-metalanguage-css(true)> (meta-language, colorer-file, repo-clone, repo-name)
+    ; say(!"... done")
 
   gen-metaborg-css(s): (meta-language, meta-language-project-path, repo-clone, repo-name) -> ()
     with
@@ -66,11 +70,6 @@ rules // generate highlighting CSS for meta-language from its editor/Colorer.esv
       ; <fclose> outs
       ; say(!$[> [repo-name]/docs/stylesheets/[meta-language].css])
       end
-
-  meta-project-path: "sdf3" -> "sdf/org.metaborg.meta.lang.template"
-  meta-project-path: "nab"  -> "nabl/org.metaborg.meta.lang.nabl"
-  meta-project-path: "stx"  -> "nabl/statix.lang"
-  meta-project-path: "str"  -> "stratego/stratego.lang"
 
   colorer-to-css(|meta-language) =
       collect-om(?ColorRule(_, _))

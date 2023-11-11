@@ -5,8 +5,10 @@ imports
   generation/docs/gen-docs-website
   generation/docs/gen-docs-css
   generation/docs/gen-node-markup
+  generation/docs/gen-origin-info
   generation/docs/statix-tokens-markup
   generation/docs/name-binding
+  generation/docs/gen-docs-meta
   
   libstratego-lib
   
@@ -35,11 +37,12 @@ rules // Actions
     ; colorer-file :=
         <!$[[meta-language-project-path]/editor/Colorer-CF.esv]; file-exists 
          <+ !$[[meta-language-project-path]/editor/Colorer.esv]>
-    ; say(!$[Generate website [repo-name]/[<base-filename> project-path]: *.[meta-language] ...])
+    ; say(!$[
+             Generate website [repo-name]/[<base-filename> project-path]: *.[meta-language] ...])
     ; say(!"Configuration ...")
-    ; <gen-docs> (meta-language, repo-clone, repo-name, project-path)
-    ; <gen-mkdocs> (repo-clone, repo-name)
-    ; <gen-ci> (meta-language-project-path, repo-clone, repo-name)
+    ; <gen-docs(not(file-exists))> (meta-language, repo-clone, repo-name, project-path)
+    ; <gen-mkdocs(not(file-exists))> (repo-clone, repo-name)
+    ; <gen-ci(not(file-exists))> (meta-language-project-path, repo-clone, repo-name)
     ; say(!"CSS ...")
     ; <gen-metaborg-css(not(file-exists))> (meta-language, meta-language-project-path, repo-clone, repo-name)
     ; <gen-modal-css(not(file-exists))> (meta-language, meta-language-project-path, repo-clone, repo-name)
@@ -67,14 +70,6 @@ rules // Actions
     ; <gen-docs-page(|meta-language, repo-clone, repo-name, project-path, file-ast-list, cons)>
         (path, <lookup> (path, file-ast-list))
     ; say(!"... done")
-
-  // meta-project-path: ext:String -> path:String
-  // - path is REPO/META-LANGUAGE for META-LANGUAGE used in files with extension ext
-
-  meta-project-path: "sdf3"  -> "sdf/org.metaborg.meta.lang.template"
-  meta-project-path: "nab"   -> "nabl/org.metaborg.meta.lang.nabl"
-  meta-project-path: "nabl2" -> "nabl/org.metaborg.meta.nabl2.lang"
-  meta-project-path: "stx"   -> "nabl/statix.lang"
 
   // gen-docs-page(|meta-language, repo-clone, repo-name, project-path, ast-list, cons): (file, ast) -> ()
   // - assumes that the project is at the top level of repo-clone

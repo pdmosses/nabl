@@ -101,4 +101,3 @@ rules // Direct path
   
   is-external-path = is-substring(!"/file:/")
 //  is-external-path = is-substring(!"src-gen/")
-  
