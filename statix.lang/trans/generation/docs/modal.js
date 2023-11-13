@@ -74,20 +74,8 @@ function btnClick(event) {
   for (const anchor of anchors) {
     anchor.addEventListener("click", closeModal);
   }
-  // Move the modal below the button
-  const nodeRect = node.getBoundingClientRect();
-  const marginLeft = nodeRect.left + window.scrollX;
-  const marginTop = nodeRect.bottom + window.scrollY;
-  modal.style.margin = `${marginTop + "px"} 0 0 ${marginLeft + "px"}`;
-  const pageLengthBefore = document.documentElement.scrollHeight;
   // Make the modal contents visible
   modal.style.display = "block";
-  // If the modal is outside the page, show it above the button
-  // Unfortunately, there is no reliable way to know this before changing the display
-  if (document.documentElement.scrollHeight > pageLengthBefore) {
-    const newMarginTop = marginTop - nodeRect.height - modal.getBoundingClientRect().height;
-    modal.style.margin = `${newMarginTop + "px"} 0 0 ${marginLeft + "px"}`;
-  }
 }
 
 for (const btn of btns) {

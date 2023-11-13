@@ -1,14 +1,16 @@
 /* Modal Content/Box */
 #modal-content {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 5rem;
+  z-index: 5; /* Header of the page has z-index: 4 */
+  transform: translate(-50%, 0);
   background-color: var(--md-code-bg-color);
   padding: 20px;
   border: 1px solid var(--md-code-fg-color);
   width: fit-content;
   max-width: 30rem;
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 
 #modal-content h2 {
