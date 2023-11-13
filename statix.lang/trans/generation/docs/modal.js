@@ -105,7 +105,7 @@ function windowClick(event) {
   // - the click is not aimed at a button that opens the modal and
   // - the click is outside the modal
   if (modal.style.display != "none"
-      && event.target.parentNode.tagName != "BUTTON"
+      && event.target.closest("button.modal-open") != null
       && event.target.closest('#modal-content') == null) {
     closeModal(event);
   }
