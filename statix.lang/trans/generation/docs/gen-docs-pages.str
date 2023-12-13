@@ -68,7 +68,7 @@ rules // Actions
     ; file-ast-list := <get-project-analyzed-asts>
     ; cons := <parse-file; collect(?Constructor(_))> colorer-file
     ; <gen-docs-page(|meta-language, repo-clone, repo-name, project-path, file-ast-list, cons)>
-        (path, <lookup> (path, file-ast-list))
+        (path, <lookup> ($[[project-path]/[path]], file-ast-list))
     ; say(!"... done")
 
   // gen-docs-page(|meta-language, repo-clone, repo-name, project-path, ast-list, cons): (file, ast) -> ()
