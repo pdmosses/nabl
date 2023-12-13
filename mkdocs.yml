@@ -46,6 +46,10 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/metaborg.css
-  - stylesheets/sdf3.css
+  - stylesheets/modal.css
   - stylesheets/nab.css
+  - stylesheets/sdf3.css
   - stylesheets/stx.css
+
+extra_javascript:
+  - javascripts/modal.js
