@@ -36,7 +36,7 @@ hide:
 24
 25
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../Signature.sdf3/#nabl2/lang/signatures/Constructors_80_114" id="nabl2/lang/signatures/Constructors_7_41" title="Referenced at ../Signature.sdf3 line 6">nabl2/lang/signatures/Constructors</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../Signature.sdf3/#nabl2/lang/signatures/Constructors_6_3" id="nabl2/lang/signatures/Constructors_1_8" title="Referenced at ../Signature.sdf3 line 6">nabl2/lang/signatures/Constructors</a>
 
 <span class="keyword">imports</span>
 
@@ -49,17 +49,26 @@ hide:
 
 <span class="keyword">context-free syntax</span>
 
-  <span id="NaBL2-Signature_187_202" title="Not referenced locally, nor via imports">NaBL2-Signature</span>.<span class="cons_Constructor"><span id="Sorts_203_208" title="Not referenced locally, nor via imports">Sorts</span></span> = &lt;
+  <span id="NaBL2-Signature_14_3" title="Not referenced">NaBL2-Signature</span>.<span class="cons_Constructor"><span id="Sorts_14_19" title="Not referenced">Sorts</span></span> = &lt;
     <span class="cons_String">sorts</span>
       &lt;{<span title="External reference">NaBL2-Sort</span> <span class="cons_Lit">"\n"</span>}*&gt;
   &gt; {<span class="keyword">longest-match</span>}
 
-  <span id="NaBL2-Signature_273_288" title="Not referenced locally, nor via imports">NaBL2-Signature</span>.<span class="cons_Constructor"><span id="Constructors_289_301" title="Not referenced locally, nor via imports">Constructors</span></span> = &lt;
+  <span id="NaBL2-Signature_19_3" title="Not referenced">NaBL2-Signature</span>.<span class="cons_Constructor"><span id="Constructors_19_19" title="Not referenced">Constructors</span></span> = &lt;
     <span class="cons_String">constructors</span>
-      &lt;{<a href="#NaBL2-OpDecl_375_387" id="NaBL2-OpDecl_331_343" title="Defined at line 24, 25">NaBL2-OpDecl</a> <span class="cons_Lit">"\n"</span>}*&gt;
+      &lt;{<a href="#NaBL2-OpDecl_24_3" id="NaBL2-OpDecl_21_9" title="Defined at line 24, 25">NaBL2-OpDecl</a> <span class="cons_Lit">"\n"</span>}*&gt;
   &gt; {<span class="keyword">longest-match</span>}
 
-  <a href="#NaBL2-OpDecl_331_343" id="NaBL2-OpDecl_375_387" title="Referenced at line 21">NaBL2-OpDecl</a>.<span class="cons_Constructor"><span id="OpDecl_388_394" title="Not referenced locally, nor via imports">OpDecl</span></span>        = [[<span title="External reference">NaBL2-OpId</span>] <span class="cons_String">:</span> [{<span title="External reference">NaBL2-SortRef</span> <span class="cons_Lit">" * "</span>}*] <span class="cons_String">-&gt;</span> [<span title="External reference">NaBL2-Sort</span>]]
-  <a href="#NaBL2-OpDecl_331_343" id="NaBL2-OpDecl_464_476" title="Referenced at line 21">NaBL2-OpDecl</a>.<span class="cons_Constructor"><span id="NullaryOpDecl_477_490" title="Not referenced locally, nor via imports">NullaryOpDecl</span></span> = [[<span title="External reference">NaBL2-OpId</span>] <span class="cons_String">:</span> [<span title="External reference">NaBL2-Sort</span>]]
+  <a href="#NaBL2-OpDecl_21_9" id="NaBL2-OpDecl_24_3" title="Referenced at line 21">NaBL2-OpDecl</a>.<span class="cons_Constructor"><span id="OpDecl_24_16" title="Not referenced">OpDecl</span></span>        = [[<span title="External reference">NaBL2-OpId</span>] <span class="cons_String">:</span> [{<span title="External reference">NaBL2-SortRef</span> <span class="cons_Lit">" * "</span>}*] <span class="cons_String">-&gt;</span> [<span title="External reference">NaBL2-Sort</span>]]
+  <a href="#NaBL2-OpDecl_21_9" id="NaBL2-OpDecl_25_3" title="Referenced at line 21">NaBL2-OpDecl</a>.<span class="cons_Constructor"><span id="NullaryOpDecl_25_16" title="Not referenced">NullaryOpDecl</span></span> = [[<span title="External reference">NaBL2-OpId</span>] <span class="cons_String">:</span> [<span title="External reference">NaBL2-Sort</span>]]
 
 </code></pre></td></tr></tbody></table></div>
+
+<div id="modal">
+  <div id="modal-content">
+    <span id="modal-close">&times;</span>
+    <h2 id="modal-h2"></h2>
+    <p  id="modal-p"></p>
+    <ul id="modal-ul"></ul>
+  </div>
+</div>
