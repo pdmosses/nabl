@@ -5,8 +5,8 @@
 *.tmp
 *.bak
 *.log
+*.hprof
 **/.DS_Store
-
 
 ## Spoofax
 .polyglot.metaborg.yaml
