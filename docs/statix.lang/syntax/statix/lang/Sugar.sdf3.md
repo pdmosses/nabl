@@ -177,12 +177,12 @@ hide:
 165
 166
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../NoParse.sdf3/#statix/lang/Sugar_119_136" id="statix/lang/Sugar_7_24" title="Referenced at ../NoParse.sdf3 line 7; ../../../StatixLang.sdf3 line 8; ../../cli/CLI.sdf3 line 8; ../../test/Result.sdf3 line 10; ../../test/Test.sdf3 line 8">statix/lang/Sugar</a>
+<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="statix/lang/Sugar_1_8" title="Multi-file references" data-urls="../NoParse.sdf3/#statix/lang/Sugar_7_3 line 7; ../../../StatixLang.sdf3/#statix/lang/Sugar_8_3 line 8; ../../cli/CLI.sdf3/#statix/lang/Sugar_8_3 line 8; ../../test/Result.sdf3/#statix/lang/Sugar_10_3 line 10; ../../test/Test.sdf3/#statix/lang/Sugar_8_3 line 8">statix/lang/Sugar</button>
 
 <span class="keyword">imports</span>
 
-  <a href="../Common.sdf3/#statix/lang/Common_7_25" id="statix/lang/Common_37_55" title="Defined at ../Common.sdf3 line 1">statix/lang/Common</a>
-  <a href="../Core.sdf3/#statix/lang/Core_7_23" id="statix/lang/Core_58_74" title="Defined at ../Core.sdf3 line 1">statix/lang/Core</a>
+  <a href="../Common.sdf3/#statix/lang/Common_1_8" id="statix/lang/Common_5_3" title="Defined at ../Common.sdf3 line 1">statix/lang/Common</a>
+  <a href="../Core.sdf3/#statix/lang/Core_1_8" id="statix/lang/Core_6_3" title="Defined at ../Core.sdf3 line 1">statix/lang/Core</a>
 
 <span class="keyword">template options</span>
 
@@ -197,43 +197,43 @@ hide:
 
   <span class="layout">// lifting of constraints</span>
 
-  <span id="Rule_386_390" title="Not referenced locally, nor via imports">Rule</span>             = &lt;<span class="cons_String">constraint</span> &lt;<a href="#CDerive_608_615" id="CDerive_418_425" title="Defined at line 29, 30">CDerive</a>&gt;&gt;
-  <span id="Rule_430_434" title="Not referenced locally, nor via imports">Rule</span>             = <a href="#CDerive_608_615" id="CDerive_449_456" title="Defined at line 29, 30">CDerive</a>
+  <span id="Rule_21_3" title="Not referenced">Rule</span>             = &lt;<span class="cons_String">constraint</span> &lt;<a href="#CDerive_29_3" id="CDerive_21_35" title="Defined at line 29, 30">CDerive</a>&gt;&gt;
+  <span id="Rule_22_3" title="Not referenced">Rule</span>             = <a href="#CDerive_29_3" id="CDerive_22_22" title="Defined at line 29, 30">CDerive</a>
 
-  <span id="Rule_460_464" title="Not referenced locally, nor via imports">Rule</span>.<span class="cons_Constructor"><span id="CDecl_465_470" title="Not referenced locally, nor via imports">CDecl</span></span>       = [[<a href="../Core.sdf3/#CInd_1152_1156" id="CInd_481_485" title="Defined at ../Core.sdf3 line 63, 64">CInd</a>]<span class="cons_String">constraint</span> [<a href="../Core.sdf3/#ConstraintId_1527_1539" id="ConstraintId_498_510" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>] <span class="cons_String">:</span> [<a href="#Type_3641_3645" id="Type_515_519" title="Defined at line 152">Type</a>]]
-  <span id="Rule_524_528" title="Not referenced locally, nor via imports">Rule</span>.<span class="cons_Constructor"><span id="CDecl_529_534" title="Not referenced locally, nor via imports">CDecl</span></span>       = [[<a href="../Core.sdf3/#CInd_1152_1156" id="CInd_545_549" title="Defined at ../Core.sdf3 line 63, 64">CInd</a>][<a href="../Core.sdf3/#ConstraintId_1527_1539" id="ConstraintId_551_563" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>] <span class="cons_String">:</span> [<a href="#Type_3641_3645" id="Type_568_572" title="Defined at line 152">Type</a>]]
+  <span id="Rule_24_3" title="Not referenced">Rule</span>.<span class="cons_Constructor"><span id="CDecl_24_8" title="Not referenced">CDecl</span></span>       = [[<a href="../Core.sdf3/#CInd_63_3" id="CInd_24_24" title="Defined at ../Core.sdf3 line 63, 64">CInd</a>]<span class="cons_String">constraint</span> [<a href="../Core.sdf3/#ConstraintId_83_3" id="ConstraintId_24_41" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>] <span class="cons_String">:</span> [<a href="#Type_152_3" id="Type_24_58" title="Defined at line 152">Type</a>]]
+  <span id="Rule_25_3" title="Not referenced">Rule</span>.<span class="cons_Constructor"><span id="CDecl_25_8" title="Not referenced">CDecl</span></span>       = [[<a href="../Core.sdf3/#CInd_63_3" id="CInd_25_24" title="Defined at ../Core.sdf3 line 63, 64">CInd</a>][<a href="../Core.sdf3/#ConstraintId_83_3" id="ConstraintId_25_30" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>] <span class="cons_String">:</span> [<a href="#Type_152_3" id="Type_25_47" title="Defined at line 152">Type</a>]]
 
-  <span id="CDecl_578_583" title="Not referenced locally, nor via imports">CDecl</span>            = <a href="#CDerive_608_615" id="CDerive_597_604" title="Defined at line 29, 30">CDerive</a>
+  <span id="CDecl_27_3" title="Not referenced">CDecl</span>            = <a href="#CDerive_29_3" id="CDerive_27_22" title="Defined at line 29, 30">CDerive</a>
 
-  <a href="#CDerive_418_425" id="CDerive_608_615" title="Referenced at line 21, 22, 27">CDerive</a>.<span class="cons_Constructor"><span id="CDeriveMap_616_626" title="Not referenced locally, nor via imports">CDeriveMap</span></span> = [[<a href="../Core.sdf3/#ConstraintId_1527_1539" id="ConstraintId_631_643" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>] <span class="cons_String">maps</span> [<a href="../Core.sdf3/#ConstraintId_1527_1539" id="ConstraintId_651_663" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>]<span class="cons_String">(</span>[{<a href="#Lift_770_774" id="Lift_667_671" title="Defined at line 32, 33, 34, 35">Lift</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">)</span>]
-  <a href="#CDerive_418_425" id="CDerive_684_691" title="Referenced at line 21, 22, 27">CDerive</a>.<span class="cons_Constructor"><span id="FDeriveMap_692_702" title="Not referenced locally, nor via imports">FDeriveMap</span></span> = [[<a href="../Core.sdf3/#ConstraintId_1527_1539" id="ConstraintId_707_719" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>] <span class="cons_String">maps</span> [<a href="../Core.sdf3/#ConstraintId_1527_1539" id="ConstraintId_727_739" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>]<span class="cons_String">(</span>[{<a href="#Lift_770_774" id="Lift_743_747" title="Defined at line 32, 33, 34, 35">Lift</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">)</span> <span class="cons_String">=</span> [<a href="#Lift_770_774" id="Lift_760_764" title="Defined at line 32, 33, 34, 35">Lift</a>]]
+  <a href="#CDerive_21_35" id="CDerive_29_3" title="Referenced at line 21, 22, 27">CDerive</a>.<span class="cons_Constructor"><span id="CDeriveMap_29_11" title="Not referenced">CDeriveMap</span></span> = [[<a href="../Core.sdf3/#ConstraintId_83_3" id="ConstraintId_29_26" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>] <span class="cons_String">maps</span> [<a href="../Core.sdf3/#ConstraintId_83_3" id="ConstraintId_29_46" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>]<span class="cons_String">(</span>[{<a href="#Lift_32_3" id="Lift_29_62" title="Defined at line 32, 33, 34, 35">Lift</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">)</span>]
+  <a href="#CDerive_21_35" id="CDerive_30_3" title="Referenced at line 21, 22, 27">CDerive</a>.<span class="cons_Constructor"><span id="FDeriveMap_30_11" title="Not referenced">FDeriveMap</span></span> = [[<a href="../Core.sdf3/#ConstraintId_83_3" id="ConstraintId_30_26" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>] <span class="cons_String">maps</span> [<a href="../Core.sdf3/#ConstraintId_83_3" id="ConstraintId_30_46" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>]<span class="cons_String">(</span>[{<a href="#Lift_32_3" id="Lift_30_62" title="Defined at line 32, 33, 34, 35">Lift</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">)</span> <span class="cons_String">=</span> [<a href="#Lift_32_3" id="Lift_30_79" title="Defined at line 32, 33, 34, 35">Lift</a>]]
 
-  <a href="#Lift_667_671" id="Lift_770_774" title="Referenced at line 29, 30, 35">Lift</a>.<span class="cons_Constructor"><span id="IdLift_775_781" title="Not referenced locally, nor via imports">IdLift</span></span>     = <span class="cons_Lit">"*"</span>
-  <a href="#Lift_667_671" id="Lift_794_798" title="Referenced at line 29, 30, 35">Lift</a>.<span class="cons_Constructor"><span id="ListLift_799_807" title="Not referenced locally, nor via imports">ListLift</span></span>   = <span class="cons_Lit">"list(*)"</span>
-  <a href="#Lift_667_671" id="Lift_824_828" title="Referenced at line 29, 30, 35">Lift</a>.<span class="cons_Constructor"><span id="Tuple0Lift_829_839" title="Not referenced locally, nor via imports">Tuple0Lift</span></span> = &lt;<span class="cons_String">(</span> <span class="cons_String">)</span>&gt;
-  <a href="#Lift_667_671" id="Lift_850_854" title="Referenced at line 29, 30, 35">Lift</a>.<span class="cons_Constructor"><span id="TupleNLift_855_865" title="Not referenced locally, nor via imports">TupleNLift</span></span> = &lt;<span class="cons_String">(</span>&lt;<a href="#Lift_770_774" id="Lift_871_875" title="Defined at line 32, 33, 34, 35">Lift</a>&gt;<span class="cons_String">,</span> &lt;{<a href="#Lift_770_774" id="Lift_880_884" title="Defined at line 32, 33, 34, 35">Lift</a> <span class="cons_Lit">", "</span>}+&gt;<span class="cons_String">)</span>&gt;
+  <a href="#Lift_29_62" id="Lift_32_3" title="Referenced at line 29, 30, 35">Lift</a>.<span class="cons_Constructor"><span id="IdLift_32_8" title="Not referenced">IdLift</span></span>     = <span class="cons_Lit">"*"</span>
+  <a href="#Lift_29_62" id="Lift_33_3" title="Referenced at line 29, 30, 35">Lift</a>.<span class="cons_Constructor"><span id="ListLift_33_8" title="Not referenced">ListLift</span></span>   = <span class="cons_Lit">"list(*)"</span>
+  <a href="#Lift_29_62" id="Lift_34_3" title="Referenced at line 29, 30, 35">Lift</a>.<span class="cons_Constructor"><span id="Tuple0Lift_34_8" title="Not referenced">Tuple0Lift</span></span> = &lt;<span class="cons_String">(</span> <span class="cons_String">)</span>&gt;
+  <a href="#Lift_29_62" id="Lift_35_3" title="Referenced at line 29, 30, 35">Lift</a>.<span class="cons_Constructor"><span id="TupleNLift_35_8" title="Not referenced">TupleNLift</span></span> = &lt;<span class="cons_String">(</span>&lt;<a href="#Lift_32_3" id="Lift_35_24" title="Defined at line 32, 33, 34, 35">Lift</a>&gt;<span class="cons_String">,</span> &lt;{<a href="#Lift_32_3" id="Lift_35_33" title="Defined at line 32, 33, 34, 35">Lift</a> <span class="cons_Lit">", "</span>}+&gt;<span class="cons_String">)</span>&gt;
 
   <span class="layout">// rule shorthands</span>
 
-  <span id="Rule_920_924" title="Not referenced locally, nor via imports">Rule</span>.<span class="cons_Constructor"><span id="AxiomRule_925_934" title="Not referenced locally, nor via imports">AxiomRule</span></span> = &lt;
-    &lt;<a href="../Core.sdf3/#RuleName_1281_1289" id="RuleName_944_952" title="Defined at ../Core.sdf3 line 71, 72">RuleName</a>&gt;&lt;<a href="#RuleHead_972_980" id="RuleHead_954_962" title="Defined at line 43">RuleHead</a>&gt;<span class="cons_String">.</span>
+  <span id="Rule_39_3" title="Not referenced">Rule</span>.<span class="cons_Constructor"><span id="AxiomRule_39_8" title="Not referenced">AxiomRule</span></span> = &lt;
+    &lt;<a href="../Core.sdf3/#RuleName_71_3" id="RuleName_40_6" title="Defined at ../Core.sdf3 line 71, 72">RuleName</a>&gt;&lt;<a href="#RuleHead_43_3" id="RuleHead_40_16" title="Defined at line 43">RuleHead</a>&gt;<span class="cons_String">.</span>
   &gt;
 
-  <a href="#RuleHead_954_962" id="RuleHead_972_980" title="Referenced at line 40">RuleHead</a>.<span class="cons_Constructor"><span id="F_981_982" title="Not referenced locally, nor via imports">F</span></span> = [[<a href="../Core.sdf3/#ConstraintId_1527_1539" id="ConstraintId_987_999" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>]<span class="cons_String">(</span>[{<a href="#Term_1150_1154" id="Term_1003_1007" title="Defined at line 53, 69, 70, 96, 166">Term</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">)</span> <span class="cons_String">=</span> [<a href="#Term_1150_1154" id="Term_1020_1024" title="Defined at line 53, 69, 70, 96, 166">Term</a>]]
+  <a href="#RuleHead_40_16" id="RuleHead_43_3" title="Referenced at line 40">RuleHead</a>.<span class="cons_Constructor"><span id="F_43_12" title="Not referenced">F</span></span> = [[<a href="../Core.sdf3/#ConstraintId_83_3" id="ConstraintId_43_18" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>]<span class="cons_String">(</span>[{<a href="#Term_53_3" id="Term_43_34" title="Defined at line 53, 69, 70, 96, 166">Term</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">)</span> <span class="cons_String">=</span> [<a href="#Term_53_3" id="Term_43_51" title="Defined at line 53, 69, 70, 96, 166">Term</a>]]
 
-  <span id="HoConstraint_1030_1042" title="Not referenced locally, nor via imports">HoConstraint</span>.<span class="cons_Constructor"><span id="LLam_1043_1047" title="Not referenced locally, nor via imports">LLam</span></span> = &lt;<span class="cons_String">{</span> &lt;{<a href="#Term_1150_1154" id="Term_1055_1059" title="Defined at line 53, 69, 70, 96, 166">Term</a> <span class="cons_Lit">", "</span>}+&gt; <span class="cons_String">}</span>&gt;
+  <span id="HoConstraint_45_3" title="Not referenced">HoConstraint</span>.<span class="cons_Constructor"><span id="LLam_45_16" title="Not referenced">LLam</span></span> = &lt;<span class="cons_String">{</span> &lt;{<a href="#Term_53_3" id="Term_45_28" title="Defined at line 53, 69, 70, 96, 166">Term</a> <span class="cons_Lit">", "</span>}+&gt; <span class="cons_String">}</span>&gt;
 
-  <span id="HoConstraint_1074_1086" title="Not referenced locally, nor via imports">HoConstraint</span>.<span class="cons_Constructor"><span id="LC_1087_1089" title="Not referenced locally, nor via imports">LC</span></span> = <a href="../Core.sdf3/#ConstraintId_1527_1539" id="ConstraintId_1092_1104" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>
+  <span id="HoConstraint_47_3" title="Not referenced">HoConstraint</span>.<span class="cons_Constructor"><span id="LC_47_16" title="Not referenced">LC</span></span> = <a href="../Core.sdf3/#ConstraintId_83_3" id="ConstraintId_47_21" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>
 
-  <span id="HoConstraint_1108_1120" title="Not referenced locally, nor via imports">HoConstraint</span>.<span class="cons_Constructor"><span id="EQ_1121_1123" title="Not referenced locally, nor via imports">EQ</span></span> = &lt;<span class="cons_String">eq(</span>&lt;<a href="#Term_1150_1154" id="Term_1131_1135" title="Defined at line 53, 69, 70, 96, 166">Term</a>&gt;<span class="cons_String">)</span>&gt;
+  <span id="HoConstraint_49_3" title="Not referenced">HoConstraint</span>.<span class="cons_Constructor"><span id="EQ_49_16" title="Not referenced">EQ</span></span> = &lt;<span class="cons_String">eq(</span>&lt;<a href="#Term_53_3" id="Term_49_26" title="Defined at line 53, 69, 70, 96, 166">Term</a>&gt;<span class="cons_String">)</span>&gt;
 
 <span class="keyword">syntax</span>
 
-  <a href="#Term_1003_1007" id="Term_1150_1154" title="Referenced at line 43, 45, 49, 70, 94, 96">Term</a><span class="keyword">-CF</span>.<span class="cons_Constructor"><span id="COp_1158_1161" title="Not referenced locally, nor via imports">COp</span></span> = <a href="../Core.sdf3/#ConstraintId_1527_1539" id="ConstraintId_1164_1176" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a><span class="keyword">-CF</span> <span class="cons_Lit">"("</span> <span class="keyword">LAYOUT</span>?<span class="keyword">-CF</span> <a href="../Core.sdf3/#CommaTerms_8312_8322" id="CommaTerms_1195_1205" title="Defined at ../Core.sdf3 line 353">CommaTerms</a><span class="keyword">-CF LAYOUT</span>?<span class="keyword">-CF</span> <span class="cons_Lit">")"</span>
+  <a href="#Term_43_34" id="Term_53_3" title="Referenced at line 43, 45, 49, 70, 94, 96">Term</a><span class="keyword">-CF</span>.<span class="cons_Constructor"><span id="COp_53_11" title="Not referenced">COp</span></span> = <a href="../Core.sdf3/#ConstraintId_83_3" id="ConstraintId_53_17" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a><span class="keyword">-CF</span> <span class="cons_Lit">"("</span> <span class="keyword">LAYOUT</span>?<span class="keyword">-CF</span> <a href="../Core.sdf3/#CommaTerms_353_3" id="CommaTerms_53_48" title="Defined at ../Core.sdf3 line 353">CommaTerms</a><span class="keyword">-CF LAYOUT</span>?<span class="keyword">-CF</span> <span class="cons_Lit">")"</span>
 
 <span class="keyword">lexical syntax</span>
 
-  <span id="Keyword_1243_1250" title="Not referenced locally, nor via imports">Keyword</span> = <span class="cons_Lit">"constraint"</span> | <span class="cons_Lit">"maps"</span>
+  <span id="Keyword_57_3" title="Not referenced">Keyword</span> = <span class="cons_Lit">"constraint"</span> | <span class="cons_Lit">"maps"</span>
 
 
 /******************************************************************
@@ -242,20 +242,20 @@ hide:
 
 <span class="keyword">context-free syntax</span>
 
-  <span id="HoConstraint_1506_1518" title="Not referenced locally, nor via imports">HoConstraint</span>.<span class="cons_Constructor"><span id="LTrue_1519_1524" title="Not referenced locally, nor via imports">LTrue</span></span>  = <span class="cons_Lit">"true"</span>
-  <span id="HoConstraint_1537_1549" title="Not referenced locally, nor via imports">HoConstraint</span>.<span class="cons_Constructor"><span id="LFalse_1550_1556" title="Not referenced locally, nor via imports">LFalse</span></span> = <span class="cons_Lit">"false"</span>
+  <span id="HoConstraint_66_3" title="Not referenced">HoConstraint</span>.<span class="cons_Constructor"><span id="LTrue_66_16" title="Not referenced">LTrue</span></span>  = <span class="cons_Lit">"true"</span>
+  <span id="HoConstraint_67_3" title="Not referenced">HoConstraint</span>.<span class="cons_Constructor"><span id="LFalse_67_16" title="Not referenced">LFalse</span></span> = <span class="cons_Lit">"false"</span>
 
-  <a href="#Term_1003_1007" id="Term_1570_1574" title="Referenced at line 43, 45, 49, 70, 94, 96">Term</a>.<span class="cons_Constructor"><span id="NewOp_1575_1580" title="Not referenced locally, nor via imports">NewOp</span></span>   = <span class="cons_Lit">"new"</span>
-  <a href="#Term_1003_1007" id="Term_1593_1597" title="Referenced at line 43, 45, 49, 70, 94, 96">Term</a>.<span class="cons_Constructor"><span id="AstIdOp_1598_1605" title="Not referenced locally, nor via imports">AstIdOp</span></span> = &lt;<span class="cons_String">astId(</span>&lt;<a href="#Term_1150_1154" id="Term_1616_1620" title="Defined at line 53, 69, 70, 96, 166">Term</a>&gt;<span class="cons_String">)</span>&gt;
+  <a href="#Term_43_34" id="Term_69_3" title="Referenced at line 43, 45, 49, 70, 94, 96">Term</a>.<span class="cons_Constructor"><span id="NewOp_69_8" title="Not referenced">NewOp</span></span>   = <span class="cons_Lit">"new"</span>
+  <a href="#Term_43_34" id="Term_70_3" title="Referenced at line 43, 45, 49, 70, 94, 96">Term</a>.<span class="cons_Constructor"><span id="AstIdOp_70_8" title="Not referenced">AstIdOp</span></span> = &lt;<span class="cons_String">astId(</span>&lt;<a href="#Term_53_3" id="Term_70_26" title="Defined at line 53, 69, 70, 96, 166">Term</a>&gt;<span class="cons_String">)</span>&gt;
 
-  <span id="AstProperty_1627_1638" title="Not referenced locally, nor via imports">AstProperty</span>.<span class="cons_Constructor"><span id="Ref_1639_1642" title="Not referenced locally, nor via imports">Ref</span></span>  = <span class="cons_Lit">"ref"</span>
-  <span id="AstProperty_1654_1665" title="Not referenced locally, nor via imports">AstProperty</span>.<span class="cons_Constructor"><span id="Type_1666_1670" title="Not referenced locally, nor via imports">Type</span></span> = <span class="cons_Lit">"type"</span>
+  <span id="AstProperty_72_3" title="Not referenced">AstProperty</span>.<span class="cons_Constructor"><span id="Ref_72_15" title="Not referenced">Ref</span></span>  = <span class="cons_Lit">"ref"</span>
+  <span id="AstProperty_73_3" title="Not referenced">AstProperty</span>.<span class="cons_Constructor"><span id="Type_73_15" title="Not referenced">Type</span></span> = <span class="cons_Lit">"type"</span>
 
 <span class="keyword">lexical syntax</span>
 
-  <span id="VARID_1699_1704" title="Not referenced locally, nor via imports">VARID</span> = <span class="cons_Lit">"new"</span> {<span class="keyword">reject</span>}
+  <span id="VARID_77_3" title="Not referenced">VARID</span> = <span class="cons_Lit">"new"</span> {<span class="keyword">reject</span>}
 
-  <span id="AstPropertyId_1725_1738" title="Not referenced locally, nor via imports">AstPropertyId</span> = <span class="cons_Lit">"ref"</span> | <span class="cons_Lit">"type"</span> {<span class="keyword">reject</span>}
+  <span id="AstPropertyId_79_3" title="Not referenced">AstPropertyId</span> = <span class="cons_Lit">"ref"</span> | <span class="cons_Lit">"type"</span> {<span class="keyword">reject</span>}
 
 
 /******************************************************************
@@ -264,20 +264,20 @@ hide:
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#RelRef_2097_2103" id="RelRef_1996_2002" title="Referenced at line 94, 96">RelRef</a>.<span class="cons_Constructor"><span id="Decl_2003_2007" title="Not referenced locally, nor via imports">Decl</span></span> = <span class="cons_Lit">"decl"</span>
+  <a href="#RelRef_94_32" id="RelRef_88_3" title="Referenced at line 94, 96">RelRef</a>.<span class="cons_Constructor"><span id="Decl_88_10" title="Not referenced">Decl</span></span> = <span class="cons_Lit">"decl"</span>
 
 <span class="keyword">syntax</span>
 
   <span class="layout">// short-hand for querying relations</span>
 
-  <a href="../../cli/CLI.sdf3/#Constraint_252_262" id="Constraint_2068_2078" title="Referenced at ../../cli/CLI.sdf3 line 20">Constraint</a><span class="keyword">-CF</span>.<span class="cons_Constructor"><span id="CAskRel_2082_2089" title="Not referenced locally, nor via imports">CAskRel</span></span>  = <span class="cons_Lit">"?"</span> <a href="#RelRef_1996_2002" id="RelRef_2097_2103" title="Defined at line 88">RelRef</a><span class="keyword">-CF</span> <span class="cons_Lit">"["</span> <a href="../Core.sdf3/#CommaTerms_8312_8322" id="CommaTerms_2111_2121" title="Defined at ../Core.sdf3 line 353">CommaTerms</a><span class="keyword">-CF</span> <span class="cons_Lit">"]"</span> <span class="keyword">LAYOUT</span>?<span class="keyword">-CF</span> <span class="cons_Lit">"in"</span> <span class="keyword">LAYOUT</span>?<span class="keyword">-CF</span> <a href="#Term_1150_1154" id="Term_2156_2160" title="Defined at line 53, 69, 70, 96, 166">Term</a><span class="keyword">-CF LAYOUT</span>?<span class="keyword">-CF</span> <a href="../Core.sdf3/#Message_10079_10086" id="Message_2175_2182" title="Defined at ../Core.sdf3 line 418, 419">Message</a><span class="keyword">-CF</span>
+  <button class="modal-open" id="Constraint_94_3" title="Multi-file references" data-urls="../../cli/CLI.sdf3/#Constraint_20_24 line 20; ../../test/Test.sdf3/#Constraint_23_8 line 23">Constraint</button><span class="keyword">-CF</span>.<span class="cons_Constructor"><span id="CAskRel_94_17" title="Not referenced">CAskRel</span></span>  = <span class="cons_Lit">"?"</span> <a href="#RelRef_88_3" id="RelRef_94_32" title="Defined at line 88">RelRef</a><span class="keyword">-CF</span> <span class="cons_Lit">"["</span> <a href="../Core.sdf3/#CommaTerms_353_3" id="CommaTerms_94_46" title="Defined at ../Core.sdf3 line 353">CommaTerms</a><span class="keyword">-CF</span> <span class="cons_Lit">"]"</span> <span class="keyword">LAYOUT</span>?<span class="keyword">-CF</span> <span class="cons_Lit">"in"</span> <span class="keyword">LAYOUT</span>?<span class="keyword">-CF</span> <a href="#Term_53_3" id="Term_94_91" title="Defined at line 53, 69, 70, 96, 166">Term</a><span class="keyword">-CF LAYOUT</span>?<span class="keyword">-CF</span> <a href="../Core.sdf3/#Message_418_3" id="Message_94_110" title="Defined at ../Core.sdf3 line 418, 419">Message</a><span class="keyword">-CF</span>
 
-  <a href="#Term_1003_1007" id="Term_2189_2193" title="Referenced at line 43, 45, 49, 70, 94, 96">Term</a><span class="keyword">-CF</span>.<span class="cons_Constructor"><span id="AskRelOp_2197_2205" title="Not referenced locally, nor via imports">AskRelOp</span></span> = <span class="cons_Lit">"?"</span> <a href="#RelRef_1996_2002" id="RelRef_2212_2218" title="Defined at line 88">RelRef</a><span class="keyword">-CF</span> <span class="cons_Lit">"["</span> <span class="keyword">LAYOUT</span>?<span class="keyword">-CF</span> <a href="../Core.sdf3/#CommaTerms_8312_8322" id="CommaTerms_2237_2247" title="Defined at ../Core.sdf3 line 353">CommaTerms</a><span class="keyword">-CF LAYOUT</span>?<span class="keyword">-CF</span> <span class="cons_Lit">"]"</span> <span class="keyword">LAYOUT</span>?<span class="keyword">-CF</span> <span class="cons_Lit">"in"</span> <span class="keyword">LAYOUT</span>?<span class="keyword">-CF</span> <a href="#Term_1150_1154" id="Term_2293_2297" title="Defined at line 53, 69, 70, 96, 166">Term</a><span class="keyword">-CF</span>
+  <a href="#Term_43_34" id="Term_96_3" title="Referenced at line 43, 45, 49, 70, 94, 96">Term</a><span class="keyword">-CF</span>.<span class="cons_Constructor"><span id="AskRelOp_96_11" title="Not referenced">AskRelOp</span></span> = <span class="cons_Lit">"?"</span> <a href="#RelRef_88_3" id="RelRef_96_26" title="Defined at line 88">RelRef</a><span class="keyword">-CF</span> <span class="cons_Lit">"["</span> <span class="keyword">LAYOUT</span>?<span class="keyword">-CF</span> <a href="../Core.sdf3/#CommaTerms_353_3" id="CommaTerms_96_51" title="Defined at ../Core.sdf3 line 353">CommaTerms</a><span class="keyword">-CF LAYOUT</span>?<span class="keyword">-CF</span> <span class="cons_Lit">"]"</span> <span class="keyword">LAYOUT</span>?<span class="keyword">-CF</span> <span class="cons_Lit">"in"</span> <span class="keyword">LAYOUT</span>?<span class="keyword">-CF</span> <a href="#Term_53_3" id="Term_96_107" title="Defined at line 53, 69, 70, 96, 166">Term</a><span class="keyword">-CF</span>
 
 <span class="keyword">lexical syntax</span>
 
-  <span id="RelationId_2320_2330" title="Not referenced locally, nor via imports">RelationId</span> = <span class="cons_Lit">"decl"</span> {<span class="keyword">reject</span>}
-  <span id="RelationId_2351_2361" title="Not referenced locally, nor via imports">RelationId</span> = <span class="cons_Lit">"ref"</span> {<span class="keyword">reject</span>}
+  <span id="RelationId_100_3" title="Not referenced">RelationId</span> = <span class="cons_Lit">"decl"</span> {<span class="keyword">reject</span>}
+  <span id="RelationId_101_3" title="Not referenced">RelationId</span> = <span class="cons_Lit">"ref"</span> {<span class="keyword">reject</span>}
 
 
 /******************************************************************
@@ -286,17 +286,17 @@ hide:
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#LabelRE_2632_2639" id="LabelRE_2610_2617" title="Referenced at line 110, 111, 115, 116, 132">LabelRE</a>.<span class="cons_Constructor"><a href="#ZeroOrOne_2746_2755" id="ZeroOrOne_2618_2627" title="Referenced at line 115">ZeroOrOne</a></span> = &lt;&lt;<a href="#LabelRE_2610_2617" id="LabelRE_2632_2639" title="Defined at line 110, 111">LabelRE</a>&gt;<span class="cons_String">?</span>&gt;
-  <a href="#LabelRE_2632_2639" id="LabelRE_2645_2652" title="Referenced at line 110, 111, 115, 116, 132">LabelRE</a>.<span class="cons_Constructor"><a href="#OneOrMore_2764_2773" id="OneOrMore_2653_2662" title="Referenced at line 115">OneOrMore</a></span> = &lt;&lt;<a href="#LabelRE_2610_2617" id="LabelRE_2667_2674" title="Defined at line 110, 111">LabelRE</a>&gt;<span class="cons_String">+</span>&gt;
+  <a href="#LabelRE_110_25" id="LabelRE_110_3" title="Referenced at line 110, 111, 115, 116, 132">LabelRE</a>.<span class="cons_Constructor"><a href="#ZeroOrOne_115_43" id="ZeroOrOne_110_11" title="Referenced at line 115">ZeroOrOne</a></span> = &lt;&lt;<a href="#LabelRE_110_3" id="LabelRE_110_25" title="Defined at line 110, 111">LabelRE</a>&gt;<span class="cons_String">?</span>&gt;
+  <a href="#LabelRE_110_25" id="LabelRE_111_3" title="Referenced at line 110, 111, 115, 116, 132">LabelRE</a>.<span class="cons_Constructor"><a href="#OneOrMore_115_61" id="OneOrMore_111_11" title="Referenced at line 115">OneOrMore</a></span> = &lt;&lt;<a href="#LabelRE_110_3" id="LabelRE_111_25" title="Defined at line 110, 111">LabelRE</a>&gt;<span class="cons_String">+</span>&gt;
 
 <span class="keyword">context-free priorities</span>
 
-    { <a href="#LabelRE_2610_2617" id="LabelRE_2710_2717" title="Defined at line 110, 111">LabelRE</a>.<span class="cons_Constructor"><a href="../Core.sdf3/#Neg_4542_4545" id="Neg_2718_2721" title="Defined at ../Core.sdf3 line 210">Neg</a></span> <a href="#LabelRE_2610_2617" id="LabelRE_2722_2729" title="Defined at line 110, 111">LabelRE</a>.<span class="cons_Constructor"><a href="../Core.sdf3/#Closure_4506_4513" id="Closure_2730_2737" title="Defined at ../Core.sdf3 line 209">Closure</a></span> <a href="#LabelRE_2610_2617" id="LabelRE_2738_2745" title="Defined at line 110, 111">LabelRE</a>.<span class="cons_Constructor"><a href="#ZeroOrOne_2618_2627" id="ZeroOrOne_2746_2755" title="Defined at line 110">ZeroOrOne</a></span> <a href="#LabelRE_2610_2617" id="LabelRE_2756_2763" title="Defined at line 110, 111">LabelRE</a>.<span class="cons_Constructor"><a href="#OneOrMore_2653_2662" id="OneOrMore_2764_2773" title="Defined at line 111">OneOrMore</a></span> }
-  &gt; { <a href="#LabelRE_2610_2617" id="LabelRE_2782_2789" title="Defined at line 110, 111">LabelRE</a>.<span class="cons_Constructor"><a href="../Core.sdf3/#Concat_4578_4584" id="Concat_2790_2796" title="Defined at ../Core.sdf3 line 211">Concat</a></span> <a href="#LabelRE_2610_2617" id="LabelRE_2797_2804" title="Defined at line 110, 111">LabelRE</a>.<span class="cons_Constructor"><a href="../Core.sdf3/#And_4635_4638" id="And_2805_2808" title="Defined at ../Core.sdf3 line 212">And</a></span> <a href="#LabelRE_2610_2617" id="LabelRE_2809_2816" title="Defined at line 110, 111">LabelRE</a>.<span class="cons_Constructor"><a href="../Core.sdf3/#Or_4691_4693" id="Or_2817_2819" title="Defined at ../Core.sdf3 line 213">Or</a></span> }
+    { <a href="#LabelRE_110_3" id="LabelRE_115_7" title="Defined at line 110, 111">LabelRE</a>.<span class="cons_Constructor"><a href="../Core.sdf3/#Neg_210_11" id="Neg_115_15" title="Defined at ../Core.sdf3 line 210">Neg</a></span> <a href="#LabelRE_110_3" id="LabelRE_115_19" title="Defined at line 110, 111">LabelRE</a>.<span class="cons_Constructor"><a href="../Core.sdf3/#Closure_209_11" id="Closure_115_27" title="Defined at ../Core.sdf3 line 209">Closure</a></span> <a href="#LabelRE_110_3" id="LabelRE_115_35" title="Defined at line 110, 111">LabelRE</a>.<span class="cons_Constructor"><a href="#ZeroOrOne_110_11" id="ZeroOrOne_115_43" title="Defined at line 110">ZeroOrOne</a></span> <a href="#LabelRE_110_3" id="LabelRE_115_53" title="Defined at line 110, 111">LabelRE</a>.<span class="cons_Constructor"><a href="#OneOrMore_111_11" id="OneOrMore_115_61" title="Defined at line 111">OneOrMore</a></span> }
+  &gt; { <a href="#LabelRE_110_3" id="LabelRE_116_7" title="Defined at line 110, 111">LabelRE</a>.<span class="cons_Constructor"><a href="../Core.sdf3/#Concat_211_11" id="Concat_116_15" title="Defined at ../Core.sdf3 line 211">Concat</a></span> <a href="#LabelRE_110_3" id="LabelRE_116_22" title="Defined at line 110, 111">LabelRE</a>.<span class="cons_Constructor"><a href="../Core.sdf3/#And_212_11" id="And_116_30" title="Defined at ../Core.sdf3 line 212">And</a></span> <a href="#LabelRE_110_3" id="LabelRE_116_34" title="Defined at line 110, 111">LabelRE</a>.<span class="cons_Constructor"><a href="../Core.sdf3/#Or_213_11" id="Or_116_42" title="Defined at ../Core.sdf3 line 213">Or</a></span> }
 
 <span class="keyword">lexical syntax</span>
 
-  <span id="Keyword_2841_2848" title="Not referenced locally, nor via imports">Keyword</span> = <span class="cons_Lit">"resolve"</span> | <span class="cons_Lit">"filter"</span> | <span class="cons_Lit">"with"</span> | <span class="cons_Lit">"and"</span>
+  <span id="Keyword_120_3" title="Not referenced">Keyword</span> = <span class="cons_Lit">"resolve"</span> | <span class="cons_Lit">"filter"</span> | <span class="cons_Lit">"with"</span> | <span class="cons_Lit">"and"</span>
 
 
 /******************************************************************
@@ -307,19 +307,19 @@ hide:
 
   <span class="layout">// short-hand forms for occurrences using default resolution policies</span>
 
-  <span id="QueryFilter_3144_3155" title="Not referenced locally, nor via imports">QueryFilter</span>.<span class="cons_Constructor"><span id="NoFilter_3156_3164" title="Not referenced locally, nor via imports">NoFilter</span></span> =
-  <span id="QueryFilter_3169_3180" title="Not referenced locally, nor via imports">QueryFilter</span>.<span class="cons_Constructor"><span id="Filter_3181_3187" title="Not referenced locally, nor via imports">Filter</span></span>   = &lt; <span class="cons_String">filter</span> &lt;<a href="#LabelRE_2610_2617" id="LabelRE_3202_3209" title="Defined at line 110, 111">LabelRE</a>&gt;&gt;
+  <span id="QueryFilter_131_3" title="Not referenced">QueryFilter</span>.<span class="cons_Constructor"><span id="NoFilter_131_15" title="Not referenced">NoFilter</span></span> =
+  <span id="QueryFilter_132_3" title="Not referenced">QueryFilter</span>.<span class="cons_Constructor"><span id="Filter_132_15" title="Not referenced">Filter</span></span>   = &lt; <span class="cons_String">filter</span> &lt;<a href="#LabelRE_110_3" id="LabelRE_132_36" title="Defined at line 110, 111">LabelRE</a>&gt;&gt;
 
 
-  <span id="QueryMin_3216_3224" title="Not referenced locally, nor via imports">QueryMin</span>.<span class="cons_Constructor"><span id="NoMin_3225_3230" title="Not referenced locally, nor via imports">NoMin</span></span> =
-  <span id="QueryMin_3235_3243" title="Not referenced locally, nor via imports">QueryMin</span>.<span class="cons_Constructor"><span id="Min_3244_3247" title="Not referenced locally, nor via imports">Min</span></span>   = &lt; <span class="cons_String">min</span> &lt;<a href="../Core.sdf3/#LabelOrd_4352_4360" id="LabelOrd_3259_3267" title="Defined at ../Core.sdf3 line 203">LabelOrd</a>&gt;&gt;
+  <span id="QueryMin_135_3" title="Not referenced">QueryMin</span>.<span class="cons_Constructor"><span id="NoMin_135_12" title="Not referenced">NoMin</span></span> =
+  <span id="QueryMin_136_3" title="Not referenced">QueryMin</span>.<span class="cons_Constructor"><span id="Min_136_12" title="Not referenced">Min</span></span>   = &lt; <span class="cons_String">min</span> &lt;<a href="../Core.sdf3/#LabelOrd_203_3" id="LabelOrd_136_27" title="Defined at ../Core.sdf3 line 203">LabelOrd</a>&gt;&gt;
 
 
-  <span id="QueryProject_3274_3286" title="Not referenced locally, nor via imports">QueryProject</span>.<span class="cons_Constructor"><span id="NoProject_3287_3296" title="Not referenced locally, nor via imports">NoProject</span></span> =
+  <span id="QueryProject_139_3" title="Not referenced">QueryProject</span>.<span class="cons_Constructor"><span id="NoProject_139_16" title="Not referenced">NoProject</span></span> =
 
 <span class="keyword">lexical syntax</span>
 
-  <span id="Keyword_3318_3325" title="Not referenced locally, nor via imports">Keyword</span> = <span class="cons_Lit">"filter"</span> | <span class="cons_Lit">"min"</span> | <span class="cons_Lit">"in"</span> | <span class="cons_Lit">"of"</span> | <span class="cons_Lit">"resolveMatch"</span> | <span class="cons_Lit">"resolveLt"</span> | <span class="cons_Lit">"occurrenceMatch"</span>
+  <span id="Keyword_143_3" title="Not referenced">Keyword</span> = <span class="cons_Lit">"filter"</span> | <span class="cons_Lit">"min"</span> | <span class="cons_Lit">"in"</span> | <span class="cons_Lit">"of"</span> | <span class="cons_Lit">"resolveMatch"</span> | <span class="cons_Lit">"resolveLt"</span> | <span class="cons_Lit">"occurrenceMatch"</span>
 
 
 /******************************************************************
@@ -328,7 +328,7 @@ hide:
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#Type_515_519" id="Type_3641_3645" title="Referenced at line 24, 25">Type</a>.<span class="cons_Constructor"><span id="FunType_3646_3653" title="Not referenced locally, nor via imports">FunType</span></span>    = [[{<a href="../Core.sdf3/#SortRef_6813_6820" id="SortRef_3662_3669" title="Defined at ../Core.sdf3 line 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310">SortRef</a> <span class="cons_Lit">" * "</span>}*] <span class="cons_String">-&gt;</span> [<a href="../Core.sdf3/#SortRef_6813_6820" id="SortRef_3683_3690" title="Defined at ../Core.sdf3 line 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310">SortRef</a>]]
+  <a href="#Type_24_58" id="Type_152_3" title="Referenced at line 24, 25">Type</a>.<span class="cons_Constructor"><span id="FunType_152_8" title="Not referenced">FunType</span></span>    = [[{<a href="../Core.sdf3/#SortRef_299_3" id="SortRef_152_24" title="Defined at ../Core.sdf3 line 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310">SortRef</a> <span class="cons_Lit">" * "</span>}*] <span class="cons_String">-&gt;</span> [<a href="../Core.sdf3/#SortRef_299_3" id="SortRef_152_45" title="Defined at ../Core.sdf3 line 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310">SortRef</a>]]
 
 
 /******************************************************************
@@ -342,6 +342,15 @@ hide:
 
 <span class="keyword">syntax</span>
 
-  <a href="#Term_1003_1007" id="Term_4123_4127" title="Referenced at line 43, 45, 49, 70, 94, 96">Term</a><span class="keyword">-CF</span>.<span class="cons_Constructor"><span id="ArithOp_4131_4138" title="Not referenced locally, nor via imports">ArithOp</span></span> = <span class="cons_Lit">"#"</span> <span class="cons_Lit">"("</span> <span class="keyword">LAYOUT</span>?<span class="keyword">-CF</span> <a href="../Core.sdf3/#ArithExp_9303_9311" id="ArithExp_4160_4168" title="Defined at ../Core.sdf3 line 395, 396, 397, 398, 399, 400, 401, 402, 403, 404">ArithExp</a><span class="keyword">-CF LAYOUT</span>?<span class="keyword">-CF</span> <span class="cons_Lit">")"</span>
+  <a href="#Term_43_34" id="Term_166_3" title="Referenced at line 43, 45, 49, 70, 94, 96">Term</a><span class="keyword">-CF</span>.<span class="cons_Constructor"><span id="ArithOp_166_11" title="Not referenced">ArithOp</span></span> = <span class="cons_Lit">"#"</span> <span class="cons_Lit">"("</span> <span class="keyword">LAYOUT</span>?<span class="keyword">-CF</span> <a href="../Core.sdf3/#ArithExp_395_3" id="ArithExp_166_40" title="Defined at ../Core.sdf3 line 395, 396, 397, 398, 399, 400, 401, 402, 403, 404">ArithExp</a><span class="keyword">-CF LAYOUT</span>?<span class="keyword">-CF</span> <span class="cons_Lit">")"</span>
 
 </code></pre></td></tr></tbody></table></div>
+
+<div id="modal">
+  <div id="modal-content">
+    <span id="modal-close">&times;</span>
+    <h2 id="modal-h2"></h2>
+    <p  id="modal-p"></p>
+    <ul id="modal-ul"></ul>
+  </div>
+</div>

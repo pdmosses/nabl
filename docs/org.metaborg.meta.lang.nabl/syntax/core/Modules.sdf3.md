@@ -36,30 +36,39 @@ hide:
 24
 25
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../Namespaces.sdf3#core/Modules_59_71" id="core/Modules_7_19" title="Referenced at ../Namespaces.sdf3 line 6">core/Modules</a>
+<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="core/Modules_1_8" title="Multi-file references" data-urls="../Namespaces.sdf3/#core/Modules_6_3 line 6; ../../NameBindingLanguage.sdf3/#core/Modules_11_3 line 11">core/Modules</button>
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="../../NameBindingLanguage.sdf3#Module_297_303" id="Module_44_50" title="Referenced at ../../NameBindingLanguage.sdf3 line 22">Module</a>.<span class="cons_Constructor"><span id="Module_51_57" title="Not referenced locally, nor via imports">Module</span></span> = &lt;<span class="cons_String">module</span> &lt;<a href="#ModuleID_281_289" id="ModuleID_69_77" title="Defined at line 17, 19">ModuleID</a>&gt; 
+  <a href="../../NameBindingLanguage.sdf3/#Module_22_11" id="Module_5_3" title="Referenced at ../../NameBindingLanguage.sdf3 line 22">Module</a>.<span class="cons_Constructor"><span id="Module_5_10" title="Not referenced">Module</span></span> = &lt;<span class="cons_String">module</span> &lt;<a href="#ModuleID_17_3" id="ModuleID_5_28" title="Defined at line 17, 19">ModuleID</a>&gt; 
     
-    &lt;<a href="#ModuleSection_115_128" id="ModuleSection_90_103" title="Defined at line 9">ModuleSection</a>*&gt;&gt; 
+    &lt;<a href="#ModuleSection_9_3" id="ModuleSection_7_6" title="Defined at line 9">ModuleSection</a>*&gt;&gt; 
     
-  <a href="#ModuleSection_90_103" id="ModuleSection_115_128" title="Referenced at line 7">ModuleSection</a>.<span class="cons_Constructor"><span id="Imports_129_136" title="Not referenced locally, nor via imports">Imports</span></span> = &lt;
-    <span class="cons_String">imports</span> &lt;<a href="#ImportModule_178_190" id="ImportModule_154_166" title="Defined at line 12, 13">ImportModule</a>*&gt;&gt; 
+  <a href="#ModuleSection_7_6" id="ModuleSection_9_3" title="Referenced at line 7">ModuleSection</a>.<span class="cons_Constructor"><span id="Imports_9_17" title="Not referenced">Imports</span></span> = &lt;
+    <span class="cons_String">imports</span> &lt;<a href="#ImportModule_12_3" id="ImportModule_10_14" title="Defined at line 12, 13">ImportModule</a>*&gt;&gt; 
     
-  <a href="#ImportModule_154_166" id="ImportModule_178_190" title="Referenced at line 10">ImportModule</a>.<span class="cons_Constructor"><span id="ImportWildcard_191_205" title="Not referenced locally, nor via imports">ImportWildcard</span></span> = &lt;&lt;<a href="#ModuleID_281_289" id="ModuleID_210_218" title="Defined at line 17, 19">ModuleID</a>&gt;<span class="cons_String">/-</span>&gt; 
-  <a href="#ImportModule_154_166" id="ImportModule_226_238" title="Referenced at line 10">ImportModule</a>.<span class="cons_Constructor"><span id="Import_239_245" title="Not referenced locally, nor via imports">Import</span></span> = &lt;&lt;<a href="#ModuleID_281_289" id="ModuleID_250_258" title="Defined at line 17, 19">ModuleID</a>&gt;&gt; 
+  <a href="#ImportModule_10_14" id="ImportModule_12_3" title="Referenced at line 10">ImportModule</a>.<span class="cons_Constructor"><span id="ImportWildcard_12_16" title="Not referenced">ImportWildcard</span></span> = &lt;&lt;<a href="#ModuleID_17_3" id="ModuleID_12_35" title="Defined at line 17, 19">ModuleID</a>&gt;<span class="cons_String">/-</span>&gt; 
+  <a href="#ImportModule_10_14" id="ImportModule_13_3" title="Referenced at line 10">ImportModule</a>.<span class="cons_Constructor"><span id="Import_13_16" title="Not referenced">Import</span></span> = &lt;&lt;<a href="#ModuleID_17_3" id="ModuleID_13_27" title="Defined at line 17, 19">ModuleID</a>&gt;&gt; 
 
 <span class="keyword">lexical syntax</span>
 
-  <a href="#ModuleID_460_468" id="ModuleID_281_289" title="Referenced at line 25">ModuleID</a> = {<a href="#ModuleIDPart_315_327" id="ModuleIDPart_293_305" title="Defined at line 18">ModuleIDPart</a> <span class="cons_Lit">"/"</span>}+ 
-  <a href="#ModuleIDPart_293_305" id="ModuleIDPart_315_327" title="Referenced at line 17">ModuleIDPart</a> = [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span>\.\_] [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\'\.\-\_]* 
-  <a href="#ModuleID_460_468" id="ModuleID_367_375" title="Referenced at line 25">ModuleID</a> = <a href="#SectionKeyword_407_421" id="SectionKeyword_378_392" title="Defined at line 21">SectionKeyword</a> {<span class="keyword">reject</span>}
+  <a href="#ModuleID_5_28" id="ModuleID_17_3" title="Referenced at line 5, 12, 13, 25">ModuleID</a> = {<a href="#ModuleIDPart_18_3" id="ModuleIDPart_17_15" title="Defined at line 18">ModuleIDPart</a> <span class="cons_Lit">"/"</span>}+ 
+  <a href="#ModuleIDPart_17_15" id="ModuleIDPart_18_3" title="Referenced at line 17">ModuleIDPart</a> = [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span>\.\_] [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\'\.\-\_]* 
+  <a href="#ModuleID_5_28" id="ModuleID_19_3" title="Referenced at line 5, 12, 13, 25">ModuleID</a> = <a href="#SectionKeyword_21_3" id="SectionKeyword_19_14" title="Defined at line 21">SectionKeyword</a> {<span class="keyword">reject</span>}
   
-  <a href="#SectionKeyword_378_392" id="SectionKeyword_407_421" title="Referenced at line 19">SectionKeyword</a> = <span class="cons_Lit">"imports"</span> 
+  <a href="#SectionKeyword_19_14" id="SectionKeyword_21_3" title="Referenced at line 19">SectionKeyword</a> = <span class="cons_Lit">"imports"</span> 
 
 <span class="keyword">lexical restrictions</span>
 
-  <a href="#ModuleID_281_289" id="ModuleID_460_468" title="Defined at line 17, 19">ModuleID</a> -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\'\.\-\_]
+  <a href="#ModuleID_17_3" id="ModuleID_25_3" title="Defined at line 17, 19">ModuleID</a> -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\'\.\-\_]
 
 </code></pre></td></tr></tbody></table></div>
+
+<div id="modal">
+  <div id="modal-content">
+    <span id="modal-close">&times;</span>
+    <h2 id="modal-h2"></h2>
+    <p  id="modal-p"></p>
+    <ul id="modal-ul"></ul>
+  </div>
+</div>

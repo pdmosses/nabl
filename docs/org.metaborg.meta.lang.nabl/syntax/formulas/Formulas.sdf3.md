@@ -39,33 +39,42 @@ hide:
 27
 28
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../../core/Properties.sdf3#formulas/Formulas_104_121" id="formulas/Formulas_7_24" title="Referenced at ../../core/Properties.sdf3 line 9">formulas/Formulas</a>
+<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="formulas/Formulas_1_8" title="Multi-file references" data-urls="../../NameBindingLanguage.sdf3/#formulas/Formulas_9_3 line 9; ../../core/Properties.sdf3/#formulas/Formulas_9_2 line 9">formulas/Formulas</button>
 
 <span class="keyword">imports</span> 
 
-  <a href="../../terms/Terms.sdf3#terms/Terms_7_18" id="terms/Terms_38_49" title="Defined at ../../terms/Terms.sdf3 line 1">terms/Terms</a> 
-  <a href="../Propositions.sdf3#formulas/Propositions_7_28" id="formulas/Propositions_53_74" title="Defined at ../Propositions.sdf3 line 1">formulas/Propositions</a>
+  <a href="../../terms/Terms.sdf3/#terms/Terms_1_8" id="terms/Terms_5_3" title="Defined at ../../terms/Terms.sdf3 line 1">terms/Terms</a> 
+  <a href="../Propositions.sdf3/#formulas/Propositions_1_8" id="formulas/Propositions_6_3" title="Defined at ../Propositions.sdf3 line 1">formulas/Propositions</a>
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#Formula_387_394" id="Formula_99_106" title="Referenced at line 28; ../../NameBindingLanguage.sdf3 line 150">Formula</a> = &lt;&lt;<a href="../Propositions.sdf3#Proposition_146_157" id="Proposition_111_122" title="Defined at ../Propositions.sdf3 line 13, 14, 15, 17, 18, 19, 20, 21, 23, 24">Proposition</a>&gt;&gt; 
+  <button class="modal-open" id="Formula_10_3" title="Multi-file references" data-urls="#Formula_13_10 line 13, 16, 17, 20, 21, 24, 28; ../../NameBindingLanguage.sdf3/#Formula_146_12 line 146, 150">Formula</button> = &lt;&lt;<a href="../Propositions.sdf3/#Proposition_13_3" id="Proposition_10_15" title="Defined at ../Propositions.sdf3 line 13, 14, 15, 17, 18, 19, 20, 21, 23, 24">Proposition</a>&gt;&gt; 
   
-  <a href="#Formula_387_394" id="Formula_131_138" title="Referenced at line 28; ../../NameBindingLanguage.sdf3 line 150">Formula</a>.<span class="cons_Constructor"><a href="#Not_367_370" id="Not_139_142" title="Referenced at line 28">Not</a></span> = &lt;
-    <span class="cons_String">not</span> &lt;<a href="#Formula_99_106" id="Formula_156_163" title="Defined at line 10, 12, 15, 19, 24">Formula</a>&gt;
+  <button class="modal-open" id="Formula_12_3" title="Multi-file references" data-urls="#Formula_13_10 line 13, 16, 17, 20, 21, 24, 28; ../../NameBindingLanguage.sdf3/#Formula_146_12 line 146, 150">Formula</button>.<span class="cons_Constructor"><a href="#Not_28_11" id="Not_12_11" title="Referenced at line 28">Not</a></span> = &lt;
+    <span class="cons_String">not</span> &lt;<a href="#Formula_10_3" id="Formula_13_10" title="Defined at line 10, 12, 15, 19, 24">Formula</a>&gt;
   &gt; 
-  <a href="#Formula_387_394" id="Formula_172_179" title="Referenced at line 28; ../../NameBindingLanguage.sdf3 line 150">Formula</a>.<span class="cons_Constructor"><a href="#And_381_384" id="And_180_183" title="Referenced at line 28">And</a></span> = &lt;
-    &lt;<a href="#Formula_99_106" id="Formula_193_200" title="Defined at line 10, 12, 15, 19, 24">Formula</a>&gt; 
-    <span class="cons_String">and</span> &lt;<a href="#Formula_99_106" id="Formula_212_219" title="Defined at line 10, 12, 15, 19, 24">Formula</a>&gt;
+  <button class="modal-open" id="Formula_15_3" title="Multi-file references" data-urls="#Formula_13_10 line 13, 16, 17, 20, 21, 24, 28; ../../NameBindingLanguage.sdf3/#Formula_146_12 line 146, 150">Formula</button>.<span class="cons_Constructor"><a href="#And_28_25" id="And_15_11" title="Referenced at line 28">And</a></span> = &lt;
+    &lt;<a href="#Formula_10_3" id="Formula_16_6" title="Defined at line 10, 12, 15, 19, 24">Formula</a>&gt; 
+    <span class="cons_String">and</span> &lt;<a href="#Formula_10_3" id="Formula_17_10" title="Defined at line 10, 12, 15, 19, 24">Formula</a>&gt;
   &gt; {<span class="keyword">left</span>}
-  <a href="#Formula_387_394" id="Formula_234_241" title="Referenced at line 28; ../../NameBindingLanguage.sdf3 line 150">Formula</a>.<span class="cons_Constructor"><a href="#Or_395_397" id="Or_242_244" title="Referenced at line 28">Or</a></span> = &lt;
-    &lt;<a href="#Formula_99_106" id="Formula_254_261" title="Defined at line 10, 12, 15, 19, 24">Formula</a>&gt; 
-    <span class="cons_String">or</span> &lt;<a href="#Formula_99_106" id="Formula_272_279" title="Defined at line 10, 12, 15, 19, 24">Formula</a>&gt;
+  <button class="modal-open" id="Formula_19_3" title="Multi-file references" data-urls="#Formula_13_10 line 13, 16, 17, 20, 21, 24, 28; ../../NameBindingLanguage.sdf3/#Formula_146_12 line 146, 150">Formula</button>.<span class="cons_Constructor"><a href="#Or_28_39" id="Or_19_11" title="Referenced at line 28">Or</a></span> = &lt;
+    &lt;<a href="#Formula_10_3" id="Formula_20_6" title="Defined at line 10, 12, 15, 19, 24">Formula</a>&gt; 
+    <span class="cons_String">or</span> &lt;<a href="#Formula_10_3" id="Formula_21_9" title="Defined at line 10, 12, 15, 19, 24">Formula</a>&gt;
   &gt; {<span class="keyword">left</span>}
   
-  <a href="#Formula_387_394" id="Formula_297_304" title="Referenced at line 28; ../../NameBindingLanguage.sdf3 line 150">Formula</a> = &lt;<span class="cons_String">(</span>&lt;<a href="#Formula_99_106" id="Formula_310_317" title="Defined at line 10, 12, 15, 19, 24">Formula</a>&gt;<span class="cons_String">)</span>&gt; {<span class="keyword">bracket</span>}
+  <button class="modal-open" id="Formula_24_3" title="Multi-file references" data-urls="#Formula_13_10 line 13, 16, 17, 20, 21, 24, 28; ../../NameBindingLanguage.sdf3/#Formula_146_12 line 146, 150">Formula</button> = &lt;<span class="cons_String">(</span>&lt;<a href="#Formula_10_3" id="Formula_24_16" title="Defined at line 10, 12, 15, 19, 24">Formula</a>&gt;<span class="cons_String">)</span>&gt; {<span class="keyword">bracket</span>}
 
 <span class="keyword">context-free priorities</span>
 
-  <a href="#Formula_99_106" id="Formula_359_366" title="Defined at line 10, 12, 15, 19, 24">Formula</a>.<span class="cons_Constructor"><a href="#Not_139_142" id="Not_367_370" title="Defined at line 12">Not</a></span> &gt; <a href="#Formula_99_106" id="Formula_373_380" title="Defined at line 10, 12, 15, 19, 24">Formula</a>.<span class="cons_Constructor"><a href="#And_180_183" id="And_381_384" title="Defined at line 15">And</a></span> &gt; <a href="#Formula_99_106" id="Formula_387_394" title="Defined at line 10, 12, 15, 19, 24">Formula</a>.<span class="cons_Constructor"><a href="#Or_242_244" id="Or_395_397" title="Defined at line 19">Or</a></span>
+  <a href="#Formula_10_3" id="Formula_28_3" title="Defined at line 10, 12, 15, 19, 24">Formula</a>.<span class="cons_Constructor"><a href="#Not_12_11" id="Not_28_11" title="Defined at line 12">Not</a></span> &gt; <a href="#Formula_10_3" id="Formula_28_17" title="Defined at line 10, 12, 15, 19, 24">Formula</a>.<span class="cons_Constructor"><a href="#And_15_11" id="And_28_25" title="Defined at line 15">And</a></span> &gt; <a href="#Formula_10_3" id="Formula_28_31" title="Defined at line 10, 12, 15, 19, 24">Formula</a>.<span class="cons_Constructor"><a href="#Or_19_11" id="Or_28_39" title="Defined at line 19">Or</a></span>
 
 </code></pre></td></tr></tbody></table></div>
+
+<div id="modal">
+  <div id="modal-content">
+    <span id="modal-close">&times;</span>
+    <h2 id="modal-h2"></h2>
+    <p  id="modal-p"></p>
+    <ul id="modal-ul"></ul>
+  </div>
+</div>

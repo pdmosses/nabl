@@ -40,34 +40,43 @@ hide:
 28
 29
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../Core.sdf3/#statix/lang/Common_36_54" id="statix/lang/Common_7_25" title="Referenced at ../Core.sdf3 line 5; ../Deprecated.sdf3 line 5; ../NoParse.sdf3 line 5; ../PreCompiled.sdf3 line 5; ../Sugar.sdf3 line 5; ../Type.sdf3 line 7; ../../../StatixLang.sdf3 line 6; ../../cli/CLI.sdf3 line 6; ../../test/Result.sdf3 line 8; ../../test/Test.sdf3 line 6">statix/lang/Common</a>
+<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="statix/lang/Common_1_8" title="Multi-file references" data-urls="../Core.sdf3/#statix/lang/Common_5_3 line 5; ../Deprecated.sdf3/#statix/lang/Common_5_3 line 5; ../NoParse.sdf3/#statix/lang/Common_5_3 line 5; ../PreCompiled.sdf3/#statix/lang/Common_5_3 line 5; ../Sugar.sdf3/#statix/lang/Common_5_3 line 5; ../Type.sdf3/#statix/lang/Common_7_3 line 7; ../../../StatixLang.sdf3/#statix/lang/Common_6_3 line 6; ../../cli/CLI.sdf3/#statix/lang/Common_6_3 line 6; ../../test/Result.sdf3/#statix/lang/Common_8_3 line 8; ../../test/Test.sdf3/#statix/lang/Common_6_3 line 6">statix/lang/Common</button>
 
 <span class="keyword">lexical syntax</span>
 
-  <a href="../Core.sdf3/#INT_7957_7960" id="INT_45_48" title="Referenced at ../Core.sdf3 line 340">INT</a> = [<span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>]+
+  <a href="../Core.sdf3/#INT_340_13" id="INT_5_3" title="Referenced at ../Core.sdf3 line 340">INT</a> = [<span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>]+
 
-  <a href="#ID_474_476" id="ID_61_63" title="Referenced at line 21; ../Core.sdf3 line 146, 175">ID</a>     = [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span>] [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_]*
-  <a href="#UCID_502_506" id="UCID_96_100" title="Referenced at line 22; ../Core.sdf3 line 238">UCID</a>   = [<span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span>]    [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_]*
-  <a href="#LCID_530_534" id="LCID_131_135" title="Referenced at line 23; ../Core.sdf3 line 83; ../PreCompiled.sdf3 line 53, 54">LCID</a>   = [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span>]    [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_]*
-  <a href="#VARID_558_563" id="VARID_166_171" title="Referenced at line 24; ../Core.sdf3 line 337">VARID</a>  = [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span>] [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_]* [\']*
+  <button class="modal-open" id="ID_7_3" title="Multi-file references" data-urls="#ID_21_3 line 21; ../Core.sdf3/#ID_146_19 line 146, 175">ID</button>     = [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span>] [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_]*
+  <button class="modal-open" id="UCID_8_3" title="Multi-file references" data-urls="#UCID_22_3 line 22; ../Core.sdf3/#UCID_238_17 line 238">UCID</button>   = [<span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span>]    [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_]*
+  <button class="modal-open" id="LCID_9_3" title="Multi-file references" data-urls="#LCID_23_3 line 23; ../Core.sdf3/#LCID_83_18 line 83; ../PreCompiled.sdf3/#LCID_53_14 line 53, 54">LCID</button>   = [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span>]    [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_]*
+  <button class="modal-open" id="VARID_10_3" title="Multi-file references" data-urls="#VARID_24_3 line 24; ../Core.sdf3/#VARID_337_13 line 337">VARID</button>  = [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span>] [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_]* [\']*
 
   <span class="layout">// more liberal ID to accept most Stratego sort and op identifiers</span>
-  <a href="#STRID_587_592" id="STRID_277_282" title="Referenced at line 26; ../Core.sdf3 line 73, 321, 325">STRID</a> = [<span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span>] [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\-\']*
+  <button class="modal-open" id="STRID_13_3" title="Multi-file references" data-urls="#STRID_26_3 line 26; ../Core.sdf3/#STRID_73_7 line 73, 321, 325">STRID</button> = [<span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span>] [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\-\']*
 <span class="layout">//STRID = [a-z] [a-zA-Z0-9\_\-\']* // leads to ambiguities with COp</span>
 
-  <a href="#FileId_428_434" id="FileId_381_387" title="Referenced at line 17, 28">FileId</a>   = [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\-\.\~\']+
-  <a href="#ModuleId_655_663" id="ModuleId_417_425" title="Referenced at line 29">ModuleId</a> = <a href="#FileId_381_387" id="FileId_428_434" title="Defined at line 16">FileId</a> (<span class="cons_Lit">"/"</span> <a href="#FileId_381_387" id="FileId_440_446" title="Defined at line 16">FileId</a>)*
+  <a href="#FileId_17_14" id="FileId_16_3" title="Referenced at line 17, 28">FileId</a>   = [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\-\.\~\']+
+  <a href="#ModuleId_29_3" id="ModuleId_17_3" title="Referenced at line 29">ModuleId</a> = <a href="#FileId_16_3" id="FileId_17_14" title="Defined at line 16">FileId</a> (<span class="cons_Lit">"/"</span> <a href="#FileId_16_3" id="FileId_17_26" title="Defined at line 16">FileId</a>)*
 
 <span class="keyword">lexical restrictions</span>
 
-  <a href="#ID_61_63" id="ID_474_476" title="Defined at line 7">ID</a>    -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\']
-  <a href="#UCID_96_100" id="UCID_502_506" title="Defined at line 8">UCID</a>  -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\']
-  <a href="#LCID_131_135" id="LCID_530_534" title="Defined at line 9">LCID</a>  -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\']
-  <a href="#VARID_166_171" id="VARID_558_563" title="Defined at line 10">VARID</a> -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\']
+  <a href="#ID_7_3" id="ID_21_3" title="Defined at line 7">ID</a>    -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\']
+  <a href="#UCID_8_3" id="UCID_22_3" title="Defined at line 8">UCID</a>  -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\']
+  <a href="#LCID_9_3" id="LCID_23_3" title="Defined at line 9">LCID</a>  -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\']
+  <a href="#VARID_10_3" id="VARID_24_3" title="Defined at line 10">VARID</a> -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\']
 
-  <a href="#STRID_277_282" id="STRID_587_592" title="Defined at line 13">STRID</a> -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\-\']
+  <a href="#STRID_13_3" id="STRID_26_3" title="Defined at line 13">STRID</a> -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\-\']
 
-  <a href="#FileId_381_387" id="FileId_618_624" title="Defined at line 16">FileId</a>   -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\-\.\~\']
-  <a href="#ModuleId_417_425" id="ModuleId_655_663" title="Defined at line 17">ModuleId</a> -/- [\/]
+  <a href="#FileId_16_3" id="FileId_28_3" title="Defined at line 16">FileId</a>   -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\_\-\.\~\']
+  <a href="#ModuleId_17_3" id="ModuleId_29_3" title="Defined at line 17">ModuleId</a> -/- [\/]
 
 </code></pre></td></tr></tbody></table></div>
+
+<div id="modal">
+  <div id="modal-content">
+    <span id="modal-close">&times;</span>
+    <h2 id="modal-h2"></h2>
+    <p  id="modal-p"></p>
+    <ul id="modal-ul"></ul>
+  </div>
+</div>

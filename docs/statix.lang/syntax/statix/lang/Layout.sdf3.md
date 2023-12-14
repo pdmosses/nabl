@@ -41,30 +41,30 @@ hide:
 29
 30
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../../../StatixLang.sdf3/#statix/lang/Layout_30_48" id="statix/lang/Layout_7_25" title="Referenced at ../../../StatixLang.sdf3 line 5; ../../cli/CLI.sdf3 line 5; ../../test/Result.sdf3 line 7; ../../test/Test.sdf3 line 5">statix/lang/Layout</a>
+<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="statix/lang/Layout_1_8" title="Multi-file references" data-urls="../../../StatixLang.sdf3/#statix/lang/Layout_5_3 line 5; ../../cli/CLI.sdf3/#statix/lang/Layout_5_3 line 5; ../../test/Result.sdf3/#statix/lang/Layout_7_3 line 7; ../../test/Test.sdf3/#statix/lang/Layout_5_3 line 5">statix/lang/Layout</button>
 
 <span class="keyword">lexical syntax</span>
 
   <span class="keyword">LAYOUT</span> = [\t\ \r\n]
-  <span class="keyword">LAYOUT</span> = <a href="#LineComment_126_137" id="LineComment_76_87" title="Defined at line 11">LineComment</a>
-  <span class="keyword">LAYOUT</span> = <a href="#BlockComment_176_188" id="BlockComment_99_111" title="Defined at line 13">BlockComment</a>
+  <span class="keyword">LAYOUT</span> = <a href="#LineComment_11_3" id="LineComment_6_12" title="Defined at line 11">LineComment</a>
+  <span class="keyword">LAYOUT</span> = <a href="#BlockComment_13_3" id="BlockComment_7_12" title="Defined at line 13">BlockComment</a>
 
-  <a href="#EOF_168_171" id="EOF_115_118" title="Referenced at line 11, 13, 21">EOF</a> =  
+  <a href="#EOF_11_45" id="EOF_9_3" title="Referenced at line 11, 13, 21">EOF</a> =  
 
-  <a href="#LineComment_76_87" id="LineComment_126_137" title="Referenced at line 6">LineComment</a>     = <span class="cons_Lit">"//"</span> ~[\r\n]* ([\r\n] | <a href="#EOF_115_118" id="EOF_168_171" title="Defined at line 9">EOF</a>)
+  <a href="#LineComment_6_12" id="LineComment_11_3" title="Referenced at line 6">LineComment</a>     = <span class="cons_Lit">"//"</span> ~[\r\n]* ([\r\n] | <a href="#EOF_9_3" id="EOF_11_45" title="Defined at line 9">EOF</a>)
 
-  <a href="#BlockComment_99_111" id="BlockComment_176_188" title="Referenced at line 7, 13">BlockComment</a>    = <span class="cons_Lit">"/*"</span> <a href="#CommentText_254_265" id="CommentText_199_210" title="Defined at line 14">CommentText</a> (<a href="#BlockComment_176_188" id="BlockComment_212_224" title="Defined at line 13">BlockComment</a> <a href="#CommentText_254_265" id="CommentText_225_236" title="Defined at line 14">CommentText</a>)* (<span class="cons_Lit">"*/"</span> | <a href="#EOF_115_118" id="EOF_247_250" title="Defined at line 9">EOF</a>)
-  <a href="#CommentText_199_210" id="CommentText_254_265" title="Referenced at line 13, 22">CommentText</a>     = <a href="#CommentChar_287_298" id="CommentChar_272_283" title="Defined at line 15">CommentChar</a>*
-  <a href="#CommentChar_272_283" id="CommentChar_287_298" title="Referenced at line 14">CommentChar</a>     = ~[\*\/] | <a href="#CommentAsterisk_372_387" id="CommentAsterisk_315_330" title="Defined at line 17">CommentAsterisk</a> | <a href="#CommentSlash_348_360" id="CommentSlash_333_345" title="Defined at line 16">CommentSlash</a>
-  <a href="#CommentSlash_333_345" id="CommentSlash_348_360" title="Referenced at line 15, 24">CommentSlash</a>    = <span class="cons_Lit">"/"</span>
-  <a href="#CommentAsterisk_315_330" id="CommentAsterisk_372_387" title="Referenced at line 15, 23">CommentAsterisk</a> = <span class="cons_Lit">"*"</span>
+  <a href="#BlockComment_7_12" id="BlockComment_13_3" title="Referenced at line 7, 13">BlockComment</a>    = <span class="cons_Lit">"/*"</span> <a href="#CommentText_14_3" id="CommentText_13_26" title="Defined at line 14">CommentText</a> (<a href="#BlockComment_13_3" id="BlockComment_13_39" title="Defined at line 13">BlockComment</a> <a href="#CommentText_14_3" id="CommentText_13_52" title="Defined at line 14">CommentText</a>)* (<span class="cons_Lit">"*/"</span> | <a href="#EOF_9_3" id="EOF_13_74" title="Defined at line 9">EOF</a>)
+  <a href="#CommentText_13_26" id="CommentText_14_3" title="Referenced at line 13, 22">CommentText</a>     = <a href="#CommentChar_15_3" id="CommentChar_14_21" title="Defined at line 15">CommentChar</a>*
+  <a href="#CommentChar_14_21" id="CommentChar_15_3" title="Referenced at line 14">CommentChar</a>     = ~[\*\/] | <a href="#CommentAsterisk_17_3" id="CommentAsterisk_15_31" title="Defined at line 17">CommentAsterisk</a> | <a href="#CommentSlash_16_3" id="CommentSlash_15_49" title="Defined at line 16">CommentSlash</a>
+  <a href="#CommentSlash_15_49" id="CommentSlash_16_3" title="Referenced at line 15, 24">CommentSlash</a>    = <span class="cons_Lit">"/"</span>
+  <a href="#CommentAsterisk_15_31" id="CommentAsterisk_17_3" title="Referenced at line 15, 23">CommentAsterisk</a> = <span class="cons_Lit">"*"</span>
 
 <span class="keyword">lexical restrictions</span>
 
-  <a href="#EOF_115_118" id="EOF_419_422" title="Defined at line 9">EOF</a>             -/- ~[]
-  <a href="#CommentText_254_265" id="CommentText_445_456" title="Defined at line 14">CommentText</a>     -/- ~[\*\/]
-  <a href="#CommentAsterisk_372_387" id="CommentAsterisk_475_490" title="Defined at line 17">CommentAsterisk</a> -/- [\/]
-  <a href="#CommentSlash_348_360" id="CommentSlash_502_514" title="Defined at line 16">CommentSlash</a>    -/- [\*]
+  <a href="#EOF_9_3" id="EOF_21_3" title="Defined at line 9">EOF</a>             -/- ~[]
+  <a href="#CommentText_14_3" id="CommentText_22_3" title="Defined at line 14">CommentText</a>     -/- ~[\*\/]
+  <a href="#CommentAsterisk_17_3" id="CommentAsterisk_23_3" title="Defined at line 17">CommentAsterisk</a> -/- [\/]
+  <a href="#CommentSlash_16_3" id="CommentSlash_24_3" title="Defined at line 16">CommentSlash</a>    -/- [\*]
 
 <span class="keyword">context-free restrictions</span>
 
@@ -73,3 +73,12 @@ hide:
   <span class="keyword">LAYOUT</span>? -/- [\/].[\*]    <span class="layout">// block comment start</span>
 
 </code></pre></td></tr></tbody></table></div>
+
+<div id="modal">
+  <div id="modal-content">
+    <span id="modal-close">&times;</span>
+    <h2 id="modal-h2"></h2>
+    <p  id="modal-p"></p>
+    <ul id="modal-ul"></ul>
+  </div>
+</div>

@@ -51,38 +51,38 @@ hide:
 39
 40
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../../core/Properties.sdf3#terms/Signatures_56_72" id="terms/Signatures_7_23" title="Referenced at ../../core/Properties.sdf3 line 6">terms/Signatures</a>
+<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="terms/Signatures_1_8" title="Multi-file references" data-urls="../../NameBindingLanguage.sdf3/#terms/Signatures_7_3 line 7; ../../core/Properties.sdf3/#terms/Signatures_6_2 line 6">terms/Signatures</button>
 
 <span class="keyword">imports</span>
 
-        <a href="../../common/Identifiers.sdf3#common/Identifiers_7_25" id="common/Identifiers_35_53" title="Defined at ../../common/Identifiers.sdf3 line 1">common/Identifiers</a>
-        <a href="../Constants.sdf3#terms/Constants_7_22" id="terms/Constants_55_70" title="Defined at ../Constants.sdf3 line 1">terms/Constants</a>
+        <a href="../../common/Identifiers.sdf3/#common/Identifiers_1_8" id="common/Identifiers_5_2" title="Defined at ../../common/Identifiers.sdf3 line 1">common/Identifiers</a>
+        <a href="../Constants.sdf3/#terms/Constants_1_8" id="terms/Constants_6_2" title="Defined at ../Constants.sdf3 line 1">terms/Constants</a>
         
 <span class="keyword">sorts</span> 
 
-  <a href="#Sort_662_666" id="Sort_83_87" title="Referenced at line 40; ../../core/Properties.sdf3 line 30">Sort</a>
+  <button class="modal-open" id="Sort_10_3" title="Multi-file references" data-urls="#Sort_16_28 line 16, 32, 40; ../../core/Properties.sdf3/#Sort_30_47 line 30">Sort</button>
 
 <span class="keyword">context-free syntax</span>
         
-        <a href="#Sort_662_666" id="Sort_112_116" title="Referenced at line 40; ../../core/Properties.sdf3 line 30">Sort</a>.<span class="cons_Constructor"><span id="SortVar_117_124" title="Not referenced locally, nor via imports">SortVar</span></span>    = <a href="../../common/Identifiers.sdf3#LCID_43_47" id="LCID_130_134" title="Defined at ../../common/Identifiers.sdf3 line 5, 12, 29">LCID</a>
-        <a href="#Sort_662_666" id="Sort_136_140" title="Referenced at line 40; ../../core/Properties.sdf3 line 30">Sort</a>.<span class="cons_Constructor"><span id="SortNoArgs_141_151" title="Not referenced locally, nor via imports">SortNoArgs</span></span> = <a href="../../common/Identifiers.sdf3#UCID_48_52" id="UCID_154_158" title="Defined at ../../common/Identifiers.sdf3 line 5, 13, 30">UCID</a>
-        <a href="#Sort_662_666" id="Sort_160_164" title="Referenced at line 40; ../../core/Properties.sdf3 line 30">Sort</a>.<span class="cons_Constructor"><span id="Sort_165_169" title="Not referenced locally, nor via imports">Sort</span></span>       = <a href="../../common/Identifiers.sdf3#Id_36_38" id="Id_178_180" title="Defined at ../../common/Identifiers.sdf3 line 5, 9, 11, 25, 26, 27">Id</a> <span class="cons_Lit">"("</span> {<a href="#Sort_83_87" id="Sort_186_190" title="Defined at line 10, 14, 15, 16">Sort</a> <span class="cons_Lit">","</span>}* <span class="cons_Lit">")"</span>
+        <button class="modal-open" id="Sort_14_2" title="Multi-file references" data-urls="#Sort_16_28 line 16, 32, 40; ../../core/Properties.sdf3/#Sort_30_47 line 30">Sort</button>.<span class="cons_Constructor"><span id="SortVar_14_7" title="Not referenced">SortVar</span></span>    = <a href="../../common/Identifiers.sdf3/#LCID_5_10" id="LCID_14_20" title="Defined at ../../common/Identifiers.sdf3 line 5, 12, 29">LCID</a>
+        <button class="modal-open" id="Sort_15_2" title="Multi-file references" data-urls="#Sort_16_28 line 16, 32, 40; ../../core/Properties.sdf3/#Sort_30_47 line 30">Sort</button>.<span class="cons_Constructor"><span id="SortNoArgs_15_7" title="Not referenced">SortNoArgs</span></span> = <a href="../../common/Identifiers.sdf3/#UCID_5_15" id="UCID_15_20" title="Defined at ../../common/Identifiers.sdf3 line 5, 13, 30">UCID</a>
+        <button class="modal-open" id="Sort_16_2" title="Multi-file references" data-urls="#Sort_16_28 line 16, 32, 40; ../../core/Properties.sdf3/#Sort_30_47 line 30">Sort</button>.<span class="cons_Constructor"><span id="Sort_16_7" title="Not referenced">Sort</span></span>       = <a href="../../common/Identifiers.sdf3/#Id_5_3" id="Id_16_20" title="Defined at ../../common/Identifiers.sdf3 line 5, 9, 11, 25, 26, 27">Id</a> <span class="cons_Lit">"("</span> {<a href="#Sort_10_3" id="Sort_16_28" title="Defined at line 10, 14, 15, 16">Sort</a> <span class="cons_Lit">","</span>}* <span class="cons_Lit">")"</span>
 
-<span class="keyword">sorts</span> <span id="TypeDecl_208_216" title="Not referenced locally, nor via imports">TypeDecl</span> <a href="#PPTerm_335_341" id="PPTerm_217_223" title="Referenced at line 23">PPTerm</a>
+<span class="keyword">sorts</span> <span id="TypeDecl_18_7" title="Not referenced">TypeDecl</span> <a href="#PPTerm_22_42" id="PPTerm_18_16" title="Referenced at line 22, 23">PPTerm</a>
 
 <span class="keyword">context-free syntax</span>
 
-  <span id="TypeDecl_248_256" title="Not referenced locally, nor via imports">TypeDecl</span>.<span class="cons_Constructor"><span id="TypeDecl_257_265" title="Not referenced locally, nor via imports">TypeDecl</span></span>  = <a href="../../common/Identifiers.sdf3#Id_36_38" id="Id_269_271" title="Defined at ../../common/Identifiers.sdf3 line 5, 9, 11, 25, 26, 27">Id</a>     <a href="#TypeParams_381_391" id="TypeParams_276_286" title="Defined at line 26, 30, 31">TypeParams</a> <a href="#PPTerm_217_223" id="PPTerm_287_293" title="Defined at line 18, 24">PPTerm</a>
-  <span id="TypeDecl_296_304" title="Not referenced locally, nor via imports">TypeDecl</span>.<span class="cons_Constructor"><span id="TypeDeclQ_305_314" title="Not referenced locally, nor via imports">TypeDeclQ</span></span> = <a href="../Constants.sdf3#String_43_49" id="String_317_323" title="Defined at ../Constants.sdf3 line 5, 11">String</a> <a href="#TypeParams_381_391" id="TypeParams_324_334" title="Defined at line 26, 30, 31">TypeParams</a> <a href="#PPTerm_217_223" id="PPTerm_335_341" title="Defined at line 18, 24">PPTerm</a>
-  <a href="#PPTerm_335_341" id="PPTerm_344_350" title="Referenced at line 23">PPTerm</a>.<span class="cons_Constructor"><span id="Str_351_354" title="Not referenced locally, nor via imports">Str</span></span>         = <a href="../Constants.sdf3#String_43_49" id="String_365_371" title="Defined at ../Constants.sdf3 line 5, 11">String</a>
+  <span id="TypeDecl_22_3" title="Not referenced">TypeDecl</span>.<span class="cons_Constructor"><span id="TypeDecl_22_12" title="Not referenced">TypeDecl</span></span>  = <a href="../../common/Identifiers.sdf3/#Id_5_3" id="Id_22_24" title="Defined at ../../common/Identifiers.sdf3 line 5, 9, 11, 25, 26, 27">Id</a>     <a href="#TypeParams_26_7" id="TypeParams_22_31" title="Defined at line 26, 30, 31">TypeParams</a> <a href="#PPTerm_18_16" id="PPTerm_22_42" title="Defined at line 18, 24">PPTerm</a>
+  <span id="TypeDecl_23_3" title="Not referenced">TypeDecl</span>.<span class="cons_Constructor"><span id="TypeDeclQ_23_12" title="Not referenced">TypeDeclQ</span></span> = <a href="../Constants.sdf3/#String_5_12" id="String_23_24" title="Defined at ../Constants.sdf3 line 5, 11">String</a> <a href="#TypeParams_26_7" id="TypeParams_23_31" title="Defined at line 26, 30, 31">TypeParams</a> <a href="#PPTerm_18_16" id="PPTerm_23_42" title="Defined at line 18, 24">PPTerm</a>
+  <a href="#PPTerm_22_42" id="PPTerm_24_3" title="Referenced at line 22, 23">PPTerm</a>.<span class="cons_Constructor"><span id="Str_24_10" title="Not referenced">Str</span></span>         = <a href="../Constants.sdf3/#String_5_12" id="String_24_24" title="Defined at ../Constants.sdf3 line 5, 11">String</a>
   
-<span class="keyword">sorts</span> <a href="#TypeParams_324_334" id="TypeParams_381_391" title="Referenced at line 23">TypeParams</a> <a href="#TypeParam_487_496" id="TypeParam_392_401" title="Referenced at line 31">TypeParam</a> 
+<span class="keyword">sorts</span> <a href="#TypeParams_22_31" id="TypeParams_26_7" title="Referenced at line 22, 23">TypeParams</a> <a href="#TypeParam_31_34" id="TypeParam_26_18" title="Referenced at line 31">TypeParam</a> 
 
 <span class="keyword">context-free syntax</span>
         
-  <a href="#TypeParams_324_334" id="TypeParams_428_438" title="Referenced at line 23">TypeParams</a>.<span class="cons_Constructor"><span id="NoTypeParams_439_451" title="Not referenced locally, nor via imports">NoTypeParams</span></span> =
-  <a href="#TypeParams_324_334" id="TypeParams_456_466" title="Referenced at line 23">TypeParams</a>.<span class="cons_Constructor"><span id="TypeParams_467_477" title="Not referenced locally, nor via imports">TypeParams</span></span>   = <span class="cons_Lit">"("</span> {<a href="#TypeParam_392_401" id="TypeParam_487_496" title="Defined at line 26, 32">TypeParam</a> <span class="cons_Lit">","</span>}+ <span class="cons_Lit">")"</span>
-  <a href="#TypeParam_487_496" id="TypeParam_509_518" title="Referenced at line 31">TypeParam</a>.<span class="cons_Constructor"><span id="TypeParam_519_528" title="Not referenced locally, nor via imports">TypeParam</span></span>     = <a href="../../common/Identifiers.sdf3#Id_36_38" id="Id_535_537" title="Defined at ../../common/Identifiers.sdf3 line 5, 9, 11, 25, 26, 27">Id</a> <span class="cons_Lit">":"</span> <a href="#Sort_83_87" id="Sort_542_546" title="Defined at line 10, 14, 15, 16">Sort</a>
+  <a href="#TypeParams_22_31" id="TypeParams_30_3" title="Referenced at line 22, 23">TypeParams</a>.<span class="cons_Constructor"><span id="NoTypeParams_30_14" title="Not referenced">NoTypeParams</span></span> =
+  <a href="#TypeParams_22_31" id="TypeParams_31_3" title="Referenced at line 22, 23">TypeParams</a>.<span class="cons_Constructor"><span id="TypeParams_31_14" title="Not referenced">TypeParams</span></span>   = <span class="cons_Lit">"("</span> {<a href="#TypeParam_26_18" id="TypeParam_31_34" title="Defined at line 26, 32">TypeParam</a> <span class="cons_Lit">","</span>}+ <span class="cons_Lit">")"</span>
+  <a href="#TypeParam_31_34" id="TypeParam_32_3" title="Referenced at line 31">TypeParam</a>.<span class="cons_Constructor"><span id="TypeParam_32_13" title="Not referenced">TypeParam</span></span>     = <a href="../../common/Identifiers.sdf3/#Id_5_3" id="Id_32_29" title="Defined at ../../common/Identifiers.sdf3 line 5, 9, 11, 25, 26, 27">Id</a> <span class="cons_Lit">":"</span> <a href="#Sort_10_3" id="Sort_32_36" title="Defined at line 10, 14, 15, 16">Sort</a>
   
 <span class="layout">%%%</span>
 <span class="layout">%% Restriction is required for the Sort* in Sdecl: List(a) is</span>
@@ -90,6 +90,15 @@ hide:
 <span class="layout">%%%</span>
 <span class="keyword">context-free restrictions</span>
 
-        <a href="#Sort_83_87" id="Sort_662_666" title="Defined at line 10, 14, 15, 16">Sort</a> -/- [\(]
+        <a href="#Sort_10_3" id="Sort_40_2" title="Defined at line 10, 14, 15, 16">Sort</a> -/- [\(]
 
 </code></pre></td></tr></tbody></table></div>
+
+<div id="modal">
+  <div id="modal-content">
+    <span id="modal-close">&times;</span>
+    <h2 id="modal-h2"></h2>
+    <p  id="modal-p"></p>
+    <ul id="modal-ul"></ul>
+  </div>
+</div>

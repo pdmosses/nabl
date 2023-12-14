@@ -38,32 +38,41 @@ hide:
 26
 27
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../../formulas/Propositions.sdf3#core/Namespaces_72_87" id="core/Namespaces_7_22" title="Referenced at ../../formulas/Propositions.sdf3 line 7">core/Namespaces</a>
+<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="core/Namespaces_1_8" title="Multi-file references" data-urls="../Properties.sdf3/#core/Namespaces_10_2 line 10; ../Scopes.sdf3/#core/Namespaces_6_2 line 6; ../../NameBindingLanguage.sdf3/#core/Namespaces_12_3 line 12; ../../formulas/Propositions.sdf3/#core/Namespaces_7_3 line 7">core/Namespaces</button>
 
 <span class="keyword">imports</span> 
 
-  <a href="../../common/Identifiers.sdf3#common/Identifiers_7_25" id="common/Identifiers_36_54" title="Defined at ../../common/Identifiers.sdf3 line 1">common/Identifiers</a>  
-  <a href="../Modules.sdf3#core/Modules_7_19" id="core/Modules_59_71" title="Defined at ../Modules.sdf3 line 1">core/Modules</a>
+  <a href="../../common/Identifiers.sdf3/#common/Identifiers_1_8" id="common/Identifiers_5_3" title="Defined at ../../common/Identifiers.sdf3 line 1">common/Identifiers</a>  
+  <a href="../Modules.sdf3/#core/Modules_1_8" id="core/Modules_6_3" title="Defined at ../Modules.sdf3 line 1">core/Modules</a>
   
 <span class="keyword">lexical syntax</span>
 
-  <a href="#NamespaceID_383_394" id="NamespaceID_93_104" title="Referenced at line 24">NamespaceID</a> = <a href="../../common/Identifiers.sdf3#Id_36_38" id="Id_107_109" title="Defined at ../../common/Identifiers.sdf3 line 5, 9, 11, 25, 26, 27">Id</a> 
-  <a href="#NamespaceID_383_394" id="NamespaceID_113_124" title="Referenced at line 24">NamespaceID</a> = <a href="#SectionKeyword_153_167" id="SectionKeyword_127_141" title="Defined at line 12">SectionKeyword</a> {<span class="keyword">reject</span>}
-  <a href="#SectionKeyword_127_141" id="SectionKeyword_153_167" title="Referenced at line 11">SectionKeyword</a> = <span class="cons_Lit">"namespaces"</span> 
+  <a href="#NamespaceID_21_33" id="NamespaceID_10_3" title="Referenced at line 21, 24">NamespaceID</a> = <a href="../../common/Identifiers.sdf3/#Id_5_3" id="Id_10_17" title="Defined at ../../common/Identifiers.sdf3 line 5, 9, 11, 25, 26, 27">Id</a> 
+  <a href="#NamespaceID_21_33" id="NamespaceID_11_3" title="Referenced at line 21, 24">NamespaceID</a> = <a href="#SectionKeyword_12_3" id="SectionKeyword_11_17" title="Defined at line 12">SectionKeyword</a> {<span class="keyword">reject</span>}
+  <a href="#SectionKeyword_11_17" id="SectionKeyword_12_3" title="Referenced at line 11">SectionKeyword</a> = <span class="cons_Lit">"namespaces"</span> 
 
 <span class="keyword">context-free syntax</span>
 
-  <span id="ModuleSection_208_221" title="Not referenced locally, nor via imports">ModuleSection</span>.<span class="cons_Constructor"><span id="Namespaces_222_232" title="Not referenced locally, nor via imports">Namespaces</span></span> = &lt;
+  <span id="ModuleSection_16_3" title="Not referenced">ModuleSection</span>.<span class="cons_Constructor"><span id="Namespaces_16_17" title="Not referenced">Namespaces</span></span> = &lt;
   <span class="cons_String">namespaces</span>   
-    &lt;<a href="#NamespaceDef_283_295" id="NamespaceDef_258_270" title="Defined at line 21">NamespaceDef</a>*&gt;
+    &lt;<a href="#NamespaceDef_21_3" id="NamespaceDef_18_6" title="Defined at line 21">NamespaceDef</a>*&gt;
   &gt; 
   
-  <a href="#NamespaceDef_258_270" id="NamespaceDef_283_295" title="Referenced at line 18">NamespaceDef</a>.<span class="cons_Constructor"><span id="NamespaceDef_296_308" title="Not referenced locally, nor via imports">NamespaceDef</span></span> = &lt;&lt;<a href="#NamespaceID_93_104" id="NamespaceID_313_324" title="Defined at line 10, 11">NamespaceID</a>&gt;
+  <a href="#NamespaceDef_18_6" id="NamespaceDef_21_3" title="Referenced at line 18">NamespaceDef</a>.<span class="cons_Constructor"><span id="NamespaceDef_21_16" title="Not referenced">NamespaceDef</span></span> = &lt;&lt;<a href="#NamespaceID_10_3" id="NamespaceID_21_33" title="Defined at line 10, 11">NamespaceID</a>&gt;
     &gt; 
     
-  <a href="../Properties.sdf3#NamespaceRef_465_477" id="NamespaceRef_340_352" title="Referenced at ../Properties.sdf3 line 30; ../Scopes.sdf3 line 35; ../../NameBindingLanguage.sdf3 line 136; ../../formulas/Propositions.sdf3 line 21">NamespaceRef</a>.<span class="cons_Constructor"><span id="NamespaceRef_353_365" title="Not referenced locally, nor via imports">NamespaceRef</span></span> = &lt;&lt;<a href="#LanguageRef_403_414" id="LanguageRef_370_381" title="Defined at line 26, 27">LanguageRef</a>&gt;&lt;<a href="#NamespaceID_93_104" id="NamespaceID_383_394" title="Defined at line 10, 11">NamespaceID</a>&gt;&gt; 
+  <button class="modal-open" id="NamespaceRef_24_3" title="Multi-file references" data-urls="../Properties.sdf3/#NamespaceRef_30_23 line 30; ../Scopes.sdf3/#NamespaceRef_15_29 line 15, 16, 17, 18, 27, 31, 35; ../../NameBindingLanguage.sdf3/#NamespaceRef_26_56 line 26, 32, 62, 73, 77, 85, 92, 100, 106, 135, 136; ../../formulas/Propositions.sdf3/#NamespaceRef_19_39 line 19, 21">NamespaceRef</button>.<span class="cons_Constructor"><span id="NamespaceRef_24_16" title="Not referenced">NamespaceRef</span></span> = &lt;&lt;<a href="#LanguageRef_26_3" id="LanguageRef_24_33" title="Defined at line 26, 27">LanguageRef</a>&gt;&lt;<a href="#NamespaceID_10_3" id="NamespaceID_24_46" title="Defined at line 10, 11">NamespaceID</a>&gt;&gt; 
   
-  <a href="#LanguageRef_370_381" id="LanguageRef_403_414" title="Referenced at line 24">LanguageRef</a>.<span class="cons_Constructor"><span id="CurrentLanguage_415_430" title="Not referenced locally, nor via imports">CurrentLanguage</span></span> = &lt;&gt; 
-  <a href="#LanguageRef_370_381" id="LanguageRef_439_450" title="Referenced at line 24">LanguageRef</a>.<span class="cons_Constructor"><span id="LanguageRef_451_462" title="Not referenced locally, nor via imports">LanguageRef</span></span> = &lt;&lt;<a href="../../common/Identifiers.sdf3#Id_36_38" id="Id_467_469" title="Defined at ../../common/Identifiers.sdf3 line 5, 9, 11, 25, 26, 27">Id</a>&gt;<span class="cons_String">.</span>&gt; 
+  <a href="#LanguageRef_24_33" id="LanguageRef_26_3" title="Referenced at line 24">LanguageRef</a>.<span class="cons_Constructor"><span id="CurrentLanguage_26_15" title="Not referenced">CurrentLanguage</span></span> = &lt;&gt; 
+  <a href="#LanguageRef_24_33" id="LanguageRef_27_3" title="Referenced at line 24">LanguageRef</a>.<span class="cons_Constructor"><span id="LanguageRef_27_15" title="Not referenced">LanguageRef</span></span> = &lt;&lt;<a href="../../common/Identifiers.sdf3/#Id_5_3" id="Id_27_31" title="Defined at ../../common/Identifiers.sdf3 line 5, 9, 11, 25, 26, 27">Id</a>&gt;<span class="cons_String">.</span>&gt; 
 
 </code></pre></td></tr></tbody></table></div>
+
+<div id="modal">
+  <div id="modal-content">
+    <span id="modal-close">&times;</span>
+    <h2 id="modal-h2"></h2>
+    <p  id="modal-p"></p>
+    <ul id="modal-ul"></ul>
+  </div>
+</div>

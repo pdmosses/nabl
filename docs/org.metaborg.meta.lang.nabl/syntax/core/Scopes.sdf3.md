@@ -47,41 +47,50 @@ hide:
 35
 36
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../../formulas/Propositions.sdf3#core/Scopes_91_102" id="core/Scopes_7_18" title="Referenced at ../../formulas/Propositions.sdf3 line 8">core/Scopes</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../../formulas/Propositions.sdf3/#core/Scopes_8_3" id="core/Scopes_1_8" title="Referenced at ../../formulas/Propositions.sdf3 line 8">core/Scopes</a>
 
 <span class="keyword">imports</span> 
 
-        <a href="../../common/Identifiers.sdf3#common/Identifiers_7_25" id="common/Identifiers_31_49" title="Defined at ../../common/Identifiers.sdf3 line 1">common/Identifiers</a>  
-        <a href="../Namespaces.sdf3#core/Namespaces_7_22" id="core/Namespaces_53_68" title="Defined at ../Namespaces.sdf3 line 1">core/Namespaces</a> 
-        <a href="../../terms/Vars.sdf3#terms/Vars_7_17" id="terms/Vars_71_81" title="Defined at ../../terms/Vars.sdf3 line 1">terms/Vars</a>
+        <a href="../../common/Identifiers.sdf3/#common/Identifiers_1_8" id="common/Identifiers_5_2" title="Defined at ../../common/Identifiers.sdf3 line 1">common/Identifiers</a>  
+        <a href="../Namespaces.sdf3/#core/Namespaces_1_8" id="core/Namespaces_6_2" title="Defined at ../Namespaces.sdf3 line 1">core/Namespaces</a> 
+        <a href="../../terms/Vars.sdf3/#terms/Vars_1_8" id="terms/Vars_7_2" title="Defined at ../../terms/Vars.sdf3 line 1">terms/Vars</a>
 
 <span class="keyword">lexical syntax</span>
 
-  <span id="ScopeID_101_108" title="Not referenced locally, nor via imports">ScopeID</span> = <a href="../../common/Identifiers.sdf3#Id_36_38" id="Id_111_113" title="Defined at ../../common/Identifiers.sdf3 line 5, 9, 11, 25, 26, 27">Id</a> 
+  <span id="ScopeID_11_3" title="Not referenced">ScopeID</span> = <a href="../../common/Identifiers.sdf3/#Id_5_3" id="Id_11_13" title="Defined at ../../common/Identifiers.sdf3 line 5, 9, 11, 25, 26, 27">Id</a> 
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#LocalScope_434_444" id="LocalScope_139_149" title="Referenced at line 21">LocalScope</a>.<span class="cons_Constructor"><span id="NamedScope_150_160" title="Not referenced locally, nor via imports">NamedScope</span></span> = &lt;&lt;<a href="../Namespaces.sdf3#NamespaceRef_340_352" id="NamespaceRef_165_177" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a>&gt; &lt;<a href="../../terms/Vars.sdf3#VarRef_84_90" id="VarRef_180_186" title="Defined at ../../terms/Vars.sdf3 line 10, 18, 19">VarRef</a>&gt;&gt; 
-  <a href="#LocalScope_434_444" id="LocalScope_192_202" title="Referenced at line 21">LocalScope</a>.<span class="cons_Constructor"><span id="CurrentScope_203_215" title="Not referenced locally, nor via imports">CurrentScope</span></span> = &lt;<span class="cons_String">current</span> &lt;<a href="../Namespaces.sdf3#NamespaceRef_340_352" id="NamespaceRef_228_240" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a>&gt; <span class="cons_String">scope</span>&gt; 
-  <a href="#LocalScope_434_444" id="LocalScope_252_262" title="Referenced at line 21">LocalScope</a>.<span class="cons_Constructor"><span id="TermScope_263_272" title="Not referenced locally, nor via imports">TermScope</span></span> = &lt;&lt;<a href="../Namespaces.sdf3#NamespaceRef_340_352" id="NamespaceRef_277_289" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a>&gt; <span class="cons_String">scope</span>  <span class="cons_String">at</span> &lt;<a href="../../terms/Vars.sdf3#VarRef_84_90" id="VarRef_302_308" title="Defined at ../../terms/Vars.sdf3 line 10, 18, 19">VarRef</a>&gt;&gt; 
-  <a href="#LocalScope_434_444" id="LocalScope_314_324" title="Referenced at line 21">LocalScope</a>.<span class="cons_Constructor"><span id="Enclosing_325_334" title="Not referenced locally, nor via imports">Enclosing</span></span> = &lt;<span class="cons_String">enclosing</span> &lt;<a href="../Namespaces.sdf3#NamespaceRef_340_352" id="NamespaceRef_349_361" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a>&gt; <span class="cons_String">of</span> &lt;<a href="#LocalScope_139_149" id="LocalScope_367_377" title="Defined at line 15, 16, 17, 18">LocalScope</a>&gt;&gt; 
+  <a href="#LocalScope_18_56" id="LocalScope_15_3" title="Referenced at line 18, 21">LocalScope</a>.<span class="cons_Constructor"><span id="NamedScope_15_14" title="Not referenced">NamedScope</span></span> = &lt;&lt;<a href="../Namespaces.sdf3/#NamespaceRef_24_3" id="NamespaceRef_15_29" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a>&gt; &lt;<a href="../../terms/Vars.sdf3/#VarRef_10_11" id="VarRef_15_44" title="Defined at ../../terms/Vars.sdf3 line 10, 18, 19">VarRef</a>&gt;&gt; 
+  <a href="#LocalScope_18_56" id="LocalScope_16_3" title="Referenced at line 18, 21">LocalScope</a>.<span class="cons_Constructor"><span id="CurrentScope_16_14" title="Not referenced">CurrentScope</span></span> = &lt;<span class="cons_String">current</span> &lt;<a href="../Namespaces.sdf3/#NamespaceRef_24_3" id="NamespaceRef_16_39" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a>&gt; <span class="cons_String">scope</span>&gt; 
+  <a href="#LocalScope_18_56" id="LocalScope_17_3" title="Referenced at line 18, 21">LocalScope</a>.<span class="cons_Constructor"><span id="TermScope_17_14" title="Not referenced">TermScope</span></span> = &lt;&lt;<a href="../Namespaces.sdf3/#NamespaceRef_24_3" id="NamespaceRef_17_28" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a>&gt; <span class="cons_String">scope</span>  <span class="cons_String">at</span> &lt;<a href="../../terms/Vars.sdf3/#VarRef_10_11" id="VarRef_17_53" title="Defined at ../../terms/Vars.sdf3 line 10, 18, 19">VarRef</a>&gt;&gt; 
+  <a href="#LocalScope_18_56" id="LocalScope_18_3" title="Referenced at line 18, 21">LocalScope</a>.<span class="cons_Constructor"><span id="Enclosing_18_14" title="Not referenced">Enclosing</span></span> = &lt;<span class="cons_String">enclosing</span> &lt;<a href="../Namespaces.sdf3/#NamespaceRef_24_3" id="NamespaceRef_18_38" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a>&gt; <span class="cons_String">of</span> &lt;<a href="#LocalScope_15_3" id="LocalScope_18_56" title="Defined at line 15, 16, 17, 18">LocalScope</a>&gt;&gt; 
   
-  <a href="#Scope_629_634" id="Scope_386_391" title="Referenced at line 31; ../../formulas/Propositions.sdf3 line 20">Scope</a>.<span class="cons_Constructor"><span id="GlobalScope_392_403" title="Not referenced locally, nor via imports">GlobalScope</span></span> = &lt;<span class="cons_String">global</span> <span class="cons_String">scope</span>&gt; 
-  <a href="#Scope_629_634" id="Scope_424_429" title="Referenced at line 31; ../../formulas/Propositions.sdf3 line 20">Scope</a> = &lt;&lt;<a href="#LocalScope_139_149" id="LocalScope_434_444" title="Defined at line 15, 16, 17, 18">LocalScope</a>&gt;&gt; 
-  <a href="#Scope_629_634" id="Scope_450_455" title="Referenced at line 31; ../../formulas/Propositions.sdf3 line 20">Scope</a>.<span class="cons_Constructor"><span id="Anonymous_456_465" title="Not referenced locally, nor via imports">Anonymous</span></span> = &lt;<span class="cons_String">new</span> <span class="cons_String">scope</span> <span class="cons_String">in</span> &lt;<a href="#Scope_386_391" id="Scope_483_488" title="Defined at line 20, 21, 22">Scope</a>&gt;&gt; 
+  <button class="modal-open" id="Scope_20_3" title="Multi-file references" data-urls="#Scope_22_36 line 22, 27, 31; ../../formulas/Propositions.sdf3/#Scope_20_27 line 20">Scope</button>.<span class="cons_Constructor"><span id="GlobalScope_20_9" title="Not referenced">GlobalScope</span></span> = &lt;<span class="cons_String">global</span> <span class="cons_String">scope</span>&gt; 
+  <button class="modal-open" id="Scope_21_3" title="Multi-file references" data-urls="#Scope_22_36 line 22, 27, 31; ../../formulas/Propositions.sdf3/#Scope_20_27 line 20">Scope</button> = &lt;&lt;<a href="#LocalScope_15_3" id="LocalScope_21_13" title="Defined at line 15, 16, 17, 18">LocalScope</a>&gt;&gt; 
+  <button class="modal-open" id="Scope_22_3" title="Multi-file references" data-urls="#Scope_22_36 line 22, 27, 31; ../../formulas/Propositions.sdf3/#Scope_20_27 line 20">Scope</button>.<span class="cons_Constructor"><span id="Anonymous_22_9" title="Not referenced">Anonymous</span></span> = &lt;<span class="cons_String">new</span> <span class="cons_String">scope</span> <span class="cons_String">in</span> &lt;<a href="#Scope_20_3" id="Scope_22_36" title="Defined at line 20, 21, 22">Scope</a>&gt;&gt; 
 
 <span class="keyword">context-free syntax</span>
 
-  <span id="Clause_516_522" title="Not referenced locally, nor via imports">Clause</span>.<span class="cons_Constructor"><span id="ChildScope_523_533" title="Not referenced locally, nor via imports">ChildScope</span></span> = &lt;
-    &lt;<a href="#Scope_386_391" id="Scope_543_548" title="Defined at line 20, 21, 22">Scope</a>&gt; <span class="cons_String">scopes</span> &lt;<a href="../Namespaces.sdf3#NamespaceRef_340_352" id="NamespaceRef_558_570" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a>&gt; <span class="cons_String">at</span> <span class="cons_String">child</span> <span class="cons_String">nodes</span>
+  <span id="Clause_26_3" title="Not referenced">Clause</span>.<span class="cons_Constructor"><span id="ChildScope_26_10" title="Not referenced">ChildScope</span></span> = &lt;
+    &lt;<a href="#Scope_20_3" id="Scope_27_6" title="Defined at line 20, 21, 22">Scope</a>&gt; <span class="cons_String">scopes</span> &lt;<a href="../Namespaces.sdf3/#NamespaceRef_24_3" id="NamespaceRef_27_21" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a>&gt; <span class="cons_String">at</span> <span class="cons_String">child</span> <span class="cons_String">nodes</span>
   &gt; 
   
-  <span id="Clause_597_603" title="Not referenced locally, nor via imports">Clause</span>.<span class="cons_Constructor"><span id="SubsequentScope_604_619" title="Not referenced locally, nor via imports">SubsequentScope</span></span> = &lt;
-    &lt;<a href="#Scope_386_391" id="Scope_629_634" title="Defined at line 20, 21, 22">Scope</a>&gt; <span class="cons_String">scopes</span> &lt;<a href="../Namespaces.sdf3#NamespaceRef_340_352" id="NamespaceRef_644_656" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a>&gt; <span class="cons_String">at</span> <span class="cons_String">subsequent</span> <span class="cons_String">nodes</span>
+  <span id="Clause_30_3" title="Not referenced">Clause</span>.<span class="cons_Constructor"><span id="SubsequentScope_30_10" title="Not referenced">SubsequentScope</span></span> = &lt;
+    &lt;<a href="#Scope_20_3" id="Scope_31_6" title="Defined at line 20, 21, 22">Scope</a>&gt; <span class="cons_String">scopes</span> &lt;<a href="../Namespaces.sdf3/#NamespaceRef_24_3" id="NamespaceRef_31_21" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a>&gt; <span class="cons_String">at</span> <span class="cons_String">subsequent</span> <span class="cons_String">nodes</span>
   &gt; 
   
-  <span id="Clause_688_694" title="Not referenced locally, nor via imports">Clause</span>.<span class="cons_Constructor"><span id="NodeScope_695_704" title="Not referenced locally, nor via imports">NodeScope</span></span> = &lt;
-    <span class="cons_String">requires</span> &lt;<a href="../Namespaces.sdf3#NamespaceRef_340_352" id="NamespaceRef_723_735" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a>&gt; <span class="cons_String">scope</span> <span class="cons_String">at</span> &lt;<a href="../../terms/Vars.sdf3#VarRef_84_90" id="VarRef_747_753" title="Defined at ../../terms/Vars.sdf3 line 10, 18, 19">VarRef</a>&gt;
+  <span id="Clause_34_3" title="Not referenced">Clause</span>.<span class="cons_Constructor"><span id="NodeScope_34_10" title="Not referenced">NodeScope</span></span> = &lt;
+    <span class="cons_String">requires</span> &lt;<a href="../Namespaces.sdf3/#NamespaceRef_24_3" id="NamespaceRef_35_15" title="Defined at ../Namespaces.sdf3 line 24">NamespaceRef</a>&gt; <span class="cons_String">scope</span> <span class="cons_String">at</span> &lt;<a href="../../terms/Vars.sdf3/#VarRef_10_11" id="VarRef_35_39" title="Defined at ../../terms/Vars.sdf3 line 10, 18, 19">VarRef</a>&gt;
   &gt; 
 
 </code></pre></td></tr></tbody></table></div>
+
+<div id="modal">
+  <div id="modal-content">
+    <span id="modal-close">&times;</span>
+    <h2 id="modal-h2"></h2>
+    <p  id="modal-p"></p>
+    <ul id="modal-ul"></ul>
+  </div>
+</div>

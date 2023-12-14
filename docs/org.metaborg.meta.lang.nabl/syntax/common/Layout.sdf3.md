@@ -38,27 +38,27 @@ hide:
 26
 27
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../../NameBindingLanguage.sdf3#common/Layout_40_53" id="common/Layout_7_20" title="Referenced at ../../NameBindingLanguage.sdf3 line 5">common/Layout</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../../NameBindingLanguage.sdf3/#common/Layout_5_3" id="common/Layout_1_8" title="Referenced at ../../NameBindingLanguage.sdf3 line 5">common/Layout</a>
 
 <span class="keyword">sorts</span>
 
-  <a href="#LongCom_157_164" id="LongCom_31_38" title="Referenced at line 12">LongCom</a> <a href="#CommChar_183_191" id="CommChar_39_47" title="Referenced at line 13">CommChar</a> <a href="#Asterisk_285_293" id="Asterisk_48_56" title="Referenced at line 20">Asterisk</a> <a href="#Eof_305_308" id="Eof_57_60" title="Referenced at line 21">Eof</a>
+  <a href="#LongCom_12_12" id="LongCom_5_3" title="Referenced at line 12">LongCom</a> <a href="#CommChar_13_18" id="CommChar_5_11" title="Referenced at line 13">CommChar</a> <a href="#Asterisk_15_14" id="Asterisk_5_20" title="Referenced at line 15, 20">Asterisk</a> <a href="#Eof_10_31" id="Eof_5_29" title="Referenced at line 10, 21">Eof</a>
 
 <span class="keyword">lexical syntax</span>
 
   <span class="keyword">LAYOUT</span> = [\t\ \n\r] 
-  <span class="keyword">LAYOUT</span> = <span class="cons_Lit">"//"</span> ~[\n]* [\n] | <a href="#Eof_57_60" id="Eof_131_134" title="Defined at line 5, 11">Eof</a> 
-  <a href="#Eof_305_308" id="Eof_138_141" title="Referenced at line 21">Eof</a> =  
-  <span class="keyword">LAYOUT</span> = <a href="#LongCom_31_38" id="LongCom_157_164" title="Defined at line 5, 13">LongCom</a> 
-  <a href="#LongCom_157_164" id="LongCom_168_175" title="Referenced at line 12">LongCom</a> = <span class="cons_Lit">"/*"</span> <a href="#CommChar_39_47" id="CommChar_183_191" title="Defined at line 5, 14, 15">CommChar</a>* <span class="cons_Lit">"*/"</span> 
-  <a href="#CommChar_183_191" id="CommChar_201_209" title="Referenced at line 13">CommChar</a> = ~[\*] 
-  <a href="#CommChar_183_191" id="CommChar_221_229" title="Referenced at line 13">CommChar</a> = <a href="#Asterisk_48_56" id="Asterisk_232_240" title="Defined at line 5, 16">Asterisk</a> 
-  <a href="#Asterisk_285_293" id="Asterisk_244_252" title="Referenced at line 20">Asterisk</a> = <span class="cons_Lit">"*"</span> 
+  <span class="keyword">LAYOUT</span> = <span class="cons_Lit">"//"</span> ~[\n]* [\n] | <a href="#Eof_5_29" id="Eof_10_31" title="Defined at line 5, 11">Eof</a> 
+  <a href="#Eof_10_31" id="Eof_11_3" title="Referenced at line 10, 21">Eof</a> =  
+  <span class="keyword">LAYOUT</span> = <a href="#LongCom_5_3" id="LongCom_12_12" title="Defined at line 5, 13">LongCom</a> 
+  <a href="#LongCom_12_12" id="LongCom_13_3" title="Referenced at line 12">LongCom</a> = <span class="cons_Lit">"/*"</span> <a href="#CommChar_5_11" id="CommChar_13_18" title="Defined at line 5, 14, 15">CommChar</a>* <span class="cons_Lit">"*/"</span> 
+  <a href="#CommChar_13_18" id="CommChar_14_3" title="Referenced at line 13">CommChar</a> = ~[\*] 
+  <a href="#CommChar_13_18" id="CommChar_15_3" title="Referenced at line 13">CommChar</a> = <a href="#Asterisk_5_20" id="Asterisk_15_14" title="Defined at line 5, 16">Asterisk</a> 
+  <a href="#Asterisk_15_14" id="Asterisk_16_3" title="Referenced at line 15, 20">Asterisk</a> = <span class="cons_Lit">"*"</span> 
 
 <span class="keyword">lexical restrictions</span>
 
-  <a href="#Asterisk_48_56" id="Asterisk_285_293" title="Defined at line 5, 16">Asterisk</a> -/- [\/]
-  <a href="#Eof_57_60" id="Eof_305_308" title="Defined at line 5, 11">Eof</a> -/- ~[]
+  <a href="#Asterisk_5_20" id="Asterisk_20_3" title="Defined at line 5, 16">Asterisk</a> -/- [\/]
+  <a href="#Eof_5_29" id="Eof_21_3" title="Defined at line 5, 11">Eof</a> -/- ~[]
 
 <span class="keyword">context-free restrictions</span>
 
@@ -67,3 +67,12 @@ hide:
   <span class="keyword">LAYOUT</span>? -/- [\/].[\/]
 
 </code></pre></td></tr></tbody></table></div>
+
+<div id="modal">
+  <div id="modal-content">
+    <span id="modal-close">&times;</span>
+    <h2 id="modal-h2"></h2>
+    <p  id="modal-p"></p>
+    <ul id="modal-ul"></ul>
+  </div>
+</div>

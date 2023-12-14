@@ -40,20 +40,20 @@ hide:
 28
 29
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <span id="StatixLang_7_17" title="Not referenced locally, nor via imports">StatixLang</span>
+<td class="code"><pre><code><span class="keyword">module</span> <span id="StatixLang_1_8" title="Not referenced">StatixLang</span>
 
 <span class="keyword">imports</span>
 
-  <a href="../statix/lang/Layout.sdf3/#statix/lang/Layout_7_25" id="statix/lang/Layout_30_48" title="Defined at ../statix/lang/Layout.sdf3 line 1">statix/lang/Layout</a>
-  <a href="../statix/lang/Common.sdf3/#statix/lang/Common_7_25" id="statix/lang/Common_51_69" title="Defined at ../statix/lang/Common.sdf3 line 1">statix/lang/Common</a>
-  <a href="../statix/lang/Core.sdf3/#statix/lang/Core_7_23" id="statix/lang/Core_72_88" title="Defined at ../statix/lang/Core.sdf3 line 1">statix/lang/Core</a>
-  <a href="../statix/lang/Sugar.sdf3/#statix/lang/Sugar_7_24" id="statix/lang/Sugar_91_108" title="Defined at ../statix/lang/Sugar.sdf3 line 1">statix/lang/Sugar</a>
-  <a href="../statix/lang/PreCompiled.sdf3/#statix/lang/PreCompiled_7_30" id="statix/lang/PreCompiled_111_134" title="Defined at ../statix/lang/PreCompiled.sdf3 line 1">statix/lang/PreCompiled</a>
-  <a href="../statix/lang/Deprecated.sdf3/#statix/lang/Deprecated_7_29" id="statix/lang/Deprecated_137_159" title="Defined at ../statix/lang/Deprecated.sdf3 line 1">statix/lang/Deprecated</a>
+  <a href="../statix/lang/Layout.sdf3/#statix/lang/Layout_1_8" id="statix/lang/Layout_5_3" title="Defined at ../statix/lang/Layout.sdf3 line 1">statix/lang/Layout</a>
+  <a href="../statix/lang/Common.sdf3/#statix/lang/Common_1_8" id="statix/lang/Common_6_3" title="Defined at ../statix/lang/Common.sdf3 line 1">statix/lang/Common</a>
+  <a href="../statix/lang/Core.sdf3/#statix/lang/Core_1_8" id="statix/lang/Core_7_3" title="Defined at ../statix/lang/Core.sdf3 line 1">statix/lang/Core</a>
+  <a href="../statix/lang/Sugar.sdf3/#statix/lang/Sugar_1_8" id="statix/lang/Sugar_8_3" title="Defined at ../statix/lang/Sugar.sdf3 line 1">statix/lang/Sugar</a>
+  <a href="../statix/lang/PreCompiled.sdf3/#statix/lang/PreCompiled_1_8" id="statix/lang/PreCompiled_9_3" title="Defined at ../statix/lang/PreCompiled.sdf3 line 1">statix/lang/PreCompiled</a>
+  <a href="../statix/lang/Deprecated.sdf3/#statix/lang/Deprecated_1_8" id="statix/lang/Deprecated_10_3" title="Defined at ../statix/lang/Deprecated.sdf3 line 1">statix/lang/Deprecated</a>
 
-  <a href="../statix/test/Test.sdf3/#statix/test/Test_7_23" id="statix/test/Test_163_179" title="Defined at ../statix/test/Test.sdf3 line 1">statix/test/Test</a>
+  <a href="../statix/test/Test.sdf3/#statix/test/Test_1_8" id="statix/test/Test_12_3" title="Defined at ../statix/test/Test.sdf3 line 1">statix/test/Test</a>
 
-  <a href="../statix/cli/CLI.sdf3/#statix/cli/CLI_7_21" id="statix/cli/CLI_183_197" title="Defined at ../statix/cli/CLI.sdf3 line 1">statix/cli/CLI</a>
+  <a href="../statix/cli/CLI.sdf3/#statix/cli/CLI_1_8" id="statix/cli/CLI_14_3" title="Defined at ../statix/cli/CLI.sdf3 line 1">statix/cli/CLI</a>
 
 <span class="keyword">template options</span>
 
@@ -61,13 +61,22 @@ hide:
 
 <span class="keyword">context-free start-symbols</span>
 
-  <a href="#Start_336_341" id="Start_280_285" title="Defined at line 28, 29">Start</a>
+  <a href="#Start_28_3" id="Start_22_3" title="Defined at line 28, 29">Start</a>
 
-  <a href="../statix/lang/Deprecated.sdf3/#LabelRE_3620_3627" id="LabelRE_289_296" title="Defined at ../statix/lang/Deprecated.sdf3 line 87">LabelRE</a> <span class="layout">// for testing</span>
+  <a href="../statix/lang/Deprecated.sdf3/#LabelRE_87_3" id="LabelRE_24_3" title="Defined at ../statix/lang/Deprecated.sdf3 line 87">LabelRE</a> <span class="layout">// for testing</span>
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#Start_280_285" id="Start_336_341" title="Referenced at line 22">Start</a> = <a href="../statix/lang/Core.sdf3/#Module_337_343" id="Module_344_350" title="Defined at ../statix/lang/Core.sdf3 line 18">Module</a>
-  <a href="#Start_280_285" id="Start_353_358" title="Referenced at line 22">Start</a> = <a href="../statix/test/Test.sdf3/#Test_254_258" id="Test_361_365" title="Defined at ../statix/test/Test.sdf3 line 21">Test</a>
+  <a href="#Start_22_3" id="Start_28_3" title="Referenced at line 22">Start</a> = <a href="../statix/lang/Core.sdf3/#Module_18_3" id="Module_28_11" title="Defined at ../statix/lang/Core.sdf3 line 18">Module</a>
+  <a href="#Start_22_3" id="Start_29_3" title="Referenced at line 22">Start</a> = <a href="../statix/test/Test.sdf3/#Test_21_3" id="Test_29_11" title="Defined at ../statix/test/Test.sdf3 line 21">Test</a>
 
 </code></pre></td></tr></tbody></table></div>
+
+<div id="modal">
+  <div id="modal-content">
+    <span id="modal-close">&times;</span>
+    <h2 id="modal-h2"></h2>
+    <p  id="modal-p"></p>
+    <ul id="modal-ul"></ul>
+  </div>
+</div>
