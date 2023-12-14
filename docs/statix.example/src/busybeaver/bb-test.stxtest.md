@@ -27,11 +27,20 @@ hide:
 
 <span class="keyword">resolve</span>
 
-  <a href="../bb-rules.stx/#busybeaver_197_207" id="busybeaver_141_151" title="Defined at ../bb-rules.stx line 12"><span class="token sort_Id">busybeaver</span></a><span class="operator">(</span><span class="cons_Op"><a href="../bb-sig.stx/#A_198_199" id="A_152_153" title="Defined at ../bb-sig.stx line 9"><span class="token sort_Id">A</span></a>()</span><span class="operator">,</span> <span class="operator">([],</span> <span class="cons_Op"><a href="../bb-sig.stx/#Zero_295_299" id="Zero_162_166" title="Defined at ../bb-sig.stx line 15"><span class="token sort_Id">Zero</span></a>()</span><span class="operator">,</span> <span class="operator">[]))</span>
+  <a href="../bb-rules.stx/#busybeaver_12_3" id="busybeaver_6_3" title="Defined at ../bb-rules.stx line 12"><span class="token sort_Id">busybeaver</span></a><span class="operator">(</span><span class="cons_Op"><a href="../bb-sig.stx/#A_9_5" id="A_6_14" title="Defined at ../bb-sig.stx line 9"><span class="token sort_Id">A</span></a>()</span><span class="operator">,</span> <span class="operator">([],</span> <span class="cons_Op"><a href="../bb-sig.stx/#Zero_15_5" id="Zero_6_24" title="Defined at ../bb-sig.stx line 15"><span class="token sort_Id">Zero</span></a>()</span><span class="operator">,</span> <span class="operator">[]))</span>
 
 <span class="keyword">imports</span>
 
-  <a href="../bb-sig.stx/#busybeaver/bb-sig_137_154" id="busybeaver/bb-sig_187_204" title="Defined at ../bb-sig.stx line 4"><span class="token sort_Id">busybeaver/bb-sig</span></a>
-  <a href="../bb-rules.stx/#busybeaver/bb-rules_137_156" id="busybeaver/bb-rules_207_226" title="Defined at ../bb-rules.stx line 4"><span class="token sort_Id">busybeaver/bb-rules</span></a>
+  <a href="../bb-sig.stx/#busybeaver/bb-sig_4_8" id="busybeaver/bb-sig_10_3" title="Defined at ../bb-sig.stx line 4"><span class="token sort_Id">busybeaver/bb-sig</span></a>
+  <a href="../bb-rules.stx/#busybeaver/bb-rules_4_8" id="busybeaver/bb-rules_11_3" title="Defined at ../bb-rules.stx line 4"><span class="token sort_Id">busybeaver/bb-rules</span></a>
 
 </code></pre></td></tr></tbody></table></div>
+
+<div id="modal">
+  <div id="modal-content">
+    <span id="modal-close">&times;</span>
+    <h2 id="modal-h2"></h2>
+    <p  id="modal-p"></p>
+    <ul id="modal-ul"></ul>
+  </div>
+</div>
