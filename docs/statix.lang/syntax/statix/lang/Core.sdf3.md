@@ -459,7 +459,7 @@ hide:
 447
 448
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="statix/lang/Core_1_8" title="Multi-file references" data-urls="../Deprecated.sdf3/#statix/lang/Core_6_3 line 6; ../NoParse.sdf3/#statix/lang/Core_6_3 line 6; ../PreCompiled.sdf3/#statix/lang/Core_6_3 line 6; ../Sugar.sdf3/#statix/lang/Core_6_3 line 6; ../Type.sdf3/#statix/lang/Core_8_3 line 8; ../../../StatixLang.sdf3/#statix/lang/Core_7_3 line 7; ../../cli/CLI.sdf3/#statix/lang/Core_7_3 line 7; ../../test/Result.sdf3/#statix/lang/Core_9_3 line 9; ../../test/Test.sdf3/#statix/lang/Core_7_3 line 7">statix/lang/Core</button>
+<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="statix/lang/Core_1_8" title="Multi-file references" data-urls="../Deprecated.sdf3/#statix/lang/Core_6_3 line 6; ../NoParse.sdf3/#statix/lang/Core_6_3 line 6; ../PreCompiled.sdf3/#statix/lang/Core_6_3 line 6; ../Schema.sdf3/#statix/lang/Core_5_3 line 5; ../Sugar.sdf3/#statix/lang/Core_6_3 line 6; ../Type.sdf3/#statix/lang/Core_8_3 line 8; ../../../StatixLang.sdf3/#statix/lang/Core_7_3 line 7; ../../cli/CLI.sdf3/#statix/lang/Core_7_3 line 7; ../../test/Result.sdf3/#statix/lang/Core_9_3 line 9; ../../test/Test.sdf3/#statix/lang/Core_7_3 line 7">statix/lang/Core</button>
 
 <span class="keyword">imports</span>
 
@@ -529,8 +529,8 @@ hide:
       &lt;<a href="#Constraint_77_3" id="Constraint_68_8" title="Defined at line 77, 95, 96, 98, 100, 105, 107, 108, 110, 112, 134, 135, 171, 234, 252, 384">Constraint</a>&gt;<span class="cons_String">.</span>
   &gt;
 
-  <button class="modal-open" id="RuleName_71_3" title="Multi-file references" data-urls="#RuleName_67_6 line 67; ../Sugar.sdf3/#RuleName_40_6 line 40">RuleName</button>.<span class="cons_Constructor"><span id="NoName_71_12" title="Not referenced">NoName</span></span> = &lt;&gt;
-  <button class="modal-open" id="RuleName_72_3" title="Multi-file references" data-urls="#RuleName_67_6 line 67; ../Sugar.sdf3/#RuleName_40_6 line 40">RuleName</button>.<span class="cons_Constructor"><span id="Name_72_12" title="Not referenced">Name</span></span> = &lt;
+  <button class="modal-open" id="RuleName_71_3" title="Multi-file references" data-urls="#RuleName_67_6 line 67; ../Schema.sdf3/#RuleName_35_95 line 35, 49; ../Sugar.sdf3/#RuleName_40_6 line 40">RuleName</button>.<span class="cons_Constructor"><span id="NoName_71_12" title="Not referenced">NoName</span></span> = &lt;&gt;
+  <button class="modal-open" id="RuleName_72_3" title="Multi-file references" data-urls="#RuleName_67_6 line 67; ../Schema.sdf3/#RuleName_35_95 line 35, 49; ../Sugar.sdf3/#RuleName_40_6 line 40">RuleName</button>.<span class="cons_Constructor"><span id="Name_72_12" title="Not referenced">Name</span></span> = &lt;
     <span class="cons_String">[</span>&lt;<a href="../Common.sdf3/#STRID_13_3" id="STRID_73_7" title="Defined at ../Common.sdf3 line 13">STRID</a>&gt;<span class="cons_String">]</span>
   &gt;
   <a href="#RuleHead_67_16" id="RuleHead_75_3" title="Referenced at line 67">RuleHead</a>.<span class="cons_Constructor"><span id="C_75_12" title="Not referenced">C</span></span> = [[<a href="#ConstraintId_83_3" id="ConstraintId_75_18" title="Defined at line 83, 84">ConstraintId</a>]<span class="cons_String">(</span>[{<a href="#Term_225_3" id="Term_75_34" title="Defined at line 225, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 363">Term</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">)</span>]
@@ -541,8 +541,8 @@ hide:
 
 <span class="keyword">lexical syntax</span>
 
-  <button class="modal-open" id="ConstraintId_83_3" title="Multi-file references" data-urls="#ConstraintId_61_30 line 61, 75, 77; ../Sugar.sdf3/#ConstraintId_24_41 line 24, 25, 29, 30, 43, 47, 53">ConstraintId</button> = <a href="../Common.sdf3/#LCID_9_3" id="LCID_83_18" title="Defined at ../Common.sdf3 line 9">LCID</a>
-  <button class="modal-open" id="ConstraintId_84_3" title="Multi-file references" data-urls="#ConstraintId_61_30 line 61, 75, 77; ../Sugar.sdf3/#ConstraintId_24_41 line 24, 25, 29, 30, 43, 47, 53">ConstraintId</button> = <a href="#Keyword_47_3" id="Keyword_84_18" title="Defined at line 47, 86, 125, 149, 178, 243, 275, 328">Keyword</a> {<span class="keyword">reject</span>}
+  <button class="modal-open" id="ConstraintId_83_3" title="Multi-file references" data-urls="#ConstraintId_61_30 line 61, 75, 77; ../Schema.sdf3/#ConstraintId_80_34 line 80; ../Sugar.sdf3/#ConstraintId_24_41 line 24, 25, 29, 30, 43, 47, 53">ConstraintId</button> = <a href="../Common.sdf3/#LCID_9_3" id="LCID_83_18" title="Defined at ../Common.sdf3 line 9">LCID</a>
+  <button class="modal-open" id="ConstraintId_84_3" title="Multi-file references" data-urls="#ConstraintId_61_30 line 61, 75, 77; ../Schema.sdf3/#ConstraintId_80_34 line 80; ../Sugar.sdf3/#ConstraintId_24_41 line 24, 25, 29, 30, 43, 47, 53">ConstraintId</button> = <a href="#Keyword_47_3" id="Keyword_84_18" title="Defined at line 47, 86, 125, 149, 178, 243, 275, 328">Keyword</a> {<span class="keyword">reject</span>}
 
   <a href="#Keyword_45_14" id="Keyword_86_3" title="Referenced at line 45, 84, 147, 176, 241, 322, 326">Keyword</a> = <span class="cons_Lit">"constraints"</span> | <span class="cons_Lit">"coinductive"</span>
 
@@ -654,7 +654,7 @@ hide:
 
   <a href="#ResolutionParam_189_9" id="ResolutionParam_194_3" title="Referenced at line 189">ResolutionParam</a>.<span class="cons_Constructor"><span id="Labels_194_19" title="Not referenced">Labels</span></span> = &lt;<span class="cons_String">labels</span> &lt;{<a href="#Label_196_3" id="Label_194_38" title="Defined at line 196">Label</a> <span class="cons_Lit">" "</span>}*&gt;&gt;
 
-  <button class="modal-open" id="Label_196_3" title="Multi-file references" data-urls="#Label_163_23 line 163, 165, 194, 198, 208, 234; ../NoParse.sdf3/#Label_25_10 line 25">Label</button>.<span class="cons_Constructor"><span id="Label_196_9" title="Not referenced">Label</span></span> = <a href="#RelationId_175_3" id="RelationId_196_17" title="Defined at line 175, 176, 240, 241">RelationId</a>
+  <button class="modal-open" id="Label_196_3" title="Multi-file references" data-urls="#Label_163_23 line 163, 165, 194, 198, 208, 234; ../NoParse.sdf3/#Label_25_10 line 25; ../Schema.sdf3/#Label_35_52 line 35, 49, 82">Label</button>.<span class="cons_Constructor"><span id="Label_196_9" title="Not referenced">Label</span></span> = <a href="#RelationId_175_3" id="RelationId_196_17" title="Defined at line 175, 176, 240, 241">RelationId</a>
 
   <button class="modal-open" id="EdgeRef_198_3" title="Multi-file references" data-urls="#EdgeRef_202_27 line 202; ../Type.sdf3/#EdgeRef_66_14 line 66">EdgeRef</button>     = <a href="#Label_196_3" id="Label_198_17" title="Defined at line 196">Label</a>
   <button class="modal-open" id="EdgeRef_199_3" title="Multi-file references" data-urls="#EdgeRef_202_27 line 202; ../Type.sdf3/#EdgeRef_66_14 line 66">EdgeRef</button>.<span class="cons_Constructor"><span id="EOP_199_11" title="Not referenced">EOP</span></span> = <span class="cons_Lit">"$"</span>
@@ -779,9 +779,9 @@ hide:
 
 <span class="keyword">lexical syntax</span>
 
-  <a href="#SortId_294_24" id="SortId_321_3" title="Referenced at line 294, 295, 297">SortId</a> = <a href="../Common.sdf3/#STRID_13_3" id="STRID_321_12" title="Defined at ../Common.sdf3 line 13">STRID</a>
-  <a href="#SortId_294_24" id="SortId_322_3" title="Referenced at line 294, 295, 297">SortId</a> = <a href="#Keyword_47_3" id="Keyword_322_12" title="Defined at line 47, 86, 125, 149, 178, 243, 275, 328">Keyword</a> {<span class="keyword">reject</span>}
-  <a href="#SortId_294_24" id="SortId_323_3" title="Referenced at line 294, 295, 297">SortId</a> = <span class="cons_Lit">"list"</span> | <span class="cons_Lit">"int"</span> | <span class="cons_Lit">"string"</span> | <span class="cons_Lit">"occurrence"</span> | <span class="cons_Lit">"scope"</span> | <span class="cons_Lit">"path"</span> | <span class="cons_Lit">"label"</span> | <span class="cons_Lit">"astId"</span> {<span class="keyword">reject</span>}
+  <button class="modal-open" id="SortId_321_3" title="Multi-file references" data-urls="#SortId_294_24 line 294, 295, 297; ../Schema.sdf3/#SortId_81_34 line 81">SortId</button> = <a href="../Common.sdf3/#STRID_13_3" id="STRID_321_12" title="Defined at ../Common.sdf3 line 13">STRID</a>
+  <button class="modal-open" id="SortId_322_3" title="Multi-file references" data-urls="#SortId_294_24 line 294, 295, 297; ../Schema.sdf3/#SortId_81_34 line 81">SortId</button> = <a href="#Keyword_47_3" id="Keyword_322_12" title="Defined at line 47, 86, 125, 149, 178, 243, 275, 328">Keyword</a> {<span class="keyword">reject</span>}
+  <button class="modal-open" id="SortId_323_3" title="Multi-file references" data-urls="#SortId_294_24 line 294, 295, 297; ../Schema.sdf3/#SortId_81_34 line 81">SortId</button> = <span class="cons_Lit">"list"</span> | <span class="cons_Lit">"int"</span> | <span class="cons_Lit">"string"</span> | <span class="cons_Lit">"occurrence"</span> | <span class="cons_Lit">"scope"</span> | <span class="cons_Lit">"path"</span> | <span class="cons_Lit">"label"</span> | <span class="cons_Lit">"astId"</span> {<span class="keyword">reject</span>}
 
   <a href="#OpId_312_22" id="OpId_325_3" title="Referenced at line 312, 363">OpId</a> = <a href="../Common.sdf3/#STRID_13_3" id="STRID_325_10" title="Defined at ../Common.sdf3 line 13">STRID</a>
   <a href="#OpId_312_22" id="OpId_326_3" title="Referenced at line 312, 363">OpId</a> = <a href="#Keyword_47_3" id="Keyword_326_10" title="Defined at line 47, 86, 125, 149, 178, 243, 275, 328">Keyword</a> {<span class="keyword">reject</span>}
@@ -795,8 +795,8 @@ hide:
 
 <span class="keyword">context-free syntax</span>
 
-  <button class="modal-open" id="Var_337_3" title="Multi-file references" data-urls="#Var_105_31 line 105, 113, 142, 342, 349, 396, 430; ../Deprecated.sdf3/#Var_72_23 line 72; ../../test/Result.sdf3/#Var_50_18 line 50">Var</button>.<span class="cons_Constructor"><span id="Var_337_7" title="Not referenced">Var</span></span> = <a href="../Common.sdf3/#VARID_10_3" id="VARID_337_13" title="Defined at ../Common.sdf3 line 10">VARID</a>
-  <button class="modal-open" id="Var_338_3" title="Multi-file references" data-urls="#Var_105_31 line 105, 113, 142, 342, 349, 396, 430; ../Deprecated.sdf3/#Var_72_23 line 72; ../../test/Result.sdf3/#Var_50_18 line 50">Var</button>.<span class="cons_Constructor"><span id="Wld_338_7" title="Not referenced">Wld</span></span> = &lt;<span class="cons_String">_</span>&gt;
+  <button class="modal-open" id="Var_337_3" title="Multi-file references" data-urls="#Var_105_31 line 105, 113, 142, 342, 349, 396, 430; ../Deprecated.sdf3/#Var_72_23 line 72; ../Schema.sdf3/#Var_76_34 line 76, 79; ../../test/Result.sdf3/#Var_50_18 line 50">Var</button>.<span class="cons_Constructor"><span id="Var_337_7" title="Not referenced">Var</span></span> = <a href="../Common.sdf3/#VARID_10_3" id="VARID_337_13" title="Defined at ../Common.sdf3 line 10">VARID</a>
+  <button class="modal-open" id="Var_338_3" title="Multi-file references" data-urls="#Var_105_31 line 105, 113, 142, 342, 349, 396, 430; ../Deprecated.sdf3/#Var_72_23 line 72; ../Schema.sdf3/#Var_76_34 line 76, 79; ../../test/Result.sdf3/#Var_50_18 line 50">Var</button>.<span class="cons_Constructor"><span id="Wld_338_7" title="Not referenced">Wld</span></span> = &lt;<span class="cons_String">_</span>&gt;
 
   <a href="#Int_343_21" id="Int_340_3" title="Referenced at line 343, 395">Int</a>.<span class="cons_Constructor"><span id="Int_340_7" title="Not referenced">Int</span></span> = <a href="../Common.sdf3/#INT_5_3" id="INT_340_13" title="Defined at ../Common.sdf3 line 5">INT</a>
 

@@ -40,7 +40,7 @@ hide:
 28
 29
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="statix/lang/Common_1_8" title="Multi-file references" data-urls="../Core.sdf3/#statix/lang/Common_5_3 line 5; ../Deprecated.sdf3/#statix/lang/Common_5_3 line 5; ../NoParse.sdf3/#statix/lang/Common_5_3 line 5; ../PreCompiled.sdf3/#statix/lang/Common_5_3 line 5; ../Sugar.sdf3/#statix/lang/Common_5_3 line 5; ../Type.sdf3/#statix/lang/Common_7_3 line 7; ../../../StatixLang.sdf3/#statix/lang/Common_6_3 line 6; ../../cli/CLI.sdf3/#statix/lang/Common_6_3 line 6; ../../test/Result.sdf3/#statix/lang/Common_8_3 line 8; ../../test/Test.sdf3/#statix/lang/Common_6_3 line 6">statix/lang/Common</button>
+<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="statix/lang/Common_1_8" title="Multi-file references" data-urls="../Core.sdf3/#statix/lang/Common_5_3 line 5; ../Deprecated.sdf3/#statix/lang/Common_5_3 line 5; ../NoParse.sdf3/#statix/lang/Common_5_3 line 5; ../PreCompiled.sdf3/#statix/lang/Common_5_3 line 5; ../Schema.sdf3/#statix/lang/Common_4_3 line 4; ../Sugar.sdf3/#statix/lang/Common_5_3 line 5; ../Type.sdf3/#statix/lang/Common_7_3 line 7; ../../../StatixLang.sdf3/#statix/lang/Common_6_3 line 6; ../../cli/CLI.sdf3/#statix/lang/Common_6_3 line 6; ../../test/Result.sdf3/#statix/lang/Common_8_3 line 8; ../../test/Test.sdf3/#statix/lang/Common_6_3 line 6">statix/lang/Common</button>
 
 <span class="keyword">lexical syntax</span>
 
