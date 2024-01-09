@@ -10,7 +10,7 @@ imports
 
   generation/docs/gen-docs-meta
 
-rules // generate highlighting CSS for meta-language from its editor/Colorer.esv file
+rules // update styles and scripts
 
   generate-css: (_, _, ast, path, project-path) -> ()
     with
@@ -22,12 +22,14 @@ rules // generate highlighting CSS for meta-language from its editor/Colorer.esv
     ; colorer-file := 
         <!$[[meta-language-project-path]/editor/Colorer-CF.esv]; file-exists 
          <+ !$[[meta-language-project-path]/editor/Colorer.esv]>
-    ; say(!"\nCSS  ...")
+    ; say(!"\nUpdating styles and scripts ...")
     ; <gen-metaborg-css(true)> (meta-language, meta-language-project-path, repo-clone, repo-name)
     ; <gen-modal-css(true)> (meta-language, meta-language-project-path, repo-clone, repo-name)
     ; <gen-modal-js(true)> (meta-language, meta-language-project-path, repo-clone, repo-name)
     ; <gen-metalanguage-css(true)> (meta-language, colorer-file, repo-clone, repo-name)
     ; say(!"... done")
+
+rules // conditionally update styles and scripts
 
   gen-metaborg-css(s): (meta-language, meta-language-project-path, repo-clone, repo-name) -> ()
     with
@@ -70,6 +72,8 @@ rules // generate highlighting CSS for meta-language from its editor/Colorer.esv
       ; <fclose> outs
       ; say(!$[> [repo-name]/docs/stylesheets/[meta-language].css])
       end
+
+rules // generate highlighting CSS for meta-language from its colorer esv file
 
   colorer-to-css(|meta-language) =
       collect-om(?ColorRule(_, _))

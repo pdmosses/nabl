@@ -7,11 +7,10 @@ imports
   libspoofax/analysis/-
   libspoofax/core/-
   libspoofax/resource/-
-  libspoofax/term/origin
     
   statix/lang/analysis
   nabl2/api
-    
+  nabl2/shared/-
 
 rules // Name binding specified in NaBL2
 

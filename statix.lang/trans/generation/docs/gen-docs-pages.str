@@ -20,12 +20,13 @@ imports
   nabl2/api
   EditorService
 
-rules // Actions
+rules // Website
 
   // generate-website: (_, _, _, _, project-path) -> None()
   // - for use as an action in the Spoofax menu
   // - the extension of the selected file determines the source language
-  // - generates a docs page from each source file in the enclosing project
+  // - checks the website configuration, styles, and scripts
+  // - generates a webpage from each source file in the enclosing project
   
   generate-website: (_, _, _, path, project-path) -> None()
     with
@@ -38,21 +39,26 @@ rules // Actions
         <!$[[meta-language-project-path]/editor/Colorer-CF.esv]; file-exists 
          <+ !$[[meta-language-project-path]/editor/Colorer.esv]>
     ; say(!$[
-             Generate website [repo-name]/[<base-filename> project-path]: *.[meta-language] ...])
-    ; say(!"Configuration ...")
+             Generating website [repo-name]/[<base-filename> project-path]: *.[meta-language] ...])
+    ; say(!"Checking configuration ...")
     ; <gen-docs(not(file-exists))> (meta-language, repo-clone, repo-name, project-path)
     ; <gen-mkdocs(not(file-exists))> (repo-clone, repo-name)
     ; <gen-ci(not(file-exists))> (meta-language-project-path, repo-clone, repo-name)
-    ; say(!"CSS ...")
+    ; say(!"Checking styles and scripts ...")
     ; <gen-metaborg-css(not(file-exists))> (meta-language, meta-language-project-path, repo-clone, repo-name)
     ; <gen-modal-css(not(file-exists))> (meta-language, meta-language-project-path, repo-clone, repo-name)
     ; <gen-modal-js(not(file-exists))> (meta-language, meta-language-project-path, repo-clone, repo-name)
     ; <gen-metalanguage-css(not(file-exists))> (meta-language, colorer-file, repo-clone, repo-name)
-    ; say(!"Web pages ...")
+    ; say(!"Generating webpages ...")
     ; file-ast-list := <get-project-analyzed-asts>
     ; cons := <parse-file; collect(?Constructor(_))> colorer-file
     ; <map(gen-docs-page(|meta-language, repo-clone, repo-name, project-path, file-ast-list, cons))> file-ast-list
     ; say(!"... done")
+
+  // test-gen-docs-page: (_, _, _, path, project-path) -> None()
+  // - for use as an action in the Spoofax menu
+  // - the extension of the selected file determines the source language
+  // - tests generating a webpage from the selected source file
 
   test-gen-docs-page: (_, _, _, path, project-path) -> None()
     with
@@ -64,12 +70,14 @@ rules // Actions
     ; colorer-file :=
         <!$[[meta-language-project-path]/editor/Colorer-CF.esv]; file-exists 
          <+ !$[[meta-language-project-path]/editor/Colorer.esv]>
-    ; say(!"Web page ...")
+    ; say(!"Testing webpage generation ...")
     ; file-ast-list := <get-project-analyzed-asts>
     ; cons := <parse-file; collect(?Constructor(_))> colorer-file
     ; <gen-docs-page(|meta-language, repo-clone, repo-name, project-path, file-ast-list, cons)>
         (path, <lookup> ($[[project-path]/[path]], file-ast-list))
     ; say(!"... done")
+
+rules // Webpage
 
   // gen-docs-page(|meta-language, repo-clone, repo-name, project-path, ast-list, cons): (file, ast) -> ()
   // - assumes that the project is at the top level of repo-clone
