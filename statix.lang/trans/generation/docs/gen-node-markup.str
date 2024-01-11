@@ -123,7 +123,7 @@ rules // Nodes
     ; gen-tokens-markup(| ins, outs, <subti> (q, p))
     ; <fputs> ($[<span class="cons_[f]">], outs)
     ; r' := <gen-node-markup-map(|ins, outs, repo-name, cons, ast-list)> (q, nodes)
-    ; gen-copy(| ins, outs, <subti> (r, r'))
+    ; gen-tokens-markup(| ins, outs, <subti> (r, r'))
     ; <fputs> ($[</span>], outs)
 
   // gen-node-markup otherwise generates markup only for the branches of the node
