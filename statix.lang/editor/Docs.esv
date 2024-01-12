@@ -7,7 +7,7 @@ menus
     action: "Generate website"  = generate-website
    
     submenu: "Develop"
-      action: "Update configuration"      = generate-config
-      action: "Update styles and scripts" = generate-css
-      action: "Test webpage generation"   = test-gen-docs-page
+      action: "Update website configuration" = generate-config
+      action: "Update styles and scripts"    = generate-css
+      action: "Test webpage generation"      = test-gen-docs-page
     end
