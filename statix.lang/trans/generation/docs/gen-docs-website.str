@@ -23,7 +23,7 @@ rules // initialise the repo docs directory for the current project
     ; repo-name := <base-filename> repo-clone
     ; repo-path := <dirname> repo-clone
     ; meta-language-project-path := $[[repo-path]/[<meta-project-path> meta-language]]
-    ; say(!"\nConfig  ...")
+    ; say(!"\nUpdating website configuration ...")
     ; <gen-docs(true)> (meta-language, repo-clone, repo-name, project-path)
     ; <gen-mkdocs(true)> (repo-clone, repo-name)
     ; <gen-ci(true)> (meta-language-project-path, repo-clone, repo-name)
