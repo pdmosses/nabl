@@ -1,7 +1,7 @@
-site_name: NaBL
-site_url: https://pdmosses.github.io/nabl
+site_name: nabl
+site_url: https://pdmosses.github.io/nabl/
 repo_name: pdmosses/nabl
-repo_url: https://github.com/pdmosses/nabl
+repo_url: https://github.com/pdmosses/nabl/
 
 theme:
   name: material
@@ -43,11 +43,12 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 extra_css:
   - stylesheets/metaborg.css
   - stylesheets/modal.css
-  - stylesheets/nab.css
   - stylesheets/sdf3.css
   - stylesheets/stx.css
 
