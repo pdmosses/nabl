@@ -1,0 +1,11 @@
+module generation/docs/gen-docs-meta
+
+rules
+
+  // meta-project-path: ext:String -> path:String
+  // - path is REPO/META-LANGUAGE for META-LANGUAGE used in files with extension ext
+
+  meta-project-path: "sdf3"  -> "sdf/org.metaborg.meta.lang.template"
+  meta-project-path: "nab"   -> "nabl/org.metaborg.meta.lang.nabl"
+  meta-project-path: "nabl2" -> "nabl/org.metaborg.meta.nabl2.lang"
+  meta-project-path: "stx"   -> "nabl/statix.lang"

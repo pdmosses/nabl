@@ -3,16 +3,12 @@ module generation/docs/gen-node-markup
 imports
 
   generation/docs/gen-tokens-markup
+  generation/docs/gen-origin-info
   generation/docs/name-binding
   
   libstratego-lib
   
-  libspoofax/analysis/-
-  libspoofax/core/-
-  libspoofax/resource/-
   libspoofax/term/origin
-        
-  generation/signatures/-
   EditorService
 
 rules // Nodes
@@ -34,19 +30,36 @@ rules // Nodes
   gen-node-markup(|ins, outs, repo-name, cons, ast-list):
     (p, node) -> r
     where
-      defs@[def1|_] := <is-string; use-to-defs; sort-by-origin> node
+      defs@[def1|_] := <is-string; use-to-defs; sort-by-origin(|node)> node
     ; (q, r) := <origin-offset> node
-    ; id-attr := $[[node]_[q]_[r]]
+    ; (line, column) := (<origin-line; inc> node, <origin-column; inc> node)
+    ; id-attr := $[[node]_[line]_[column]]
     ; gen-tokens-markup(| ins, outs, <subti> (q, p))
     ; direct-path := <direct-path> (<origin-file> node, <origin-file> def1)
-    ; (s, t) := <origin-offset> def1
-    ; href := $[[direct-path]#[node]_[s]_[t]]
-    ; origin-info := <gen-origin-info> (<origin-file> node, defs)
-    ; title := <string-replace(|"  ", " ")> $[Defined at [origin-info]]
-    ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
-    ; gen-copy(| ins, outs, <subti> (r, q))
-    ; <fputs> ($[</a>], outs)
-  
+    ; if <is-external-path> direct-path
+      then
+        title := "External reference"
+      ; <fputs> ($[<span title="[title]">], outs)
+      ; gen-tokens-markup(| ins, outs, <subti> (r, q))
+      ; <fputs> ($[</span>], outs)
+      else
+        urls := <gen-name-info> (node, defs)
+      ; if <elem> (';', <explode-string> urls)
+        then
+          <fputs> ($[<button class="modal-open" id="[id-attr]" title="Multi-file definition" data-urls="[urls]">], outs)
+        ; gen-tokens-markup(| ins, outs, <subti> (r, q))
+        ; <fputs> ($[</button>], outs)
+        else
+          (line1, column1) := (<origin-line; inc> def1, <origin-column; inc> def1)
+        ; href := $[[<file-url> direct-path]#[node]_[line1]_[column1]]
+        ; origin-info := <gen-file-info> (node, defs)
+        ; title := <string-replace(|"  ", " ")> $[Defined at [origin-info]]
+        ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
+        ; gen-tokens-markup(| ins, outs, <subti> (r, q))
+        ; <fputs> ($[</a>], outs)
+        end
+      end
+
   // gen-node-markup embeds a definition node in an <a> element with a link to the corresponding reference
   // - links to the first reference to the definition
   // - when there are no references, embeds it in a <span> element
@@ -57,26 +70,35 @@ rules // Nodes
   gen-node-markup(|ins, outs, repo-name, cons, ast-list):
     (p, node) -> r
     where 
-      refs := <is-string; def-to-uses(|ast-list); sort-by-origin> node
+      refs := <is-string; def-to-uses(|ast-list); sort-by-origin(|node)> node
     ; (q, r) := <origin-offset> node
-    ; id-attr := $[[node]_[q]_[r]]
+    ; (line, column) := (<origin-line; inc> node, <origin-column; inc> node)
+    ; id-attr := $[[node]_[line]_[column]]
     ; gen-tokens-markup(| ins, outs, <subti> (q, p))
     ; if <eq> (refs, []) 
       then 
-        title := "Not referenced locally, nor via imports"
+        title := "Not referenced"
       ; <fputs> ($[<span id="[id-attr]" title="[title]">], outs)
-      ; gen-copy(| ins, outs, <subti> (r, q))
+      ; gen-tokens-markup(| ins, outs, <subti> (r, q))
       ; <fputs> ($[</span>], outs)
       else
-        [ref1 | _] := refs
-      ; direct-path := <direct-path> (<origin-file> node, <origin-file> ref1)
-      ; (s, t) := <origin-offset> ref1
-      ; href := $[[direct-path]#[node]_[s]_[t]]
-      ; origin-info := <gen-origin-info> (<origin-file> node, refs)
-      ; title := <string-replace(|"  ", " ")> $[Referenced at [origin-info]]
-      ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
-      ; gen-copy(| ins, outs, <subti> (r, q))
-      ; <fputs> ($[</a>], outs)
+        urls := <gen-name-info> (node, refs)
+      ; if <elem> (';', <explode-string> urls)
+        then
+          <fputs> ($[<button class="modal-open" id="[id-attr]" title="Multi-file references" data-urls="[urls]">], outs)
+        ; gen-tokens-markup(| ins, outs, <subti> (r, q))
+        ; <fputs> ($[</button>], outs)
+        else
+          [ref1 | _] := refs
+        ; direct-path := <direct-path> (<origin-file> node, <origin-file> ref1)
+        ; (line1, column1) := (<origin-line; inc> ref1, <origin-column; inc> ref1)
+        ; href := $[[<file-url> direct-path]#[node]_[line1]_[column1]]
+        ; origin-info := <gen-file-info> (node, refs)
+        ; title := <string-replace(|"  ", " ")> $[Referenced at [origin-info]]
+        ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
+        ; gen-tokens-markup(| ins, outs, <subti> (r, q))
+        ; <fputs> ($[</a>], outs)
+        end
       end
   
   // gen-node-markup copies other strings without markup
@@ -101,7 +123,7 @@ rules // Nodes
     ; gen-tokens-markup(| ins, outs, <subti> (q, p))
     ; <fputs> ($[<span class="cons_[f]">], outs)
     ; r' := <gen-node-markup-map(|ins, outs, repo-name, cons, ast-list)> (q, nodes)
-    ; gen-copy(| ins, outs, <subti> (r, r'))
+    ; gen-tokens-markup(| ins, outs, <subti> (r, r'))
     ; <fputs> ($[</span>], outs)
 
   // gen-node-markup otherwise generates markup only for the branches of the node
@@ -120,4 +142,3 @@ rules // Nodes
 
   gen-node-markup-map(|ins, outs, repo-name, cons, ast-list):
     (p, []) -> p
-

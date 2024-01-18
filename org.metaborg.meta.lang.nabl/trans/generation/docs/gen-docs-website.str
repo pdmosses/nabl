@@ -1,8 +1,10 @@
 module generation/docs/gen-docs-website
 
 imports
-    libspoofax/core/-
-    libspoofax/resource/-
+  libspoofax/core/-
+  libspoofax/resource/-
+
+  generation/docs/gen-docs-meta
 
 rules // initialise the repo docs directory for the current project
 
@@ -12,27 +14,124 @@ rules // initialise the repo docs directory for the current project
 //  (If the plugin had an option to suppress the MkDocs transformation,
 //  these files would not be needed.)
 
-//  generate-docs-website: (_, _, _, path, project-path) -> None()
+//  generate-config: (_, _, _, path, project-path) -> None()
 
-  generate-docs-website: (_, _, _, path, project-path) -> None()
+  generate-config: (_, _, _, path, project-path) -> None()
     with
-      meta-language := <get-extension> path
-    ; repo-clone := <project-path; local-path; dirname>
-    ; project-name := <project-path; base-filename>
-    ; file-list := <current-language-source-files; filter(where(has-extension(|meta-language)))>
-    ; dir-list := <map(dirname; string-replace(|<project-path>, $[[<project-path; base-filename>]]))> file-list
-    ; say(!$[[repo-clone]/docs/[project-name]/**])
-    ; <map(gen-docs-dir)> dir-list
+      meta-language := <get-extension; try(?"stxtest"; !"stx")> path
+    ; repo-clone := <local-path; dirname> project-path
+    ; repo-name := <base-filename> repo-clone
+    ; repo-path := <dirname> repo-clone
+    ; meta-language-project-path := $[[repo-path]/[<meta-project-path> meta-language]]
+    ; say(!"\nUpdating website configuration ...")
+    ; <gen-docs(true)> (meta-language, repo-clone, repo-name, project-path)
+    ; <gen-mkdocs(true)> (repo-clone, repo-name)
+    ; <gen-ci(true)> (meta-language-project-path, repo-clone, repo-name)
+    ; say(!"... done")
 
-  gen-docs-dir: dir -> ()
+  gen-docs(s): (meta-language, repo-clone, repo-name, project-path) -> None()
     with
-      repo-clone := <project-path; local-path; dirname>
-    ; project-name := <project-path; base-filename>
-    ; pages-file := $[[repo-clone]/docs/[dir]/.pages]
-    ; pages-contents := $[title: [<base-filename> dir]]
-    ; outs := <fopen> (pages-file, "w")
-    ; <fputs> (pages-contents, outs)
-    ; <fclose> outs
-    ; if <is-substring(!"/")> dir
-      then <dirname; gen-docs-dir> dir
+      file-list := <current-language-source-files; filter(where(has-extension(|meta-language)))>
+    ; project-name := <base-filename> project-path
+    ; dir-list := <map(dirname; string-replace(|project-path, project-name))> file-list
+    ; <map(gen-docs-dir(s|repo-clone))> dir-list
+
+  gen-docs-dir(s|repo-clone): dir -> ()
+    with
+      target-file := $[[repo-clone]/docs/[dir]/.pages]
+    ; if <s> target-file
+      then
+        pages-contents := $[title: [<base-filename> dir]]
+      ; pages-src-gen := "\nhide: true"
+      ; outs := <fopen> (target-file, "w")
+      ; <fputs> (pages-contents, outs)
+      ; if <eq> (<base-filename> dir, "src-gen")
+        then <fputs> (pages-src-gen, outs)
+        end
+      ; <fclose> outs
       end
+    ; if <is-substring(!"/")> dir
+      then <dirname; gen-docs-dir(s|repo-clone)> dir
+      end
+
+  gen-mkdocs(s): (repo-clone, repo-name) -> ()
+    with
+      target-file := $[[repo-clone]/mkdocs.yml]
+    ; if <s> target-file
+      then
+        outs := <fopen> (target-file, "w")
+      ; <fputs> (<mkdocs> repo-name, outs)
+      ; <fclose> outs
+      ; say(!$[> [repo-name]/mkdocs.yml])
+      end
+
+  gen-ci(s): (meta-language-project-path, repo-clone, repo-name) -> ()
+    with
+      ci-path := ".github/workflows/ci.yml"
+    ; target-file := $[[repo-clone]/[ci-path]]
+    ; if <s> target-file
+      then
+        meta-language-ci-file := $[[<dirname> meta-language-project-path]/[ci-path]]
+      ; <copy-file> (meta-language-ci-file, target-file)
+      ; say(!$[> [repo-name]/[ci-path]])
+      end
+
+  mkdocs: repo-name ->
+${site_name: {repo-name}
+site_url: https://pdmosses.github.io/{repo-name}/
+repo_name: pdmosses/{repo-name}
+repo_url: https://github.com/pdmosses/{repo-name}/
+
+theme:
+  name: material
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/lightbulb 
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+
+  features:
+    - content.code.copy
+    # - navigation.expand
+    - navigation.indexes 
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+plugins:
+  - search
+  - awesome-pages:
+      collapse_single_pages: false
+      strict: false
+      order: asc
+      sort_type: natural
+      order_by: title
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - stylesheets/metaborg.css
+  - stylesheets/modal.css
+  - stylesheets/sdf3.css
+  - stylesheets/nab.css
+  - stylesheets/stx.css
+
+extra_javascript:
+  - javascripts/modal.js
+}

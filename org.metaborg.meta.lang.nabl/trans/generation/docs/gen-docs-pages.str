@@ -2,9 +2,13 @@ module generation/docs/gen-docs-pages
 
 imports
 
+  generation/docs/gen-docs-website
+  generation/docs/gen-docs-css
   generation/docs/gen-node-markup
+  generation/docs/gen-origin-info
   generation/docs/gen-tokens-markup
   generation/docs/name-binding
+  generation/docs/gen-docs-meta
   
   libstratego-lib
   
@@ -12,49 +16,73 @@ imports
   libspoofax/core/-
   libspoofax/resource/-
   libspoofax/term/origin
-    
-  generation/signatures/-
+  
   EditorService
 
-rules // Actions
+rules // Website
 
-  // generate-docs-pages: (_, _, _, _, project-path) -> None()
+  // generate-website: (_, _, _, _, project-path) -> None()
   // - for use as an action in the Spoofax menu
   // - the extension of the selected file determines the source language
-  // - generates a docs page from each source file in the enclosing project
+  // - checks the website configuration, styles, and scripts
+  // - generates a webpage from each source file in the enclosing project
   
-  generate-docs-pages: (_, _, _, path, project-path) -> None()
+  generate-website: (_, _, _, path, project-path) -> None()
     with
-      meta-language := <get-extension> path
+      meta-language := <get-extension; try(?"stxtest"; !"stx")> path
+    ; repo-clone := <local-path; dirname> project-path
+    ; repo-name := <base-filename> repo-clone
+    ; repo-path := <dirname> repo-clone
+    ; meta-language-project-path := $[[repo-path]/[<meta-project-path> meta-language]]
+    ; colorer-file :=
+        <!$[[meta-language-project-path]/editor/Colorer-CF.esv]; file-exists 
+         <+ !$[[meta-language-project-path]/editor/Colorer.esv]>
+    ; say(!$[
+             Generating website [repo-name]/[<base-filename> project-path]: *.[meta-language] ...])
+    ; say(!"Checking configuration ...")
+    ; <gen-docs(not(file-exists))> (meta-language, repo-clone, repo-name, project-path)
+    ; <gen-mkdocs(not(file-exists))> (repo-clone, repo-name)
+    ; <gen-ci(not(file-exists))> (meta-language-project-path, repo-clone, repo-name)
+    ; say(!"Checking styles and scripts ...")
+    ; <gen-metaborg-css(not(file-exists))> (meta-language, meta-language-project-path, repo-clone, repo-name)
+    ; <gen-modal-css(not(file-exists))> (meta-language, meta-language-project-path, repo-clone, repo-name)
+    ; <gen-modal-js(not(file-exists))> (meta-language, meta-language-project-path, repo-clone, repo-name)
+    ; <gen-metalanguage-css(not(file-exists))> (meta-language, colorer-file, repo-clone, repo-name)
+    ; say(!"Generating webpages ...")
     ; file-list := <current-language-source-files; filter(where(has-extension(|meta-language)))>
     ; ast-list := <map(analyzed-ast)> file-list
-    ; repo-path := <local-path; dirname; dirname> project-path
-    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
+    ; file-ast-list := <zip> (file-list, ast-list)
     ; cons := <parse-file; collect(?Constructor(_))> colorer-file
-    ; <zip; map(generate-markup(|project-path, ast-list, cons))> (file-list, ast-list)
+    ; <map(gen-docs-page(|meta-language, repo-clone, repo-name, project-path, file-ast-list, cons))> file-ast-list
+    ; say(!"... done")
 
-  // test-generate-docs-pages: (_, _, _, path, project-path) -> None()
+  // test-gen-docs-page: (_, _, _, path, project-path) -> None()
   // - for use as an action in the Spoofax menu
   // - the extension of the selected file determines the source language
-  // - generates an incomplete docs page from the selected source file
+  // - tests generating a webpage from the selected source file
 
-  test-generate-docs-page: (_, _, _, path, project-path) -> None()
+  test-gen-docs-page: (_, _, _, path, project-path) -> None()
     with
-      meta-language := <get-extension> path
-    ; file-list := [$[[project-path]/[path]]]
+      meta-language := <get-extension; try(?"stxtest"; !"stx")> path
+    ; repo-clone := <local-path; dirname> project-path
+    ; repo-name := <base-filename> repo-clone
+    ; repo-path := <dirname> repo-clone
+    ; meta-language-project-path := $[[repo-path]/[<meta-project-path> meta-language]]
+    ; colorer-file :=
+        <!$[[meta-language-project-path]/editor/Colorer-CF.esv]; file-exists 
+         <+ !$[[meta-language-project-path]/editor/Colorer.esv]>
+    ; say(!"Testing webpage generation ...")
+    ; file-list := <current-language-source-files; filter(where(has-extension(|meta-language)))>
     ; ast-list := <map(analyzed-ast)> file-list
-    ; repo-path := <local-path; dirname; dirname> project-path
-    ; colorer-file := $[[repo-path]/[<meta-project-path> meta-language]/editor/Colorer.esv]
+    ; file-ast-list := <zip> (file-list, ast-list)
     ; cons := <parse-file; collect(?Constructor(_))> colorer-file
-    ; <zip; map(generate-markup(|project-path, ast-list, cons))> (file-list, ast-list)
+    ; <gen-docs-page(|meta-language, repo-clone, repo-name, project-path, file-ast-list, cons)>
+        (path, <lookup> ($[[project-path]/[path]], file-ast-list))
+    ; say(!"... done")
 
-  // meta-project-path: ext:String -> path:String
-  // - path is REPO/META-LANGUAGE for META-LANGUAGE used in files with extension ext
+rules // Webpage
 
-  meta-project-path: "sdf3" -> "sdf/org.metaborg.meta.lang.template"
-  meta-project-path: "nab" -> "nabl/org.metaborg.meta.lang.nabl"
-
-  // generate-markup(|project-path, ast-list, cons): (file, ast) -> ()
+  // gen-docs-page(|meta-language, repo-clone, repo-name, project-path, ast-list, cons): (file, ast) -> ()
   // - assumes that the project is at the top level of repo-clone
   // - assumes that the docs directory is a sibling of the project
   // - reads source text from the file
@@ -62,28 +90,35 @@ rules // Actions
   // - embeds the HTML in the source text for a web page
   // - writes the web page source to the docs directory
     
-  generate-markup(|project-path, ast-list, cons): (file, ast) -> ()
+  gen-docs-page(|meta-language, repo-clone, repo-name, project-path, ast-list, cons):
+    (file, ast) -> ()
     with
+    if <eq>(file, ".")
+    then !()
+    else
       path := <string-replace(|$[[project-path]/], "")> file
-    ; meta-language := <get-extension> path
     ; filename := <base-filename> path
     ; project-name := <base-filename> project-path
     ; project-clone := <local-path> project-path
-    ; repo-name := <dirname; base-filename> project-clone
-    ; repo-clone := <dirname> project-clone
     ; github-repo := $[pdmosses/[repo-name]]
+    ; github-link := <
+        if is-substring(!"src-gen/") then !"" else
+        !${:simple-github: [{github-repo}/{project-name}/{path}]}
+        end > path
     ; target := $[[repo-clone]/docs/[project-name]/[path].md]
-    ; say(!target)
+    ; say(!$[> [repo-name]/docs/[project-name]/[path].md])
     ; ins := <fopen> (path, "r")
     ; outs := <fopen> (target, "w")
     ; <fputs> (
         ${---
           title: {filename}
+          hide:
+            - toc
           ---
           
           # `{filename}`
           
-          :simple-github: [{github-repo}/{project-name}/{path}]
+          {github-link}
           
           [{github-repo}/{project-name}/{path}]: https://github.com/{github-repo}/blob/master/{project-name}/{path} "The source file on GitHub"
           
@@ -100,10 +135,21 @@ rules // Actions
     ; gen-tokens-markup(|ins, outs)
     ; <fputs> (
         ${
-          </code></pre></td>{div-end}}, outs)
+          </code></pre></td>{div-end}
+          
+          <div id="modal">
+            <div id="modal-content">
+              <span id="modal-close">&times;</span>
+              <h2 id="modal-h2"></h2>
+              <p  id="modal-p"></p>
+              <ul id="modal-ul"></ul>
+            </div>
+          </div>
+          }, outs)
     ; <fclose> ins
     ; <fclose> outs
     ; !()
+    end
 
 rules // Line numbers
 

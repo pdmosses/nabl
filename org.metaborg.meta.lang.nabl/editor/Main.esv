@@ -2,7 +2,7 @@ module Main
 
 imports 
 
-  MenusDocs
+  Docs
   Menus
   Colorer
   Syntax

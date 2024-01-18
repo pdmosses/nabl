@@ -1,0 +1,13 @@
+module Docs
+
+menus
+
+  menu: "Docs"
+    
+    action: "Generate website"  = generate-website
+   
+    submenu: "Develop"
+      action: "Update website configuration" = generate-config
+      action: "Update styles and scripts"    = generate-css
+      action: "Test webpage generation"      = test-gen-docs-page
+    end
