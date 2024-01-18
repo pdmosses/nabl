@@ -3,12 +3,7 @@ module Colorer
 imports 
 
   libspoofax/color/default
-  
-//module libspoofax/color/default
-//
-imports
-
-  libspoofax/color/colors
+//  libspoofax/color/colors
 
 colorer // Default, token-based highlighting
 
