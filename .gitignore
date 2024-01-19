@@ -71,3 +71,7 @@ buildNumber.properties
 gradle-app.setting
 !gradle-wrapper.jar
 .gradletasknamecache
+
+
+## MkDocs and mike
+/site/
