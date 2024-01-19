@@ -1,0 +1,55 @@
+.nab code .keyword {
+  color: rgb(127 0 85);
+  font-weight: bold;
+}
+.nab code .identifier {
+}
+.nab code .string {
+  color: rgb(0 0 255);
+}
+.nab code .number {
+  color: rgb(0 128 0);
+}
+.nab code .var {
+  color: rgb(139 69 19);
+  font-style: italic;
+}
+.nab code .operator {
+  color: rgb(0 0 128);
+}
+.nab code .layout {
+  color: rgb(63 127 95);
+  font-style: italic;
+}
+.nab code .sort_NamespaceID {
+  color: rgb(0 64 128);
+  font-style: italic;
+}
+.nab code .sort_PropertyID {
+  color: rgb(0 64 128);
+  font-style: italic;
+}
+.nab code .sort_PropertyRef.cons_TypeProp {
+  color: rgb(0 64 128);
+  font-weight: bold; font-style: italic;
+}
+.nab code .cons_NamespaceDef {
+  color: rgb(0 64 128);
+  font-style: italic;
+}
+.nab code .cons_NamespaceRef {
+  color: rgb(0 64 128);
+  font-style: italic;
+}
+.nab code .cons_PropertyRef {
+  color: rgb(0 64 128);
+  font-style: italic;
+}
+.nab code .cons_QualityRef {
+  color: rgb(0 64 128);
+  font-style: italic;
+}
+.nab code .cons_TypeProp {
+  color: rgb(0 64 128);
+  font-weight: bold; font-style: italic;
+}
