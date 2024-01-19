@@ -3,5 +3,10 @@
     "version": "repo",
     "title": "repo",
     "aliases": []
+  },
+  {
+    "version": "org.metaborg.meta.lang.nabl",
+    "title": "org.metaborg.meta.lang.nabl",
+    "aliases": []
   }
 ]
