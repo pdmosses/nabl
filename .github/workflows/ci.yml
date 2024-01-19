@@ -2,8 +2,8 @@ name: ci
 on:
   push:
     branches:
-      - master 
-      - main
+      - repo 
+      - org.metaborg.meta.lang.nabl
 permissions:
   contents: write
 jobs:
@@ -23,5 +23,12 @@ jobs:
             mkdocs-material-
       - run: pip install \
                mkdocs-material \
-               mkdocs-awesome-pages-plugin
-      - run: mkdocs gh-deploy --force
+               mkdocs-awesome-pages-plugin \
+               mike
+      - name: Configure Git user
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git fetch origin gh-pages --depth=1
+      - run: mike deploy --push $GITHUB_REF_NAME
+      
