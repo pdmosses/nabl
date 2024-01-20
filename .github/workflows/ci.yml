@@ -4,6 +4,8 @@ on:
     branches:
       - repo 
       - org.metaborg.meta.lang.nabl
+      - org.metaborg.meta.nabl2.lang
+      - statix.lang
 permissions:
   contents: write
 jobs:
