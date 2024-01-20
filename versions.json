@@ -5,6 +5,11 @@
     "aliases": []
   },
   {
+    "version": "org.metaborg.meta.nabl2.lang",
+    "title": "org.metaborg.meta.nabl2.lang",
+    "aliases": []
+  },
+  {
     "version": "org.metaborg.meta.lang.nabl",
     "title": "org.metaborg.meta.lang.nabl",
     "aliases": []
