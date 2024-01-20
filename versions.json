@@ -1,5 +1,10 @@
 [
   {
+    "version": "statix.lang",
+    "title": "statix.lang",
+    "aliases": []
+  },
+  {
     "version": "repo",
     "title": "repo",
     "aliases": []
