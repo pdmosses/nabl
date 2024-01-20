@@ -2,107 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/src-gen/syntax/permissive-water.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/NameBindingLanguage.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/common/Identifiers.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/common/Layout.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/core/Modules.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/core/Namespaces.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/core/Properties.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/core/Scopes.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/formulas/Formulas.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/formulas/Messages.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/formulas/Propositions.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/lexical/Identifiers.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/lexical/Layout.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/terms/Constants.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/terms/Signatures.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/terms/StringQuotations.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/terms/Terms.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/syntax/terms/Vars.sdf3/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pdmosses.github.io/nabl/org.metaborg.meta.lang.nabl/org.metaborg.meta.lang.nabl/trans/analysis/names.nab/</loc>
-         <lastmod>2024-01-19</lastmod>
+         <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
