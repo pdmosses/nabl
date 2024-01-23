@@ -1,5 +1,5 @@
 arrange:
     - index.md
     - statix.lang
-    - org.metaborg.meta.nabl2.lang
+    - nabl2.lang
     - org.metaborg.meta.lang.nabl
