@@ -95,7 +95,7 @@ rules // Webpage
     else
       path := <string-replace(|$[[project-path]/], "")> file
     ; filename := <base-filename> path
-    ; project-name := <base-filename> project-path
+    ; project-name := <project-dirname> project-path
     ; project-clone := <local-path> project-path
     ; github-repo := $[pdmosses/[repo-name]]
     ; github-link := <

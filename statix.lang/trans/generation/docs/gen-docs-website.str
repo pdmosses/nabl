@@ -32,7 +32,7 @@ rules // initialise the repo docs directory for the current project
   gen-docs(s): (meta-language, repo-clone, repo-name, project-path) -> None()
     with
       file-list := <current-language-source-files; filter(where(has-extension(|meta-language)))>
-    ; project-name := <base-filename> project-path
+    ; project-name := <project-dirname> project-path
     ; dir-list := <map(dirname; string-replace(|project-path, project-name))> file-list
     ; <map(gen-docs-dir(s|repo-clone))> dir-list
 
