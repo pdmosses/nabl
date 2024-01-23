@@ -18,5 +18,10 @@
     "version": "org.metaborg.meta.lang.nabl",
     "title": "org.metaborg.meta.lang.nabl",
     "aliases": []
+  },
+  {
+    "version": "nabl2.lang",
+    "title": "nabl2.lang",
+    "aliases": []
   }
 ]
