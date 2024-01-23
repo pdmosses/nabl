@@ -4,8 +4,8 @@ title: Languages
 
 # Languages in this repository
 
-The repository `metaborg/nabl` includes Spoofax language projects specifying
-the following Spoofax meta-languages:
+The repository [`metaborg/nabl`](https://github.com/metaborg/nabl/) includes several Spoofax language projects.
+A separate hyperlinked twin website has been generated for each language project:[^1]
 
 **[Statix]**
 : supersedes the deprecated NaBL and NaBL2 meta-languages
@@ -14,10 +14,9 @@ the following Spoofax meta-languages:
 : used for specifying the name binding of Statix
 
 **[NaBL]**
-:  used for specifying the name binding of SDF3 (and of NaBL itself)
+: used for specifying the name binding of SDF3 (and of NaBL itself)
 
-There is a separate hyperlinked twin website for each language project
-(to ensure that searching returns results only in the currently-selected project),
+[^1]: The separation of the websites ensures that searching returns results only in the currently browsed language project.
 
 [Statix]: ../../statix.lang/
 [NaBL2]:  ../../nabl2.lang/
