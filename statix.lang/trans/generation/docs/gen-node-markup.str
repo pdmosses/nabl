@@ -23,81 +23,83 @@ rules // Nodes
   // - assumes that cons is a list of the constructors for highlighting 
   // - the result r is the position of the end of the ast text
 
-  // gen-node-markup embeds a reference node in an <a> element with a link to the corresponding definition
+  // gen-node-markup generates a HTML element from a reference node
   // - assumes that the name of a reference is a string
-  // - links to the first definition of the reference
-   
+  // - when external definition, generates a span
+  // - when some definitions in a single file, generates an anchor linking to the first
+  // - when multi-file definitions, generates a button for a modal with a link to each definition
+  // - always includes an id attribute
+  // - guarantees that the id is unique on each web page by adding the origin line and column to the name
+
   gen-node-markup(|ins, outs, repo-name, cons, ast-list):
     (p, node) -> r
     where
-      defs@[def1|_] := <is-string; use-to-defs; sort-by-origin(|node)> node
-    ; (q, r) := <origin-offset> node
+      defs := <is-string; use-to-defs; sort-by-origin(|node)> node
     ; (line, column) := (<origin-line; inc> node, <origin-column; inc> node)
     ; id-attr := $[[node]_[line]_[column]]
+    ; (q, r) := <origin-offset> node
     ; gen-tokens-markup(| ins, outs, <subti> (q, p))
-    ; direct-path := <direct-path> (<origin-file> node, <origin-file> def1)
-    ; if <is-external-path> direct-path
+    ; if <map(origin-file; is-substring(!"/file:/"))> defs
       then
-        title := "External reference"
-      ; <fputs> ($[<span title="[title]">], outs)
+        title := $[a reference to an external definition]
+      ; <fputs> ($[<span id="[id-attr]" title="[title]">], outs)
       ; gen-tokens-markup(| ins, outs, <subti> (r, q))
       ; <fputs> ($[</span>], outs)
       else
-        urls := <gen-name-info> (node, defs)
-      ; if <elem> (';', <explode-string> urls)
+        modal-data := <gen-modal-data> (node, defs)
+      ; if [(url, [(line1, column1)|_])] := modal-data
         then
-          <fputs> ($[<button class="modal-open" id="[id-attr]" title="Multi-file definition" data-urls="[urls]">], outs)
-        ; gen-tokens-markup(| ins, outs, <subti> (r, q))
-        ; <fputs> ($[</button>], outs)
-        else
-          (line1, column1) := (<origin-line; inc> def1, <origin-column; inc> def1)
-        ; href := $[[<file-url> direct-path]#[node]_[line1]_[column1]]
-        ; origin-info := <gen-file-info> (node, defs)
-        ; title := <string-replace(|"  ", " ")> $[Defined at [origin-info]]
+          title := $[a reference to a single-file definition]
+        ; href := $[[url]#[node]_[line1]_[column1]]
         ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
         ; gen-tokens-markup(| ins, outs, <subti> (r, q))
         ; <fputs> ($[</a>], outs)
+        else
+          title := $[a reference to a multi-file definition]
+        ; data-urls := <map(url-modal-data(|node)); separate-by(|"; "); concat-strings> modal-data
+        ; <fputs> ($[<button class="modal-open" id="[id-attr]" title="[title]" data-urls="[data-urls]">], outs)
+        ; gen-tokens-markup(| ins, outs, <subti> (r, q))
+        ; <fputs> ($[</button>], outs)
         end
       end
 
-  // gen-node-markup embeds a definition node in an <a> element with a link to the corresponding reference
-  // - links to the first reference to the definition
-  // - when there are no references, embeds it in a <span> element
+  // gen-node-markup generates a HTML element from a definition node
   // - assumes that the name of a definition is a string
+  // - when no references, generates a span
+  // - when one reference in a single file, generates an anchor linking to it
+  // - when multi-file references, generates a button for a modal with a link to each reference
   // - always includes an id attribute
-  // - guarantees that the id is unique on each web page by adding the origin-offset to the name
+  // - guarantees that the id is unique on each web page by adding the origin line and column to the name
 
   gen-node-markup(|ins, outs, repo-name, cons, ast-list):
     (p, node) -> r
     where 
       refs := <is-string; def-to-uses; sort-by-origin(|node)> node
-    ; (q, r) := <origin-offset> node
     ; (line, column) := (<origin-line; inc> node, <origin-column; inc> node)
     ; id-attr := $[[node]_[line]_[column]]
+    ; (q, r) := <origin-offset> node
     ; gen-tokens-markup(| ins, outs, <subti> (q, p))
     ; if <eq> (refs, []) 
       then 
-        title := "Not referenced"
+        title := $[a definition with no references]
       ; <fputs> ($[<span id="[id-attr]" title="[title]">], outs)
       ; gen-tokens-markup(| ins, outs, <subti> (r, q))
       ; <fputs> ($[</span>], outs)
       else
-        urls := <gen-name-info> (node, refs)
-      ; if <elem> (';', <explode-string> urls)
+        modal-data := <gen-modal-data> (node, refs)
+      ; if [(url, [(line1, column1)])] := modal-data
         then
-          <fputs> ($[<button class="modal-open" id="[id-attr]" title="Multi-file references" data-urls="[urls]">], outs)
-        ; gen-tokens-markup(| ins, outs, <subti> (r, q))
-        ; <fputs> ($[</button>], outs)
-        else
-          [ref1 | _] := refs
-        ; direct-path := <direct-path> (<origin-file> node, <origin-file> ref1)
-        ; (line1, column1) := (<origin-line; inc> ref1, <origin-column; inc> ref1)
-        ; href := $[[<file-url> direct-path]#[node]_[line1]_[column1]]
-        ; origin-info := <gen-file-info> (node, refs)
-        ; title := <string-replace(|"  ", " ")> $[Referenced at [origin-info]]
+          title := $[a definition with a single reference]
+        ; href := $[[url]#[node]_[line1]_[column1]]
         ; <fputs> ($[<a href="[href]" id="[id-attr]" title="[title]">], outs)
         ; gen-tokens-markup(| ins, outs, <subti> (r, q))
         ; <fputs> ($[</a>], outs)
+        else
+          title := $[a definition with multiple references]
+        ; data-urls := <map(url-modal-data(|node)); separate-by(|"; "); concat-strings> modal-data
+        ; <fputs> ($[<button class="modal-open" id="[id-attr]" title="[title]" data-urls="[data-urls]">], outs)
+        ; gen-tokens-markup(| ins, outs, <subti> (r, q))
+        ; <fputs> ($[</button>], outs)
         end
       end
   
