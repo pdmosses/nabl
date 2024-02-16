@@ -35,15 +35,15 @@ hide:
 23
 24
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../../Main.sdf3/#nabl2/lang/signatures/Signature_8_3" id="nabl2/lang/signatures/Signature_1_8" title="Referenced at ../../Main.sdf3 line 8">nabl2/lang/signatures/Signature</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../../Main.sdf3/#nabl2/lang/signatures/Signature_8_3" id="nabl2/lang/signatures/Signature_1_8" title="a definition with a single reference">nabl2/lang/signatures/Signature</a>
 
 <span class="keyword">imports</span>
 
-  <a href="../CGen.sdf3/#nabl2/lang/signatures/CGen_1_8" id="nabl2/lang/signatures/CGen_5_3" title="Defined at ../CGen.sdf3 line 1">nabl2/lang/signatures/CGen</a>
-  <a href="../Constructors.sdf3/#nabl2/lang/signatures/Constructors_1_8" id="nabl2/lang/signatures/Constructors_6_3" title="Defined at ../Constructors.sdf3 line 1">nabl2/lang/signatures/Constructors</a>
-  <a href="../Functions.sdf3/#nabl2/lang/signatures/Functions_1_8" id="nabl2/lang/signatures/Functions_7_3" title="Defined at ../Functions.sdf3 line 1">nabl2/lang/signatures/Functions</a>
-  <a href="../NameResolution.sdf3/#nabl2/lang/signatures/NameResolution_1_8" id="nabl2/lang/signatures/NameResolution_8_3" title="Defined at ../NameResolution.sdf3 line 1">nabl2/lang/signatures/NameResolution</a>
-  <a href="../Relations.sdf3/#nabl2/lang/signatures/Relations_1_8" id="nabl2/lang/signatures/Relations_9_3" title="Defined at ../Relations.sdf3 line 1">nabl2/lang/signatures/Relations</a>
+  <a href="../CGen.sdf3/#nabl2/lang/signatures/CGen_1_8" id="nabl2/lang/signatures/CGen_5_3" title="a reference to a single-file definition">nabl2/lang/signatures/CGen</a>
+  <a href="../Constructors.sdf3/#nabl2/lang/signatures/Constructors_1_8" id="nabl2/lang/signatures/Constructors_6_3" title="a reference to a single-file definition">nabl2/lang/signatures/Constructors</a>
+  <a href="../Functions.sdf3/#nabl2/lang/signatures/Functions_1_8" id="nabl2/lang/signatures/Functions_7_3" title="a reference to a single-file definition">nabl2/lang/signatures/Functions</a>
+  <a href="../NameResolution.sdf3/#nabl2/lang/signatures/NameResolution_1_8" id="nabl2/lang/signatures/NameResolution_8_3" title="a reference to a single-file definition">nabl2/lang/signatures/NameResolution</a>
+  <a href="../Relations.sdf3/#nabl2/lang/signatures/Relations_1_8" id="nabl2/lang/signatures/Relations_9_3" title="a reference to a single-file definition">nabl2/lang/signatures/Relations</a>
 
 <span class="keyword">template options</span>
 
@@ -51,14 +51,14 @@ hide:
 
 <span class="keyword">context-free syntax</span>
 
-  <span id="NaBL2-ModuleSection_17_3" title="Not referenced">NaBL2-ModuleSection</span>.<span class="cons_Constructor"><span id="Signature_17_23" title="Not referenced">Signature</span></span> = &lt;
+  <span id="NaBL2-ModuleSection_17_3" title="a definition with no references">NaBL2-ModuleSection</span>.<span class="cons_Constructor"><span id="Signature_17_23" title="a definition with no references">Signature</span></span> = &lt;
     <span class="cons_String">signature</span>
-      &lt;{<a href="../NameResolution.sdf3/#NaBL2-Signature_16_3" id="NaBL2-Signature_19_9" title="Defined at ../NameResolution.sdf3 line 16, 31">NaBL2-Signature</a> <span class="cons_Lit">"\n\n"</span>}*&gt;
+      &lt;{<a href="../NameResolution.sdf3/#NaBL2-Signature_16_3" id="NaBL2-Signature_19_9" title="a reference to a single-file definition">NaBL2-Signature</a> <span class="cons_Lit">"\n\n"</span>}*&gt;
   &gt;
 
 <span class="keyword">lexical syntax</span>
 
-  <span id="NaBL2-SectionKeyword_24_3" title="Not referenced">NaBL2-SectionKeyword</span> = <span class="cons_Lit">"signature"</span>
+  <span id="NaBL2-SectionKeyword_24_3" title="a definition with no references">NaBL2-SectionKeyword</span> = <span class="cons_Lit">"signature"</span>
 
 
 </code></pre></td></tr></tbody></table></div>

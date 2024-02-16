@@ -36,31 +36,31 @@ hide:
 24
 25
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="terms/Constants_1_8" title="Multi-file references" data-urls="../Signatures.sdf3/#terms/Constants_6_2 line 6; ../Terms.sdf3/#terms/Constants_5_3 line 5">terms/Constants</button>
+<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="terms/Constants_1_8" title="a definition with multiple references" data-urls="../Signatures.sdf3/#terms/Constants line 6_2; ../Terms.sdf3/#terms/Constants line 5_3">terms/Constants</button>
 
 <span class="keyword">sorts</span> 
 
-  <a href="../Terms.sdf3/#Int_16_19" id="Int_5_3" title="Referenced at ../Terms.sdf3 line 16, 34">Int</a> <a href="../Terms.sdf3/#Real_17_20" id="Real_5_7" title="Referenced at ../Terms.sdf3 line 17, 35">Real</a> <button class="modal-open" id="String_5_12" title="Multi-file references" data-urls="../Signatures.sdf3/#String_23_24 line 23, 24; ../Terms.sdf3/#String_18_19 line 18, 20, 36, 38">String</button> <a href="#StrChar_11_18" id="StrChar_5_19" title="Referenced at line 11">StrChar</a>
+  <button class="modal-open" id="Int_5_3" title="a definition with multiple references" data-urls="../Terms.sdf3/#Int line 16_19, 34_16">Int</button> <button class="modal-open" id="Real_5_7" title="a definition with multiple references" data-urls="../Terms.sdf3/#Real line 17_20, 35_17">Real</button> <button class="modal-open" id="String_5_12" title="a definition with multiple references" data-urls="../Signatures.sdf3/#String line 23_24, 24_24; ../Terms.sdf3/#String line 18_19, 20_19, 36_16, 38_16">String</button> <a href="#StrChar_11_18" id="StrChar_5_19" title="a definition with a single reference">StrChar</a>
 
 <span class="keyword">lexical syntax</span>
 
-  <a href="../Terms.sdf3/#Int_16_19" id="Int_9_3" title="Referenced at ../Terms.sdf3 line 16, 34">Int</a>     = [\-]? [<span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>]+
-  <a href="../Terms.sdf3/#Real_17_20" id="Real_10_3" title="Referenced at ../Terms.sdf3 line 17, 35">Real</a>    = [\-]? [<span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>]+ [\.] [<span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>]+
-  <button class="modal-open" id="String_11_3" title="Multi-file references" data-urls="../Signatures.sdf3/#String_23_24 line 23, 24; ../Terms.sdf3/#String_18_19 line 18, 20, 36, 38">String</button>  = <span class="cons_Lit">"\""</span> <a href="#StrChar_5_19" id="StrChar_11_18" title="Defined at line 5, 12, 13">StrChar</a>* <span class="cons_Lit">"\""</span>
-  <a href="#StrChar_11_18" id="StrChar_12_3" title="Referenced at line 11">StrChar</a> = ~[\"\\]
-  <a href="#StrChar_11_18" id="StrChar_13_3" title="Referenced at line 11">StrChar</a> = [\\] [\"<span class="cons_Regular">t</span><span class="cons_Regular">n</span><span class="cons_Regular">r</span>\\]
+  <button class="modal-open" id="Int_9_3" title="a definition with multiple references" data-urls="../Terms.sdf3/#Int line 16_19, 34_16">Int</button>     = [\-]? [<span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>]+
+  <button class="modal-open" id="Real_10_3" title="a definition with multiple references" data-urls="../Terms.sdf3/#Real line 17_20, 35_17">Real</button>    = [\-]? [<span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>]+ [\.] [<span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>]+
+  <button class="modal-open" id="String_11_3" title="a definition with multiple references" data-urls="../Signatures.sdf3/#String line 23_24, 24_24; ../Terms.sdf3/#String line 18_19, 20_19, 36_16, 38_16">String</button>  = <span class="cons_Lit">"\""</span> <a href="#StrChar_5_19" id="StrChar_11_18" title="a reference to a single-file definition">StrChar</a>* <span class="cons_Lit">"\""</span>
+  <a href="#StrChar_11_18" id="StrChar_12_3" title="a definition with a single reference">StrChar</a> = ~[\"\\]
+  <a href="#StrChar_11_18" id="StrChar_13_3" title="a definition with a single reference">StrChar</a> = [\\] [\"<span class="cons_Regular">t</span><span class="cons_Regular">n</span><span class="cons_Regular">r</span>\\]
 
-<span class="keyword">sorts</span> <button class="modal-open" id="Char_15_7" title="Multi-file references" data-urls="#Char_25_8 line 25; ../Terms.sdf3/#Char_21_20 line 21, 39">Char</button> <a href="#CharChar_19_18" id="CharChar_15_12" title="Referenced at line 19">CharChar</a>
+<span class="keyword">sorts</span> <button class="modal-open" id="Char_15_7" title="a definition with multiple references" data-urls="#Char line 25_8; ../Terms.sdf3/#Char line 21_20, 39_17">Char</button> <a href="#CharChar_19_18" id="CharChar_15_12" title="a definition with a single reference">CharChar</a>
 
 <span class="keyword">lexical syntax</span>
   
-  <button class="modal-open" id="Char_19_3" title="Multi-file references" data-urls="#Char_25_8 line 25; ../Terms.sdf3/#Char_21_20 line 21, 39">Char</button>     = <span class="cons_Lit">"'"</span> <a href="#CharChar_15_12" id="CharChar_19_18" title="Defined at line 15, 20, 21">CharChar</a> <span class="cons_Lit">"'"</span>
-  <a href="#CharChar_19_18" id="CharChar_20_3" title="Referenced at line 19">CharChar</a> = ~[\']
-  <a href="#CharChar_19_18" id="CharChar_21_3" title="Referenced at line 19">CharChar</a> = [\\] [\'<span class="cons_Regular">n</span><span class="cons_Regular">t</span><span class="cons_Regular">r</span>\ ]
+  <button class="modal-open" id="Char_19_3" title="a definition with multiple references" data-urls="#Char line 25_8; ../Terms.sdf3/#Char line 21_20, 39_17">Char</button>     = <span class="cons_Lit">"'"</span> <a href="#CharChar_15_12" id="CharChar_19_18" title="a reference to a single-file definition">CharChar</a> <span class="cons_Lit">"'"</span>
+  <a href="#CharChar_19_18" id="CharChar_20_3" title="a definition with a single reference">CharChar</a> = ~[\']
+  <a href="#CharChar_19_18" id="CharChar_21_3" title="a definition with a single reference">CharChar</a> = [\\] [\'<span class="cons_Regular">n</span><span class="cons_Regular">t</span><span class="cons_Regular">r</span>\ ]
   
 <span class="keyword">lexical syntax</span>
 
-  <span id="Id_25_3" title="Not referenced">Id</span> = <a href="#Char_15_7" id="Char_25_8" title="Defined at line 15, 19">Char</a> {<span class="keyword">reject</span>}
+  <span id="Id_25_3" title="a definition with no references">Id</span> = <a href="#Char_15_7" id="Char_25_8" title="a reference to a single-file definition">Char</a> {<span class="keyword">reject</span>}
 
 </code></pre></td></tr></tbody></table></div>
 

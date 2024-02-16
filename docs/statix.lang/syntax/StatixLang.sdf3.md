@@ -40,20 +40,20 @@ hide:
 28
 29
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <span id="StatixLang_1_8" title="Not referenced">StatixLang</span>
+<td class="code"><pre><code><span class="keyword">module</span> <span id="StatixLang_1_8" title="a definition with no references">StatixLang</span>
 
 <span class="keyword">imports</span>
 
-  <a href="../statix/lang/Layout.sdf3/#statix/lang/Layout_1_8" id="statix/lang/Layout_5_3" title="Defined at ../statix/lang/Layout.sdf3 line 1">statix/lang/Layout</a>
-  <a href="../statix/lang/Common.sdf3/#statix/lang/Common_1_8" id="statix/lang/Common_6_3" title="Defined at ../statix/lang/Common.sdf3 line 1">statix/lang/Common</a>
-  <a href="../statix/lang/Core.sdf3/#statix/lang/Core_1_8" id="statix/lang/Core_7_3" title="Defined at ../statix/lang/Core.sdf3 line 1">statix/lang/Core</a>
-  <a href="../statix/lang/Sugar.sdf3/#statix/lang/Sugar_1_8" id="statix/lang/Sugar_8_3" title="Defined at ../statix/lang/Sugar.sdf3 line 1">statix/lang/Sugar</a>
-  <a href="../statix/lang/PreCompiled.sdf3/#statix/lang/PreCompiled_1_8" id="statix/lang/PreCompiled_9_3" title="Defined at ../statix/lang/PreCompiled.sdf3 line 1">statix/lang/PreCompiled</a>
-  <a href="../statix/lang/Deprecated.sdf3/#statix/lang/Deprecated_1_8" id="statix/lang/Deprecated_10_3" title="Defined at ../statix/lang/Deprecated.sdf3 line 1">statix/lang/Deprecated</a>
+  <a href="../statix/lang/Layout.sdf3/#statix/lang/Layout_1_8" id="statix/lang/Layout_5_3" title="a reference to a single-file definition">statix/lang/Layout</a>
+  <a href="../statix/lang/Common.sdf3/#statix/lang/Common_1_8" id="statix/lang/Common_6_3" title="a reference to a single-file definition">statix/lang/Common</a>
+  <a href="../statix/lang/Core.sdf3/#statix/lang/Core_1_8" id="statix/lang/Core_7_3" title="a reference to a single-file definition">statix/lang/Core</a>
+  <a href="../statix/lang/Sugar.sdf3/#statix/lang/Sugar_1_8" id="statix/lang/Sugar_8_3" title="a reference to a single-file definition">statix/lang/Sugar</a>
+  <a href="../statix/lang/PreCompiled.sdf3/#statix/lang/PreCompiled_1_8" id="statix/lang/PreCompiled_9_3" title="a reference to a single-file definition">statix/lang/PreCompiled</a>
+  <a href="../statix/lang/Deprecated.sdf3/#statix/lang/Deprecated_1_8" id="statix/lang/Deprecated_10_3" title="a reference to a single-file definition">statix/lang/Deprecated</a>
 
-  <a href="../statix/test/Test.sdf3/#statix/test/Test_1_8" id="statix/test/Test_12_3" title="Defined at ../statix/test/Test.sdf3 line 1">statix/test/Test</a>
+  <a href="../statix/test/Test.sdf3/#statix/test/Test_1_8" id="statix/test/Test_12_3" title="a reference to a single-file definition">statix/test/Test</a>
 
-  <a href="../statix/cli/CLI.sdf3/#statix/cli/CLI_1_8" id="statix/cli/CLI_14_3" title="Defined at ../statix/cli/CLI.sdf3 line 1">statix/cli/CLI</a>
+  <a href="../statix/cli/CLI.sdf3/#statix/cli/CLI_1_8" id="statix/cli/CLI_14_3" title="a reference to a single-file definition">statix/cli/CLI</a>
 
 <span class="keyword">template options</span>
 
@@ -61,14 +61,14 @@ hide:
 
 <span class="keyword">context-free start-symbols</span>
 
-  <a href="#Start_28_3" id="Start_22_3" title="Defined at line 28, 29">Start</a>
+  <a href="#Start_28_3" id="Start_22_3" title="a reference to a single-file definition">Start</a>
 
-  <a href="../statix/lang/Deprecated.sdf3/#LabelRE_87_3" id="LabelRE_24_3" title="Defined at ../statix/lang/Deprecated.sdf3 line 87">LabelRE</a> <span class="layout">// for testing</span>
+  <a href="../statix/lang/Deprecated.sdf3/#LabelRE_87_3" id="LabelRE_24_3" title="a reference to a single-file definition">LabelRE</a> <span class="layout">// for testing</span>
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#Start_22_3" id="Start_28_3" title="Referenced at line 22">Start</a> = <a href="../statix/lang/Core.sdf3/#Module_18_3" id="Module_28_11" title="Defined at ../statix/lang/Core.sdf3 line 18">Module</a>
-  <a href="#Start_22_3" id="Start_29_3" title="Referenced at line 22">Start</a> = <a href="../statix/test/Test.sdf3/#Test_21_3" id="Test_29_11" title="Defined at ../statix/test/Test.sdf3 line 21">Test</a>
+  <a href="#Start_22_3" id="Start_28_3" title="a definition with a single reference">Start</a> = <a href="../statix/lang/Core.sdf3/#Module_18_3" id="Module_28_11" title="a reference to a single-file definition">Module</a>
+  <a href="#Start_22_3" id="Start_29_3" title="a definition with a single reference">Start</a> = <a href="../statix/test/Test.sdf3/#Test_21_3" id="Test_29_11" title="a reference to a single-file definition">Test</a>
 
 </code></pre></td></tr></tbody></table></div>
 
