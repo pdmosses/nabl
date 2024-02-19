@@ -38,27 +38,27 @@ hide:
 26
 27
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <span id="lexical/Layout_1_8" title="Not referenced">lexical/Layout</span>
+<td class="code"><pre><code><span class="keyword">module</span> <span id="lexical/Layout_1_8" title="a definition with no references">lexical/Layout</span>
 
-<span class="keyword">sorts</span> <a href="#LongCom_12_14" id="LongCom_3_7" title="Referenced at line 12">LongCom</a> <a href="#CommChar_13_19" id="CommChar_3_15" title="Referenced at line 13">CommChar</a> <a href="#Asterisk_15_14" id="Asterisk_3_24" title="Referenced at line 15, 20">Asterisk</a> <a href="#Eof_9_33" id="Eof_3_33" title="Referenced at line 9, 21">Eof</a> 
+<span class="keyword">sorts</span> <a href="#LongCom_12_14" id="LongCom_3_7" title="a definition with a single reference">LongCom</a> <a href="#CommChar_13_19" id="CommChar_3_15" title="a definition with a single reference">CommChar</a> <button class="modal-open" id="Asterisk_3_24" title="a definition with multiple references" data-urls="#Asterisk line 15_14, 20_3">Asterisk</button> <button class="modal-open" id="Eof_3_33" title="a definition with multiple references" data-urls="#Eof line 9_33, 21_3">Eof</button> 
 
 <span class="keyword">lexical syntax</span>
 
   <span class="keyword">LAYOUT</span>   = [\t\ \n\r] 
 
-  <span class="keyword">LAYOUT</span>   =<span class="cons_Lit">"//"</span> ~[\n]* ([\n] | <a href="#Eof_3_33" id="Eof_9_33" title="Defined at line 3, 10">Eof</a>)
-  <a href="#Eof_9_33" id="Eof_10_3" title="Referenced at line 9, 21">Eof</a>      = 
+  <span class="keyword">LAYOUT</span>   =<span class="cons_Lit">"//"</span> ~[\n]* ([\n] | <a href="#Eof_3_33" id="Eof_9_33" title="a reference to a single-file definition">Eof</a>)
+  <button class="modal-open" id="Eof_10_3" title="a definition with multiple references" data-urls="#Eof line 9_33, 21_3">Eof</button>      = 
  
-  <span class="keyword">LAYOUT</span>   = <a href="#LongCom_3_7" id="LongCom_12_14" title="Defined at line 3, 13">LongCom</a>
-  <a href="#LongCom_12_14" id="LongCom_13_3" title="Referenced at line 12">LongCom</a>  = <span class="cons_Lit">"/*"</span> <a href="#CommChar_3_15" id="CommChar_13_19" title="Defined at line 3, 14, 15">CommChar</a>* <span class="cons_Lit">"*/"</span>
-  <a href="#CommChar_13_19" id="CommChar_14_3" title="Referenced at line 13">CommChar</a> = ~[\*]
-  <a href="#CommChar_13_19" id="CommChar_15_3" title="Referenced at line 13">CommChar</a> = <a href="#Asterisk_3_24" id="Asterisk_15_14" title="Defined at line 3, 16">Asterisk</a>
-  <a href="#Asterisk_15_14" id="Asterisk_16_3" title="Referenced at line 15, 20">Asterisk</a> = <span class="cons_Lit">"*"</span>
+  <span class="keyword">LAYOUT</span>   = <a href="#LongCom_3_7" id="LongCom_12_14" title="a reference to a single-file definition">LongCom</a>
+  <a href="#LongCom_12_14" id="LongCom_13_3" title="a definition with a single reference">LongCom</a>  = <span class="cons_Lit">"/*"</span> <a href="#CommChar_3_15" id="CommChar_13_19" title="a reference to a single-file definition">CommChar</a>* <span class="cons_Lit">"*/"</span>
+  <a href="#CommChar_13_19" id="CommChar_14_3" title="a definition with a single reference">CommChar</a> = ~[\*]
+  <a href="#CommChar_13_19" id="CommChar_15_3" title="a definition with a single reference">CommChar</a> = <a href="#Asterisk_3_24" id="Asterisk_15_14" title="a reference to a single-file definition">Asterisk</a>
+  <button class="modal-open" id="Asterisk_16_3" title="a definition with multiple references" data-urls="#Asterisk line 15_14, 20_3">Asterisk</button> = <span class="cons_Lit">"*"</span>
   
 <span class="keyword">lexical restrictions</span>
 
-  <a href="#Asterisk_3_24" id="Asterisk_20_3" title="Defined at line 3, 16">Asterisk</a> -/- [\/]
-  <a href="#Eof_3_33" id="Eof_21_3" title="Defined at line 3, 10">Eof</a>      -/- ~[]
+  <a href="#Asterisk_3_24" id="Asterisk_20_3" title="a reference to a single-file definition">Asterisk</a> -/- [\/]
+  <a href="#Eof_3_33" id="Eof_21_3" title="a reference to a single-file definition">Eof</a>      -/- ~[]
 
 <span class="keyword">context-free restrictions</span>
 
