@@ -1,55 +1,74 @@
-.nab code .keyword {
+.nab .keyword {
   color: rgb(127 0 85);
   font-weight: bold;
+  font-style: normal;
 }
-.nab code .identifier {
+.nab .identifier {
+  font-weight: normal;
+  font-style: normal;
 }
-.nab code .string {
+.nab .string {
   color: rgb(0 0 255);
+  font-weight: normal;
+  font-style: normal;
 }
-.nab code .number {
+.nab .number {
   color: rgb(0 128 0);
+  font-weight: normal;
+  font-style: normal;
 }
-.nab code .var {
+.nab .var {
   color: rgb(139 69 19);
+  font-weight: normal;
   font-style: italic;
 }
-.nab code .operator {
+.nab .operator {
   color: rgb(0 0 128);
+  font-weight: normal;
+  font-style: normal;
 }
-.nab code .layout {
+.nab .layout {
   color: rgb(63 127 95);
+  font-weight: normal;
   font-style: italic;
 }
-.nab code .sort_NamespaceID {
+.nab .sort_NamespaceID {
   color: rgb(0 64 128);
+  font-weight: normal;
   font-style: italic;
 }
-.nab code .sort_PropertyID {
+.nab .sort_PropertyID {
   color: rgb(0 64 128);
+  font-weight: normal;
   font-style: italic;
 }
-.nab code .sort_PropertyRef.cons_TypeProp {
+.nab .sort_PropertyRef.cons_TypeProp {
   color: rgb(0 64 128);
-  font-weight: bold; font-style: italic;
-}
-.nab code .cons_NamespaceDef {
-  color: rgb(0 64 128);
+  font-weight: bold;
   font-style: italic;
 }
-.nab code .cons_NamespaceRef {
+.nab .cons_NamespaceDef, .nab .cons_NamespaceDef > * > .token {
   color: rgb(0 64 128);
+  font-weight: normal;
   font-style: italic;
 }
-.nab code .cons_PropertyRef {
+.nab .cons_NamespaceRef, .nab .cons_NamespaceRef > * > .token {
   color: rgb(0 64 128);
+  font-weight: normal;
   font-style: italic;
 }
-.nab code .cons_QualityRef {
+.nab .cons_PropertyRef, .nab .cons_PropertyRef > * > .token {
   color: rgb(0 64 128);
+  font-weight: normal;
   font-style: italic;
 }
-.nab code .cons_TypeProp {
+.nab .cons_QualityRef, .nab .cons_QualityRef > * > .token {
   color: rgb(0 64 128);
-  font-weight: bold; font-style: italic;
+  font-weight: normal;
+  font-style: italic;
+}
+.nab .cons_TypeProp, .nab .cons_TypeProp > * > .token {
+  color: rgb(0 64 128);
+  font-weight: bold;
+  font-style: italic;
 }
