@@ -34,12 +34,12 @@ hide:
 22
 23
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="nabl2/lang/rules/Rules_1_8" title="Multi-file references" data-urls="../CGen.sdf3/#nabl2/lang/rules/Rules_12_3 line 12; ../../Main.sdf3/#nabl2/lang/rules/Rules_7_3 line 7">nabl2/lang/rules/Rules</button>
+<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="nabl2/lang/rules/Rules_1_8" title="a definition with multiple references" data-urls="../CGen.sdf3/#nabl2/lang/rules/Rules line 12_3; ../../Main.sdf3/#nabl2/lang/rules/Rules line 7_3">nabl2/lang/rules/Rules</button>
 
 <span class="keyword">imports</span>
 
-  <a href="../CGen.sdf3/#nabl2/lang/rules/CGen_1_8" id="nabl2/lang/rules/CGen_5_3" title="Defined at ../CGen.sdf3 line 1">nabl2/lang/rules/CGen</a>
-  <a href="../Names.sdf3/#nabl2/lang/rules/Names_1_8" id="nabl2/lang/rules/Names_6_3" title="Defined at ../Names.sdf3 line 1">nabl2/lang/rules/Names</a>
+  <a href="../CGen.sdf3/#nabl2/lang/rules/CGen_1_8" id="nabl2/lang/rules/CGen_5_3" title="a reference to a single-file definition">nabl2/lang/rules/CGen</a>
+  <a href="../Names.sdf3/#nabl2/lang/rules/Names_1_8" id="nabl2/lang/rules/Names_6_3" title="a reference to a single-file definition">nabl2/lang/rules/Names</a>
 
 <span class="keyword">template options</span>
 
@@ -47,16 +47,16 @@ hide:
 
 <span class="keyword">context-free syntax</span>
 
-  <span id="NaBL2-ModuleSection_14_3" title="Not referenced">NaBL2-ModuleSection</span>.<span class="cons_Constructor"><span id="Rules_14_23" title="Not referenced">Rules</span></span> = &lt;
+  <span id="NaBL2-ModuleSection_14_3" title="a definition with no references">NaBL2-ModuleSection</span>.<span class="cons_Constructor"><span id="Rules_14_23" title="a definition with no references">Rules</span></span> = &lt;
     <span class="cons_String">rules</span>
  
-      &lt;{<a href="../CGen.sdf3/#NaBL2-Rule_18_3" id="NaBL2-Rule_17_9" title="Defined at ../CGen.sdf3 line 18, 22, 27, 31">NaBL2-Rule</a> <span class="cons_Lit">"\n\n"</span>}*&gt;
+      &lt;{<a href="../CGen.sdf3/#NaBL2-Rule_18_3" id="NaBL2-Rule_17_9" title="a reference to a single-file definition">NaBL2-Rule</a> <span class="cons_Lit">"\n\n"</span>}*&gt;
 
   &gt; {<span class="keyword">longest-match</span>}
 
 <span class="keyword">lexical syntax</span>
 
-  <span id="NaBL2-SectionKeyword_23_3" title="Not referenced">NaBL2-SectionKeyword</span> = <span class="cons_Lit">"rules"</span>
+  <span id="NaBL2-SectionKeyword_23_3" title="a definition with no references">NaBL2-SectionKeyword</span> = <span class="cons_Lit">"rules"</span>
 
 </code></pre></td></tr></tbody></table></div>
 

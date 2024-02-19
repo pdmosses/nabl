@@ -26,7 +26,9 @@ rules // initialise the repo docs directory for the current project
     ; say(!"\nUpdating website configuration ...")
     ; <gen-docs(true)> (meta-language, repo-clone, repo-name, project-path)
     ; <gen-mkdocs(true)> (repo-clone, repo-name)
-    ; <gen-ci(true)> (meta-language-project-path, repo-clone, repo-name)
+    ; <gen-ci(not(file-exists))> (meta-language-project-path, repo-clone, repo-name)
+      // inhibits overwriting of the non-standard ci.yml used in a multi-project repo
+    ; <gen-index(true)> (meta-language-project-path, repo-clone, repo-name)
     ; say(!"... done")
 
   gen-docs(s): (meta-language, repo-clone, repo-name, project-path) -> None()
@@ -67,13 +69,22 @@ rules // initialise the repo docs directory for the current project
 
   gen-ci(s): (meta-language-project-path, repo-clone, repo-name) -> ()
     with
-      ci-path := ".github/workflows/ci.yml"
-    ; target-file := $[[repo-clone]/[ci-path]]
+      target-file := $[[repo-clone]/.github/workflows/ci.yml]
     ; if <s> target-file
       then
-        meta-language-ci-file := $[[<dirname> meta-language-project-path]/[ci-path]]
+        meta-language-ci-file := $[[<dirname> meta-language-project-path]/trans/generation/docs/ci.yml]
       ; <copy-file> (meta-language-ci-file, target-file)
-      ; say(!$[> [repo-name]/[ci-path]])
+      ; say(!$[> [repo-name]/.github/workflows/ci.yml])
+      end
+
+  gen-index(s): (meta-language-project-path, repo-clone, repo-name) -> ()
+    with
+      target-file := $[[repo-clone]/docs/index.md]
+    ; if <s> target-file
+      then
+        index-file := $[[meta-language-project-path]/trans/generation/docs/index.md]
+      ; <copy-file> (index-file, target-file)
+      ; say(!$[> [repo-name]/docs/index.md])
       end
 
   mkdocs: repo-name ->
@@ -118,8 +129,8 @@ markdown_extensions:
   - def_list
   - footnotes
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tasklist:
@@ -129,6 +140,7 @@ extra_css:
   - stylesheets/metaborg.css
   - stylesheets/modal.css
   - stylesheets/sdf3.css
+  - stylesheets/nab.css
   - stylesheets/stx.css
 
 extra_javascript:

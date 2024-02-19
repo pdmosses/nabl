@@ -36,12 +36,12 @@ hide:
 24
 25
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <a href="../Signature.sdf3/#nabl2/lang/signatures/Constructors_6_3" id="nabl2/lang/signatures/Constructors_1_8" title="Referenced at ../Signature.sdf3 line 6">nabl2/lang/signatures/Constructors</a>
+<td class="code"><pre><code><span class="keyword">module</span> <a href="../Signature.sdf3/#nabl2/lang/signatures/Constructors_6_3" id="nabl2/lang/signatures/Constructors_1_8" title="a definition with a single reference">nabl2/lang/signatures/Constructors</a>
 
 <span class="keyword">imports</span>
 
-  <span title="External reference">nabl2/shared/common/Identifiers</span>
-  <span title="External reference">nabl2/shared/common/Sorts</span>
+  <a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20231130-170231-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3/#nabl2/shared/common/Identifiers_1_8" id="nabl2/shared/common/Identifiers_5_3" title="a reference to a single-file definition">nabl2/shared/common/Identifiers</a>
+  <a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20231130-170231-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3/#nabl2/shared/common/Sorts_1_8" id="nabl2/shared/common/Sorts_6_3" title="a reference to a single-file definition">nabl2/shared/common/Sorts</a>
 
 <span class="keyword">template options</span>
 
@@ -49,18 +49,18 @@ hide:
 
 <span class="keyword">context-free syntax</span>
 
-  <span id="NaBL2-Signature_14_3" title="Not referenced">NaBL2-Signature</span>.<span class="cons_Constructor"><span id="Sorts_14_19" title="Not referenced">Sorts</span></span> = &lt;
+  <span id="NaBL2-Signature_14_3" title="a definition with no references">NaBL2-Signature</span>.<span class="cons_Constructor"><span id="Sorts_14_19" title="a definition with no references">Sorts</span></span> = &lt;
     <span class="cons_String">sorts</span>
-      &lt;{<span title="External reference">NaBL2-Sort</span> <span class="cons_Lit">"\n"</span>}*&gt;
+      &lt;{<a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20231130-170231-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3/#NaBL2-Sort_13_3" id="NaBL2-Sort_16_9" title="a reference to a single-file definition">NaBL2-Sort</a> <span class="cons_Lit">"\n"</span>}*&gt;
   &gt; {<span class="keyword">longest-match</span>}
 
-  <span id="NaBL2-Signature_19_3" title="Not referenced">NaBL2-Signature</span>.<span class="cons_Constructor"><span id="Constructors_19_19" title="Not referenced">Constructors</span></span> = &lt;
+  <span id="NaBL2-Signature_19_3" title="a definition with no references">NaBL2-Signature</span>.<span class="cons_Constructor"><span id="Constructors_19_19" title="a definition with no references">Constructors</span></span> = &lt;
     <span class="cons_String">constructors</span>
-      &lt;{<a href="#NaBL2-OpDecl_24_3" id="NaBL2-OpDecl_21_9" title="Defined at line 24, 25">NaBL2-OpDecl</a> <span class="cons_Lit">"\n"</span>}*&gt;
+      &lt;{<a href="#NaBL2-OpDecl_24_3" id="NaBL2-OpDecl_21_9" title="a reference to a single-file definition">NaBL2-OpDecl</a> <span class="cons_Lit">"\n"</span>}*&gt;
   &gt; {<span class="keyword">longest-match</span>}
 
-  <a href="#NaBL2-OpDecl_21_9" id="NaBL2-OpDecl_24_3" title="Referenced at line 21">NaBL2-OpDecl</a>.<span class="cons_Constructor"><span id="OpDecl_24_16" title="Not referenced">OpDecl</span></span>        = [[<span title="External reference">NaBL2-OpId</span>] <span class="cons_String">:</span> [{<span title="External reference">NaBL2-SortRef</span> <span class="cons_Lit">" * "</span>}*] <span class="cons_String">-&gt;</span> [<span title="External reference">NaBL2-Sort</span>]]
-  <a href="#NaBL2-OpDecl_21_9" id="NaBL2-OpDecl_25_3" title="Referenced at line 21">NaBL2-OpDecl</a>.<span class="cons_Constructor"><span id="NullaryOpDecl_25_16" title="Not referenced">NullaryOpDecl</span></span> = [[<span title="External reference">NaBL2-OpId</span>] <span class="cons_String">:</span> [<span title="External reference">NaBL2-Sort</span>]]
+  <a href="#NaBL2-OpDecl_21_9" id="NaBL2-OpDecl_24_3" title="a definition with a single reference">NaBL2-OpDecl</a>.<span class="cons_Constructor"><span id="OpDecl_24_16" title="a definition with no references">OpDecl</span></span>        = [[<a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20231130-170231-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3/#NaBL2-OpId_22_3" id="NaBL2-OpId_24_34" title="a reference to a single-file definition">NaBL2-OpId</a>] <span class="cons_String">:</span> [{<a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20231130-170231-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3/#NaBL2-SortRef_15_3" id="NaBL2-SortRef_24_50" title="a reference to a single-file definition">NaBL2-SortRef</a> <span class="cons_Lit">" * "</span>}*] <span class="cons_String">-&gt;</span> [<a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20231130-170231-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3/#NaBL2-Sort_13_3" id="NaBL2-Sort_24_77" title="a reference to a single-file definition">NaBL2-Sort</a>]]
+  <a href="#NaBL2-OpDecl_21_9" id="NaBL2-OpDecl_25_3" title="a definition with a single reference">NaBL2-OpDecl</a>.<span class="cons_Constructor"><span id="NullaryOpDecl_25_16" title="a definition with no references">NullaryOpDecl</span></span> = [[<a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20231130-170231-master/target/unpacked/latest/syntax/nabl2/shared/common/Identifiers.sdf3/#NaBL2-OpId_22_3" id="NaBL2-OpId_25_34" title="a reference to a single-file definition">NaBL2-OpId</a>] <span class="cons_String">:</span> [<a href="../../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/org.metaborg.meta.nabl2.shared.eclipse_2.6.0.20231130-170231-master/target/unpacked/latest/syntax/nabl2/shared/common/Sorts.sdf3/#NaBL2-Sort_13_3" id="NaBL2-Sort_25_49" title="a reference to a single-file definition">NaBL2-Sort</a>]]
 
 </code></pre></td></tr></tbody></table></div>
 

@@ -48,7 +48,7 @@ hide:
 36
 37
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="nabl2/lang/modules/Module_1_8" title="Multi-file references" data-urls="../../Main.sdf3/#nabl2/lang/modules/Module_6_3 line 6; ../../../../NaBL2Lang.sdf3/#nabl2/lang/modules/Module_6_3 line 6">nabl2/lang/modules/Module</button>
+<td class="code"><pre><code><span class="keyword">module</span> <button class="modal-open" id="nabl2/lang/modules/Module_1_8" title="a definition with multiple references" data-urls="../../Main.sdf3/#nabl2/lang/modules/Module line 6_3; ../../../../NaBL2Lang.sdf3/#nabl2/lang/modules/Module line 6_3">nabl2/lang/modules/Module</button>
 
 <span class="keyword">template options</span>
 
@@ -56,35 +56,35 @@ hide:
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="../../../../NaBL2Lang.sdf3/#NaBL2-Module_11_3" id="NaBL2-Module_9_3" title="Referenced at ../../../../NaBL2Lang.sdf3 line 11">NaBL2-Module</a>.<span class="cons_Constructor"><span id="Module_9_16" title="Not referenced">Module</span></span> = &lt;
-    <span class="cons_String">module</span> &lt;<a href="#NaBL2-ModuleId_27_3" id="NaBL2-ModuleId_10_13" title="Defined at line 27, 29">NaBL2-ModuleId</a>&gt;
+  <a href="../../../../NaBL2Lang.sdf3/#NaBL2-Module_11_3" id="NaBL2-Module_9_3" title="a definition with a single reference">NaBL2-Module</a>.<span class="cons_Constructor"><span id="Module_9_16" title="a definition with no references">Module</span></span> = &lt;
+    <span class="cons_String">module</span> &lt;<a href="#NaBL2-ModuleId_27_3" id="NaBL2-ModuleId_10_13" title="a reference to a single-file definition">NaBL2-ModuleId</a>&gt;
 
-    &lt;{<a href="#NaBL2-ModuleSection_15_3" id="NaBL2-ModuleSection_12_7" title="Defined at line 15">NaBL2-ModuleSection</a> <span class="cons_Lit">"\n"</span>}*&gt;
+    &lt;{<a href="#NaBL2-ModuleSection_15_3" id="NaBL2-ModuleSection_12_7" title="a reference to a single-file definition">NaBL2-ModuleSection</a> <span class="cons_Lit">"\n"</span>}*&gt;
   &gt;
  
-  <a href="#NaBL2-ModuleSection_12_7" id="NaBL2-ModuleSection_15_3" title="Referenced at line 12">NaBL2-ModuleSection</a>.<span class="cons_Constructor"><span id="Imports_15_23" title="Not referenced">Imports</span></span> = &lt;
-    <span class="cons_String">imports</span> &lt;<a href="#NaBL2-ImportModule_19_3" id="NaBL2-ImportModule_16_14" title="Defined at line 19, 23">NaBL2-ImportModule</a>*&gt;
+  <a href="#NaBL2-ModuleSection_12_7" id="NaBL2-ModuleSection_15_3" title="a definition with a single reference">NaBL2-ModuleSection</a>.<span class="cons_Constructor"><span id="Imports_15_23" title="a definition with no references">Imports</span></span> = &lt;
+    <span class="cons_String">imports</span> &lt;<a href="#NaBL2-ImportModule_19_3" id="NaBL2-ImportModule_16_14" title="a reference to a single-file definition">NaBL2-ImportModule</a>*&gt;
   &gt;
  
-  <a href="#NaBL2-ImportModule_16_14" id="NaBL2-ImportModule_19_3" title="Referenced at line 16">NaBL2-ImportModule</a>.<span class="cons_Constructor"><span id="Import_19_22" title="Not referenced">Import</span></span> = &lt;&lt;<a href="#NaBL2-ModuleId_27_3" id="NaBL2-ModuleId_19_33" title="Defined at line 27, 29">NaBL2-ModuleId</a>&gt;&gt; 
+  <a href="#NaBL2-ImportModule_16_14" id="NaBL2-ImportModule_19_3" title="a definition with a single reference">NaBL2-ImportModule</a>.<span class="cons_Constructor"><span id="Import_19_22" title="a definition with no references">Import</span></span> = &lt;&lt;<a href="#NaBL2-ModuleId_27_3" id="NaBL2-ModuleId_19_33" title="a reference to a single-file definition">NaBL2-ModuleId</a>&gt;&gt; 
 
 <span class="keyword">syntax</span>
 
-  <a href="#NaBL2-ImportModule_16_14" id="NaBL2-ImportModule_23_3" title="Referenced at line 16">NaBL2-ImportModule</a><span class="keyword">-CF</span>.<span class="cons_Constructor"><span id="ImportWildcard_23_25" title="Not referenced">ImportWildcard</span></span> = <a href="#NaBL2-ModuleId_27_3" id="NaBL2-ModuleId_23_42" title="Defined at line 27, 29">NaBL2-ModuleId</a><span class="keyword">-CF</span> <span class="cons_Lit">"/-"</span>
+  <a href="#NaBL2-ImportModule_16_14" id="NaBL2-ImportModule_23_3" title="a definition with a single reference">NaBL2-ImportModule</a><span class="keyword">-CF</span>.<span class="cons_Constructor"><span id="ImportWildcard_23_25" title="a definition with no references">ImportWildcard</span></span> = <a href="#NaBL2-ModuleId_27_3" id="NaBL2-ModuleId_23_42" title="a reference to a single-file definition">NaBL2-ModuleId</a><span class="keyword">-CF</span> <span class="cons_Lit">"/-"</span>
 
 <span class="keyword">lexical syntax</span>
 
-  <a href="#NaBL2-ModuleId_10_13" id="NaBL2-ModuleId_27_3" title="Referenced at line 10, 19, 23, 37">NaBL2-ModuleId</a> = {<a href="#NaBL2-ModuleIdPart_28_3" id="NaBL2-ModuleIdPart_27_21" title="Defined at line 28">NaBL2-ModuleIdPart</a> <span class="cons_Lit">"/"</span>}+
-  <a href="#NaBL2-ModuleIdPart_27_21" id="NaBL2-ModuleIdPart_28_3" title="Referenced at line 27">NaBL2-ModuleIdPart</a> = [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span>\_] [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\.\-\_]*
-  <a href="#NaBL2-ModuleId_10_13" id="NaBL2-ModuleId_29_3" title="Referenced at line 10, 19, 23, 37">NaBL2-ModuleId</a> = <a href="#NaBL2-SectionKeyword_33_3" id="NaBL2-SectionKeyword_29_20" title="Defined at line 33">NaBL2-SectionKeyword</a> {<span class="keyword">reject</span>}
+  <button class="modal-open" id="NaBL2-ModuleId_27_3" title="a definition with multiple references" data-urls="#NaBL2-ModuleId line 10_13, 19_33, 23_42, 37_3">NaBL2-ModuleId</button> = {<a href="#NaBL2-ModuleIdPart_28_3" id="NaBL2-ModuleIdPart_27_21" title="a reference to a single-file definition">NaBL2-ModuleIdPart</a> <span class="cons_Lit">"/"</span>}+
+  <a href="#NaBL2-ModuleIdPart_27_21" id="NaBL2-ModuleIdPart_28_3" title="a definition with a single reference">NaBL2-ModuleIdPart</a> = [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span>\_] [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\.\-\_]*
+  <button class="modal-open" id="NaBL2-ModuleId_29_3" title="a definition with multiple references" data-urls="#NaBL2-ModuleId line 10_13, 19_33, 23_42, 37_3">NaBL2-ModuleId</button> = <a href="#NaBL2-SectionKeyword_33_3" id="NaBL2-SectionKeyword_29_20" title="a reference to a single-file definition">NaBL2-SectionKeyword</a> {<span class="keyword">reject</span>}
   
-  <span id="NaBL2-RuleId_31_3" title="Not referenced">NaBL2-RuleId</span> = <a href="#NaBL2-SectionKeyword_33_3" id="NaBL2-SectionKeyword_31_18" title="Defined at line 33">NaBL2-SectionKeyword</a> {<span class="keyword">reject</span>}
+  <span id="NaBL2-RuleId_31_3" title="a definition with no references">NaBL2-RuleId</span> = <a href="#NaBL2-SectionKeyword_33_3" id="NaBL2-SectionKeyword_31_18" title="a reference to a single-file definition">NaBL2-SectionKeyword</a> {<span class="keyword">reject</span>}
   
-  <a href="#NaBL2-SectionKeyword_29_20" id="NaBL2-SectionKeyword_33_3" title="Referenced at line 29, 31">NaBL2-SectionKeyword</a> = <span class="cons_Lit">"imports"</span>
+  <button class="modal-open" id="NaBL2-SectionKeyword_33_3" title="a definition with multiple references" data-urls="#NaBL2-SectionKeyword line 29_20, 31_18">NaBL2-SectionKeyword</button> = <span class="cons_Lit">"imports"</span>
 
 <span class="keyword">lexical restrictions</span>
 
-  <a href="#NaBL2-ModuleId_27_3" id="NaBL2-ModuleId_37_3" title="Defined at line 27, 29">NaBL2-ModuleId</a> -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\.\-\_]
+  <a href="#NaBL2-ModuleId_27_3" id="NaBL2-ModuleId_37_3" title="a reference to a single-file definition">NaBL2-ModuleId</a> -/- [<span class="cons_Regular">a</span>-<span class="cons_Regular">z</span><span class="cons_Regular">A</span>-<span class="cons_Regular">Z</span><span class="cons_Regular">0</span>-<span class="cons_Regular">9</span>\.\-\_]
 
 
 </code></pre></td></tr></tbody></table></div>
