@@ -9,3 +9,10 @@ rules
   meta-project-path: "nab"   -> "nabl/org.metaborg.meta.lang.nabl"
   meta-project-path: "nabl2" -> "nabl/org.metaborg.meta.nabl2.lang"
   meta-project-path: "stx"   -> "nabl/statix.lang"
+  
+  // project-dirname: project-path:String -> dir:String
+  // - dir is the name of the project directory in the repo clone,
+  // - dir differs from the project name in Spoofax only for the NaBL2 project
+
+  project-dirname = base-filename ; try(?"org.metaborg.meta.nabl2.lang" ; !"nabl2.lang")
+  

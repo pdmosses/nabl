@@ -31,6 +31,29 @@ rules // Multi-file order of origins of definitions or references
 
   dirs-length = string-tokenize(|['/']) ; length
 
+rules // Data for modals
+
+  gen-modal-data: (node, nodes) -> l
+    where
+      files := <map(origin-file); make-set> nodes
+    ; l := <map(gen-file-modal-data(|node, nodes))> files
+
+  gen-file-modal-data(|node, nodes): file -> (url, line-columns)
+    where
+      url := <direct-path; file-url> (<origin-file> node, file)
+    ; file-nodes := <filter(where(origin-file; equal(|file)))> nodes
+    ; line-columns := <map(line-column)> file-nodes
+
+  line-column: node -> (<origin-line; inc> node, <origin-column; inc> node)
+
+rules // For use by modals.js
+
+  url-modal-data(|node): (url, line-columns) -> $[[url]#[node] line [s]]
+     where
+       s := <map(line-column-string); separate-by(|", "); concat-strings> line-columns
+
+  line-column-string: (line, column) -> $[[line]_[column]]
+  
 rules // Tool tips for anchors
 
   // For each origin-file FILE of nodes: "URL line N1, ..., Nm", separated by "; ",
@@ -93,11 +116,3 @@ rules // Direct path
 
   file-url: "" -> ""
   file-url: s -> $[[s]/]
-
-  // is-in-project: s:string -> s:string
-  // - checks that s is not a relative path to a plugin file
-
-  // TODO: check more rigorously
-  
-  is-external-path = is-substring(!"/file:/")
-//  is-external-path = is-substring(!"src-gen/")

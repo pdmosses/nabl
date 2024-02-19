@@ -40,15 +40,15 @@ hide:
 28
 29
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <span id="statix/lang/NoParse_1_8" title="Not referenced">statix/lang/NoParse</span> <span class="layout">// DO NOT INCLUDE IN OTHER SYNTAX FILES</span>
+<td class="code"><pre><code><span class="keyword">module</span> <span id="statix/lang/NoParse_1_8" title="a definition with no references">statix/lang/NoParse</span> <span class="layout">// DO NOT INCLUDE IN OTHER SYNTAX FILES</span>
 
 <span class="keyword">imports</span>
 
-  <a href="../Common.sdf3/#statix/lang/Common_1_8" id="statix/lang/Common_5_3" title="Defined at ../Common.sdf3 line 1">statix/lang/Common</a>
-  <a href="../Core.sdf3/#statix/lang/Core_1_8" id="statix/lang/Core_6_3" title="Defined at ../Core.sdf3 line 1">statix/lang/Core</a>
-  <a href="../Sugar.sdf3/#statix/lang/Sugar_1_8" id="statix/lang/Sugar_7_3" title="Defined at ../Sugar.sdf3 line 1">statix/lang/Sugar</a>
+  <a href="../Common.sdf3/#statix/lang/Common_1_8" id="statix/lang/Common_5_3" title="a reference to a single-file definition">statix/lang/Common</a>
+  <a href="../Core.sdf3/#statix/lang/Core_1_8" id="statix/lang/Core_6_3" title="a reference to a single-file definition">statix/lang/Core</a>
+  <a href="../Sugar.sdf3/#statix/lang/Sugar_1_8" id="statix/lang/Sugar_7_3" title="a reference to a single-file definition">statix/lang/Sugar</a>
 
-  <span title="External reference">statix/API</span>
+  <a href="../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20231130-170231-master/target/unpacked/latest/syntax/statix/API.sdf3/#statix/API_1_8" id="statix/API_9_3" title="a reference to a single-file definition">statix/API</a>
 
 <span class="keyword">template options</span>
 
@@ -56,19 +56,19 @@ hide:
 
 <span class="keyword">context-free syntax</span> <span class="layout">// desugared terms</span>
 
-  <a href="#Term_17_20" id="Term_17_3" title="Referenced at line 17">Term</a>.<span class="cons_Constructor"><span id="Tuple_17_8" title="Not referenced">Tuple</span></span> = &lt;<span class="cons_String">(</span>&lt;{<a href="#Term_17_3" id="Term_17_20" title="Defined at line 17, 25, 26, 27">Term</a> <span class="cons_Lit">", "</span>}*&gt;<span class="cons_String">)</span>&gt;
+  <a href="#Term_17_20" id="Term_17_3" title="a definition with a single reference">Term</a>.<span class="cons_Constructor"><span id="Tuple_17_8" title="a definition with no references">Tuple</span></span> = &lt;<span class="cons_String">(</span>&lt;{<a href="#Term_17_3" id="Term_17_20" title="a reference to a single-file definition">Term</a> <span class="cons_Lit">", "</span>}*&gt;<span class="cons_String">)</span>&gt;
 
-  <a href="#SortRef_19_27" id="SortRef_19_3" title="Referenced at line 19">SortRef</a>.<span class="cons_Constructor"><span id="TupleSort_19_11" title="Not referenced">TupleSort</span></span> = &lt;<span class="cons_String">(</span>&lt;{<a href="#SortRef_19_3" id="SortRef_19_27" title="Defined at line 19">SortRef</a> <span class="cons_Lit">" * "</span>}*&gt;<span class="cons_String">)</span>&gt;
+  <a href="#SortRef_19_27" id="SortRef_19_3" title="a definition with a single reference">SortRef</a>.<span class="cons_Constructor"><span id="TupleSort_19_11" title="a definition with no references">TupleSort</span></span> = &lt;<span class="cons_String">(</span>&lt;{<a href="#SortRef_19_3" id="SortRef_19_27" title="a reference to a single-file definition">SortRef</a> <span class="cons_Lit">" * "</span>}*&gt;<span class="cons_String">)</span>&gt;
 
-  <a href="#Lift_21_24" id="Lift_21_3" title="Referenced at line 21">Lift</a>.<span class="cons_Constructor"><span id="TupleLift_21_8" title="Not referenced">TupleLift</span></span> = &lt;<span class="cons_String">(</span>&lt;{<a href="#Lift_21_3" id="Lift_21_24" title="Defined at line 21">Lift</a> <span class="cons_Lit">", "</span>}*&gt;<span class="cons_String">)</span>&gt;
+  <a href="#Lift_21_24" id="Lift_21_3" title="a definition with a single reference">Lift</a>.<span class="cons_Constructor"><span id="TupleLift_21_8" title="a definition with no references">TupleLift</span></span> = &lt;<span class="cons_String">(</span>&lt;{<a href="#Lift_21_3" id="Lift_21_24" title="a reference to a single-file definition">Lift</a> <span class="cons_Lit">", "</span>}*&gt;<span class="cons_String">)</span>&gt;
 
 <span class="keyword">context-free syntax</span> <span class="layout">// runtime terms</span>
 
-  <a href="#Term_17_20" id="Term_25_3" title="Referenced at line 17">Term</a> = <a href="../Core.sdf3/#Label_196_3" id="Label_25_10" title="Defined at ../Core.sdf3 line 196">Label</a>
-  <a href="#Term_17_20" id="Term_26_3" title="Referenced at line 17">Term</a> = <span title="External reference">Stx-Scope</span>
-  <a href="#Term_17_20" id="Term_27_3" title="Referenced at line 17">Term</a> = <span title="External reference">Stx-TermIndex</span>
+  <a href="#Term_17_20" id="Term_25_3" title="a definition with a single reference">Term</a> = <a href="../Core.sdf3/#Label_196_3" id="Label_25_10" title="a reference to a single-file definition">Label</a>
+  <a href="#Term_17_20" id="Term_26_3" title="a definition with a single reference">Term</a> = <a href="../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20231130-170231-master/target/unpacked/latest/syntax/statix/API.sdf3/#Stx-Scope_11_3" id="Stx-Scope_26_10" title="a reference to a single-file definition">Stx-Scope</a>
+  <a href="#Term_17_20" id="Term_27_3" title="a definition with a single reference">Term</a> = <a href="../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20231130-170231-master/target/unpacked/latest/syntax/statix/API.sdf3/#Stx-TermIndex_12_3" id="Stx-TermIndex_27_10" title="a reference to a single-file definition">Stx-TermIndex</a>
 
-  <span id="TermOrTermIndex_29_3" title="Not referenced">TermOrTermIndex</span> = <span title="External reference">Stx-TermIndex</span>
+  <span id="TermOrTermIndex_29_3" title="a definition with no references">TermOrTermIndex</span> = <a href="../../../../../../file:/Users/pdm/eclipse/spoofax-dev/Eclipse.app/Contents/Eclipse/plugins/statix.runtime.eclipse_2.6.0.20231130-170231-master/target/unpacked/latest/syntax/statix/API.sdf3/#Stx-TermIndex_12_3" id="Stx-TermIndex_29_21" title="a reference to a single-file definition">Stx-TermIndex</a>
 
 </code></pre></td></tr></tbody></table></div>
 

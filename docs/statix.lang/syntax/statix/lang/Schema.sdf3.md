@@ -109,104 +109,104 @@ hide:
 97
 98
 </pre></div></td>
-<td class="code"><pre><code><span class="keyword">module</span> <span id="statix/lang/Schema_1_8" title="Not referenced">statix/lang/Schema</span>
+<td class="code"><pre><code><span class="keyword">module</span> <span id="statix/lang/Schema_1_8" title="a definition with no references">statix/lang/Schema</span>
 
 <span class="keyword">imports</span>
-  <a href="../Common.sdf3/#statix/lang/Common_1_8" id="statix/lang/Common_4_3" title="Defined at ../Common.sdf3 line 1">statix/lang/Common</a>
-  <a href="../Core.sdf3/#statix/lang/Core_1_8" id="statix/lang/Core_5_3" title="Defined at ../Core.sdf3 line 1">statix/lang/Core</a>
+  <a href="../Common.sdf3/#statix/lang/Common_1_8" id="statix/lang/Common_4_3" title="a reference to a single-file definition">statix/lang/Common</a>
+  <a href="../Core.sdf3/#statix/lang/Core_1_8" id="statix/lang/Core_5_3" title="a reference to a single-file definition">statix/lang/Core</a>
 
 <span class="keyword">context-free start-symbols</span>
 
-  <a href="#Schema_13_3" id="Schema_9_3" title="Defined at line 13, 17">Schema</a>
+  <a href="#Schema_13_3" id="Schema_9_3" title="a reference to a single-file definition">Schema</a>
 
 <span class="keyword">context-free sorts</span>
 
-  <a href="#Schema_9_3" id="Schema_13_3" title="Referenced at line 9">Schema</a>
+  <a href="#Schema_9_3" id="Schema_13_3" title="a definition with a single reference">Schema</a>
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#Schema_9_3" id="Schema_17_3" title="Referenced at line 9">Schema</a>.<span class="cons_Constructor"><span id="SGSchema_17_10" title="Not referenced">SGSchema</span></span> = &lt;<span class="cons_String">scope</span> <span class="cons_String">graph</span> <span class="cons_String">scheme</span>
-    &lt;<a href="#SGEdges_26_3" id="SGEdges_18_6" title="Defined at line 26, 31">SGEdges</a>&gt;
+  <a href="#Schema_9_3" id="Schema_17_3" title="a definition with a single reference">Schema</a>.<span class="cons_Constructor"><span id="SGSchema_17_10" title="a definition with no references">SGSchema</span></span> = &lt;<span class="cons_String">scope</span> <span class="cons_String">graph</span> <span class="cons_String">scheme</span>
+    &lt;<a href="#SGEdges_26_3" id="SGEdges_18_6" title="a reference to a single-file definition">SGEdges</a>&gt;
 
-    &lt;<a href="#SGDecls_39_3" id="SGDecls_20_6" title="Defined at line 39, 45">SGDecls</a>&gt;
+    &lt;<a href="#SGDecls_39_3" id="SGDecls_20_6" title="a reference to a single-file definition">SGDecls</a>&gt;
 
-    &lt;<a href="#SchemaVars_56_3" id="SchemaVars_22_6" title="Defined at line 56, 61">SchemaVars</a>&gt;
+    &lt;<a href="#SchemaVars_56_3" id="SchemaVars_22_6" title="a reference to a single-file definition">SchemaVars</a>&gt;
   &gt;
 
 <span class="keyword">context-free sorts</span>
-  <a href="#SGEdges_18_6" id="SGEdges_26_3" title="Referenced at line 18">SGEdges</a>
-  <a href="#SGEdge_32_7" id="SGEdge_27_3" title="Referenced at line 32">SGEdge</a>
+  <a href="#SGEdges_18_6" id="SGEdges_26_3" title="a definition with a single reference">SGEdges</a>
+  <a href="#SGEdge_32_7" id="SGEdge_27_3" title="a definition with a single reference">SGEdge</a>
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#SGEdges_18_6" id="SGEdges_31_3" title="Referenced at line 18">SGEdges</a>.<span class="cons_Constructor"><span id="SGEdges_31_11" title="Not referenced">SGEdges</span></span> = &lt;<span class="cons_String">edges</span>
-    &lt;{<a href="#SGEdge_27_3" id="SGEdge_32_7" title="Defined at line 27, 35">SGEdge</a> <span class="cons_Lit">"\n"</span>}*&gt;
+  <a href="#SGEdges_18_6" id="SGEdges_31_3" title="a definition with a single reference">SGEdges</a>.<span class="cons_Constructor"><span id="SGEdges_31_11" title="a definition with no references">SGEdges</span></span> = &lt;<span class="cons_String">edges</span>
+    &lt;{<a href="#SGEdge_27_3" id="SGEdge_32_7" title="a reference to a single-file definition">SGEdge</a> <span class="cons_Lit">"\n"</span>}*&gt;
   &gt;
 
-  <a href="#SGEdge_32_7" id="SGEdge_35_3" title="Referenced at line 32">SGEdge</a>.<span class="cons_Constructor"><span id="SGEdge_35_10" title="Not referenced">SGEdge</span></span> = [<span class="cons_String">{</span>[{<a href="#ScopeKindWithCard_71_3" id="ScopeKindWithCard_35_23" title="Defined at line 71, 84">ScopeKindWithCard</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">}</span> <span class="cons_String">=</span>[<a href="../Core.sdf3/#Label_196_3" id="Label_35_52" title="Defined at ../Core.sdf3 line 196">Label</a>]<span class="cons_String">=&gt;</span> <span class="cons_String">{</span>[{<a href="#ScopeKindWithCard_71_3" id="ScopeKindWithCard_35_64" title="Defined at line 71, 84">ScopeKindWithCard</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">}</span> <span class="cons_String">in</span> [<a href="../Core.sdf3/#RuleName_71_3" id="RuleName_35_95" title="Defined at ../Core.sdf3 line 71, 72">RuleName</a>]]
+  <a href="#SGEdge_32_7" id="SGEdge_35_3" title="a definition with a single reference">SGEdge</a>.<span class="cons_Constructor"><span id="SGEdge_35_10" title="a definition with no references">SGEdge</span></span> = [<span class="cons_String">{</span>[{<a href="#ScopeKindWithCard_71_3" id="ScopeKindWithCard_35_23" title="a reference to a single-file definition">ScopeKindWithCard</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">}</span> <span class="cons_String">=</span>[<a href="../Core.sdf3/#Label_196_3" id="Label_35_52" title="a reference to a single-file definition">Label</a>]<span class="cons_String">=&gt;</span> <span class="cons_String">{</span>[{<a href="#ScopeKindWithCard_71_3" id="ScopeKindWithCard_35_64" title="a reference to a single-file definition">ScopeKindWithCard</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">}</span> <span class="cons_String">in</span> [<a href="../Core.sdf3/#RuleName_71_3" id="RuleName_35_95" title="a reference to a single-file definition">RuleName</a>]]
 
 <span class="keyword">context-free sorts</span>
 
-  <a href="#SGDecls_20_6" id="SGDecls_39_3" title="Referenced at line 20">SGDecls</a>
-  <a href="#SGDecl_46_7" id="SGDecl_40_3" title="Referenced at line 46">SGDecl</a>
-  <a href="#Data_49_66" id="Data_41_3" title="Referenced at line 49">Data</a>
+  <a href="#SGDecls_20_6" id="SGDecls_39_3" title="a definition with a single reference">SGDecls</a>
+  <a href="#SGDecl_46_7" id="SGDecl_40_3" title="a definition with a single reference">SGDecl</a>
+  <a href="#Data_49_66" id="Data_41_3" title="a definition with a single reference">Data</a>
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#SGDecls_20_6" id="SGDecls_45_3" title="Referenced at line 20">SGDecls</a>.<span class="cons_Constructor"><span id="SGDecls_45_11" title="Not referenced">SGDecls</span></span> = &lt;<span class="cons_String">decls</span>
-    &lt;{<a href="#SGDecl_40_3" id="SGDecl_46_7" title="Defined at line 40, 49">SGDecl</a> <span class="cons_Lit">"\n"</span>}*&gt;
+  <a href="#SGDecls_20_6" id="SGDecls_45_3" title="a definition with a single reference">SGDecls</a>.<span class="cons_Constructor"><span id="SGDecls_45_11" title="a definition with no references">SGDecls</span></span> = &lt;<span class="cons_String">decls</span>
+    &lt;{<a href="#SGDecl_40_3" id="SGDecl_46_7" title="a reference to a single-file definition">SGDecl</a> <span class="cons_Lit">"\n"</span>}*&gt;
   &gt;
 
-  <a href="#SGDecl_46_7" id="SGDecl_49_3" title="Referenced at line 46">SGDecl</a>.<span class="cons_Constructor"><span id="SGDecl_49_10" title="Not referenced">SGDecl</span></span> = [<span class="cons_String">{</span>[{<a href="#ScopeKindWithCard_71_3" id="ScopeKindWithCard_49_23" title="Defined at line 71, 84">ScopeKindWithCard</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">}</span> <span class="cons_String">|=</span>[<a href="../Core.sdf3/#Label_196_3" id="Label_49_53" title="Defined at ../Core.sdf3 line 196">Label</a>]<span class="cons_String">=&gt;</span> \[[{<a href="#Data_41_3" id="Data_49_66" title="Defined at line 41, 51, 52">Data</a> <span class="cons_Lit">", "</span>}*]\] <span class="cons_String">in</span> [<a href="../Core.sdf3/#RuleName_71_3" id="RuleName_49_85" title="Defined at ../Core.sdf3 line 71, 72">RuleName</a>]]
+  <a href="#SGDecl_46_7" id="SGDecl_49_3" title="a definition with a single reference">SGDecl</a>.<span class="cons_Constructor"><span id="SGDecl_49_10" title="a definition with no references">SGDecl</span></span> = [<span class="cons_String">{</span>[{<a href="#ScopeKindWithCard_71_3" id="ScopeKindWithCard_49_23" title="a reference to a single-file definition">ScopeKindWithCard</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">}</span> <span class="cons_String">|=</span>[<a href="../Core.sdf3/#Label_196_3" id="Label_49_53" title="a reference to a single-file definition">Label</a>]<span class="cons_String">=&gt;</span> \[[{<a href="#Data_41_3" id="Data_49_66" title="a reference to a single-file definition">Data</a> <span class="cons_Lit">", "</span>}*]\] <span class="cons_String">in</span> [<a href="../Core.sdf3/#RuleName_71_3" id="RuleName_49_85" title="a reference to a single-file definition">RuleName</a>]]
 
-  <a href="#Data_49_66" id="Data_51_3" title="Referenced at line 49">Data</a>.<span class="cons_Constructor"><span id="DData_51_8" title="Not referenced">DData</span></span>  = &lt;<span class="cons_String">data</span>&gt;
-  <a href="#Data_49_66" id="Data_52_3" title="Referenced at line 49">Data</a>.<span class="cons_Constructor"><span id="DScope_52_8" title="Not referenced">DScope</span></span> = [<span class="cons_String">scope</span> <span class="cons_String">{</span>[{<a href="#ScopeKindWithCard_71_3" id="ScopeKindWithCard_52_27" title="Defined at line 71, 84">ScopeKindWithCard</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">}</span>]
+  <a href="#Data_49_66" id="Data_51_3" title="a definition with a single reference">Data</a>.<span class="cons_Constructor"><span id="DData_51_8" title="a definition with no references">DData</span></span>  = &lt;<span class="cons_String">data</span>&gt;
+  <a href="#Data_49_66" id="Data_52_3" title="a definition with a single reference">Data</a>.<span class="cons_Constructor"><span id="DScope_52_8" title="a definition with no references">DScope</span></span> = [<span class="cons_String">scope</span> <span class="cons_String">{</span>[{<a href="#ScopeKindWithCard_71_3" id="ScopeKindWithCard_52_27" title="a reference to a single-file definition">ScopeKindWithCard</a> <span class="cons_Lit">", "</span>}*]<span class="cons_String">}</span>]
 
 <span class="keyword">context-free sorts</span>
 
-  <a href="#SchemaVars_22_6" id="SchemaVars_56_3" title="Referenced at line 22">SchemaVars</a>
-  <a href="#SchemaVar_62_7" id="SchemaVar_57_3" title="Referenced at line 62">SchemaVar</a>
+  <a href="#SchemaVars_22_6" id="SchemaVars_56_3" title="a definition with a single reference">SchemaVars</a>
+  <a href="#SchemaVar_62_7" id="SchemaVar_57_3" title="a definition with a single reference">SchemaVar</a>
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#SchemaVars_22_6" id="SchemaVars_61_3" title="Referenced at line 22">SchemaVars</a>.<span class="cons_Constructor"><span id="SchemaVars_61_14" title="Not referenced">SchemaVars</span></span> = &lt;<span class="cons_String">schema</span> <span class="cons_String">variables</span>
-    &lt;{<a href="#SchemaVar_57_3" id="SchemaVar_62_7" title="Defined at line 57, 65">SchemaVar</a> <span class="cons_Lit">"\n"</span>}*&gt;
+  <a href="#SchemaVars_22_6" id="SchemaVars_61_3" title="a definition with a single reference">SchemaVars</a>.<span class="cons_Constructor"><span id="SchemaVars_61_14" title="a definition with no references">SchemaVars</span></span> = &lt;<span class="cons_String">schema</span> <span class="cons_String">variables</span>
+    &lt;{<a href="#SchemaVar_57_3" id="SchemaVar_62_7" title="a reference to a single-file definition">SchemaVar</a> <span class="cons_Lit">"\n"</span>}*&gt;
   &gt;
 
-  <a href="#SchemaVar_62_7" id="SchemaVar_65_3" title="Referenced at line 62">SchemaVar</a>.<span class="cons_Constructor"><span id="SchemaVar_65_13" title="Not referenced">SchemaVar</span></span> = [[<a href="#ScopeKindVar_70_3" id="ScopeKindVar_65_27" title="Defined at line 70, 79, 80, 81, 82">ScopeKindVar</a>] <span class="cons_String">|-&gt;</span> <span class="cons_String">{</span>[{<a href="#ScopeKindWithCard_71_3" id="ScopeKindWithCard_65_48" title="Defined at line 71, 84">ScopeKindWithCard</a> <span class="cons_Lit">","</span>}*]<span class="cons_String">}</span>]
+  <a href="#SchemaVar_62_7" id="SchemaVar_65_3" title="a definition with a single reference">SchemaVar</a>.<span class="cons_Constructor"><span id="SchemaVar_65_13" title="a definition with no references">SchemaVar</span></span> = [[<a href="#ScopeKindVar_70_3" id="ScopeKindVar_65_27" title="a reference to a single-file definition">ScopeKindVar</a>] <span class="cons_String">|-&gt;</span> <span class="cons_String">{</span>[{<a href="#ScopeKindWithCard_71_3" id="ScopeKindWithCard_65_48" title="a reference to a single-file definition">ScopeKindWithCard</a> <span class="cons_Lit">","</span>}*]<span class="cons_String">}</span>]
 
 <span class="keyword">context-free sorts</span>
 
-  <a href="#ScopeKind_84_43" id="ScopeKind_69_3" title="Referenced at line 84">ScopeKind</a>
-  <a href="#ScopeKindVar_65_27" id="ScopeKindVar_70_3" title="Referenced at line 65">ScopeKindVar</a>
-  <a href="#ScopeKindWithCard_35_23" id="ScopeKindWithCard_71_3" title="Referenced at line 35, 49, 52, 65">ScopeKindWithCard</a>
+  <a href="#ScopeKind_84_43" id="ScopeKind_69_3" title="a definition with a single reference">ScopeKind</a>
+  <a href="#ScopeKindVar_65_27" id="ScopeKindVar_70_3" title="a definition with a single reference">ScopeKindVar</a>
+  <button class="modal-open" id="ScopeKindWithCard_71_3" title="a definition with multiple references" data-urls="#ScopeKindWithCard line 35_23, 35_64, 49_23, 52_27, 65_48">ScopeKindWithCard</button>
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#ScopeKind_84_43" id="ScopeKind_75_3" title="Referenced at line 84">ScopeKind</a>.<span class="cons_Constructor"><span id="Glob_75_13" title="Not referenced">Glob</span></span>         = &lt;<span class="cons_String">glob</span>&gt;
-  <a href="#ScopeKind_84_43" id="ScopeKind_76_3" title="Referenced at line 84">ScopeKind</a>.<span class="cons_Constructor"><span id="KVar_76_13" title="Not referenced">KVar</span></span>         = &lt;<span class="cons_String">var</span> &lt;<a href="../Core.sdf3/#Var_337_3" id="Var_76_34" title="Defined at ../Core.sdf3 line 337, 338">Var</a>&gt;&gt;
-  <a href="#ScopeKind_84_43" id="ScopeKind_77_3" title="Referenced at line 84">ScopeKind</a>.<span class="cons_Constructor"><span id="Unknown_77_13" title="Not referenced">Unknown</span></span>      = &lt;<span class="cons_String">unknown</span>&gt;
+  <a href="#ScopeKind_84_43" id="ScopeKind_75_3" title="a definition with a single reference">ScopeKind</a>.<span class="cons_Constructor"><span id="Glob_75_13" title="a definition with no references">Glob</span></span>         = &lt;<span class="cons_String">glob</span>&gt;
+  <a href="#ScopeKind_84_43" id="ScopeKind_76_3" title="a definition with a single reference">ScopeKind</a>.<span class="cons_Constructor"><span id="KVar_76_13" title="a definition with no references">KVar</span></span>         = &lt;<span class="cons_String">var</span> &lt;<a href="../Core.sdf3/#Var_337_3" id="Var_76_34" title="a reference to a single-file definition">Var</a>&gt;&gt;
+  <a href="#ScopeKind_84_43" id="ScopeKind_77_3" title="a definition with a single reference">ScopeKind</a>.<span class="cons_Constructor"><span id="Unknown_77_13" title="a definition with no references">Unknown</span></span>      = &lt;<span class="cons_String">unknown</span>&gt;
 
-  <a href="#ScopeKindVar_65_27" id="ScopeKindVar_79_3" title="Referenced at line 65">ScopeKindVar</a>.<span class="cons_Constructor"><span id="Variable_79_16" title="Not referenced">Variable</span></span>  = &lt;<span class="cons_String">var</span> &lt;<a href="../Core.sdf3/#Var_337_3" id="Var_79_34" title="Defined at ../Core.sdf3 line 337, 338">Var</a>&gt;&gt;
-  <a href="#ScopeKindVar_65_27" id="ScopeKindVar_80_3" title="Referenced at line 65">ScopeKindVar</a>.<span class="cons_Constructor"><span id="PArg_80_16" title="Not referenced">PArg</span></span>      = &lt;<span class="cons_String">prd</span> &lt;<a href="../Core.sdf3/#ConstraintId_83_3" id="ConstraintId_80_34" title="Defined at ../Core.sdf3 line 83, 84">ConstraintId</a>&gt;<span class="cons_String">[</span>&lt;<a href="#INTT_98_3" id="INTT_80_49" title="Defined at line 98">INTT</a>&gt;<span class="cons_String">]</span>&gt;
-  <a href="#ScopeKindVar_65_27" id="ScopeKindVar_81_3" title="Referenced at line 65">ScopeKindVar</a>.<span class="cons_Constructor"><span id="CArg_81_16" title="Not referenced">CArg</span></span>      = &lt;<span class="cons_String">ctr</span> &lt;<a href="../Core.sdf3/#SortId_321_3" id="SortId_81_34" title="Defined at ../Core.sdf3 line 321, 322, 323">SortId</a>&gt;<span class="cons_String">[</span>&lt;<a href="#INTT_98_3" id="INTT_81_43" title="Defined at line 98">INTT</a>&gt;<span class="cons_String">]</span>&gt;
-  <a href="#ScopeKindVar_65_27" id="ScopeKindVar_82_3" title="Referenced at line 65">ScopeKindVar</a>.<span class="cons_Constructor"><span id="RArg_82_16" title="Not referenced">RArg</span></span>      = &lt;<span class="cons_String">rel</span> &lt;<a href="../Core.sdf3/#Label_196_3" id="Label_82_34" title="Defined at ../Core.sdf3 line 196">Label</a>&gt;<span class="cons_String">[</span>&lt;<a href="#INTT_98_3" id="INTT_82_42" title="Defined at line 98">INTT</a>&gt;<span class="cons_String">]</span>&gt;
+  <a href="#ScopeKindVar_65_27" id="ScopeKindVar_79_3" title="a definition with a single reference">ScopeKindVar</a>.<span class="cons_Constructor"><span id="Variable_79_16" title="a definition with no references">Variable</span></span>  = &lt;<span class="cons_String">var</span> &lt;<a href="../Core.sdf3/#Var_337_3" id="Var_79_34" title="a reference to a single-file definition">Var</a>&gt;&gt;
+  <a href="#ScopeKindVar_65_27" id="ScopeKindVar_80_3" title="a definition with a single reference">ScopeKindVar</a>.<span class="cons_Constructor"><span id="PArg_80_16" title="a definition with no references">PArg</span></span>      = &lt;<span class="cons_String">prd</span> &lt;<a href="../Core.sdf3/#ConstraintId_83_3" id="ConstraintId_80_34" title="a reference to a single-file definition">ConstraintId</a>&gt;<span class="cons_String">[</span>&lt;<a href="#INTT_98_3" id="INTT_80_49" title="a reference to a single-file definition">INTT</a>&gt;<span class="cons_String">]</span>&gt;
+  <a href="#ScopeKindVar_65_27" id="ScopeKindVar_81_3" title="a definition with a single reference">ScopeKindVar</a>.<span class="cons_Constructor"><span id="CArg_81_16" title="a definition with no references">CArg</span></span>      = &lt;<span class="cons_String">ctr</span> &lt;<a href="../Core.sdf3/#SortId_321_3" id="SortId_81_34" title="a reference to a single-file definition">SortId</a>&gt;<span class="cons_String">[</span>&lt;<a href="#INTT_98_3" id="INTT_81_43" title="a reference to a single-file definition">INTT</a>&gt;<span class="cons_String">]</span>&gt;
+  <a href="#ScopeKindVar_65_27" id="ScopeKindVar_82_3" title="a definition with a single reference">ScopeKindVar</a>.<span class="cons_Constructor"><span id="RArg_82_16" title="a definition with no references">RArg</span></span>      = &lt;<span class="cons_String">rel</span> &lt;<a href="../Core.sdf3/#Label_196_3" id="Label_82_34" title="a reference to a single-file definition">Label</a>&gt;<span class="cons_String">[</span>&lt;<a href="#INTT_98_3" id="INTT_82_42" title="a reference to a single-file definition">INTT</a>&gt;<span class="cons_String">]</span>&gt;
 
-  <a href="#ScopeKindWithCard_35_23" id="ScopeKindWithCard_84_3" title="Referenced at line 35, 49, 52, 65">ScopeKindWithCard</a>.<span class="cons_Constructor"><span id="ScopeKindWithCard_84_21" title="Not referenced">ScopeKindWithCard</span></span> = &lt;&lt;<a href="#ScopeKind_69_3" id="ScopeKind_84_43" title="Defined at line 69, 75, 76, 77">ScopeKind</a>&gt;<span class="cons_String">[</span>&lt;<a href="#Cardinality_88_3" id="Cardinality_84_55" title="Defined at line 88, 93">Cardinality</a>&gt;<span class="cons_String">]</span>&gt;
+  <button class="modal-open" id="ScopeKindWithCard_84_3" title="a definition with multiple references" data-urls="#ScopeKindWithCard line 35_23, 35_64, 49_23, 52_27, 65_48">ScopeKindWithCard</button>.<span class="cons_Constructor"><span id="ScopeKindWithCard_84_21" title="a definition with no references">ScopeKindWithCard</span></span> = &lt;&lt;<a href="#ScopeKind_69_3" id="ScopeKind_84_43" title="a reference to a single-file definition">ScopeKind</a>&gt;<span class="cons_String">[</span>&lt;<a href="#Cardinality_88_3" id="Cardinality_84_55" title="a reference to a single-file definition">Cardinality</a>&gt;<span class="cons_String">]</span>&gt;
 
 <span class="keyword">context-free sorts</span>
 
-  <a href="#Cardinality_84_55" id="Cardinality_88_3" title="Referenced at line 84">Cardinality</a>
-  <a href="#Bound_93_31" id="Bound_89_3" title="Referenced at line 93">Bound</a>
+  <a href="#Cardinality_84_55" id="Cardinality_88_3" title="a definition with a single reference">Cardinality</a>
+  <button class="modal-open" id="Bound_89_3" title="a definition with multiple references" data-urls="#Bound line 93_31, 93_40">Bound</button>
 
 <span class="keyword">context-free syntax</span>
 
-  <a href="#Cardinality_84_55" id="Cardinality_93_3" title="Referenced at line 84">Cardinality</a>.<span class="cons_Constructor"><span id="Cardinality_93_15" title="Not referenced">Cardinality</span></span> = &lt;&lt;<a href="#Bound_89_3" id="Bound_93_31" title="Defined at line 89, 94, 95">Bound</a>&gt;<span class="cons_String">..</span>&lt;<a href="#Bound_89_3" id="Bound_93_40" title="Defined at line 89, 94, 95">Bound</a>&gt;&gt;
-  <a href="#Bound_93_31" id="Bound_94_3" title="Referenced at line 93">Bound</a>.<span class="cons_Constructor"><span id="INF_94_9" title="Not referenced">INF</span></span>               = &lt;<span class="cons_String">*</span>&gt;
-  <a href="#Bound_93_31" id="Bound_95_3" title="Referenced at line 93">Bound</a>.<span class="cons_Constructor"><span id="BNum_95_9" title="Not referenced">BNum</span></span>              = &lt;&lt;<a href="#INTT_98_3" id="INTT_95_31" title="Defined at line 98">INTT</a>&gt;&gt;
+  <a href="#Cardinality_84_55" id="Cardinality_93_3" title="a definition with a single reference">Cardinality</a>.<span class="cons_Constructor"><span id="Cardinality_93_15" title="a definition with no references">Cardinality</span></span> = &lt;&lt;<a href="#Bound_89_3" id="Bound_93_31" title="a reference to a single-file definition">Bound</a>&gt;<span class="cons_String">..</span>&lt;<a href="#Bound_89_3" id="Bound_93_40" title="a reference to a single-file definition">Bound</a>&gt;&gt;
+  <button class="modal-open" id="Bound_94_3" title="a definition with multiple references" data-urls="#Bound line 93_31, 93_40">Bound</button>.<span class="cons_Constructor"><span id="INF_94_9" title="a definition with no references">INF</span></span>               = &lt;<span class="cons_String">*</span>&gt;
+  <button class="modal-open" id="Bound_95_3" title="a definition with multiple references" data-urls="#Bound line 93_31, 93_40">Bound</button>.<span class="cons_Constructor"><span id="BNum_95_9" title="a definition with no references">BNum</span></span>              = &lt;&lt;<a href="#INTT_98_3" id="INTT_95_31" title="a reference to a single-file definition">INTT</a>&gt;&gt;
 
 <span class="keyword">lexical sorts</span>
-  <a href="#INTT_80_49" id="INTT_98_3" title="Referenced at line 80, 81, 82, 95">INTT</a>
+  <button class="modal-open" id="INTT_98_3" title="a definition with multiple references" data-urls="#INTT line 80_49, 81_43, 82_42, 95_31">INTT</button>
 
 </code></pre></td></tr></tbody></table></div>
 
